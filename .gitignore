@@ -17,12 +17,10 @@ venv.bak
 # Docker
 docker-compose.override.yml
 
-# Generated nodes
-nodes/generated/
-
 # IDEs
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
+*.egg-info/

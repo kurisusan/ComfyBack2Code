@@ -4,7 +4,7 @@ services:
     restart: unless-stopped
     build:
       context: ./comfyui
-      dockerfile: ./Dockerfile.comfy
+      dockerfile: ./Dockerfile
     volumes:
       - comfyui_models:/app/models
       - comfyui/user:/app/user
@@ -12,7 +12,7 @@ services:
       - comfyui_custom:/app/custom_nodes
       - comfyui_venv:/app/venv
     ports:
-      - "3008:8188"
+      - "8188:8188"
     runtime: nvidia
     deploy:
       resources:

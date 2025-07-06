@@ -1,0 +1,17 @@
+[project]
+name = "comfyback2code"
+version = "0.1.0"
+description = "Programmatic ComfyUI workflow creation and execution."
+authors = [
+    { name = "Kurisu", email = "kurisu@example.com" }
+]
+dependencies = [] # Add any project dependencies here
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["cb2c_py"]
+include = ["*"]
+namespaces = false
