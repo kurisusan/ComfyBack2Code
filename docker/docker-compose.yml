@@ -3,13 +3,13 @@ services:
     container_name: comfyui
     restart: unless-stopped
     build:
-      context: ./comfyui
+      context: .
       dockerfile: ./Dockerfile
     volumes:
       - comfyui_models:/app/models
-      - comfyui/user:/app/user
+      - comfyui_user:/app/user
       - comfyui_output:/app/output
-      - comfyui_custom:/app/custom_nodes
+      # - comfyui_custom:/app/custom_nodes
       - comfyui_venv:/app/venv
     ports:
       - "8188:8188"
@@ -27,7 +27,7 @@ volumes:
     driver: local
   comfyui_output:
     driver: local
-  comfyui_custom:
-    driver: local
+  # comfyui_custom:
+  #   driver: local
   comfyui_venv:
     driver: local

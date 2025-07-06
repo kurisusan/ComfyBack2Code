@@ -1,28 +1,27 @@
 #!/bin/bash
-# Script pour cloner les nodes custom de ComfyUI et installer leurs dépendances.
-
-# 'set -e' fait en sorte que le script s'arrête immédiatement si une commande échoue.
 set -e
 
 # --- Configuration ---
-# Assurez-vous que ce chemin correspond bien à votre dossier de custom nodes
 TARGET_DIR="/app/custom_nodes" 
+# TARGET_DIR="test" 
 
 # --- Exécution ---
 echo "Moving to target directory: ${TARGET_DIR}"
 cd "${TARGET_DIR}"
 
 echo "--- Starting Node Cloning Process from ${NODE_LIST_FILE} ---"
-while IFS= read -r url; do
+mapfile -t urls < <(grep -v '^\s*#' "${NODE_LIST_FILE}" | grep -v '^\s*$' | tr -d '\r')
+for url in "${urls[@]}"; do
     echo "Cloning ${url}"
-    git clone "${url}"
-done < "${NODE_LIST_FILE}"
+    if ! git clone "${url}"; then
+        echo "WARNING: Failed to clone ${url}"
+    fi
+done
 
 echo "--- Cloning complete. Installing Python dependencies. ---"
 for dir in */; do
-    if [ -f "${dir}requirements.txt" ]; then
+    if [[ -f "${dir}requirements.txt" ]]; then
         echo "Installing requirements for ${dir}"
-        # Utilise la variable $VPIP de votre Dockerfile, avec 'pip' comme solution de repli
         ${VPIP:-pip} install --no-cache-dir -r "${dir}requirements.txt"
     fi
 done
@@ -32,5 +31,4 @@ ${VPIP:-pip} install https://huggingface.co/mit-han-lab/nunchaku/resolve/main/nu
 
 echo "--- Node installation process finished successfully. ---"
 
-# On peut aussi supprimer le fichier de liste à la fin
 rm "${NODE_LIST_FILE}"
