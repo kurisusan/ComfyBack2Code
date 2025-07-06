@@ -1,0 +1,28 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*cpython-*.so
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak
+venv.bak
+
+# Docker
+docker-compose.override.yml
+
+# Generated nodes
+nodes/generated/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

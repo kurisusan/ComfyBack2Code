@@ -1,0 +1,12 @@
+https://github.com/Comfy-Org/ComfyUI-Manager
+https://github.com/cubiq/ComfyUI_essentials
+https://github.com/city96/ComfyUI-GGUF
+https://github.com/comfyui-wiki/ComfyUI-Wiki-Workflows
+https://github.com/kijai/ComfyUI-WanVideoWrapper
+https://github.com/mit-han-lab/ComfyUI-nunchaku
+https://github.com/kijai/ComfyUI-DepthAnythingV2
+https://github.com/kijai/ComfyUI-KJNodes
+https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git
+https://github.com/Fannovel16/comfyui_controlnet_aux.git
+https://github.com/pollockjj/ComfyUI-MultiGPU
+https://github.com/rgthree/rgthree-comfy.git

@@ -1,0 +1,33 @@
+services:
+  comfyui:
+    container_name: comfyui
+    restart: unless-stopped
+    build:
+      context: ./comfyui
+      dockerfile: ./Dockerfile.comfy
+    volumes:
+      - comfyui_models:/app/models
+      - comfyui/user:/app/user
+      - comfyui_output:/app/output
+      - comfyui_custom:/app/custom_nodes
+      - comfyui_venv:/app/venv
+    ports:
+      - "3008:8188"
+    runtime: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [ gpu ]
+
+volumes:
+  comfyui_models:
+    driver: local
+  comfyui_user:
+    driver: local
+  comfyui_output:
+    driver: local
+  comfyui_custom:
+    driver: local
+  comfyui_venv:
+    driver: local
