@@ -1,19 +1,6 @@
 
 import json
-import websocket
-import uuid
-import urllib.request
-import urllib.parse
-import os
-from pathlib import Path
-from dotenv import load_dotenv
-
-# Load environment variables from .env file
-load_dotenv()
-
-# Get ComfyUI server address from environment variable or use default
-DEFAULT_COMFYUI_API_URL = "localhost:8188"
-COMFYUI_SERVER_ADDRESS = os.getenv("COMFYUI_API_URL", DEFAULT_COMFYUI_API_URL)
+from .workflow_runner import WorkflowRunner
 
 class Workflow:
     """
@@ -24,6 +11,7 @@ class Workflow:
         self.node_to_id = {}
         self.links = []
         self._next_id = 1
+        self.runner = WorkflowRunner()
 
     def add_node(self, node_instance):
         """
@@ -75,6 +63,15 @@ class Workflow:
                 }
             }
 
+        for from_node_id, from_output_slot, to_node_id, to_input_slot in self.links:
+            from_node_instance = self.nodes[from_node_id]
+            from_output_names = from_node_instance.get_outputs()
+            from_slot_index = from_output_slot if isinstance(from_output_slot, int) else from_output_names.index(from_output_slot)
+        
+            to_input_name = to_input_slot if isinstance(to_input_slot, str) else list(self.nodes[to_node_id].get_inputs().keys())[to_input_slot]
+            workflow_data[str(to_node_id)]["inputs"][to_input_name] = [str(from_node_id), from_slot_index]
+    
+
         # Process links
         final_links = []
         link_id = 1
@@ -104,98 +101,16 @@ class Workflow:
             ])
             link_id += 1
         
-        # The final structure for the API is a dictionary containing the nodes and links
-        api_format = {"prompt": workflow_data, "extra_data": {"extra_pnginfo": {"workflow": {"nodes": workflow_data, "links": final_links}}}}
+        # The final structure for the API is a dictionary containing the nodes
+        api_format = {"prompt": workflow_data}
 
         return json.dumps(api_format, indent=indent)
 
     def run(self):
         """
-        Executes the workflow and saves the output files.
+        Executes the workflow using the WorkflowRunner.
         """
-        client_id = str(uuid.uuid4())
+        # print(f"Workflow data: {self.build_workflow_json()}")
         
-        # Connect to the websocket
-        ws = websocket.WebSocket()
-        ws.connect(f"ws://{COMFYUI_SERVER_ADDRESS}/ws?clientId={client_id}")
-
-        print("Executing workflow...")
-        files = self._get_outputs(ws, json.loads(self.build_workflow_json()), client_id)
-
-        # Create an 'outputs' directory if it doesn't exist
-        output_dir = Path("outputs")
-        output_dir.mkdir(exist_ok=True)
-
-        # Save the output files
-        for file_data, filename in files:
-            output_path = output_dir / filename
-            with open(output_path, "wb") as f:
-                f.write(file_data)
-            print(f"File saved to {output_path}")
-
-        ws.close()
-
-    def _queue_prompt(self, prompt, client_id):
-        """
-        Queues a prompt on the ComfyUI server.
-        """
-        p = {"prompt": prompt, "client_id": client_id}
-        data = json.dumps(p).encode('utf-8')
-        req = urllib.request.Request(f"http://{COMFYUI_SERVER_ADDRESS}/prompt", data=data)
-        return json.loads(urllib.request.urlopen(req).read())
-
-    def _get_file(self, filename, subfolder, folder_type):
-        """
-        Gets a file from the ComfyUI server.
-        """
-        data = {"filename": filename, "subfolder": subfolder, "type": folder_type}
-        url_values = urllib.parse.urlencode(data)
-        with urllib.request.urlopen(f"http://{COMFYUI_SERVER_ADDRESS}/view?{url_values}") as response:
-            return response.read()
-
-    def _get_history(self, prompt_id):
-        """
-        Gets the execution history for a given prompt ID.
-        """
-        with urllib.request.urlopen(f"http://{COMFYUI_SERVER_ADDRESS}/history/{prompt_id}") as response:
-            return json.loads(response.read())
-
-    def _get_outputs(self, ws, prompt, client_id):
-        """
-        Executes a prompt and retrieves the output files.
-        """
-        prompt_id = self._queue_prompt(prompt, client_id)['prompt_id']
-        output_files = {}
-        
-        while True:
-            out = ws.recv()
-            if isinstance(out, str):
-                message = json.loads(out)
-                if message['type'] == 'executing':
-                    data = message['data']
-                    if data['node'] is None and data['prompt_id'] == prompt_id:
-                        break  # Execution is done
-            else:
-                continue # Previews are binary data
-
-        history = self._get_history(prompt_id)[prompt_id]
-        for o in history['outputs']:
-            for node_id in history['outputs']:
-                node_output = history['outputs'][node_id]
-                if 'files' in node_output:
-                    files_output = []
-                    for file in node_output['files']:
-                        file_data = self._get_file(file['filename'], file['subfolder'], file['type'])
-                        files_output.append((file_data, file['filename']))
-                    output_files[node_id] = files_output
-                if 'images' in node_output:
-                    images_output = []
-                    for image in node_output['images']:
-                        image_data = self._get_file(image['filename'], image['subfolder'], image['type'])
-                        images_output.append((image_data, image['filename']))
-                    output_files[node_id] = images_output
-        
-        for node_id in output_files:
-            for file_data, filename in output_files[node_id]:
-                yield file_data, filename
+        self.runner.run_workflow(self.build_workflow_json())
 

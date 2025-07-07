@@ -23,4 +23,6 @@ docker-compose.override.yml
 *.swp
 *.swo
 *~
-*.egg-info/
+*.egg-info
+
+/models/

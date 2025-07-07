@@ -43,19 +43,27 @@ This will start a ComfyUI instance with the necessary configurations.
 
 Add the git repository URLs of any custom nodes you need to `custom-nodes.txt`. The `docker/custom-nodes-loader.sh` script will automatically clone them into the correct directory when the container starts.
 
-### 3. Generate Python Node Classes
+### 3. Add Models
+
+To add models to the ComfyUI container, add them to the `models.csv` file at the root of the project. The format is `url,destination`. The `docker/download_models.py` script will download them into the correct directory:
+
+```bash
+python docker/download_models.py
+```
+
+### 4. Generate Python Node Classes
 
 Once your ComfyUI instance is running (with all custom nodes loaded), generate the Python wrapper classes:
 
 ```bash
 # Make sure your environment is set up to connect to the ComfyUI API
 # (e.g., by setting API_URL in your environment or .env file)
-python -m cb2c_py/nodes/generate_nodes.py
+python -m cb2c_py.nodes.generate_nodes
 ```
 
 This will populate the `nodes/generated/` directory with Python modules corresponding to each ComfyUI node.
 
-### 4. Build a Workflow
+### 5. Build a Workflow
 
 Create a Python script to define your workflow using the `Workflow` class and the generated node classes. See `example/workflow/simple.py` for a template.
 
@@ -103,10 +111,10 @@ if __name__ == "__main__":
     print(json.dumps(workflow_json, indent=2))
 ```
 
-### 5. Run the Workflow
+### 6. Run the Workflow
 
 Use the `example/runner/simple.py` script to execute the workflow against the ComfyUI API.
 
 ```bash
-python -m example/runner/simple.py
+python -m cb2c_py.example.runner.simple
 ```

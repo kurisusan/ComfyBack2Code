@@ -90,11 +90,3 @@ def simple_image_workflow(
     wf.connect(vae_decode.outputs.IMAGE, save_image.inputs.images)
 
     return wf
-
-if __name__ == "__main__":
-    print("Building a simple text-to-image workflow...")
-    workflow = build_simple_workflow()
-
-    # The runner script will now handle the execution of the workflow.
-    print("\nWorkflow built successfully.")
-    print("You can now run the `runner-example.py` to execute this workflow.")

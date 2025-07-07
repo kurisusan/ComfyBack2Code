@@ -1,9 +1,10 @@
 import os
 import requests
 
+
 # Default API address for a local ComfyUI instance
-DEFAULT_COMFYUI_API_URL = "http://localhost:8188/"
-COMFYUI_API_URL = os.getenv("COMFYUI_API_URL", DEFAULT_COMFYUI_API_URL)
+DEFAULT_COMFYUI_SERVER_ADDRESS = "localhost:8188"
+COMFYUI_API_URL = "http://" + os.getenv("COMFYUI_SERVER_ADDRESS", DEFAULT_COMFYUI_SERVER_ADDRESS)
 
 def fetch_node_definitions(api_url: str = COMFYUI_API_URL):
     """
