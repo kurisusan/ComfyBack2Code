@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: ./Dockerfile
     volumes:
-      - ./models:/app/models
+      - ../models:/app/models
       - comfyui_user:/app/user
       - comfyui_output:/app/output
       - comfyui_venv:/app/venv

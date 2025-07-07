@@ -27,7 +27,6 @@ def simple_image_workflow(
     wf = Workflow()
 
     # 1. Load the model checkpoint
-    # Note: The class name is sanitized, but the `ckpt_name` is the actual model file.
     chkpt_loader = wf.add_node(CheckpointLoaderSimple(
         ckpt_name="v1-5-pruned-emaonly.safetensors"
     ))

@@ -5,7 +5,9 @@ description = "Programmatic ComfyUI workflow creation and execution."
 authors = [
     { name = "Kurisu", email = "kurisu@example.com" }
 ]
-dependencies = [] # Add any project dependencies here
+dependencies = [
+    "tqdm",
+] # Add any project dependencies here
 
 [build-system]
 requires = ["setuptools>=61.0"]

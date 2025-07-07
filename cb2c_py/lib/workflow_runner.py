@@ -7,6 +7,7 @@ import urllib.parse
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+from typing import Callable, Optional, Dict, Any, TypeAlias
 
 # Load environment variables from .env file
 load_dotenv()
@@ -15,14 +16,16 @@ load_dotenv()
 DEFAULT_COMFYUI_SERVER_ADDRESS = "localhost:8188"
 COMFYUI_SERVER_ADDRESS = os.getenv("COMFYUI_SERVER_ADDRESS", DEFAULT_COMFYUI_SERVER_ADDRESS)
 
+ProgressCallback: TypeAlias = Optional[Callable[[Dict[str, Any]], None]]
+
 class WorkflowRunner:
     """
     A class to execute ComfyUI workflows via its API.
     """
-    def __init__(self, comfyui_server_address=None):
+    def __init__(self, comfyui_server_address: Optional[str] = None):
         self.comfyui_server_address = comfyui_server_address or COMFYUI_SERVER_ADDRESS
 
-    def run_workflow(self, workflow_json):
+    def run_workflow(self, workflow_json: str, progress_callback: ProgressCallback = None):
         """
         Executes the workflow and saves the output files.
         """
@@ -33,7 +36,7 @@ class WorkflowRunner:
         ws.connect(f"ws://{self.comfyui_server_address}/ws?clientId={client_id}")
 
         print("Executing workflow...")
-        files = self._get_outputs(ws, json.loads(workflow_json), client_id)
+        files = self._get_outputs(ws, json.loads(workflow_json), client_id, progress_callback)
 
         # Create an 'outputs' directory if it doesn't exist
         output_dir = Path("outputs")
@@ -48,7 +51,7 @@ class WorkflowRunner:
 
         ws.close()
 
-    def _queue_prompt(self, prompt, client_id):
+    def _queue_prompt(self, prompt: Dict[str, Any], client_id: str) -> Dict[str, Any]:
         """
         Queues a prompt on the ComfyUI server.
         """
@@ -69,7 +72,7 @@ class WorkflowRunner:
             print(f"Response: {e.read().decode()}")
             raise
 
-    def _get_file(self, filename, subfolder, folder_type):
+    def _get_file(self, filename: str, subfolder: str, folder_type: str) -> bytes:
         """
         Gets a file from the ComfyUI server.
         """
@@ -78,14 +81,14 @@ class WorkflowRunner:
         with urllib.request.urlopen(f"http://{self.comfyui_server_address}/view?{url_values}") as response:
             return response.read()
 
-    def _get_history(self, prompt_id):
+    def _get_history(self, prompt_id: str) -> Dict[str, Any]:
         """
         Gets the execution history for a given prompt ID.
         """
         with urllib.request.urlopen(f"http://{self.comfyui_server_address}/history/{prompt_id}") as response:
             return json.loads(response.read())
 
-    def _get_outputs(self, ws, prompt, client_id):
+    def _get_outputs(self, ws: websocket.WebSocket, prompt: Dict[str, Any], client_id: str, progress_callback: ProgressCallback = None):
         """
         Executes a prompt and retrieves the output files.
         """
@@ -96,6 +99,9 @@ class WorkflowRunner:
             out = ws.recv()
             if isinstance(out, str):
                 message = json.loads(out)
+                if progress_callback:
+                    progress_callback(message)
+                
                 if message['type'] == 'executing':
                     data = message['data']
                     if data['node'] is None and data['prompt_id'] == prompt_id:

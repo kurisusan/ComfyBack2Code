@@ -1,6 +1,10 @@
 
 import json
 from .workflow_runner import WorkflowRunner
+from .progress_handler import ComfyUIProgressHandler
+from typing import Callable, Optional, Dict, Any, TypeAlias
+
+ProgressCallback: TypeAlias = Optional[Callable[[Dict[str, Any]], None]]
 
 class Workflow:
     """
@@ -106,11 +110,11 @@ class Workflow:
 
         return json.dumps(api_format, indent=indent)
 
-    def run(self):
+    def run(self, progress_callback: ProgressCallback = None):
         """
         Executes the workflow using the WorkflowRunner.
         """
         # print(f"Workflow data: {self.build_workflow_json()}")
         
-        self.runner.run_workflow(self.build_workflow_json())
+        self.runner.run_workflow(self.build_workflow_json(), progress_callback)
 
