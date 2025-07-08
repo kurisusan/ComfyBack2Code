@@ -8,6 +8,7 @@ from .animalposepreprocessor import AnimalPosePreprocessor
 from .animeface_semsegpreprocessor import AnimeFace_SemSegPreprocessor
 from .animelineartpreprocessor import AnimeLineArtPreprocessor
 from .anylineartpreprocessor_aux import AnyLineArtPreprocessor_aux
+from .any_switch__rgthree_ import Any_Switch__rgthree_
 from .appendinstancediffusiontracking import AppendInstanceDiffusionTracking
 from .appendstringstolist import AppendStringsToList
 from .applyclipseg_ import ApplyCLIPSeg_
@@ -95,6 +96,12 @@ from .conditioningstableaudio import ConditioningStableAudio
 from .conditioningtimestepsrange import ConditioningTimestepsRange
 from .conditioningzeroout import ConditioningZeroOut
 from .consoledebug_ import ConsoleDebug_
+from .context_big__rgthree_ import Context_Big__rgthree_
+from .context_merge_big__rgthree_ import Context_Merge_Big__rgthree_
+from .context_merge__rgthree_ import Context_Merge__rgthree_
+from .context_switch_big__rgthree_ import Context_Switch_Big__rgthree_
+from .context_switch__rgthree_ import Context_Switch__rgthree_
+from .context__rgthree_ import Context__rgthree_
 from .controlnetapply import ControlNetApply
 from .controlnetapplyadvanced import ControlNetApplyAdvanced
 from .controlnetapplysd3 import ControlNetApplySD3
@@ -151,6 +158,8 @@ from .diffusionedge_preprocessor import DiffusionEdge_Preprocessor
 from .diffusionmodelloaderkj import DiffusionModelLoaderKJ
 from .disablenoise import DisableNoise
 from .displayany import DisplayAny
+from .display_any__rgthree_ import Display_Any__rgthree_
+from .display_int__rgthree_ import Display_Int__rgthree_
 from .downloadandloadclipseg import DownloadAndLoadCLIPSeg
 from .downloadandloaddepthanythingv2model import DownloadAndLoadDepthAnythingV2Model
 from .downloadandloadwav2vecmodel import DownloadAndLoadWav2VecModel
@@ -326,6 +335,10 @@ from .imageuntile_ import ImageUntile_
 from .imageupscalewithmodel import ImageUpscaleWithModel
 from .imageupscalewithmodelbatched import ImageUpscaleWithModelBatched
 from .imageyuvtorgb import ImageYUVToRGB
+from .image_comparer__rgthree_ import Image_Comparer__rgthree_
+from .image_inset_crop__rgthree_ import Image_Inset_Crop__rgthree_
+from .image_resize__rgthree_ import Image_Resize__rgthree_
+from .image_or_latent_size__rgthree_ import Image_or_Latent_Size__rgthree_
 from .injectlatentnoise_ import InjectLatentNoise_
 from .injectnoisetolatent import InjectNoiseToLatent
 from .inpaintmodelconditioning import InpaintModelConditioning
@@ -345,6 +358,7 @@ from .ksampleradvanced import KSamplerAdvanced
 from .ksamplerselect import KSamplerSelect
 from .ksamplervariationsstochastic_ import KSamplerVariationsStochastic_
 from .ksamplervariationswithnoise_ import KSamplerVariationsWithNoise_
+from .ksampler_config__rgthree_ import KSampler_Config__rgthree_
 from .karrasscheduler import KarrasScheduler
 from .klingcameracontroli2vnode import KlingCameraControlI2VNode
 from .klingcameracontrolt2vnode import KlingCameraControlT2VNode
@@ -409,6 +423,7 @@ from .loraloader import LoraLoader
 from .loraloadermodelonly import LoraLoaderModelOnly
 from .loramodelloader import LoraModelLoader
 from .lorasave import LoraSave
+from .lora_loader_stack__rgthree_ import Lora_Loader_Stack__rgthree_
 from .lorasforfluxparams_ import LorasForFluxParams_
 from .lossgraphnode import LossGraphNode
 from .lotusconditioning import LotusConditioning
@@ -545,6 +560,11 @@ from .plotparameters_ import PlotParameters_
 from .pointseditor import PointsEditor
 from .polyexponentialscheduler import PolyexponentialScheduler
 from .porterduffimagecomposite import PorterDuffImageComposite
+from .power_lora_loader__rgthree_ import Power_Lora_Loader__rgthree_
+from .power_primitive__rgthree_ import Power_Primitive__rgthree_
+from .power_prompt___simple__rgthree_ import Power_Prompt___Simple__rgthree_
+from .power_prompt__rgthree_ import Power_Prompt__rgthree_
+from .power_puter__rgthree_ import Power_Puter__rgthree_
 from .preview3d import Preview3D
 from .preview3danimation import Preview3DAnimation
 from .previewanimation import PreviewAnimation
@@ -614,6 +634,9 @@ from .sd3attentionseekert5_ import SD3AttentionSeekerT5_
 from .sd3negativeconditioning_ import SD3NegativeConditioning_
 from .sdturboscheduler import SDTurboScheduler
 from .sdxlemptylatentsizepicker_ import SDXLEmptyLatentSizePicker_
+from .sdxl_empty_latent_image__rgthree_ import SDXL_Empty_Latent_Image__rgthree_
+from .sdxl_power_prompt___positive__rgthree_ import SDXL_Power_Prompt___Positive__rgthree_
+from .sdxl_power_prompt___simple___negative__rgthree_ import SDXL_Power_Prompt___Simple___Negative__rgthree_
 from .sd_4xupscale_conditioning import SD_4XUpscale_Conditioning
 from .sv3d_batchschedule import SV3D_BatchSchedule
 from .sv3d_conditioning import SV3D_Conditioning
@@ -656,6 +679,7 @@ from .screencap_mss import Screencap_mss
 from .scribblepreprocessor import ScribblePreprocessor
 from .scribble_pidinet_preprocessor import Scribble_PiDiNet_Preprocessor
 from .scribble_xdog_preprocessor import Scribble_XDoG_Preprocessor
+from .seed__rgthree_ import Seed__rgthree_
 from .selfattentionguidance import SelfAttentionGuidance
 from .semsegpreprocessor import SemSegPreprocessor
 from .separatemasks import SeparateMasks
@@ -920,6 +944,7 @@ __all__ = [
     "AnimeFace_SemSegPreprocessor",
     "AnimeLineArtPreprocessor",
     "AnyLineArtPreprocessor_aux",
+    "Any_Switch__rgthree_",
     "AppendInstanceDiffusionTracking",
     "AppendStringsToList",
     "ApplyCLIPSeg_",
@@ -1007,6 +1032,12 @@ __all__ = [
     "ConditioningTimestepsRange",
     "ConditioningZeroOut",
     "ConsoleDebug_",
+    "Context_Big__rgthree_",
+    "Context_Merge_Big__rgthree_",
+    "Context_Merge__rgthree_",
+    "Context_Switch_Big__rgthree_",
+    "Context_Switch__rgthree_",
+    "Context__rgthree_",
     "ControlNetApply",
     "ControlNetApplyAdvanced",
     "ControlNetApplySD3",
@@ -1063,6 +1094,8 @@ __all__ = [
     "DiffusionModelLoaderKJ",
     "DisableNoise",
     "DisplayAny",
+    "Display_Any__rgthree_",
+    "Display_Int__rgthree_",
     "DownloadAndLoadCLIPSeg",
     "DownloadAndLoadDepthAnythingV2Model",
     "DownloadAndLoadWav2VecModel",
@@ -1238,6 +1271,10 @@ __all__ = [
     "ImageUpscaleWithModel",
     "ImageUpscaleWithModelBatched",
     "ImageYUVToRGB",
+    "Image_Comparer__rgthree_",
+    "Image_Inset_Crop__rgthree_",
+    "Image_Resize__rgthree_",
+    "Image_or_Latent_Size__rgthree_",
     "InjectLatentNoise_",
     "InjectNoiseToLatent",
     "InpaintModelConditioning",
@@ -1257,6 +1294,7 @@ __all__ = [
     "KSamplerSelect",
     "KSamplerVariationsStochastic_",
     "KSamplerVariationsWithNoise_",
+    "KSampler_Config__rgthree_",
     "KarrasScheduler",
     "KlingCameraControlI2VNode",
     "KlingCameraControlT2VNode",
@@ -1321,6 +1359,7 @@ __all__ = [
     "LoraLoaderModelOnly",
     "LoraModelLoader",
     "LoraSave",
+    "Lora_Loader_Stack__rgthree_",
     "LorasForFluxParams_",
     "LossGraphNode",
     "LotusConditioning",
@@ -1457,6 +1496,11 @@ __all__ = [
     "PointsEditor",
     "PolyexponentialScheduler",
     "PorterDuffImageComposite",
+    "Power_Lora_Loader__rgthree_",
+    "Power_Primitive__rgthree_",
+    "Power_Prompt___Simple__rgthree_",
+    "Power_Prompt__rgthree_",
+    "Power_Puter__rgthree_",
     "Preview3D",
     "Preview3DAnimation",
     "PreviewAnimation",
@@ -1526,6 +1570,9 @@ __all__ = [
     "SD3NegativeConditioning_",
     "SDTurboScheduler",
     "SDXLEmptyLatentSizePicker_",
+    "SDXL_Empty_Latent_Image__rgthree_",
+    "SDXL_Power_Prompt___Positive__rgthree_",
+    "SDXL_Power_Prompt___Simple___Negative__rgthree_",
     "SD_4XUpscale_Conditioning",
     "SV3D_BatchSchedule",
     "SV3D_Conditioning",
@@ -1568,6 +1615,7 @@ __all__ = [
     "ScribblePreprocessor",
     "Scribble_PiDiNet_Preprocessor",
     "Scribble_XDoG_Preprocessor",
+    "Seed__rgthree_",
     "SelfAttentionGuidance",
     "SemSegPreprocessor",
     "SeparateMasks",

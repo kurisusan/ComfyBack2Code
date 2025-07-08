@@ -7,6 +7,9 @@ authors = [
 ]
 dependencies = [
     "tqdm",
+    "dotenv",
+    "requests",
+    "websocket"
 ] # Add any project dependencies here
 
 [build-system]

@@ -4,7 +4,10 @@ import requests
 
 # Default API address for a local ComfyUI instance
 DEFAULT_COMFYUI_SERVER_ADDRESS = "localhost:8188"
-COMFYUI_API_URL = "http://" + os.getenv("COMFYUI_SERVER_ADDRESS", DEFAULT_COMFYUI_SERVER_ADDRESS)
+COMFYUI_API_URL = "http://" + os.getenv(
+    "COMFYUI_SERVER_ADDRESS", DEFAULT_COMFYUI_SERVER_ADDRESS
+)
+
 
 def fetch_node_definitions(api_url: str = COMFYUI_API_URL):
     """
@@ -19,10 +22,11 @@ def fetch_node_definitions(api_url: str = COMFYUI_API_URL):
         response.raise_for_status()  # Raise an exception for HTTP errors
         print("Successfully fetched node definitions.")
         return response.json()
-    except requests.exceptions.RequestException as e:
+    except requests.exceptions.RequestException:
         print(f"Error: Could not connect to the ComfyUI API at {api_url}.")
         print("Please ensure ComfyUI is running and the API is accessible.")
         return None
+
 
 if __name__ == "__main__":
     # Example of how to use the fetcher

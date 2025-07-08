@@ -17,9 +17,12 @@ from cb2c_py.nodes.generated import (
     SaveImage,
 )
 
+
 def simple_image_workflow(
-    prompt: str,
-    negative_prompt: str,
+    pos_prompt: str,
+    neg_prompt: str,
+    seed: int,
+    steps: int = 20,
 ):
     """
     Creates a standard text-to-image workflow object.
@@ -27,65 +30,57 @@ def simple_image_workflow(
     wf = Workflow()
 
     # 1. Load the model checkpoint
-    chkpt_loader = wf.add_node(CheckpointLoaderSimple(
-        ckpt_name="v1-5-pruned-emaonly.safetensors"
-    ))
+    chkpt_loader_node = CheckpointLoaderSimple(ckpt_name="v1-5-pruned-emaonly.safetensors")
+    wf.add_node(chkpt_loader_node)
 
     # 2. Create an empty latent image
-    empty_latent = wf.add_node(EmptyLatentImage(
-        width=512,
-        height=512,
-        batch_size=1
-    ))
+    empty_latent_node = EmptyLatentImage(width=512, height=512, batch_size=1)
+    wf.add_node(empty_latent_node)
 
-    # 3. Encode the positive prompt
-    positive_prompt = wf.add_node(CLIPTextEncode(
-        text=prompt,
-        clip=None,
-    ))
+    # 3. Encode the positive prompt, connecting it to the checkpoint loader's CLIP output
+    positive_prompt_node = CLIPTextEncode(
+        text=pos_prompt,
+        clip=chkpt_loader_node.outputs.clip,
+    )
+    wf.add_node(positive_prompt_node)
 
-    # 4. Encode the negative prompt
-    negative_prompt = wf.add_node(CLIPTextEncode(
-        text=negative_prompt,
-        clip=None,
-    ))
+    # 4. Encode the negative prompt, also connecting it to the checkpoint loader's CLIP output
+    negative_prompt_node = CLIPTextEncode(
+            text=neg_prompt,
+            clip=chkpt_loader_node.outputs.clip,
+        )
+    wf.add_node(negative_prompt_node)
 
-    # 5. The KSampler node, which generates the image from the noise
-    sampler = wf.add_node(KSampler(
-        seed=12345,
-        steps=20,
-        cfg=8.0,
-        sampler_name="euler",
-        scheduler="normal",
-        denoise=1.0,
-        model=None,
-        positive=None,
-        negative=None,
-        latent_image=None,
-    ))
+    # 5. The KSampler node, which takes outputs from all previous nodes
+    sampler_node = KSampler(
+            seed=seed,
+            steps=steps,
+            cfg=8.0,
+            sampler_name="euler",
+            scheduler="normal",
+            denoise=1.0,
+            model=chkpt_loader_node.outputs.model,
+            positive=positive_prompt_node.outputs.conditioning,
+            negative=negative_prompt_node.outputs.conditioning,
+            latent_image=empty_latent_node.outputs.latent,
+        )
+    wf.add_node(sampler_node)
 
     # 6. Decode the latent image back into pixels
-    vae_decode = wf.add_node(VAEDecode(
-        samples=None,
-        vae=None,
-    ))
+    vae_decode_node = VAEDecode(
+        samples=sampler_node.outputs.latent,
+        vae=chkpt_loader_node.outputs.vae,
+        )
+    wf.add_node(vae_decode_node)
 
     # 7. Save the final image
-    save_image = wf.add_node(SaveImage(
-        filename_prefix="ComfyBack2Code_example",
-        images=None,
-    ))
+    save_image_node = SaveImage(
+            filename_prefix="ComfyBack2Code_example",
+            images=vae_decode_node.outputs.image,
+        )
+    wf.add_node(save_image_node)
 
-    # 8. Connect the nodes together using the new, intuitive syntax
-    print("Connecting workflow nodes...")
-    wf.connect(chkpt_loader.outputs.MODEL, sampler.inputs.model)
-    wf.connect(chkpt_loader.outputs.CLIP, positive_prompt.inputs.clip)
-    wf.connect(chkpt_loader.outputs.CLIP, negative_prompt.inputs.clip)
-    wf.connect(chkpt_loader.outputs.VAE, vae_decode.inputs.vae)
-    wf.connect(empty_latent.outputs.LATENT, sampler.inputs.latent_image)
-    wf.connect(positive_prompt.outputs.CONDITIONING, sampler.inputs.positive)
-    wf.connect(negative_prompt.outputs.CONDITIONING, sampler.inputs.negative)
-    wf.connect(sampler.outputs.LATENT, vae_decode.inputs.samples)
-    wf.connect(vae_decode.outputs.IMAGE, save_image.inputs.images)
+    # The connections are now defined directly when creating the nodes.
+    # The wf.connect calls are no longer needed.
 
     return wf
