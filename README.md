@@ -1,4 +1,6 @@
-# ComfyBack2Code
+# ComfyBack2Code (WIP)
+
+> **Warning**: This project is currently under development and is not yet stable. Expect changes and potential breaking issues.
 
 ---
 
@@ -64,10 +66,9 @@ This will populate the `nodes/generated/` directory with Python modules correspo
 
 ### 5. Build a Workflow
 
-Create a Python script to define your workflow using the `Workflow` class and the generated node classes. See `example/workflow/simple.py` for a template.
+Create a Python script to define your workflow using the `Workflow` class and the generated node classes. See `cb2c_py/templates/workflow/text2image.py` for a template.
 
 ```python
-# example/workflow/simple.py
 from lib.workflow import Workflow
 from nodes.generated import KSampler, CheckpointLoaderSimple, EmptyLatentImage, VAEDecode, SaveImage
 
@@ -112,8 +113,4 @@ if __name__ == "__main__":
 
 ### 6. Run the Workflow
 
-Use the `example/runner/simple.py` script to execute the workflow against the ComfyUI API.
-
-```bash
-python -m cb2c_py.example.runner.simple
-```
+The workflow instance can be run using the `run` method. See `cb2c_py/templates/runner/text2image.py` for an example of how to use it.

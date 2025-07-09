@@ -18,11 +18,12 @@ from cb2c_py.nodes.generated import (
 )
 
 
-def simple_image_workflow(
+def text2image(
     pos_prompt: str,
     neg_prompt: str,
     seed: int,
     steps: int = 20,
+    ckpt_name: str = "v1-5-pruned-emaonly.safetensors"
 ):
     """
     Creates a standard text-to-image workflow object.
@@ -30,7 +31,7 @@ def simple_image_workflow(
     wf = Workflow()
 
     # 1. Load the model checkpoint
-    chkpt_loader_node = CheckpointLoaderSimple(ckpt_name="v1-5-pruned-emaonly.safetensors")
+    chkpt_loader_node = CheckpointLoaderSimple(ckpt_name)
     wf.add_node(chkpt_loader_node)
 
     # 2. Create an empty latent image
