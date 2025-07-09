@@ -1,14 +1,14 @@
 # ComfyBack2Code
 
-**ComfyBack2Code** is a framework for developers to build, manage, and execute ComfyUI workflows programmatically using Python. It provides a scriptable, version-controllable, and automatable alternative to the graphical user interface.
-
-The goal is to make **ComfyUI workflow creation 100% scriptable** in Python, from node definition to final execution.
-
 ---
 
 ## 🎯 Core Objective
 
-The primary goal of the `ComfyBack2Code` project is to enable developers to create, manage, and execute ComfyUI workflows programmatically using Python. This provides a scriptable, version-controllable, and automatable alternative to the graphical user interface.
+**ComfyBack2Code** is a little framework for developers to build, manage, and execute ComfyUI workflows programmatically using Python. It provides a scriptable, version-controllable, and automatable alternative to the graphical user interface.
+
+The goal is to make **ComfyUI workflow creation 100% scriptable** in Python, from node definition to final execution.
+
+It comes with a docker image but should theorically work on comfyui instance as it simply uses the HTTP/Websocket API.
 
 ---
 
@@ -17,8 +17,7 @@ The primary goal of the `ComfyBack2Code` project is to enable developers to crea
 The project is built around a few key components:
 
 - **Workflow Builder (`lib/workflow.py`):** A Python class-based interface for constructing a workflow graph. It allows users to add nodes and define connections between them.
-- **Dynamic Node Generation (`nodes/`):** Instead of manually defining each node, this project dynamically generates Python classes for all available ComfyUI nodes (including custom nodes) by querying the API (`/object_info` endpoint) of a running ComfyUI instance.
-  - `nodes/node_discovery.py`: Fetches the node definitions.
+- **Dynamic Node Generation (`nodes/`):** Instead of manually defining each node, this project dynamically generates Python classes for all available ComfyUI nodes (including custom nodes) by querying the API (`/object_info` endpoint) of a running ComfyUI instance. So you can have correct node types, parameters, and inputs/outputs.
   - `nodes/generate_nodes.py`: Creates the corresponding Python modules in `nodes/generated/`.
 - **Workflow Runner (`example/runner/simple.py`):** An example component responsible for taking a generated workflow JSON and executing it via the ComfyUI API (`/prompt` endpoint).
 - **Dependency Management (`custom-nodes.txt`):** A simple text file to manage custom node dependencies for your ComfyUI setup.
@@ -45,7 +44,7 @@ Add the git repository URLs of any custom nodes you need to `custom-nodes.txt`. 
 
 ### 3. Add Models
 
-To add models to the ComfyUI container, add them to the `models.csv` file at the root of the project. The format is `url,destination`. The `docker/download_models.py` script will download them into the correct directory:
+To add models to the ComfyUI container, add them to the `models.csv` file at the root of the project. The format is `url,destination`. The `docker/download_models.py` script will then download them into the correct directory:
 
 ```bash
 python docker/download_models.py

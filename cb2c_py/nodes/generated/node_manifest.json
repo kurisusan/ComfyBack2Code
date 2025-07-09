@@ -1,0 +1,6931 @@
+{
+    "KSampler": {
+        "class_name": "KSampler",
+        "module_name": "ksampler",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "CheckpointLoaderSimple": {
+        "class_name": "CheckpointLoaderSimple",
+        "module_name": "checkpointloadersimple",
+        "output_names": [
+            "model",
+            "clip",
+            "vae"
+        ]
+    },
+    "CLIPTextEncode": {
+        "class_name": "CLIPTextEncode",
+        "module_name": "cliptextencode",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "CLIPSetLastLayer": {
+        "class_name": "CLIPSetLastLayer",
+        "module_name": "clipsetlastlayer",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "VAEDecode": {
+        "class_name": "VAEDecode",
+        "module_name": "vaedecode",
+        "output_names": [
+            "image"
+        ]
+    },
+    "VAEEncode": {
+        "class_name": "VAEEncode",
+        "module_name": "vaeencode",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "VAEEncodeForInpaint": {
+        "class_name": "VAEEncodeForInpaint",
+        "module_name": "vaeencodeforinpaint",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "VAELoader": {
+        "class_name": "VAELoader",
+        "module_name": "vaeloader",
+        "output_names": [
+            "vae"
+        ]
+    },
+    "EmptyLatentImage": {
+        "class_name": "EmptyLatentImage",
+        "module_name": "emptylatentimage",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "LatentUpscale": {
+        "class_name": "LatentUpscale",
+        "module_name": "latentupscale",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "LatentUpscaleBy": {
+        "class_name": "LatentUpscaleBy",
+        "module_name": "latentupscaleby",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "LatentFromBatch": {
+        "class_name": "LatentFromBatch",
+        "module_name": "latentfrombatch",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "RepeatLatentBatch": {
+        "class_name": "RepeatLatentBatch",
+        "module_name": "repeatlatentbatch",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "SaveImage": {
+        "class_name": "SaveImage",
+        "module_name": "saveimage",
+        "output_names": []
+    },
+    "PreviewImage": {
+        "class_name": "PreviewImage",
+        "module_name": "previewimage",
+        "output_names": []
+    },
+    "LoadImage": {
+        "class_name": "LoadImage",
+        "module_name": "loadimage",
+        "output_names": [
+            "image",
+            "mask"
+        ]
+    },
+    "LoadImageMask": {
+        "class_name": "LoadImageMask",
+        "module_name": "loadimagemask",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "LoadImageOutput": {
+        "class_name": "LoadImageOutput",
+        "module_name": "loadimageoutput",
+        "output_names": [
+            "image",
+            "mask"
+        ]
+    },
+    "ImageScale": {
+        "class_name": "ImageScale",
+        "module_name": "imagescale",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageScaleBy": {
+        "class_name": "ImageScaleBy",
+        "module_name": "imagescaleby",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageInvert": {
+        "class_name": "ImageInvert",
+        "module_name": "imageinvert",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageBatch": {
+        "class_name": "ImageBatch",
+        "module_name": "imagebatch",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImagePadForOutpaint": {
+        "class_name": "ImagePadForOutpaint",
+        "module_name": "imagepadforoutpaint",
+        "output_names": [
+            "image",
+            "mask"
+        ]
+    },
+    "EmptyImage": {
+        "class_name": "EmptyImage",
+        "module_name": "emptyimage",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ConditioningAverage": {
+        "class_name": "ConditioningAverage",
+        "module_name": "conditioningaverage",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "ConditioningCombine": {
+        "class_name": "ConditioningCombine",
+        "module_name": "conditioningcombine",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "ConditioningConcat": {
+        "class_name": "ConditioningConcat",
+        "module_name": "conditioningconcat",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "ConditioningSetArea": {
+        "class_name": "ConditioningSetArea",
+        "module_name": "conditioningsetarea",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "ConditioningSetAreaPercentage": {
+        "class_name": "ConditioningSetAreaPercentage",
+        "module_name": "conditioningsetareapercentage",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "ConditioningSetAreaStrength": {
+        "class_name": "ConditioningSetAreaStrength",
+        "module_name": "conditioningsetareastrength",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "ConditioningSetMask": {
+        "class_name": "ConditioningSetMask",
+        "module_name": "conditioningsetmask",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "KSamplerAdvanced": {
+        "class_name": "KSamplerAdvanced",
+        "module_name": "ksampleradvanced",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "SetLatentNoiseMask": {
+        "class_name": "SetLatentNoiseMask",
+        "module_name": "setlatentnoisemask",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "LatentComposite": {
+        "class_name": "LatentComposite",
+        "module_name": "latentcomposite",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "LatentBlend": {
+        "class_name": "LatentBlend",
+        "module_name": "latentblend",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "LatentRotate": {
+        "class_name": "LatentRotate",
+        "module_name": "latentrotate",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "LatentFlip": {
+        "class_name": "LatentFlip",
+        "module_name": "latentflip",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "LatentCrop": {
+        "class_name": "LatentCrop",
+        "module_name": "latentcrop",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "LoraLoader": {
+        "class_name": "LoraLoader",
+        "module_name": "loraloader",
+        "output_names": [
+            "model",
+            "clip"
+        ]
+    },
+    "CLIPLoader": {
+        "class_name": "CLIPLoader",
+        "module_name": "cliploader",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "UNETLoader": {
+        "class_name": "UNETLoader",
+        "module_name": "unetloader",
+        "output_names": [
+            "model"
+        ]
+    },
+    "DualCLIPLoader": {
+        "class_name": "DualCLIPLoader",
+        "module_name": "dualcliploader",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "CLIPVisionEncode": {
+        "class_name": "CLIPVisionEncode",
+        "module_name": "clipvisionencode",
+        "output_names": [
+            "clip_vision_output"
+        ]
+    },
+    "StyleModelApply": {
+        "class_name": "StyleModelApply",
+        "module_name": "stylemodelapply",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "unCLIPConditioning": {
+        "class_name": "unCLIPConditioning",
+        "module_name": "unclipconditioning",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "ControlNetApply": {
+        "class_name": "ControlNetApply",
+        "module_name": "controlnetapply",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "ControlNetApplyAdvanced": {
+        "class_name": "ControlNetApplyAdvanced",
+        "module_name": "controlnetapplyadvanced",
+        "output_names": [
+            "positive",
+            "negative"
+        ]
+    },
+    "ControlNetLoader": {
+        "class_name": "ControlNetLoader",
+        "module_name": "controlnetloader",
+        "output_names": [
+            "control_net"
+        ]
+    },
+    "DiffControlNetLoader": {
+        "class_name": "DiffControlNetLoader",
+        "module_name": "diffcontrolnetloader",
+        "output_names": [
+            "control_net"
+        ]
+    },
+    "StyleModelLoader": {
+        "class_name": "StyleModelLoader",
+        "module_name": "stylemodelloader",
+        "output_names": [
+            "style_model"
+        ]
+    },
+    "CLIPVisionLoader": {
+        "class_name": "CLIPVisionLoader",
+        "module_name": "clipvisionloader",
+        "output_names": [
+            "clip_vision"
+        ]
+    },
+    "VAEDecodeTiled": {
+        "class_name": "VAEDecodeTiled",
+        "module_name": "vaedecodetiled",
+        "output_names": [
+            "image"
+        ]
+    },
+    "VAEEncodeTiled": {
+        "class_name": "VAEEncodeTiled",
+        "module_name": "vaeencodetiled",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "unCLIPCheckpointLoader": {
+        "class_name": "unCLIPCheckpointLoader",
+        "module_name": "unclipcheckpointloader",
+        "output_names": [
+            "model",
+            "clip",
+            "vae",
+            "clip_vision"
+        ]
+    },
+    "GLIGENLoader": {
+        "class_name": "GLIGENLoader",
+        "module_name": "gligenloader",
+        "output_names": [
+            "gligen"
+        ]
+    },
+    "GLIGENTextBoxApply": {
+        "class_name": "GLIGENTextBoxApply",
+        "module_name": "gligentextboxapply",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "InpaintModelConditioning": {
+        "class_name": "InpaintModelConditioning",
+        "module_name": "inpaintmodelconditioning",
+        "output_names": [
+            "positive",
+            "negative",
+            "latent"
+        ]
+    },
+    "CheckpointLoader": {
+        "class_name": "CheckpointLoader",
+        "module_name": "checkpointloader",
+        "output_names": [
+            "model",
+            "clip",
+            "vae"
+        ]
+    },
+    "DiffusersLoader": {
+        "class_name": "DiffusersLoader",
+        "module_name": "diffusersloader",
+        "output_names": [
+            "model",
+            "clip",
+            "vae"
+        ]
+    },
+    "LoadLatent": {
+        "class_name": "LoadLatent",
+        "module_name": "loadlatent",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "SaveLatent": {
+        "class_name": "SaveLatent",
+        "module_name": "savelatent",
+        "output_names": []
+    },
+    "ConditioningZeroOut": {
+        "class_name": "ConditioningZeroOut",
+        "module_name": "conditioningzeroout",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "ConditioningSetTimestepRange": {
+        "class_name": "ConditioningSetTimestepRange",
+        "module_name": "conditioningsettimesteprange",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "LoraLoaderModelOnly": {
+        "class_name": "LoraLoaderModelOnly",
+        "module_name": "loraloadermodelonly",
+        "output_names": [
+            "model"
+        ]
+    },
+    "LatentAdd": {
+        "class_name": "LatentAdd",
+        "module_name": "latentadd",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "LatentSubtract": {
+        "class_name": "LatentSubtract",
+        "module_name": "latentsubtract",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "LatentMultiply": {
+        "class_name": "LatentMultiply",
+        "module_name": "latentmultiply",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "LatentInterpolate": {
+        "class_name": "LatentInterpolate",
+        "module_name": "latentinterpolate",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "LatentBatch": {
+        "class_name": "LatentBatch",
+        "module_name": "latentbatch",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "LatentBatchSeedBehavior": {
+        "class_name": "LatentBatchSeedBehavior",
+        "module_name": "latentbatchseedbehavior",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "LatentApplyOperation": {
+        "class_name": "LatentApplyOperation",
+        "module_name": "latentapplyoperation",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "LatentApplyOperationCFG": {
+        "class_name": "LatentApplyOperationCFG",
+        "module_name": "latentapplyoperationcfg",
+        "output_names": [
+            "model"
+        ]
+    },
+    "LatentOperationTonemapReinhard": {
+        "class_name": "LatentOperationTonemapReinhard",
+        "module_name": "latentoperationtonemapreinhard",
+        "output_names": [
+            "latent_operation"
+        ]
+    },
+    "LatentOperationSharpen": {
+        "class_name": "LatentOperationSharpen",
+        "module_name": "latentoperationsharpen",
+        "output_names": [
+            "latent_operation"
+        ]
+    },
+    "HypernetworkLoader": {
+        "class_name": "HypernetworkLoader",
+        "module_name": "hypernetworkloader",
+        "output_names": [
+            "model"
+        ]
+    },
+    "UpscaleModelLoader": {
+        "class_name": "UpscaleModelLoader",
+        "module_name": "upscalemodelloader",
+        "output_names": [
+            "upscale_model"
+        ]
+    },
+    "ImageUpscaleWithModel": {
+        "class_name": "ImageUpscaleWithModel",
+        "module_name": "imageupscalewithmodel",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageBlend": {
+        "class_name": "ImageBlend",
+        "module_name": "imageblend",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageBlur": {
+        "class_name": "ImageBlur",
+        "module_name": "imageblur",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageQuantize": {
+        "class_name": "ImageQuantize",
+        "module_name": "imagequantize",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageSharpen": {
+        "class_name": "ImageSharpen",
+        "module_name": "imagesharpen",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageScaleToTotalPixels": {
+        "class_name": "ImageScaleToTotalPixels",
+        "module_name": "imagescaletototalpixels",
+        "output_names": [
+            "image"
+        ]
+    },
+    "LatentCompositeMasked": {
+        "class_name": "LatentCompositeMasked",
+        "module_name": "latentcompositemasked",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "ImageCompositeMasked": {
+        "class_name": "ImageCompositeMasked",
+        "module_name": "imagecompositemasked",
+        "output_names": [
+            "image"
+        ]
+    },
+    "MaskToImage": {
+        "class_name": "MaskToImage",
+        "module_name": "masktoimage",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageToMask": {
+        "class_name": "ImageToMask",
+        "module_name": "imagetomask",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "ImageColorToMask": {
+        "class_name": "ImageColorToMask",
+        "module_name": "imagecolortomask",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "SolidMask": {
+        "class_name": "SolidMask",
+        "module_name": "solidmask",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "InvertMask": {
+        "class_name": "InvertMask",
+        "module_name": "invertmask",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "CropMask": {
+        "class_name": "CropMask",
+        "module_name": "cropmask",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "MaskComposite": {
+        "class_name": "MaskComposite",
+        "module_name": "maskcomposite",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "FeatherMask": {
+        "class_name": "FeatherMask",
+        "module_name": "feathermask",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "GrowMask": {
+        "class_name": "GrowMask",
+        "module_name": "growmask",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "ThresholdMask": {
+        "class_name": "ThresholdMask",
+        "module_name": "thresholdmask",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "MaskPreview": {
+        "class_name": "MaskPreview",
+        "module_name": "maskpreview",
+        "output_names": []
+    },
+    "PorterDuffImageComposite": {
+        "class_name": "PorterDuffImageComposite",
+        "module_name": "porterduffimagecomposite",
+        "output_names": [
+            "image",
+            "mask"
+        ]
+    },
+    "SplitImageWithAlpha": {
+        "class_name": "SplitImageWithAlpha",
+        "module_name": "splitimagewithalpha",
+        "output_names": [
+            "image",
+            "mask"
+        ]
+    },
+    "JoinImageWithAlpha": {
+        "class_name": "JoinImageWithAlpha",
+        "module_name": "joinimagewithalpha",
+        "output_names": [
+            "image"
+        ]
+    },
+    "RebatchLatents": {
+        "class_name": "RebatchLatents",
+        "module_name": "rebatchlatents",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "RebatchImages": {
+        "class_name": "RebatchImages",
+        "module_name": "rebatchimages",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ModelMergeSimple": {
+        "class_name": "ModelMergeSimple",
+        "module_name": "modelmergesimple",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ModelMergeBlocks": {
+        "class_name": "ModelMergeBlocks",
+        "module_name": "modelmergeblocks",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ModelMergeSubtract": {
+        "class_name": "ModelMergeSubtract",
+        "module_name": "modelmergesubtract",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ModelMergeAdd": {
+        "class_name": "ModelMergeAdd",
+        "module_name": "modelmergeadd",
+        "output_names": [
+            "model"
+        ]
+    },
+    "CheckpointSave": {
+        "class_name": "CheckpointSave",
+        "module_name": "checkpointsave",
+        "output_names": []
+    },
+    "CLIPMergeSimple": {
+        "class_name": "CLIPMergeSimple",
+        "module_name": "clipmergesimple",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "CLIPMergeSubtract": {
+        "class_name": "CLIPMergeSubtract",
+        "module_name": "clipmergesubtract",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "CLIPMergeAdd": {
+        "class_name": "CLIPMergeAdd",
+        "module_name": "clipmergeadd",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "CLIPSave": {
+        "class_name": "CLIPSave",
+        "module_name": "clipsave",
+        "output_names": []
+    },
+    "VAESave": {
+        "class_name": "VAESave",
+        "module_name": "vaesave",
+        "output_names": []
+    },
+    "ModelSave": {
+        "class_name": "ModelSave",
+        "module_name": "modelsave",
+        "output_names": []
+    },
+    "TomePatchModel": {
+        "class_name": "TomePatchModel",
+        "module_name": "tomepatchmodel",
+        "output_names": [
+            "model"
+        ]
+    },
+    "CLIPTextEncodeSDXLRefiner": {
+        "class_name": "CLIPTextEncodeSDXLRefiner",
+        "module_name": "cliptextencodesdxlrefiner",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "CLIPTextEncodeSDXL": {
+        "class_name": "CLIPTextEncodeSDXL",
+        "module_name": "cliptextencodesdxl",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "Canny": {
+        "class_name": "Canny",
+        "module_name": "canny",
+        "output_names": [
+            "image"
+        ]
+    },
+    "FreeU": {
+        "class_name": "FreeU",
+        "module_name": "freeu",
+        "output_names": [
+            "model"
+        ]
+    },
+    "FreeU_V2": {
+        "class_name": "FreeU_V2",
+        "module_name": "freeu_v2",
+        "output_names": [
+            "model"
+        ]
+    },
+    "SamplerCustom": {
+        "class_name": "SamplerCustom",
+        "module_name": "samplercustom",
+        "output_names": [
+            "output",
+            "denoised_output"
+        ]
+    },
+    "BasicScheduler": {
+        "class_name": "BasicScheduler",
+        "module_name": "basicscheduler",
+        "output_names": [
+            "sigmas"
+        ]
+    },
+    "KarrasScheduler": {
+        "class_name": "KarrasScheduler",
+        "module_name": "karrasscheduler",
+        "output_names": [
+            "sigmas"
+        ]
+    },
+    "ExponentialScheduler": {
+        "class_name": "ExponentialScheduler",
+        "module_name": "exponentialscheduler",
+        "output_names": [
+            "sigmas"
+        ]
+    },
+    "PolyexponentialScheduler": {
+        "class_name": "PolyexponentialScheduler",
+        "module_name": "polyexponentialscheduler",
+        "output_names": [
+            "sigmas"
+        ]
+    },
+    "LaplaceScheduler": {
+        "class_name": "LaplaceScheduler",
+        "module_name": "laplacescheduler",
+        "output_names": [
+            "sigmas"
+        ]
+    },
+    "VPScheduler": {
+        "class_name": "VPScheduler",
+        "module_name": "vpscheduler",
+        "output_names": [
+            "sigmas"
+        ]
+    },
+    "BetaSamplingScheduler": {
+        "class_name": "BetaSamplingScheduler",
+        "module_name": "betasamplingscheduler",
+        "output_names": [
+            "sigmas"
+        ]
+    },
+    "SDTurboScheduler": {
+        "class_name": "SDTurboScheduler",
+        "module_name": "sdturboscheduler",
+        "output_names": [
+            "sigmas"
+        ]
+    },
+    "KSamplerSelect": {
+        "class_name": "KSamplerSelect",
+        "module_name": "ksamplerselect",
+        "output_names": [
+            "sampler"
+        ]
+    },
+    "SamplerEulerAncestral": {
+        "class_name": "SamplerEulerAncestral",
+        "module_name": "samplereulerancestral",
+        "output_names": [
+            "sampler"
+        ]
+    },
+    "SamplerEulerAncestralCFGPP": {
+        "class_name": "SamplerEulerAncestralCFGPP",
+        "module_name": "samplereulerancestralcfgpp",
+        "output_names": [
+            "sampler"
+        ]
+    },
+    "SamplerLMS": {
+        "class_name": "SamplerLMS",
+        "module_name": "samplerlms",
+        "output_names": [
+            "sampler"
+        ]
+    },
+    "SamplerDPMPP_3M_SDE": {
+        "class_name": "SamplerDPMPP_3M_SDE",
+        "module_name": "samplerdpmpp_3m_sde",
+        "output_names": [
+            "sampler"
+        ]
+    },
+    "SamplerDPMPP_2M_SDE": {
+        "class_name": "SamplerDPMPP_2M_SDE",
+        "module_name": "samplerdpmpp_2m_sde",
+        "output_names": [
+            "sampler"
+        ]
+    },
+    "SamplerDPMPP_SDE": {
+        "class_name": "SamplerDPMPP_SDE",
+        "module_name": "samplerdpmpp_sde",
+        "output_names": [
+            "sampler"
+        ]
+    },
+    "SamplerDPMPP_2S_Ancestral": {
+        "class_name": "SamplerDPMPP_2S_Ancestral",
+        "module_name": "samplerdpmpp_2s_ancestral",
+        "output_names": [
+            "sampler"
+        ]
+    },
+    "SamplerDPMAdaptative": {
+        "class_name": "SamplerDPMAdaptative",
+        "module_name": "samplerdpmadaptative",
+        "output_names": [
+            "sampler"
+        ]
+    },
+    "SamplerER_SDE": {
+        "class_name": "SamplerER_SDE",
+        "module_name": "samplerer_sde",
+        "output_names": [
+            "sampler"
+        ]
+    },
+    "SplitSigmas": {
+        "class_name": "SplitSigmas",
+        "module_name": "splitsigmas",
+        "output_names": [
+            "high_sigmas",
+            "low_sigmas"
+        ]
+    },
+    "SplitSigmasDenoise": {
+        "class_name": "SplitSigmasDenoise",
+        "module_name": "splitsigmasdenoise",
+        "output_names": [
+            "high_sigmas",
+            "low_sigmas"
+        ]
+    },
+    "FlipSigmas": {
+        "class_name": "FlipSigmas",
+        "module_name": "flipsigmas",
+        "output_names": [
+            "sigmas"
+        ]
+    },
+    "SetFirstSigma": {
+        "class_name": "SetFirstSigma",
+        "module_name": "setfirstsigma",
+        "output_names": [
+            "sigmas"
+        ]
+    },
+    "ExtendIntermediateSigmas": {
+        "class_name": "ExtendIntermediateSigmas",
+        "module_name": "extendintermediatesigmas",
+        "output_names": [
+            "sigmas"
+        ]
+    },
+    "CFGGuider": {
+        "class_name": "CFGGuider",
+        "module_name": "cfgguider",
+        "output_names": [
+            "guider"
+        ]
+    },
+    "DualCFGGuider": {
+        "class_name": "DualCFGGuider",
+        "module_name": "dualcfgguider",
+        "output_names": [
+            "guider"
+        ]
+    },
+    "BasicGuider": {
+        "class_name": "BasicGuider",
+        "module_name": "basicguider",
+        "output_names": [
+            "guider"
+        ]
+    },
+    "RandomNoise": {
+        "class_name": "RandomNoise",
+        "module_name": "randomnoise",
+        "output_names": [
+            "noise"
+        ]
+    },
+    "DisableNoise": {
+        "class_name": "DisableNoise",
+        "module_name": "disablenoise",
+        "output_names": [
+            "noise"
+        ]
+    },
+    "AddNoise": {
+        "class_name": "AddNoise",
+        "module_name": "addnoise",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "SamplerCustomAdvanced": {
+        "class_name": "SamplerCustomAdvanced",
+        "module_name": "samplercustomadvanced",
+        "output_names": [
+            "output",
+            "denoised_output"
+        ]
+    },
+    "HyperTile": {
+        "class_name": "HyperTile",
+        "module_name": "hypertile",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ModelSamplingDiscrete": {
+        "class_name": "ModelSamplingDiscrete",
+        "module_name": "modelsamplingdiscrete",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ModelSamplingContinuousEDM": {
+        "class_name": "ModelSamplingContinuousEDM",
+        "module_name": "modelsamplingcontinuousedm",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ModelSamplingContinuousV": {
+        "class_name": "ModelSamplingContinuousV",
+        "module_name": "modelsamplingcontinuousv",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ModelSamplingStableCascade": {
+        "class_name": "ModelSamplingStableCascade",
+        "module_name": "modelsamplingstablecascade",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ModelSamplingSD3": {
+        "class_name": "ModelSamplingSD3",
+        "module_name": "modelsamplingsd3",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ModelSamplingAuraFlow": {
+        "class_name": "ModelSamplingAuraFlow",
+        "module_name": "modelsamplingauraflow",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ModelSamplingFlux": {
+        "class_name": "ModelSamplingFlux",
+        "module_name": "modelsamplingflux",
+        "output_names": [
+            "model"
+        ]
+    },
+    "RescaleCFG": {
+        "class_name": "RescaleCFG",
+        "module_name": "rescalecfg",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ModelComputeDtype": {
+        "class_name": "ModelComputeDtype",
+        "module_name": "modelcomputedtype",
+        "output_names": [
+            "model"
+        ]
+    },
+    "PatchModelAddDownscale": {
+        "class_name": "PatchModelAddDownscale",
+        "module_name": "patchmodeladddownscale",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ImageCrop": {
+        "class_name": "ImageCrop",
+        "module_name": "imagecrop",
+        "output_names": [
+            "image"
+        ]
+    },
+    "RepeatImageBatch": {
+        "class_name": "RepeatImageBatch",
+        "module_name": "repeatimagebatch",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageFromBatch": {
+        "class_name": "ImageFromBatch",
+        "module_name": "imagefrombatch",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageAddNoise": {
+        "class_name": "ImageAddNoise",
+        "module_name": "imageaddnoise",
+        "output_names": [
+            "image"
+        ]
+    },
+    "SaveAnimatedWEBP": {
+        "class_name": "SaveAnimatedWEBP",
+        "module_name": "saveanimatedwebp",
+        "output_names": []
+    },
+    "SaveAnimatedPNG": {
+        "class_name": "SaveAnimatedPNG",
+        "module_name": "saveanimatedpng",
+        "output_names": []
+    },
+    "SaveSVGNode": {
+        "class_name": "SaveSVGNode",
+        "module_name": "savesvgnode",
+        "output_names": []
+    },
+    "ImageStitch": {
+        "class_name": "ImageStitch",
+        "module_name": "imagestitch",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ResizeAndPadImage": {
+        "class_name": "ResizeAndPadImage",
+        "module_name": "resizeandpadimage",
+        "output_names": [
+            "image"
+        ]
+    },
+    "GetImageSize": {
+        "class_name": "GetImageSize",
+        "module_name": "getimagesize",
+        "output_names": [
+            "width",
+            "height",
+            "batch_size"
+        ]
+    },
+    "ImageRotate": {
+        "class_name": "ImageRotate",
+        "module_name": "imagerotate",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageFlip": {
+        "class_name": "ImageFlip",
+        "module_name": "imageflip",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageOnlyCheckpointLoader": {
+        "class_name": "ImageOnlyCheckpointLoader",
+        "module_name": "imageonlycheckpointloader",
+        "output_names": [
+            "model",
+            "clip_vision",
+            "vae"
+        ]
+    },
+    "SVD_img2vid_Conditioning": {
+        "class_name": "SVD_img2vid_Conditioning",
+        "module_name": "svd_img2vid_conditioning",
+        "output_names": [
+            "positive",
+            "negative",
+            "latent"
+        ]
+    },
+    "VideoLinearCFGGuidance": {
+        "class_name": "VideoLinearCFGGuidance",
+        "module_name": "videolinearcfgguidance",
+        "output_names": [
+            "model"
+        ]
+    },
+    "VideoTriangleCFGGuidance": {
+        "class_name": "VideoTriangleCFGGuidance",
+        "module_name": "videotrianglecfgguidance",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ImageOnlyCheckpointSave": {
+        "class_name": "ImageOnlyCheckpointSave",
+        "module_name": "imageonlycheckpointsave",
+        "output_names": []
+    },
+    "ConditioningSetAreaPercentageVideo": {
+        "class_name": "ConditioningSetAreaPercentageVideo",
+        "module_name": "conditioningsetareapercentagevideo",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "TrainLoraNode": {
+        "class_name": "TrainLoraNode",
+        "module_name": "trainloranode",
+        "output_names": [
+            "model_with_lora",
+            "lora",
+            "loss",
+            "steps"
+        ]
+    },
+    "SaveLoRANode": {
+        "class_name": "SaveLoRANode",
+        "module_name": "saveloranode",
+        "output_names": []
+    },
+    "LoraModelLoader": {
+        "class_name": "LoraModelLoader",
+        "module_name": "loramodelloader",
+        "output_names": [
+            "model"
+        ]
+    },
+    "LoadImageSetFromFolderNode": {
+        "class_name": "LoadImageSetFromFolderNode",
+        "module_name": "loadimagesetfromfoldernode",
+        "output_names": [
+            "image"
+        ]
+    },
+    "LossGraphNode": {
+        "class_name": "LossGraphNode",
+        "module_name": "lossgraphnode",
+        "output_names": []
+    },
+    "SelfAttentionGuidance": {
+        "class_name": "SelfAttentionGuidance",
+        "module_name": "selfattentionguidance",
+        "output_names": [
+            "model"
+        ]
+    },
+    "PerpNeg": {
+        "class_name": "PerpNeg",
+        "module_name": "perpneg",
+        "output_names": [
+            "model"
+        ]
+    },
+    "PerpNegGuider": {
+        "class_name": "PerpNegGuider",
+        "module_name": "perpnegguider",
+        "output_names": [
+            "guider"
+        ]
+    },
+    "StableZero123_Conditioning": {
+        "class_name": "StableZero123_Conditioning",
+        "module_name": "stablezero123_conditioning",
+        "output_names": [
+            "positive",
+            "negative",
+            "latent"
+        ]
+    },
+    "StableZero123_Conditioning_Batched": {
+        "class_name": "StableZero123_Conditioning_Batched",
+        "module_name": "stablezero123_conditioning_batched",
+        "output_names": [
+            "positive",
+            "negative",
+            "latent"
+        ]
+    },
+    "SV3D_Conditioning": {
+        "class_name": "SV3D_Conditioning",
+        "module_name": "sv3d_conditioning",
+        "output_names": [
+            "positive",
+            "negative",
+            "latent"
+        ]
+    },
+    "SD_4XUpscale_Conditioning": {
+        "class_name": "SD_4XUpscale_Conditioning",
+        "module_name": "sd_4xupscale_conditioning",
+        "output_names": [
+            "positive",
+            "negative",
+            "latent"
+        ]
+    },
+    "PhotoMakerLoader": {
+        "class_name": "PhotoMakerLoader",
+        "module_name": "photomakerloader",
+        "output_names": [
+            "photomaker"
+        ]
+    },
+    "PhotoMakerEncode": {
+        "class_name": "PhotoMakerEncode",
+        "module_name": "photomakerencode",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "CLIPTextEncodePixArtAlpha": {
+        "class_name": "CLIPTextEncodePixArtAlpha",
+        "module_name": "cliptextencodepixartalpha",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "CLIPTextEncodeControlnet": {
+        "class_name": "CLIPTextEncodeControlnet",
+        "module_name": "cliptextencodecontrolnet",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "T5TokenizerOptions": {
+        "class_name": "T5TokenizerOptions",
+        "module_name": "t5tokenizeroptions",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "Morphology": {
+        "class_name": "Morphology",
+        "module_name": "morphology",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageRGBToYUV": {
+        "class_name": "ImageRGBToYUV",
+        "module_name": "imagergbtoyuv",
+        "output_names": [
+            "y",
+            "u",
+            "v"
+        ]
+    },
+    "ImageYUVToRGB": {
+        "class_name": "ImageYUVToRGB",
+        "module_name": "imageyuvtorgb",
+        "output_names": [
+            "image"
+        ]
+    },
+    "StableCascade_EmptyLatentImage": {
+        "class_name": "StableCascade_EmptyLatentImage",
+        "module_name": "stablecascade_emptylatentimage",
+        "output_names": [
+            "stage_c",
+            "stage_b"
+        ]
+    },
+    "StableCascade_StageB_Conditioning": {
+        "class_name": "StableCascade_StageB_Conditioning",
+        "module_name": "stablecascade_stageb_conditioning",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "StableCascade_StageC_VAEEncode": {
+        "class_name": "StableCascade_StageC_VAEEncode",
+        "module_name": "stablecascade_stagec_vaeencode",
+        "output_names": [
+            "stage_c",
+            "stage_b"
+        ]
+    },
+    "StableCascade_SuperResolutionControlnet": {
+        "class_name": "StableCascade_SuperResolutionControlnet",
+        "module_name": "stablecascade_superresolutioncontrolnet",
+        "output_names": [
+            "controlnet_input",
+            "stage_c",
+            "stage_b"
+        ]
+    },
+    "DifferentialDiffusion": {
+        "class_name": "DifferentialDiffusion",
+        "module_name": "differentialdiffusion",
+        "output_names": [
+            "model"
+        ]
+    },
+    "InstructPixToPixConditioning": {
+        "class_name": "InstructPixToPixConditioning",
+        "module_name": "instructpixtopixconditioning",
+        "output_names": [
+            "positive",
+            "negative",
+            "latent"
+        ]
+    },
+    "ModelMergeSD1": {
+        "class_name": "ModelMergeSD1",
+        "module_name": "modelmergesd1",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ModelMergeSD2": {
+        "class_name": "ModelMergeSD2",
+        "module_name": "modelmergesd2",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ModelMergeSDXL": {
+        "class_name": "ModelMergeSDXL",
+        "module_name": "modelmergesdxl",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ModelMergeSD3_2B": {
+        "class_name": "ModelMergeSD3_2B",
+        "module_name": "modelmergesd3_2b",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ModelMergeAuraflow": {
+        "class_name": "ModelMergeAuraflow",
+        "module_name": "modelmergeauraflow",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ModelMergeFlux1": {
+        "class_name": "ModelMergeFlux1",
+        "module_name": "modelmergeflux1",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ModelMergeSD35_Large": {
+        "class_name": "ModelMergeSD35_Large",
+        "module_name": "modelmergesd35_large",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ModelMergeMochiPreview": {
+        "class_name": "ModelMergeMochiPreview",
+        "module_name": "modelmergemochipreview",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ModelMergeLTXV": {
+        "class_name": "ModelMergeLTXV",
+        "module_name": "modelmergeltxv",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ModelMergeCosmos7B": {
+        "class_name": "ModelMergeCosmos7B",
+        "module_name": "modelmergecosmos7b",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ModelMergeCosmos14B": {
+        "class_name": "ModelMergeCosmos14B",
+        "module_name": "modelmergecosmos14b",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ModelMergeWAN2_1": {
+        "class_name": "ModelMergeWAN2_1",
+        "module_name": "modelmergewan2_1",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ModelMergeCosmosPredict2_2B": {
+        "class_name": "ModelMergeCosmosPredict2_2B",
+        "module_name": "modelmergecosmospredict2_2b",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ModelMergeCosmosPredict2_14B": {
+        "class_name": "ModelMergeCosmosPredict2_14B",
+        "module_name": "modelmergecosmospredict2_14b",
+        "output_names": [
+            "model"
+        ]
+    },
+    "PerturbedAttentionGuidance": {
+        "class_name": "PerturbedAttentionGuidance",
+        "module_name": "perturbedattentionguidance",
+        "output_names": [
+            "model"
+        ]
+    },
+    "AlignYourStepsScheduler": {
+        "class_name": "AlignYourStepsScheduler",
+        "module_name": "alignyourstepsscheduler",
+        "output_names": [
+            "sigmas"
+        ]
+    },
+    "UNetSelfAttentionMultiply": {
+        "class_name": "UNetSelfAttentionMultiply",
+        "module_name": "unetselfattentionmultiply",
+        "output_names": [
+            "model"
+        ]
+    },
+    "UNetCrossAttentionMultiply": {
+        "class_name": "UNetCrossAttentionMultiply",
+        "module_name": "unetcrossattentionmultiply",
+        "output_names": [
+            "model"
+        ]
+    },
+    "CLIPAttentionMultiply": {
+        "class_name": "CLIPAttentionMultiply",
+        "module_name": "clipattentionmultiply",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "UNetTemporalAttentionMultiply": {
+        "class_name": "UNetTemporalAttentionMultiply",
+        "module_name": "unettemporalattentionmultiply",
+        "output_names": [
+            "model"
+        ]
+    },
+    "SamplerLCMUpscale": {
+        "class_name": "SamplerLCMUpscale",
+        "module_name": "samplerlcmupscale",
+        "output_names": [
+            "sampler"
+        ]
+    },
+    "SamplerEulerCFGpp": {
+        "class_name": "SamplerEulerCFGpp",
+        "module_name": "samplereulercfgpp",
+        "output_names": [
+            "sampler"
+        ]
+    },
+    "WebcamCapture": {
+        "class_name": "WebcamCapture",
+        "module_name": "webcamcapture",
+        "output_names": [
+            "image"
+        ]
+    },
+    "EmptyLatentAudio": {
+        "class_name": "EmptyLatentAudio",
+        "module_name": "emptylatentaudio",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "VAEEncodeAudio": {
+        "class_name": "VAEEncodeAudio",
+        "module_name": "vaeencodeaudio",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "VAEDecodeAudio": {
+        "class_name": "VAEDecodeAudio",
+        "module_name": "vaedecodeaudio",
+        "output_names": [
+            "audio"
+        ]
+    },
+    "SaveAudio": {
+        "class_name": "SaveAudio",
+        "module_name": "saveaudio",
+        "output_names": []
+    },
+    "SaveAudioMP3": {
+        "class_name": "SaveAudioMP3",
+        "module_name": "saveaudiomp3",
+        "output_names": []
+    },
+    "SaveAudioOpus": {
+        "class_name": "SaveAudioOpus",
+        "module_name": "saveaudioopus",
+        "output_names": []
+    },
+    "LoadAudio": {
+        "class_name": "LoadAudio",
+        "module_name": "loadaudio",
+        "output_names": [
+            "audio"
+        ]
+    },
+    "PreviewAudio": {
+        "class_name": "PreviewAudio",
+        "module_name": "previewaudio",
+        "output_names": []
+    },
+    "ConditioningStableAudio": {
+        "class_name": "ConditioningStableAudio",
+        "module_name": "conditioningstableaudio",
+        "output_names": [
+            "positive",
+            "negative"
+        ]
+    },
+    "TripleCLIPLoader": {
+        "class_name": "TripleCLIPLoader",
+        "module_name": "triplecliploader",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "EmptySD3LatentImage": {
+        "class_name": "EmptySD3LatentImage",
+        "module_name": "emptysd3latentimage",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "CLIPTextEncodeSD3": {
+        "class_name": "CLIPTextEncodeSD3",
+        "module_name": "cliptextencodesd3",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "ControlNetApplySD3": {
+        "class_name": "ControlNetApplySD3",
+        "module_name": "controlnetapplysd3",
+        "output_names": [
+            "positive",
+            "negative"
+        ]
+    },
+    "SkipLayerGuidanceSD3": {
+        "class_name": "SkipLayerGuidanceSD3",
+        "module_name": "skiplayerguidancesd3",
+        "output_names": [
+            "model"
+        ]
+    },
+    "GITSScheduler": {
+        "class_name": "GITSScheduler",
+        "module_name": "gitsscheduler",
+        "output_names": [
+            "sigmas"
+        ]
+    },
+    "SetUnionControlNetType": {
+        "class_name": "SetUnionControlNetType",
+        "module_name": "setunioncontrolnettype",
+        "output_names": [
+            "control_net"
+        ]
+    },
+    "ControlNetInpaintingAliMamaApply": {
+        "class_name": "ControlNetInpaintingAliMamaApply",
+        "module_name": "controlnetinpaintingalimamaapply",
+        "output_names": [
+            "positive",
+            "negative"
+        ]
+    },
+    "CLIPTextEncodeHunyuanDiT": {
+        "class_name": "CLIPTextEncodeHunyuanDiT",
+        "module_name": "cliptextencodehunyuandit",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "TextEncodeHunyuanVideo_ImageToVideo": {
+        "class_name": "TextEncodeHunyuanVideo_ImageToVideo",
+        "module_name": "textencodehunyuanvideo_imagetovideo",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "EmptyHunyuanLatentVideo": {
+        "class_name": "EmptyHunyuanLatentVideo",
+        "module_name": "emptyhunyuanlatentvideo",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "HunyuanImageToVideo": {
+        "class_name": "HunyuanImageToVideo",
+        "module_name": "hunyuanimagetovideo",
+        "output_names": [
+            "positive",
+            "latent"
+        ]
+    },
+    "CLIPTextEncodeFlux": {
+        "class_name": "CLIPTextEncodeFlux",
+        "module_name": "cliptextencodeflux",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "FluxGuidance": {
+        "class_name": "FluxGuidance",
+        "module_name": "fluxguidance",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "FluxDisableGuidance": {
+        "class_name": "FluxDisableGuidance",
+        "module_name": "fluxdisableguidance",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "FluxKontextImageScale": {
+        "class_name": "FluxKontextImageScale",
+        "module_name": "fluxkontextimagescale",
+        "output_names": [
+            "image"
+        ]
+    },
+    "LoraSave": {
+        "class_name": "LoraSave",
+        "module_name": "lorasave",
+        "output_names": []
+    },
+    "TorchCompileModel": {
+        "class_name": "TorchCompileModel",
+        "module_name": "torchcompilemodel",
+        "output_names": [
+            "model"
+        ]
+    },
+    "EmptyMochiLatentVideo": {
+        "class_name": "EmptyMochiLatentVideo",
+        "module_name": "emptymochilatentvideo",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "SkipLayerGuidanceDiT": {
+        "class_name": "SkipLayerGuidanceDiT",
+        "module_name": "skiplayerguidancedit",
+        "output_names": [
+            "model"
+        ]
+    },
+    "SkipLayerGuidanceDiTSimple": {
+        "class_name": "SkipLayerGuidanceDiTSimple",
+        "module_name": "skiplayerguidanceditsimple",
+        "output_names": [
+            "model"
+        ]
+    },
+    "Mahiro": {
+        "class_name": "Mahiro",
+        "module_name": "mahiro",
+        "output_names": [
+            "patched_model"
+        ]
+    },
+    "EmptyLTXVLatentVideo": {
+        "class_name": "EmptyLTXVLatentVideo",
+        "module_name": "emptyltxvlatentvideo",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "LTXVImgToVideo": {
+        "class_name": "LTXVImgToVideo",
+        "module_name": "ltxvimgtovideo",
+        "output_names": [
+            "positive",
+            "negative",
+            "latent"
+        ]
+    },
+    "ModelSamplingLTXV": {
+        "class_name": "ModelSamplingLTXV",
+        "module_name": "modelsamplingltxv",
+        "output_names": [
+            "model"
+        ]
+    },
+    "LTXVConditioning": {
+        "class_name": "LTXVConditioning",
+        "module_name": "ltxvconditioning",
+        "output_names": [
+            "positive",
+            "negative"
+        ]
+    },
+    "LTXVScheduler": {
+        "class_name": "LTXVScheduler",
+        "module_name": "ltxvscheduler",
+        "output_names": [
+            "sigmas"
+        ]
+    },
+    "LTXVAddGuide": {
+        "class_name": "LTXVAddGuide",
+        "module_name": "ltxvaddguide",
+        "output_names": [
+            "positive",
+            "negative",
+            "latent"
+        ]
+    },
+    "LTXVPreprocess": {
+        "class_name": "LTXVPreprocess",
+        "module_name": "ltxvpreprocess",
+        "output_names": [
+            "output_image"
+        ]
+    },
+    "LTXVCropGuides": {
+        "class_name": "LTXVCropGuides",
+        "module_name": "ltxvcropguides",
+        "output_names": [
+            "positive",
+            "negative",
+            "latent"
+        ]
+    },
+    "CreateHookLora": {
+        "class_name": "CreateHookLora",
+        "module_name": "createhooklora",
+        "output_names": [
+            "hooks"
+        ]
+    },
+    "CreateHookLoraModelOnly": {
+        "class_name": "CreateHookLoraModelOnly",
+        "module_name": "createhookloramodelonly",
+        "output_names": [
+            "hooks"
+        ]
+    },
+    "CreateHookModelAsLora": {
+        "class_name": "CreateHookModelAsLora",
+        "module_name": "createhookmodelaslora",
+        "output_names": [
+            "hooks"
+        ]
+    },
+    "CreateHookModelAsLoraModelOnly": {
+        "class_name": "CreateHookModelAsLoraModelOnly",
+        "module_name": "createhookmodelasloramodelonly",
+        "output_names": [
+            "hooks"
+        ]
+    },
+    "SetHookKeyframes": {
+        "class_name": "SetHookKeyframes",
+        "module_name": "sethookkeyframes",
+        "output_names": [
+            "hooks"
+        ]
+    },
+    "CreateHookKeyframe": {
+        "class_name": "CreateHookKeyframe",
+        "module_name": "createhookkeyframe",
+        "output_names": [
+            "hook_kf"
+        ]
+    },
+    "CreateHookKeyframesInterpolated": {
+        "class_name": "CreateHookKeyframesInterpolated",
+        "module_name": "createhookkeyframesinterpolated",
+        "output_names": [
+            "hook_kf"
+        ]
+    },
+    "CreateHookKeyframesFromFloats": {
+        "class_name": "CreateHookKeyframesFromFloats",
+        "module_name": "createhookkeyframesfromfloats",
+        "output_names": [
+            "hook_kf"
+        ]
+    },
+    "CombineHooks2": {
+        "class_name": "CombineHooks2",
+        "module_name": "combinehooks2",
+        "output_names": [
+            "hooks"
+        ]
+    },
+    "CombineHooks4": {
+        "class_name": "CombineHooks4",
+        "module_name": "combinehooks4",
+        "output_names": [
+            "hooks"
+        ]
+    },
+    "CombineHooks8": {
+        "class_name": "CombineHooks8",
+        "module_name": "combinehooks8",
+        "output_names": [
+            "hooks"
+        ]
+    },
+    "ConditioningSetProperties": {
+        "class_name": "ConditioningSetProperties",
+        "module_name": "conditioningsetproperties",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "ConditioningSetPropertiesAndCombine": {
+        "class_name": "ConditioningSetPropertiesAndCombine",
+        "module_name": "conditioningsetpropertiesandcombine",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "PairConditioningSetProperties": {
+        "class_name": "PairConditioningSetProperties",
+        "module_name": "pairconditioningsetproperties",
+        "output_names": [
+            "positive",
+            "negative"
+        ]
+    },
+    "PairConditioningSetPropertiesAndCombine": {
+        "class_name": "PairConditioningSetPropertiesAndCombine",
+        "module_name": "pairconditioningsetpropertiesandcombine",
+        "output_names": [
+            "positive",
+            "negative"
+        ]
+    },
+    "ConditioningSetDefaultCombine": {
+        "class_name": "ConditioningSetDefaultCombine",
+        "module_name": "conditioningsetdefaultcombine",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "PairConditioningSetDefaultCombine": {
+        "class_name": "PairConditioningSetDefaultCombine",
+        "module_name": "pairconditioningsetdefaultcombine",
+        "output_names": [
+            "positive",
+            "negative"
+        ]
+    },
+    "PairConditioningCombine": {
+        "class_name": "PairConditioningCombine",
+        "module_name": "pairconditioningcombine",
+        "output_names": [
+            "positive",
+            "negative"
+        ]
+    },
+    "SetClipHooks": {
+        "class_name": "SetClipHooks",
+        "module_name": "setcliphooks",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "ConditioningTimestepsRange": {
+        "class_name": "ConditioningTimestepsRange",
+        "module_name": "conditioningtimestepsrange",
+        "output_names": [
+            "timesteps_range",
+            "before_range",
+            "after_range"
+        ]
+    },
+    "Load3D": {
+        "class_name": "Load3D",
+        "module_name": "load3d",
+        "output_names": [
+            "image",
+            "mask",
+            "mesh_path",
+            "normal",
+            "lineart",
+            "camera_info",
+            "recording_video"
+        ]
+    },
+    "Load3DAnimation": {
+        "class_name": "Load3DAnimation",
+        "module_name": "load3danimation",
+        "output_names": [
+            "image",
+            "mask",
+            "mesh_path",
+            "normal",
+            "camera_info",
+            "recording_video"
+        ]
+    },
+    "Preview3D": {
+        "class_name": "Preview3D",
+        "module_name": "preview3d",
+        "output_names": []
+    },
+    "Preview3DAnimation": {
+        "class_name": "Preview3DAnimation",
+        "module_name": "preview3danimation",
+        "output_names": []
+    },
+    "EmptyCosmosLatentVideo": {
+        "class_name": "EmptyCosmosLatentVideo",
+        "module_name": "emptycosmoslatentvideo",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "CosmosImageToVideoLatent": {
+        "class_name": "CosmosImageToVideoLatent",
+        "module_name": "cosmosimagetovideolatent",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "CosmosPredict2ImageToVideoLatent": {
+        "class_name": "CosmosPredict2ImageToVideoLatent",
+        "module_name": "cosmospredict2imagetovideolatent",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "SaveWEBM": {
+        "class_name": "SaveWEBM",
+        "module_name": "savewebm",
+        "output_names": []
+    },
+    "SaveVideo": {
+        "class_name": "SaveVideo",
+        "module_name": "savevideo",
+        "output_names": []
+    },
+    "CreateVideo": {
+        "class_name": "CreateVideo",
+        "module_name": "createvideo",
+        "output_names": [
+            "video"
+        ]
+    },
+    "GetVideoComponents": {
+        "class_name": "GetVideoComponents",
+        "module_name": "getvideocomponents",
+        "output_names": [
+            "images",
+            "audio",
+            "fps"
+        ]
+    },
+    "LoadVideo": {
+        "class_name": "LoadVideo",
+        "module_name": "loadvideo",
+        "output_names": [
+            "video"
+        ]
+    },
+    "CLIPTextEncodeLumina2": {
+        "class_name": "CLIPTextEncodeLumina2",
+        "module_name": "cliptextencodelumina2",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "RenormCFG": {
+        "class_name": "RenormCFG",
+        "module_name": "renormcfg",
+        "output_names": [
+            "model"
+        ]
+    },
+    "WanImageToVideo": {
+        "class_name": "WanImageToVideo",
+        "module_name": "wanimagetovideo",
+        "output_names": [
+            "positive",
+            "negative",
+            "latent"
+        ]
+    },
+    "WanFunControlToVideo": {
+        "class_name": "WanFunControlToVideo",
+        "module_name": "wanfuncontroltovideo",
+        "output_names": [
+            "positive",
+            "negative",
+            "latent"
+        ]
+    },
+    "WanFunInpaintToVideo": {
+        "class_name": "WanFunInpaintToVideo",
+        "module_name": "wanfuninpainttovideo",
+        "output_names": [
+            "positive",
+            "negative",
+            "latent"
+        ]
+    },
+    "WanFirstLastFrameToVideo": {
+        "class_name": "WanFirstLastFrameToVideo",
+        "module_name": "wanfirstlastframetovideo",
+        "output_names": [
+            "positive",
+            "negative",
+            "latent"
+        ]
+    },
+    "WanVaceToVideo": {
+        "class_name": "WanVaceToVideo",
+        "module_name": "wanvacetovideo",
+        "output_names": [
+            "positive",
+            "negative",
+            "latent",
+            "trim_latent"
+        ]
+    },
+    "TrimVideoLatent": {
+        "class_name": "TrimVideoLatent",
+        "module_name": "trimvideolatent",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "WanCameraImageToVideo": {
+        "class_name": "WanCameraImageToVideo",
+        "module_name": "wancameraimagetovideo",
+        "output_names": [
+            "positive",
+            "negative",
+            "latent"
+        ]
+    },
+    "WanPhantomSubjectToVideo": {
+        "class_name": "WanPhantomSubjectToVideo",
+        "module_name": "wanphantomsubjecttovideo",
+        "output_names": [
+            "positive",
+            "negative_text",
+            "negative_img_text",
+            "latent"
+        ]
+    },
+    "LotusConditioning": {
+        "class_name": "LotusConditioning",
+        "module_name": "lotusconditioning",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "EmptyLatentHunyuan3Dv2": {
+        "class_name": "EmptyLatentHunyuan3Dv2",
+        "module_name": "emptylatenthunyuan3dv2",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "Hunyuan3Dv2Conditioning": {
+        "class_name": "Hunyuan3Dv2Conditioning",
+        "module_name": "hunyuan3dv2conditioning",
+        "output_names": [
+            "positive",
+            "negative"
+        ]
+    },
+    "Hunyuan3Dv2ConditioningMultiView": {
+        "class_name": "Hunyuan3Dv2ConditioningMultiView",
+        "module_name": "hunyuan3dv2conditioningmultiview",
+        "output_names": [
+            "positive",
+            "negative"
+        ]
+    },
+    "VAEDecodeHunyuan3D": {
+        "class_name": "VAEDecodeHunyuan3D",
+        "module_name": "vaedecodehunyuan3d",
+        "output_names": [
+            "voxel"
+        ]
+    },
+    "VoxelToMeshBasic": {
+        "class_name": "VoxelToMeshBasic",
+        "module_name": "voxeltomeshbasic",
+        "output_names": [
+            "mesh"
+        ]
+    },
+    "VoxelToMesh": {
+        "class_name": "VoxelToMesh",
+        "module_name": "voxeltomesh",
+        "output_names": [
+            "mesh"
+        ]
+    },
+    "SaveGLB": {
+        "class_name": "SaveGLB",
+        "module_name": "saveglb",
+        "output_names": []
+    },
+    "PrimitiveString": {
+        "class_name": "PrimitiveString",
+        "module_name": "primitivestring",
+        "output_names": [
+            "string"
+        ]
+    },
+    "PrimitiveStringMultiline": {
+        "class_name": "PrimitiveStringMultiline",
+        "module_name": "primitivestringmultiline",
+        "output_names": [
+            "string"
+        ]
+    },
+    "PrimitiveInt": {
+        "class_name": "PrimitiveInt",
+        "module_name": "primitiveint",
+        "output_names": [
+            "int"
+        ]
+    },
+    "PrimitiveFloat": {
+        "class_name": "PrimitiveFloat",
+        "module_name": "primitivefloat",
+        "output_names": [
+            "float"
+        ]
+    },
+    "PrimitiveBoolean": {
+        "class_name": "PrimitiveBoolean",
+        "module_name": "primitiveboolean",
+        "output_names": [
+            "boolean"
+        ]
+    },
+    "CFGZeroStar": {
+        "class_name": "CFGZeroStar",
+        "module_name": "cfgzerostar",
+        "output_names": [
+            "patched_model"
+        ]
+    },
+    "OptimalStepsScheduler": {
+        "class_name": "OptimalStepsScheduler",
+        "module_name": "optimalstepsscheduler",
+        "output_names": [
+            "sigmas"
+        ]
+    },
+    "QuadrupleCLIPLoader": {
+        "class_name": "QuadrupleCLIPLoader",
+        "module_name": "quadruplecliploader",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "CLIPTextEncodeHiDream": {
+        "class_name": "CLIPTextEncodeHiDream",
+        "module_name": "cliptextencodehidream",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "FreSca": {
+        "class_name": "FreSca",
+        "module_name": "fresca",
+        "output_names": [
+            "model"
+        ]
+    },
+    "APG": {
+        "class_name": "APG",
+        "module_name": "apg",
+        "output_names": [
+            "model"
+        ]
+    },
+    "PreviewAny": {
+        "class_name": "PreviewAny",
+        "module_name": "previewany",
+        "output_names": []
+    },
+    "TextEncodeAceStepAudio": {
+        "class_name": "TextEncodeAceStepAudio",
+        "module_name": "textencodeacestepaudio",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "EmptyAceStepLatentAudio": {
+        "class_name": "EmptyAceStepLatentAudio",
+        "module_name": "emptyacesteplatentaudio",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "StringConcatenate": {
+        "class_name": "StringConcatenate",
+        "module_name": "stringconcatenate",
+        "output_names": [
+            "string"
+        ]
+    },
+    "StringSubstring": {
+        "class_name": "StringSubstring",
+        "module_name": "stringsubstring",
+        "output_names": [
+            "string"
+        ]
+    },
+    "StringLength": {
+        "class_name": "StringLength",
+        "module_name": "stringlength",
+        "output_names": [
+            "length"
+        ]
+    },
+    "CaseConverter": {
+        "class_name": "CaseConverter",
+        "module_name": "caseconverter",
+        "output_names": [
+            "string"
+        ]
+    },
+    "StringTrim": {
+        "class_name": "StringTrim",
+        "module_name": "stringtrim",
+        "output_names": [
+            "string"
+        ]
+    },
+    "StringReplace": {
+        "class_name": "StringReplace",
+        "module_name": "stringreplace",
+        "output_names": [
+            "string"
+        ]
+    },
+    "StringContains": {
+        "class_name": "StringContains",
+        "module_name": "stringcontains",
+        "output_names": [
+            "contains"
+        ]
+    },
+    "StringCompare": {
+        "class_name": "StringCompare",
+        "module_name": "stringcompare",
+        "output_names": [
+            "boolean"
+        ]
+    },
+    "RegexMatch": {
+        "class_name": "RegexMatch",
+        "module_name": "regexmatch",
+        "output_names": [
+            "matches"
+        ]
+    },
+    "RegexExtract": {
+        "class_name": "RegexExtract",
+        "module_name": "regexextract",
+        "output_names": [
+            "string"
+        ]
+    },
+    "RegexReplace": {
+        "class_name": "RegexReplace",
+        "module_name": "regexreplace",
+        "output_names": [
+            "string"
+        ]
+    },
+    "WanCameraEmbedding": {
+        "class_name": "WanCameraEmbedding",
+        "module_name": "wancameraembedding",
+        "output_names": [
+            "camera_embedding",
+            "width",
+            "height",
+            "length"
+        ]
+    },
+    "ReferenceLatent": {
+        "class_name": "ReferenceLatent",
+        "module_name": "referencelatent",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "TCFG": {
+        "class_name": "TCFG",
+        "module_name": "tcfg",
+        "output_names": [
+            "patched_model"
+        ]
+    },
+    "IdeogramV1": {
+        "class_name": "IdeogramV1",
+        "module_name": "ideogramv1",
+        "output_names": [
+            "image"
+        ]
+    },
+    "IdeogramV2": {
+        "class_name": "IdeogramV2",
+        "module_name": "ideogramv2",
+        "output_names": [
+            "image"
+        ]
+    },
+    "IdeogramV3": {
+        "class_name": "IdeogramV3",
+        "module_name": "ideogramv3",
+        "output_names": [
+            "image"
+        ]
+    },
+    "OpenAIDalle2": {
+        "class_name": "OpenAIDalle2",
+        "module_name": "openaidalle2",
+        "output_names": [
+            "image"
+        ]
+    },
+    "OpenAIDalle3": {
+        "class_name": "OpenAIDalle3",
+        "module_name": "openaidalle3",
+        "output_names": [
+            "image"
+        ]
+    },
+    "OpenAIGPTImage1": {
+        "class_name": "OpenAIGPTImage1",
+        "module_name": "openaigptimage1",
+        "output_names": [
+            "image"
+        ]
+    },
+    "OpenAIChatNode": {
+        "class_name": "OpenAIChatNode",
+        "module_name": "openaichatnode",
+        "output_names": [
+            "string"
+        ]
+    },
+    "OpenAIInputFiles": {
+        "class_name": "OpenAIInputFiles",
+        "module_name": "openaiinputfiles",
+        "output_names": [
+            "openai_input_files"
+        ]
+    },
+    "OpenAIChatConfig": {
+        "class_name": "OpenAIChatConfig",
+        "module_name": "openaichatconfig",
+        "output_names": [
+            "openai_chat_config"
+        ]
+    },
+    "MinimaxTextToVideoNode": {
+        "class_name": "MinimaxTextToVideoNode",
+        "module_name": "minimaxtexttovideonode",
+        "output_names": [
+            "video"
+        ]
+    },
+    "MinimaxImageToVideoNode": {
+        "class_name": "MinimaxImageToVideoNode",
+        "module_name": "minimaximagetovideonode",
+        "output_names": [
+            "video"
+        ]
+    },
+    "VeoVideoGenerationNode": {
+        "class_name": "VeoVideoGenerationNode",
+        "module_name": "veovideogenerationnode",
+        "output_names": [
+            "video"
+        ]
+    },
+    "KlingCameraControls": {
+        "class_name": "KlingCameraControls",
+        "module_name": "klingcameracontrols",
+        "output_names": [
+            "camera_control"
+        ]
+    },
+    "KlingTextToVideoNode": {
+        "class_name": "KlingTextToVideoNode",
+        "module_name": "klingtexttovideonode",
+        "output_names": [
+            "video",
+            "video_id",
+            "duration"
+        ]
+    },
+    "KlingImage2VideoNode": {
+        "class_name": "KlingImage2VideoNode",
+        "module_name": "klingimage2videonode",
+        "output_names": [
+            "video",
+            "video_id",
+            "duration"
+        ]
+    },
+    "KlingCameraControlI2VNode": {
+        "class_name": "KlingCameraControlI2VNode",
+        "module_name": "klingcameracontroli2vnode",
+        "output_names": [
+            "video",
+            "video_id",
+            "duration"
+        ]
+    },
+    "KlingCameraControlT2VNode": {
+        "class_name": "KlingCameraControlT2VNode",
+        "module_name": "klingcameracontrolt2vnode",
+        "output_names": [
+            "video",
+            "video_id",
+            "duration"
+        ]
+    },
+    "KlingStartEndFrameNode": {
+        "class_name": "KlingStartEndFrameNode",
+        "module_name": "klingstartendframenode",
+        "output_names": [
+            "video",
+            "video_id",
+            "duration"
+        ]
+    },
+    "KlingVideoExtendNode": {
+        "class_name": "KlingVideoExtendNode",
+        "module_name": "klingvideoextendnode",
+        "output_names": [
+            "video",
+            "video_id",
+            "duration"
+        ]
+    },
+    "KlingLipSyncAudioToVideoNode": {
+        "class_name": "KlingLipSyncAudioToVideoNode",
+        "module_name": "klinglipsyncaudiotovideonode",
+        "output_names": [
+            "video",
+            "video_id",
+            "duration"
+        ]
+    },
+    "KlingLipSyncTextToVideoNode": {
+        "class_name": "KlingLipSyncTextToVideoNode",
+        "module_name": "klinglipsynctexttovideonode",
+        "output_names": [
+            "video",
+            "video_id",
+            "duration"
+        ]
+    },
+    "KlingVirtualTryOnNode": {
+        "class_name": "KlingVirtualTryOnNode",
+        "module_name": "klingvirtualtryonnode",
+        "output_names": [
+            "image"
+        ]
+    },
+    "KlingImageGenerationNode": {
+        "class_name": "KlingImageGenerationNode",
+        "module_name": "klingimagegenerationnode",
+        "output_names": [
+            "image"
+        ]
+    },
+    "KlingSingleImageVideoEffectNode": {
+        "class_name": "KlingSingleImageVideoEffectNode",
+        "module_name": "klingsingleimagevideoeffectnode",
+        "output_names": [
+            "video",
+            "video_id",
+            "duration"
+        ]
+    },
+    "KlingDualCharacterVideoEffectNode": {
+        "class_name": "KlingDualCharacterVideoEffectNode",
+        "module_name": "klingdualcharactervideoeffectnode",
+        "output_names": [
+            "video",
+            "duration"
+        ]
+    },
+    "FluxProUltraImageNode": {
+        "class_name": "FluxProUltraImageNode",
+        "module_name": "fluxproultraimagenode",
+        "output_names": [
+            "image"
+        ]
+    },
+    "FluxKontextProImageNode": {
+        "class_name": "FluxKontextProImageNode",
+        "module_name": "fluxkontextproimagenode",
+        "output_names": [
+            "image"
+        ]
+    },
+    "FluxKontextMaxImageNode": {
+        "class_name": "FluxKontextMaxImageNode",
+        "module_name": "fluxkontextmaximagenode",
+        "output_names": [
+            "image"
+        ]
+    },
+    "FluxProExpandNode": {
+        "class_name": "FluxProExpandNode",
+        "module_name": "fluxproexpandnode",
+        "output_names": [
+            "image"
+        ]
+    },
+    "FluxProFillNode": {
+        "class_name": "FluxProFillNode",
+        "module_name": "fluxprofillnode",
+        "output_names": [
+            "image"
+        ]
+    },
+    "FluxProCannyNode": {
+        "class_name": "FluxProCannyNode",
+        "module_name": "fluxprocannynode",
+        "output_names": [
+            "image"
+        ]
+    },
+    "FluxProDepthNode": {
+        "class_name": "FluxProDepthNode",
+        "module_name": "fluxprodepthnode",
+        "output_names": [
+            "image"
+        ]
+    },
+    "LumaImageNode": {
+        "class_name": "LumaImageNode",
+        "module_name": "lumaimagenode",
+        "output_names": [
+            "image"
+        ]
+    },
+    "LumaImageModifyNode": {
+        "class_name": "LumaImageModifyNode",
+        "module_name": "lumaimagemodifynode",
+        "output_names": [
+            "image"
+        ]
+    },
+    "LumaVideoNode": {
+        "class_name": "LumaVideoNode",
+        "module_name": "lumavideonode",
+        "output_names": [
+            "video"
+        ]
+    },
+    "LumaImageToVideoNode": {
+        "class_name": "LumaImageToVideoNode",
+        "module_name": "lumaimagetovideonode",
+        "output_names": [
+            "video"
+        ]
+    },
+    "LumaReferenceNode": {
+        "class_name": "LumaReferenceNode",
+        "module_name": "lumareferencenode",
+        "output_names": [
+            "luma_ref"
+        ]
+    },
+    "LumaConceptsNode": {
+        "class_name": "LumaConceptsNode",
+        "module_name": "lumaconceptsnode",
+        "output_names": [
+            "luma_concepts"
+        ]
+    },
+    "RecraftTextToImageNode": {
+        "class_name": "RecraftTextToImageNode",
+        "module_name": "recrafttexttoimagenode",
+        "output_names": [
+            "image"
+        ]
+    },
+    "RecraftImageToImageNode": {
+        "class_name": "RecraftImageToImageNode",
+        "module_name": "recraftimagetoimagenode",
+        "output_names": [
+            "image"
+        ]
+    },
+    "RecraftImageInpaintingNode": {
+        "class_name": "RecraftImageInpaintingNode",
+        "module_name": "recraftimageinpaintingnode",
+        "output_names": [
+            "image"
+        ]
+    },
+    "RecraftTextToVectorNode": {
+        "class_name": "RecraftTextToVectorNode",
+        "module_name": "recrafttexttovectornode",
+        "output_names": [
+            "svg"
+        ]
+    },
+    "RecraftVectorizeImageNode": {
+        "class_name": "RecraftVectorizeImageNode",
+        "module_name": "recraftvectorizeimagenode",
+        "output_names": [
+            "svg"
+        ]
+    },
+    "RecraftRemoveBackgroundNode": {
+        "class_name": "RecraftRemoveBackgroundNode",
+        "module_name": "recraftremovebackgroundnode",
+        "output_names": [
+            "image",
+            "mask"
+        ]
+    },
+    "RecraftReplaceBackgroundNode": {
+        "class_name": "RecraftReplaceBackgroundNode",
+        "module_name": "recraftreplacebackgroundnode",
+        "output_names": [
+            "image"
+        ]
+    },
+    "RecraftCrispUpscaleNode": {
+        "class_name": "RecraftCrispUpscaleNode",
+        "module_name": "recraftcrispupscalenode",
+        "output_names": [
+            "image"
+        ]
+    },
+    "RecraftCreativeUpscaleNode": {
+        "class_name": "RecraftCreativeUpscaleNode",
+        "module_name": "recraftcreativeupscalenode",
+        "output_names": [
+            "image"
+        ]
+    },
+    "RecraftStyleV3RealisticImage": {
+        "class_name": "RecraftStyleV3RealisticImage",
+        "module_name": "recraftstylev3realisticimage",
+        "output_names": [
+            "recraft_style"
+        ]
+    },
+    "RecraftStyleV3DigitalIllustration": {
+        "class_name": "RecraftStyleV3DigitalIllustration",
+        "module_name": "recraftstylev3digitalillustration",
+        "output_names": [
+            "recraft_style"
+        ]
+    },
+    "RecraftStyleV3LogoRaster": {
+        "class_name": "RecraftStyleV3LogoRaster",
+        "module_name": "recraftstylev3logoraster",
+        "output_names": [
+            "recraft_style"
+        ]
+    },
+    "RecraftStyleV3InfiniteStyleLibrary": {
+        "class_name": "RecraftStyleV3InfiniteStyleLibrary",
+        "module_name": "recraftstylev3infinitestylelibrary",
+        "output_names": [
+            "recraft_style"
+        ]
+    },
+    "RecraftColorRGB": {
+        "class_name": "RecraftColorRGB",
+        "module_name": "recraftcolorrgb",
+        "output_names": [
+            "recraft_color"
+        ]
+    },
+    "RecraftControls": {
+        "class_name": "RecraftControls",
+        "module_name": "recraftcontrols",
+        "output_names": [
+            "recraft_controls"
+        ]
+    },
+    "PixverseTextToVideoNode": {
+        "class_name": "PixverseTextToVideoNode",
+        "module_name": "pixversetexttovideonode",
+        "output_names": [
+            "video"
+        ]
+    },
+    "PixverseImageToVideoNode": {
+        "class_name": "PixverseImageToVideoNode",
+        "module_name": "pixverseimagetovideonode",
+        "output_names": [
+            "video"
+        ]
+    },
+    "PixverseTransitionVideoNode": {
+        "class_name": "PixverseTransitionVideoNode",
+        "module_name": "pixversetransitionvideonode",
+        "output_names": [
+            "video"
+        ]
+    },
+    "PixverseTemplateNode": {
+        "class_name": "PixverseTemplateNode",
+        "module_name": "pixversetemplatenode",
+        "output_names": [
+            "pixverse_template"
+        ]
+    },
+    "StabilityStableImageUltraNode": {
+        "class_name": "StabilityStableImageUltraNode",
+        "module_name": "stabilitystableimageultranode",
+        "output_names": [
+            "image"
+        ]
+    },
+    "StabilityStableImageSD_3_5Node": {
+        "class_name": "StabilityStableImageSD_3_5Node",
+        "module_name": "stabilitystableimagesd_3_5node",
+        "output_names": [
+            "image"
+        ]
+    },
+    "StabilityUpscaleConservativeNode": {
+        "class_name": "StabilityUpscaleConservativeNode",
+        "module_name": "stabilityupscaleconservativenode",
+        "output_names": [
+            "image"
+        ]
+    },
+    "StabilityUpscaleCreativeNode": {
+        "class_name": "StabilityUpscaleCreativeNode",
+        "module_name": "stabilityupscalecreativenode",
+        "output_names": [
+            "image"
+        ]
+    },
+    "StabilityUpscaleFastNode": {
+        "class_name": "StabilityUpscaleFastNode",
+        "module_name": "stabilityupscalefastnode",
+        "output_names": [
+            "image"
+        ]
+    },
+    "PikaImageToVideoNode2_2": {
+        "class_name": "PikaImageToVideoNode2_2",
+        "module_name": "pikaimagetovideonode2_2",
+        "output_names": [
+            "video"
+        ]
+    },
+    "PikaTextToVideoNode2_2": {
+        "class_name": "PikaTextToVideoNode2_2",
+        "module_name": "pikatexttovideonode2_2",
+        "output_names": [
+            "video"
+        ]
+    },
+    "PikaScenesV2_2": {
+        "class_name": "PikaScenesV2_2",
+        "module_name": "pikascenesv2_2",
+        "output_names": [
+            "video"
+        ]
+    },
+    "Pikadditions": {
+        "class_name": "Pikadditions",
+        "module_name": "pikadditions",
+        "output_names": [
+            "video"
+        ]
+    },
+    "Pikaswaps": {
+        "class_name": "Pikaswaps",
+        "module_name": "pikaswaps",
+        "output_names": [
+            "video"
+        ]
+    },
+    "Pikaffects": {
+        "class_name": "Pikaffects",
+        "module_name": "pikaffects",
+        "output_names": [
+            "video"
+        ]
+    },
+    "PikaStartEndFrameNode2_2": {
+        "class_name": "PikaStartEndFrameNode2_2",
+        "module_name": "pikastartendframenode2_2",
+        "output_names": [
+            "video"
+        ]
+    },
+    "RunwayFirstLastFrameNode": {
+        "class_name": "RunwayFirstLastFrameNode",
+        "module_name": "runwayfirstlastframenode",
+        "output_names": [
+            "video"
+        ]
+    },
+    "RunwayImageToVideoNodeGen3a": {
+        "class_name": "RunwayImageToVideoNodeGen3a",
+        "module_name": "runwayimagetovideonodegen3a",
+        "output_names": [
+            "video"
+        ]
+    },
+    "RunwayImageToVideoNodeGen4": {
+        "class_name": "RunwayImageToVideoNodeGen4",
+        "module_name": "runwayimagetovideonodegen4",
+        "output_names": [
+            "video"
+        ]
+    },
+    "RunwayTextToImageNode": {
+        "class_name": "RunwayTextToImageNode",
+        "module_name": "runwaytexttoimagenode",
+        "output_names": [
+            "image"
+        ]
+    },
+    "TripoTextToModelNode": {
+        "class_name": "TripoTextToModelNode",
+        "module_name": "tripotexttomodelnode",
+        "output_names": [
+            "model_file",
+            "model_task_id"
+        ]
+    },
+    "TripoImageToModelNode": {
+        "class_name": "TripoImageToModelNode",
+        "module_name": "tripoimagetomodelnode",
+        "output_names": [
+            "model_file",
+            "model_task_id"
+        ]
+    },
+    "TripoMultiviewToModelNode": {
+        "class_name": "TripoMultiviewToModelNode",
+        "module_name": "tripomultiviewtomodelnode",
+        "output_names": [
+            "model_file",
+            "model_task_id"
+        ]
+    },
+    "TripoTextureNode": {
+        "class_name": "TripoTextureNode",
+        "module_name": "tripotexturenode",
+        "output_names": [
+            "model_file",
+            "model_task_id"
+        ]
+    },
+    "TripoRefineNode": {
+        "class_name": "TripoRefineNode",
+        "module_name": "triporefinenode",
+        "output_names": [
+            "model_file",
+            "model_task_id"
+        ]
+    },
+    "TripoRigNode": {
+        "class_name": "TripoRigNode",
+        "module_name": "triporignode",
+        "output_names": [
+            "model_file",
+            "rig_task_id"
+        ]
+    },
+    "TripoRetargetNode": {
+        "class_name": "TripoRetargetNode",
+        "module_name": "triporetargetnode",
+        "output_names": [
+            "model_file",
+            "retarget_task_id"
+        ]
+    },
+    "TripoConversionNode": {
+        "class_name": "TripoConversionNode",
+        "module_name": "tripoconversionnode",
+        "output_names": []
+    },
+    "Rodin3D_Regular": {
+        "class_name": "Rodin3D_Regular",
+        "module_name": "rodin3d_regular",
+        "output_names": [
+            "_3d_model_path"
+        ]
+    },
+    "Rodin3D_Detail": {
+        "class_name": "Rodin3D_Detail",
+        "module_name": "rodin3d_detail",
+        "output_names": [
+            "_3d_model_path"
+        ]
+    },
+    "Rodin3D_Smooth": {
+        "class_name": "Rodin3D_Smooth",
+        "module_name": "rodin3d_smooth",
+        "output_names": [
+            "_3d_model_path"
+        ]
+    },
+    "Rodin3D_Sketch": {
+        "class_name": "Rodin3D_Sketch",
+        "module_name": "rodin3d_sketch",
+        "output_names": [
+            "_3d_model_path"
+        ]
+    },
+    "GeminiNode": {
+        "class_name": "GeminiNode",
+        "module_name": "gemininode",
+        "output_names": [
+            "string"
+        ]
+    },
+    "GeminiInputFiles": {
+        "class_name": "GeminiInputFiles",
+        "module_name": "geminiinputfiles",
+        "output_names": [
+            "gemini_input_files"
+        ]
+    },
+    "SaveImageWebsocket": {
+        "class_name": "SaveImageWebsocket",
+        "module_name": "saveimagewebsocket",
+        "output_names": []
+    },
+    "Context Big (rgthree)": {
+        "class_name": "Context_Big__rgthree_",
+        "module_name": "context_big__rgthree_",
+        "output_names": [
+            "context",
+            "model",
+            "clip",
+            "vae",
+            "positive",
+            "negative",
+            "latent",
+            "image",
+            "seed",
+            "steps",
+            "step_refiner",
+            "cfg",
+            "ckpt_name",
+            "sampler",
+            "scheduler",
+            "clip_width",
+            "clip_height",
+            "text_pos_g",
+            "text_pos_l",
+            "text_neg_g",
+            "text_neg_l",
+            "mask",
+            "control_net"
+        ]
+    },
+    "Context (rgthree)": {
+        "class_name": "Context__rgthree_",
+        "module_name": "context__rgthree_",
+        "output_names": [
+            "context",
+            "model",
+            "clip",
+            "vae",
+            "positive",
+            "negative",
+            "latent",
+            "image",
+            "seed"
+        ]
+    },
+    "Context Switch (rgthree)": {
+        "class_name": "Context_Switch__rgthree_",
+        "module_name": "context_switch__rgthree_",
+        "output_names": [
+            "context",
+            "model",
+            "clip",
+            "vae",
+            "positive",
+            "negative",
+            "latent",
+            "image",
+            "seed"
+        ]
+    },
+    "Context Switch Big (rgthree)": {
+        "class_name": "Context_Switch_Big__rgthree_",
+        "module_name": "context_switch_big__rgthree_",
+        "output_names": [
+            "context",
+            "model",
+            "clip",
+            "vae",
+            "positive",
+            "negative",
+            "latent",
+            "image",
+            "seed",
+            "steps",
+            "step_refiner",
+            "cfg",
+            "ckpt_name",
+            "sampler",
+            "scheduler",
+            "clip_width",
+            "clip_height",
+            "text_pos_g",
+            "text_pos_l",
+            "text_neg_g",
+            "text_neg_l",
+            "mask",
+            "control_net"
+        ]
+    },
+    "Context Merge (rgthree)": {
+        "class_name": "Context_Merge__rgthree_",
+        "module_name": "context_merge__rgthree_",
+        "output_names": [
+            "context",
+            "model",
+            "clip",
+            "vae",
+            "positive",
+            "negative",
+            "latent",
+            "image",
+            "seed"
+        ]
+    },
+    "Context Merge Big (rgthree)": {
+        "class_name": "Context_Merge_Big__rgthree_",
+        "module_name": "context_merge_big__rgthree_",
+        "output_names": [
+            "context",
+            "model",
+            "clip",
+            "vae",
+            "positive",
+            "negative",
+            "latent",
+            "image",
+            "seed",
+            "steps",
+            "step_refiner",
+            "cfg",
+            "ckpt_name",
+            "sampler",
+            "scheduler",
+            "clip_width",
+            "clip_height",
+            "text_pos_g",
+            "text_pos_l",
+            "text_neg_g",
+            "text_neg_l",
+            "mask",
+            "control_net"
+        ]
+    },
+    "Display Int (rgthree)": {
+        "class_name": "Display_Int__rgthree_",
+        "module_name": "display_int__rgthree_",
+        "output_names": []
+    },
+    "Display Any (rgthree)": {
+        "class_name": "Display_Any__rgthree_",
+        "module_name": "display_any__rgthree_",
+        "output_names": []
+    },
+    "Lora Loader Stack (rgthree)": {
+        "class_name": "Lora_Loader_Stack__rgthree_",
+        "module_name": "lora_loader_stack__rgthree_",
+        "output_names": [
+            "model",
+            "clip"
+        ]
+    },
+    "Seed (rgthree)": {
+        "class_name": "Seed__rgthree_",
+        "module_name": "seed__rgthree_",
+        "output_names": [
+            "seed"
+        ]
+    },
+    "Image Inset Crop (rgthree)": {
+        "class_name": "Image_Inset_Crop__rgthree_",
+        "module_name": "image_inset_crop__rgthree_",
+        "output_names": [
+            "image"
+        ]
+    },
+    "Power Prompt (rgthree)": {
+        "class_name": "Power_Prompt__rgthree_",
+        "module_name": "power_prompt__rgthree_",
+        "output_names": [
+            "conditioning",
+            "model",
+            "clip",
+            "text"
+        ]
+    },
+    "Power Prompt - Simple (rgthree)": {
+        "class_name": "Power_Prompt___Simple__rgthree_",
+        "module_name": "power_prompt___simple__rgthree_",
+        "output_names": [
+            "conditioning",
+            "text"
+        ]
+    },
+    "KSampler Config (rgthree)": {
+        "class_name": "KSampler_Config__rgthree_",
+        "module_name": "ksampler_config__rgthree_",
+        "output_names": [
+            "steps",
+            "refiner_step",
+            "cfg",
+            "sampler",
+            "scheduler"
+        ]
+    },
+    "SDXL Empty Latent Image (rgthree)": {
+        "class_name": "SDXL_Empty_Latent_Image__rgthree_",
+        "module_name": "sdxl_empty_latent_image__rgthree_",
+        "output_names": [
+            "latent",
+            "clip_width",
+            "clip_height"
+        ]
+    },
+    "SDXL Power Prompt - Positive (rgthree)": {
+        "class_name": "SDXL_Power_Prompt___Positive__rgthree_",
+        "module_name": "sdxl_power_prompt___positive__rgthree_",
+        "output_names": [
+            "conditioning",
+            "model",
+            "clip",
+            "text_g",
+            "text_l"
+        ]
+    },
+    "SDXL Power Prompt - Simple / Negative (rgthree)": {
+        "class_name": "SDXL_Power_Prompt___Simple___Negative__rgthree_",
+        "module_name": "sdxl_power_prompt___simple___negative__rgthree_",
+        "output_names": [
+            "conditioning",
+            "text_g",
+            "text_l"
+        ]
+    },
+    "Any Switch (rgthree)": {
+        "class_name": "Any_Switch__rgthree_",
+        "module_name": "any_switch__rgthree_",
+        "output_names": [
+            "_"
+        ]
+    },
+    "Image Comparer (rgthree)": {
+        "class_name": "Image_Comparer__rgthree_",
+        "module_name": "image_comparer__rgthree_",
+        "output_names": []
+    },
+    "Power Lora Loader (rgthree)": {
+        "class_name": "Power_Lora_Loader__rgthree_",
+        "module_name": "power_lora_loader__rgthree_",
+        "output_names": [
+            "model",
+            "clip"
+        ]
+    },
+    "Power Primitive (rgthree)": {
+        "class_name": "Power_Primitive__rgthree_",
+        "module_name": "power_primitive__rgthree_",
+        "output_names": [
+            "_"
+        ]
+    },
+    "Image or Latent Size (rgthree)": {
+        "class_name": "Image_or_Latent_Size__rgthree_",
+        "module_name": "image_or_latent_size__rgthree_",
+        "output_names": [
+            "width",
+            "height"
+        ]
+    },
+    "Image Resize (rgthree)": {
+        "class_name": "Image_Resize__rgthree_",
+        "module_name": "image_resize__rgthree_",
+        "output_names": [
+            "image",
+            "width",
+            "height"
+        ]
+    },
+    "Power Puter (rgthree)": {
+        "class_name": "Power_Puter__rgthree_",
+        "module_name": "power_puter__rgthree_",
+        "output_names": [
+            "_"
+        ]
+    },
+    "CLIPTextEncodeSDXL+": {
+        "class_name": "CLIPTextEncodeSDXL_",
+        "module_name": "cliptextencodesdxl_",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "ConditioningCombineMultiple+": {
+        "class_name": "ConditioningCombineMultiple_",
+        "module_name": "conditioningcombinemultiple_",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "SD3NegativeConditioning+": {
+        "class_name": "SD3NegativeConditioning_",
+        "module_name": "sd3negativeconditioning_",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "FluxAttentionSeeker+": {
+        "class_name": "FluxAttentionSeeker_",
+        "module_name": "fluxattentionseeker_",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "SD3AttentionSeekerLG+": {
+        "class_name": "SD3AttentionSeekerLG_",
+        "module_name": "sd3attentionseekerlg_",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "SD3AttentionSeekerT5+": {
+        "class_name": "SD3AttentionSeekerT5_",
+        "module_name": "sd3attentionseekert5_",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "FluxBlocksBuster+": {
+        "class_name": "FluxBlocksBuster_",
+        "module_name": "fluxblocksbuster_",
+        "output_names": [
+            "model",
+            "patched_blocks"
+        ]
+    },
+    "ImageEnhanceDifference+": {
+        "class_name": "ImageEnhanceDifference_",
+        "module_name": "imageenhancedifference_",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageBatchMultiple+": {
+        "class_name": "ImageBatchMultiple_",
+        "module_name": "imagebatchmultiple_",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageExpandBatch+": {
+        "class_name": "ImageExpandBatch_",
+        "module_name": "imageexpandbatch_",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageFromBatch+": {
+        "class_name": "ImageFromBatch_",
+        "module_name": "imagefrombatch_",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageListToBatch+": {
+        "class_name": "ImageListToBatch_",
+        "module_name": "imagelisttobatch_",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageBatchToList+": {
+        "class_name": "ImageBatchToList_",
+        "module_name": "imagebatchtolist_",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageCompositeFromMaskBatch+": {
+        "class_name": "ImageCompositeFromMaskBatch_",
+        "module_name": "imagecompositefrommaskbatch_",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageComposite+": {
+        "class_name": "ImageComposite_",
+        "module_name": "imagecomposite_",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageCrop+": {
+        "class_name": "ImageCrop_",
+        "module_name": "imagecrop_",
+        "output_names": [
+            "image",
+            "x",
+            "y"
+        ]
+    },
+    "ImageFlip+": {
+        "class_name": "ImageFlip_",
+        "module_name": "imageflip_",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageRandomTransform+": {
+        "class_name": "ImageRandomTransform_",
+        "module_name": "imagerandomtransform_",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageRemoveAlpha+": {
+        "class_name": "ImageRemoveAlpha_",
+        "module_name": "imageremovealpha_",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageRemoveBackground+": {
+        "class_name": "ImageRemoveBackground_",
+        "module_name": "imageremovebackground_",
+        "output_names": [
+            "image",
+            "mask"
+        ]
+    },
+    "ImageResize+": {
+        "class_name": "ImageResize_",
+        "module_name": "imageresize_",
+        "output_names": [
+            "image",
+            "width",
+            "height"
+        ]
+    },
+    "ImageSeamCarving+": {
+        "class_name": "ImageSeamCarving_",
+        "module_name": "imageseamcarving_",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageTile+": {
+        "class_name": "ImageTile_",
+        "module_name": "imagetile_",
+        "output_names": [
+            "image",
+            "tile_width",
+            "tile_height",
+            "overlap_x",
+            "overlap_y"
+        ]
+    },
+    "ImageUntile+": {
+        "class_name": "ImageUntile_",
+        "module_name": "imageuntile_",
+        "output_names": [
+            "image"
+        ]
+    },
+    "RemBGSession+": {
+        "class_name": "RemBGSession_",
+        "module_name": "rembgsession_",
+        "output_names": [
+            "rembg_session"
+        ]
+    },
+    "TransparentBGSession+": {
+        "class_name": "TransparentBGSession_",
+        "module_name": "transparentbgsession_",
+        "output_names": [
+            "rembg_session"
+        ]
+    },
+    "ImageApplyLUT+": {
+        "class_name": "ImageApplyLUT_",
+        "module_name": "imageapplylut_",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageCASharpening+": {
+        "class_name": "ImageCASharpening_",
+        "module_name": "imagecasharpening_",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageDesaturate+": {
+        "class_name": "ImageDesaturate_",
+        "module_name": "imagedesaturate_",
+        "output_names": [
+            "image"
+        ]
+    },
+    "PixelOEPixelize+": {
+        "class_name": "PixelOEPixelize_",
+        "module_name": "pixeloepixelize_",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImagePosterize+": {
+        "class_name": "ImagePosterize_",
+        "module_name": "imageposterize_",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageColorMatch+": {
+        "class_name": "ImageColorMatch_",
+        "module_name": "imagecolormatch_",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageColorMatchAdobe+": {
+        "class_name": "ImageColorMatchAdobe_",
+        "module_name": "imagecolormatchadobe_",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageHistogramMatch+": {
+        "class_name": "ImageHistogramMatch_",
+        "module_name": "imagehistogrammatch_",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageSmartSharpen+": {
+        "class_name": "ImageSmartSharpen_",
+        "module_name": "imagesmartsharpen_",
+        "output_names": [
+            "image"
+        ]
+    },
+    "GetImageSize+": {
+        "class_name": "GetImageSize_",
+        "module_name": "getimagesize_",
+        "output_names": [
+            "width",
+            "height",
+            "count"
+        ]
+    },
+    "ImageToDevice+": {
+        "class_name": "ImageToDevice_",
+        "module_name": "imagetodevice_",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImagePreviewFromLatent+": {
+        "class_name": "ImagePreviewFromLatent_",
+        "module_name": "imagepreviewfromlatent_",
+        "output_names": [
+            "image",
+            "mask",
+            "width",
+            "height"
+        ]
+    },
+    "NoiseFromImage+": {
+        "class_name": "NoiseFromImage_",
+        "module_name": "noisefromimage_",
+        "output_names": [
+            "image"
+        ]
+    },
+    "MaskBlur+": {
+        "class_name": "MaskBlur_",
+        "module_name": "maskblur_",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "MaskBoundingBox+": {
+        "class_name": "MaskBoundingBox_",
+        "module_name": "maskboundingbox_",
+        "output_names": [
+            "mask",
+            "image",
+            "x",
+            "y",
+            "width",
+            "height"
+        ]
+    },
+    "MaskFix+": {
+        "class_name": "MaskFix_",
+        "module_name": "maskfix_",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "MaskFlip+": {
+        "class_name": "MaskFlip_",
+        "module_name": "maskflip_",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "MaskFromColor+": {
+        "class_name": "MaskFromColor_",
+        "module_name": "maskfromcolor_",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "MaskFromList+": {
+        "class_name": "MaskFromList_",
+        "module_name": "maskfromlist_",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "MaskFromRGBCMYBW+": {
+        "class_name": "MaskFromRGBCMYBW_",
+        "module_name": "maskfromrgbcmybw_",
+        "output_names": [
+            "red",
+            "green",
+            "blue",
+            "cyan",
+            "magenta",
+            "yellow",
+            "black",
+            "white"
+        ]
+    },
+    "MaskFromSegmentation+": {
+        "class_name": "MaskFromSegmentation_",
+        "module_name": "maskfromsegmentation_",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "MaskPreview+": {
+        "class_name": "MaskPreview_",
+        "module_name": "maskpreview_",
+        "output_names": []
+    },
+    "MaskSmooth+": {
+        "class_name": "MaskSmooth_",
+        "module_name": "masksmooth_",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "TransitionMask+": {
+        "class_name": "TransitionMask_",
+        "module_name": "transitionmask_",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "MaskBatch+": {
+        "class_name": "MaskBatch_",
+        "module_name": "maskbatch_",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "MaskExpandBatch+": {
+        "class_name": "MaskExpandBatch_",
+        "module_name": "maskexpandbatch_",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "MaskFromBatch+": {
+        "class_name": "MaskFromBatch_",
+        "module_name": "maskfrombatch_",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "KSamplerVariationsStochastic+": {
+        "class_name": "KSamplerVariationsStochastic_",
+        "module_name": "ksamplervariationsstochastic_",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "KSamplerVariationsWithNoise+": {
+        "class_name": "KSamplerVariationsWithNoise_",
+        "module_name": "ksamplervariationswithnoise_",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "InjectLatentNoise+": {
+        "class_name": "InjectLatentNoise_",
+        "module_name": "injectlatentnoise_",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "FluxSamplerParams+": {
+        "class_name": "FluxSamplerParams_",
+        "module_name": "fluxsamplerparams_",
+        "output_names": [
+            "latent",
+            "params"
+        ]
+    },
+    "GuidanceTimestepping+": {
+        "class_name": "GuidanceTimestepping_",
+        "module_name": "guidancetimestepping_",
+        "output_names": [
+            "model"
+        ]
+    },
+    "PlotParameters+": {
+        "class_name": "PlotParameters_",
+        "module_name": "plotparameters_",
+        "output_names": [
+            "image"
+        ]
+    },
+    "TextEncodeForSamplerParams+": {
+        "class_name": "TextEncodeForSamplerParams_",
+        "module_name": "textencodeforsamplerparams_",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "SamplerSelectHelper+": {
+        "class_name": "SamplerSelectHelper_",
+        "module_name": "samplerselecthelper_",
+        "output_names": [
+            "string"
+        ]
+    },
+    "SchedulerSelectHelper+": {
+        "class_name": "SchedulerSelectHelper_",
+        "module_name": "schedulerselecthelper_",
+        "output_names": [
+            "string"
+        ]
+    },
+    "LorasForFluxParams+": {
+        "class_name": "LorasForFluxParams_",
+        "module_name": "lorasforfluxparams_",
+        "output_names": [
+            "lora_params"
+        ]
+    },
+    "ModelSamplingSD3Advanced+": {
+        "class_name": "ModelSamplingSD3Advanced_",
+        "module_name": "modelsamplingsd3advanced_",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ApplyCLIPSeg+": {
+        "class_name": "ApplyCLIPSeg_",
+        "module_name": "applyclipseg_",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "LoadCLIPSegModels+": {
+        "class_name": "LoadCLIPSegModels_",
+        "module_name": "loadclipsegmodels_",
+        "output_names": [
+            "clip_seg"
+        ]
+    },
+    "DrawText+": {
+        "class_name": "DrawText_",
+        "module_name": "drawtext_",
+        "output_names": [
+            "image",
+            "mask"
+        ]
+    },
+    "BatchCount+": {
+        "class_name": "BatchCount_",
+        "module_name": "batchcount_",
+        "output_names": [
+            "int"
+        ]
+    },
+    "ConsoleDebug+": {
+        "class_name": "ConsoleDebug_",
+        "module_name": "consoledebug_",
+        "output_names": []
+    },
+    "DebugTensorShape+": {
+        "class_name": "DebugTensorShape_",
+        "module_name": "debugtensorshape_",
+        "output_names": []
+    },
+    "DisplayAny": {
+        "class_name": "DisplayAny",
+        "module_name": "displayany",
+        "output_names": [
+            "string"
+        ]
+    },
+    "ModelCompile+": {
+        "class_name": "ModelCompile_",
+        "module_name": "modelcompile_",
+        "output_names": [
+            "model"
+        ]
+    },
+    "RemoveLatentMask+": {
+        "class_name": "RemoveLatentMask_",
+        "module_name": "removelatentmask_",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "SDXLEmptyLatentSizePicker+": {
+        "class_name": "SDXLEmptyLatentSizePicker_",
+        "module_name": "sdxlemptylatentsizepicker_",
+        "output_names": [
+            "latent",
+            "width",
+            "height"
+        ]
+    },
+    "SimpleComparison+": {
+        "class_name": "SimpleComparison_",
+        "module_name": "simplecomparison_",
+        "output_names": [
+            "boolean"
+        ]
+    },
+    "SimpleCondition+": {
+        "class_name": "SimpleCondition_",
+        "module_name": "simplecondition_",
+        "output_names": [
+            "result"
+        ]
+    },
+    "SimpleMath+": {
+        "class_name": "SimpleMath_",
+        "module_name": "simplemath_",
+        "output_names": [
+            "int",
+            "float"
+        ]
+    },
+    "SimpleMathDual+": {
+        "class_name": "SimpleMathDual_",
+        "module_name": "simplemathdual_",
+        "output_names": [
+            "int_1",
+            "float_1",
+            "int_2",
+            "float_2"
+        ]
+    },
+    "SimpleMathCondition+": {
+        "class_name": "SimpleMathCondition_",
+        "module_name": "simplemathcondition_",
+        "output_names": [
+            "int",
+            "float"
+        ]
+    },
+    "SimpleMathBoolean+": {
+        "class_name": "SimpleMathBoolean_",
+        "module_name": "simplemathboolean_",
+        "output_names": [
+            "boolean"
+        ]
+    },
+    "SimpleMathFloat+": {
+        "class_name": "SimpleMathFloat_",
+        "module_name": "simplemathfloat_",
+        "output_names": [
+            "float"
+        ]
+    },
+    "SimpleMathInt+": {
+        "class_name": "SimpleMathInt_",
+        "module_name": "simplemathint_",
+        "output_names": [
+            "int"
+        ]
+    },
+    "SimpleMathPercent+": {
+        "class_name": "SimpleMathPercent_",
+        "module_name": "simplemathpercent_",
+        "output_names": [
+            "float"
+        ]
+    },
+    "SimpleMathSlider+": {
+        "class_name": "SimpleMathSlider_",
+        "module_name": "simplemathslider_",
+        "output_names": [
+            "float",
+            "int"
+        ]
+    },
+    "SimpleMathSliderLowRes+": {
+        "class_name": "SimpleMathSliderLowRes_",
+        "module_name": "simplemathsliderlowres_",
+        "output_names": [
+            "float",
+            "int"
+        ]
+    },
+    "DeviceSelectorMultiGPU": {
+        "class_name": "DeviceSelectorMultiGPU",
+        "module_name": "deviceselectormultigpu",
+        "output_names": [
+            "device"
+        ]
+    },
+    "HunyuanVideoEmbeddingsAdapter": {
+        "class_name": "HunyuanVideoEmbeddingsAdapter",
+        "module_name": "hunyuanvideoembeddingsadapter",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "MergeFluxLoRAsQuantizeAndLoaddMultiGPU": {
+        "class_name": "MergeFluxLoRAsQuantizeAndLoaddMultiGPU",
+        "module_name": "mergefluxlorasquantizeandloaddmultigpu",
+        "output_names": [
+            "model"
+        ]
+    },
+    "UNETLoaderMultiGPU": {
+        "class_name": "UNETLoaderMultiGPU",
+        "module_name": "unetloadermultigpu",
+        "output_names": [
+            "model"
+        ]
+    },
+    "VAELoaderMultiGPU": {
+        "class_name": "VAELoaderMultiGPU",
+        "module_name": "vaeloadermultigpu",
+        "output_names": [
+            "vae"
+        ]
+    },
+    "CLIPLoaderMultiGPU": {
+        "class_name": "CLIPLoaderMultiGPU",
+        "module_name": "cliploadermultigpu",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "DualCLIPLoaderMultiGPU": {
+        "class_name": "DualCLIPLoaderMultiGPU",
+        "module_name": "dualcliploadermultigpu",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "TripleCLIPLoaderMultiGPU": {
+        "class_name": "TripleCLIPLoaderMultiGPU",
+        "module_name": "triplecliploadermultigpu",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "QuadrupleCLIPLoaderMultiGPU": {
+        "class_name": "QuadrupleCLIPLoaderMultiGPU",
+        "module_name": "quadruplecliploadermultigpu",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "CLIPVisionLoaderMultiGPU": {
+        "class_name": "CLIPVisionLoaderMultiGPU",
+        "module_name": "clipvisionloadermultigpu",
+        "output_names": [
+            "clip_vision"
+        ]
+    },
+    "CheckpointLoaderSimpleMultiGPU": {
+        "class_name": "CheckpointLoaderSimpleMultiGPU",
+        "module_name": "checkpointloadersimplemultigpu",
+        "output_names": [
+            "model",
+            "clip",
+            "vae"
+        ]
+    },
+    "ControlNetLoaderMultiGPU": {
+        "class_name": "ControlNetLoaderMultiGPU",
+        "module_name": "controlnetloadermultigpu",
+        "output_names": [
+            "control_net"
+        ]
+    },
+    "UnetLoaderGGUFMultiGPU": {
+        "class_name": "UnetLoaderGGUFMultiGPU",
+        "module_name": "unetloaderggufmultigpu",
+        "output_names": [
+            "model"
+        ]
+    },
+    "UnetLoaderGGUFDisTorchMultiGPU": {
+        "class_name": "UnetLoaderGGUFDisTorchMultiGPU",
+        "module_name": "unetloaderggufdistorchmultigpu",
+        "output_names": [
+            "model"
+        ]
+    },
+    "UnetLoaderGGUFAdvancedMultiGPU": {
+        "class_name": "UnetLoaderGGUFAdvancedMultiGPU",
+        "module_name": "unetloaderggufadvancedmultigpu",
+        "output_names": [
+            "model"
+        ]
+    },
+    "UnetLoaderGGUFAdvancedDisTorchMultiGPU": {
+        "class_name": "UnetLoaderGGUFAdvancedDisTorchMultiGPU",
+        "module_name": "unetloaderggufadvanceddistorchmultigpu",
+        "output_names": [
+            "model"
+        ]
+    },
+    "CLIPLoaderGGUFMultiGPU": {
+        "class_name": "CLIPLoaderGGUFMultiGPU",
+        "module_name": "cliploaderggufmultigpu",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "CLIPLoaderGGUFDisTorchMultiGPU": {
+        "class_name": "CLIPLoaderGGUFDisTorchMultiGPU",
+        "module_name": "cliploaderggufdistorchmultigpu",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "DualCLIPLoaderGGUFMultiGPU": {
+        "class_name": "DualCLIPLoaderGGUFMultiGPU",
+        "module_name": "dualcliploaderggufmultigpu",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "DualCLIPLoaderGGUFDisTorchMultiGPU": {
+        "class_name": "DualCLIPLoaderGGUFDisTorchMultiGPU",
+        "module_name": "dualcliploaderggufdistorchmultigpu",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "TripleCLIPLoaderGGUFMultiGPU": {
+        "class_name": "TripleCLIPLoaderGGUFMultiGPU",
+        "module_name": "triplecliploaderggufmultigpu",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "TripleCLIPLoaderGGUFDisTorchMultiGPU": {
+        "class_name": "TripleCLIPLoaderGGUFDisTorchMultiGPU",
+        "module_name": "triplecliploaderggufdistorchmultigpu",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "QuadrupleCLIPLoaderGGUFMultiGPU": {
+        "class_name": "QuadrupleCLIPLoaderGGUFMultiGPU",
+        "module_name": "quadruplecliploaderggufmultigpu",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "QuadrupleCLIPLoaderGGUFDisTorchMultiGPU": {
+        "class_name": "QuadrupleCLIPLoaderGGUFDisTorchMultiGPU",
+        "module_name": "quadruplecliploaderggufdistorchmultigpu",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "WanVideoModelLoaderMultiGPU": {
+        "class_name": "WanVideoModelLoaderMultiGPU",
+        "module_name": "wanvideomodelloadermultigpu",
+        "output_names": [
+            "model"
+        ]
+    },
+    "WanVideoVAELoaderMultiGPU": {
+        "class_name": "WanVideoVAELoaderMultiGPU",
+        "module_name": "wanvideovaeloadermultigpu",
+        "output_names": [
+            "vae"
+        ]
+    },
+    "LoadWanVideoT5TextEncoderMultiGPU": {
+        "class_name": "LoadWanVideoT5TextEncoderMultiGPU",
+        "module_name": "loadwanvideot5textencodermultigpu",
+        "output_names": [
+            "wan_t5_model"
+        ]
+    },
+    "BAE-NormalMapPreprocessor": {
+        "class_name": "BAE_NormalMapPreprocessor",
+        "module_name": "bae_normalmappreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "OneFormer-COCO-SemSegPreprocessor": {
+        "class_name": "OneFormer_COCO_SemSegPreprocessor",
+        "module_name": "oneformer_coco_semsegpreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "OneFormer-ADE20K-SemSegPreprocessor": {
+        "class_name": "OneFormer_ADE20K_SemSegPreprocessor",
+        "module_name": "oneformer_ade20k_semsegpreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "TilePreprocessor": {
+        "class_name": "TilePreprocessor",
+        "module_name": "tilepreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "TTPlanet_TileGF_Preprocessor": {
+        "class_name": "TTPlanet_TileGF_Preprocessor",
+        "module_name": "ttplanet_tilegf_preprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "TTPlanet_TileSimple_Preprocessor": {
+        "class_name": "TTPlanet_TileSimple_Preprocessor",
+        "module_name": "ttplanet_tilesimple_preprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "SAMPreprocessor": {
+        "class_name": "SAMPreprocessor",
+        "module_name": "sampreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "AnyLineArtPreprocessor_aux": {
+        "class_name": "AnyLineArtPreprocessor_aux",
+        "module_name": "anylineartpreprocessor_aux",
+        "output_names": [
+            "image"
+        ]
+    },
+    "DepthAnythingV2Preprocessor": {
+        "class_name": "DepthAnythingV2Preprocessor",
+        "module_name": "depthanythingv2preprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "LineartStandardPreprocessor": {
+        "class_name": "LineartStandardPreprocessor",
+        "module_name": "lineartstandardpreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageLuminanceDetector": {
+        "class_name": "ImageLuminanceDetector",
+        "module_name": "imageluminancedetector",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageIntensityDetector": {
+        "class_name": "ImageIntensityDetector",
+        "module_name": "imageintensitydetector",
+        "output_names": [
+            "image"
+        ]
+    },
+    "AnimeLineArtPreprocessor": {
+        "class_name": "AnimeLineArtPreprocessor",
+        "module_name": "animelineartpreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "DensePosePreprocessor": {
+        "class_name": "DensePosePreprocessor",
+        "module_name": "denseposepreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "PiDiNetPreprocessor": {
+        "class_name": "PiDiNetPreprocessor",
+        "module_name": "pidinetpreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "DWPreprocessor": {
+        "class_name": "DWPreprocessor",
+        "module_name": "dwpreprocessor",
+        "output_names": [
+            "image",
+            "pose_keypoint"
+        ]
+    },
+    "AnimalPosePreprocessor": {
+        "class_name": "AnimalPosePreprocessor",
+        "module_name": "animalposepreprocessor",
+        "output_names": [
+            "image",
+            "pose_keypoint"
+        ]
+    },
+    "ShufflePreprocessor": {
+        "class_name": "ShufflePreprocessor",
+        "module_name": "shufflepreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "Zoe-DepthMapPreprocessor": {
+        "class_name": "Zoe_DepthMapPreprocessor",
+        "module_name": "zoe_depthmappreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ScribblePreprocessor": {
+        "class_name": "ScribblePreprocessor",
+        "module_name": "scribblepreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "Scribble_XDoG_Preprocessor": {
+        "class_name": "Scribble_XDoG_Preprocessor",
+        "module_name": "scribble_xdog_preprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "Scribble_PiDiNet_Preprocessor": {
+        "class_name": "Scribble_PiDiNet_Preprocessor",
+        "module_name": "scribble_pidinet_preprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "DepthAnythingPreprocessor": {
+        "class_name": "DepthAnythingPreprocessor",
+        "module_name": "depthanythingpreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "Zoe_DepthAnythingPreprocessor": {
+        "class_name": "Zoe_DepthAnythingPreprocessor",
+        "module_name": "zoe_depthanythingpreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "DSINE-NormalMapPreprocessor": {
+        "class_name": "DSINE_NormalMapPreprocessor",
+        "module_name": "dsine_normalmappreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "DiffusionEdge_Preprocessor": {
+        "class_name": "DiffusionEdge_Preprocessor",
+        "module_name": "diffusionedge_preprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "PyraCannyPreprocessor": {
+        "class_name": "PyraCannyPreprocessor",
+        "module_name": "pyracannypreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "Manga2Anime_LineArt_Preprocessor": {
+        "class_name": "Manga2Anime_LineArt_Preprocessor",
+        "module_name": "manga2anime_lineart_preprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "MeshGraphormer-DepthMapPreprocessor": {
+        "class_name": "MeshGraphormer_DepthMapPreprocessor",
+        "module_name": "meshgraphormer_depthmappreprocessor",
+        "output_names": [
+            "image",
+            "inpainting_mask"
+        ]
+    },
+    "MeshGraphormer+ImpactDetector-DepthMapPreprocessor": {
+        "class_name": "MeshGraphormer_ImpactDetector_DepthMapPreprocessor",
+        "module_name": "meshgraphormer_impactdetector_depthmappreprocessor",
+        "output_names": [
+            "image",
+            "inpainting_mask"
+        ]
+    },
+    "InpaintPreprocessor": {
+        "class_name": "InpaintPreprocessor",
+        "module_name": "inpaintpreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "Metric3D-DepthMapPreprocessor": {
+        "class_name": "Metric3D_DepthMapPreprocessor",
+        "module_name": "metric3d_depthmappreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "Metric3D-NormalMapPreprocessor": {
+        "class_name": "Metric3D_NormalMapPreprocessor",
+        "module_name": "metric3d_normalmappreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "UniFormer-SemSegPreprocessor": {
+        "class_name": "UniFormer_SemSegPreprocessor",
+        "module_name": "uniformer_semsegpreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "SemSegPreprocessor": {
+        "class_name": "SemSegPreprocessor",
+        "module_name": "semsegpreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "CannyEdgePreprocessor": {
+        "class_name": "CannyEdgePreprocessor",
+        "module_name": "cannyedgepreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ColorPreprocessor": {
+        "class_name": "ColorPreprocessor",
+        "module_name": "colorpreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "BinaryPreprocessor": {
+        "class_name": "BinaryPreprocessor",
+        "module_name": "binarypreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "M-LSDPreprocessor": {
+        "class_name": "M_LSDPreprocessor",
+        "module_name": "m_lsdpreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "MiDaS-NormalMapPreprocessor": {
+        "class_name": "MiDaS_NormalMapPreprocessor",
+        "module_name": "midas_normalmappreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "MiDaS-DepthMapPreprocessor": {
+        "class_name": "MiDaS_DepthMapPreprocessor",
+        "module_name": "midas_depthmappreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "AnimeFace_SemSegPreprocessor": {
+        "class_name": "AnimeFace_SemSegPreprocessor",
+        "module_name": "animeface_semsegpreprocessor",
+        "output_names": [
+            "image",
+            "abg_character_mask__mask_"
+        ]
+    },
+    "LeReS-DepthMapPreprocessor": {
+        "class_name": "LeReS_DepthMapPreprocessor",
+        "module_name": "leres_depthmappreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "TEEDPreprocessor": {
+        "class_name": "TEEDPreprocessor",
+        "module_name": "teedpreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "OpenposePreprocessor": {
+        "class_name": "OpenposePreprocessor",
+        "module_name": "openposepreprocessor",
+        "output_names": [
+            "image",
+            "pose_keypoint"
+        ]
+    },
+    "SavePoseKpsAsJsonFile": {
+        "class_name": "SavePoseKpsAsJsonFile",
+        "module_name": "saveposekpsasjsonfile",
+        "output_names": []
+    },
+    "FacialPartColoringFromPoseKps": {
+        "class_name": "FacialPartColoringFromPoseKps",
+        "module_name": "facialpartcoloringfromposekps",
+        "output_names": [
+            "image"
+        ]
+    },
+    "UpperBodyTrackingFromPoseKps": {
+        "class_name": "UpperBodyTrackingFromPoseKps",
+        "module_name": "upperbodytrackingfromposekps",
+        "output_names": [
+            "tracking",
+            "prompt"
+        ]
+    },
+    "RenderPeopleKps": {
+        "class_name": "RenderPeopleKps",
+        "module_name": "renderpeoplekps",
+        "output_names": [
+            "image"
+        ]
+    },
+    "RenderAnimalKps": {
+        "class_name": "RenderAnimalKps",
+        "module_name": "renderanimalkps",
+        "output_names": [
+            "image"
+        ]
+    },
+    "HEDPreprocessor": {
+        "class_name": "HEDPreprocessor",
+        "module_name": "hedpreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "FakeScribblePreprocessor": {
+        "class_name": "FakeScribblePreprocessor",
+        "module_name": "fakescribblepreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "MediaPipe-FaceMeshPreprocessor": {
+        "class_name": "MediaPipe_FaceMeshPreprocessor",
+        "module_name": "mediapipe_facemeshpreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "Unimatch_OptFlowPreprocessor": {
+        "class_name": "Unimatch_OptFlowPreprocessor",
+        "module_name": "unimatch_optflowpreprocessor",
+        "output_names": [
+            "optical_flow",
+            "preview_image"
+        ]
+    },
+    "MaskOptFlow": {
+        "class_name": "MaskOptFlow",
+        "module_name": "maskoptflow",
+        "output_names": [
+            "optical_flow",
+            "preview_image"
+        ]
+    },
+    "LineArtPreprocessor": {
+        "class_name": "LineArtPreprocessor",
+        "module_name": "lineartpreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "AIO_Preprocessor": {
+        "class_name": "AIO_Preprocessor",
+        "module_name": "aio_preprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ControlNetPreprocessorSelector": {
+        "class_name": "ControlNetPreprocessorSelector",
+        "module_name": "controlnetpreprocessorselector",
+        "output_names": [
+            "preprocessor"
+        ]
+    },
+    "PixelPerfectResolution": {
+        "class_name": "PixelPerfectResolution",
+        "module_name": "pixelperfectresolution",
+        "output_names": [
+            "resolution__int_"
+        ]
+    },
+    "ImageGenResolutionFromImage": {
+        "class_name": "ImageGenResolutionFromImage",
+        "module_name": "imagegenresolutionfromimage",
+        "output_names": [
+            "image_gen_width__int_",
+            "image_gen_height__int_"
+        ]
+    },
+    "ImageGenResolutionFromLatent": {
+        "class_name": "ImageGenResolutionFromLatent",
+        "module_name": "imagegenresolutionfromlatent",
+        "output_names": [
+            "image_gen_width__int_",
+            "image_gen_height__int_"
+        ]
+    },
+    "HintImageEnchance": {
+        "class_name": "HintImageEnchance",
+        "module_name": "hintimageenchance",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ExecuteAllControlNetPreprocessors": {
+        "class_name": "ExecuteAllControlNetPreprocessors",
+        "module_name": "executeallcontrolnetpreprocessors",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ControlNetAuxSimpleAddText": {
+        "class_name": "ControlNetAuxSimpleAddText",
+        "module_name": "controlnetauxsimpleaddtext",
+        "output_names": [
+            "image"
+        ]
+    },
+    "DepthAnything_V2": {
+        "class_name": "DepthAnything_V2",
+        "module_name": "depthanything_v2",
+        "output_names": [
+            "image"
+        ]
+    },
+    "DownloadAndLoadDepthAnythingV2Model": {
+        "class_name": "DownloadAndLoadDepthAnythingV2Model",
+        "module_name": "downloadandloaddepthanythingv2model",
+        "output_names": [
+            "da_v2_model"
+        ]
+    },
+    "NunchakuFluxDiTLoader": {
+        "class_name": "NunchakuFluxDiTLoader",
+        "module_name": "nunchakufluxditloader",
+        "output_names": [
+            "model"
+        ]
+    },
+    "NunchakuFluxLoraLoader": {
+        "class_name": "NunchakuFluxLoraLoader",
+        "module_name": "nunchakufluxloraloader",
+        "output_names": [
+            "model"
+        ]
+    },
+    "NunchakuTextEncoderLoader": {
+        "class_name": "NunchakuTextEncoderLoader",
+        "module_name": "nunchakutextencoderloader",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "NunchakuTextEncoderLoaderV2": {
+        "class_name": "NunchakuTextEncoderLoaderV2",
+        "module_name": "nunchakutextencoderloaderv2",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "NunchakuDepthPreprocessor": {
+        "class_name": "NunchakuDepthPreprocessor",
+        "module_name": "nunchakudepthpreprocessor",
+        "output_names": [
+            "image"
+        ]
+    },
+    "NunchakuPulidApply": {
+        "class_name": "NunchakuPulidApply",
+        "module_name": "nunchakupulidapply",
+        "output_names": [
+            "model"
+        ]
+    },
+    "NunchakuPulidLoader": {
+        "class_name": "NunchakuPulidLoader",
+        "module_name": "nunchakupulidloader",
+        "output_names": [
+            "model",
+            "pulid"
+        ]
+    },
+    "NunchakuPuLIDLoaderV2": {
+        "class_name": "NunchakuPuLIDLoaderV2",
+        "module_name": "nunchakupulidloaderv2",
+        "output_names": [
+            "model",
+            "pulid_pipeline"
+        ]
+    },
+    "NunchakuFluxPuLIDApplyV2": {
+        "class_name": "NunchakuFluxPuLIDApplyV2",
+        "module_name": "nunchakufluxpulidapplyv2",
+        "output_names": [
+            "model"
+        ]
+    },
+    "NunchakuModelMerger": {
+        "class_name": "NunchakuModelMerger",
+        "module_name": "nunchakumodelmerger",
+        "output_names": [
+            "status"
+        ]
+    },
+    "NunchakuWheelInstaller": {
+        "class_name": "NunchakuWheelInstaller",
+        "module_name": "nunchakuwheelinstaller",
+        "output_names": [
+            "status"
+        ]
+    },
+    "VHS_VideoCombine": {
+        "class_name": "VHS_VideoCombine",
+        "module_name": "vhs_videocombine",
+        "output_names": [
+            "filenames"
+        ]
+    },
+    "VHS_LoadVideo": {
+        "class_name": "VHS_LoadVideo",
+        "module_name": "vhs_loadvideo",
+        "output_names": [
+            "image",
+            "frame_count",
+            "audio",
+            "video_info"
+        ]
+    },
+    "VHS_LoadVideoPath": {
+        "class_name": "VHS_LoadVideoPath",
+        "module_name": "vhs_loadvideopath",
+        "output_names": [
+            "image",
+            "frame_count",
+            "audio",
+            "video_info"
+        ]
+    },
+    "VHS_LoadVideoFFmpeg": {
+        "class_name": "VHS_LoadVideoFFmpeg",
+        "module_name": "vhs_loadvideoffmpeg",
+        "output_names": [
+            "image",
+            "mask",
+            "audio",
+            "video_info"
+        ]
+    },
+    "VHS_LoadVideoFFmpegPath": {
+        "class_name": "VHS_LoadVideoFFmpegPath",
+        "module_name": "vhs_loadvideoffmpegpath",
+        "output_names": [
+            "image",
+            "mask",
+            "audio",
+            "video_info"
+        ]
+    },
+    "VHS_LoadImagePath": {
+        "class_name": "VHS_LoadImagePath",
+        "module_name": "vhs_loadimagepath",
+        "output_names": [
+            "image",
+            "mask"
+        ]
+    },
+    "VHS_LoadImages": {
+        "class_name": "VHS_LoadImages",
+        "module_name": "vhs_loadimages",
+        "output_names": [
+            "image",
+            "mask",
+            "frame_count"
+        ]
+    },
+    "VHS_LoadImagesPath": {
+        "class_name": "VHS_LoadImagesPath",
+        "module_name": "vhs_loadimagespath",
+        "output_names": [
+            "image",
+            "mask",
+            "frame_count"
+        ]
+    },
+    "VHS_LoadAudio": {
+        "class_name": "VHS_LoadAudio",
+        "module_name": "vhs_loadaudio",
+        "output_names": [
+            "audio"
+        ]
+    },
+    "VHS_LoadAudioUpload": {
+        "class_name": "VHS_LoadAudioUpload",
+        "module_name": "vhs_loadaudioupload",
+        "output_names": [
+            "audio"
+        ]
+    },
+    "VHS_AudioToVHSAudio": {
+        "class_name": "VHS_AudioToVHSAudio",
+        "module_name": "vhs_audiotovhsaudio",
+        "output_names": [
+            "vhs_audio"
+        ]
+    },
+    "VHS_VHSAudioToAudio": {
+        "class_name": "VHS_VHSAudioToAudio",
+        "module_name": "vhs_vhsaudiotoaudio",
+        "output_names": [
+            "audio"
+        ]
+    },
+    "VHS_PruneOutputs": {
+        "class_name": "VHS_PruneOutputs",
+        "module_name": "vhs_pruneoutputs",
+        "output_names": []
+    },
+    "VHS_BatchManager": {
+        "class_name": "VHS_BatchManager",
+        "module_name": "vhs_batchmanager",
+        "output_names": [
+            "meta_batch"
+        ]
+    },
+    "VHS_VideoInfo": {
+        "class_name": "VHS_VideoInfo",
+        "module_name": "vhs_videoinfo",
+        "output_names": [
+            "source_fps_",
+            "source_frame_count_",
+            "source_duration_",
+            "source_width_",
+            "source_height_",
+            "loaded_fps_",
+            "loaded_frame_count_",
+            "loaded_duration_",
+            "loaded_width_",
+            "loaded_height_"
+        ]
+    },
+    "VHS_VideoInfoSource": {
+        "class_name": "VHS_VideoInfoSource",
+        "module_name": "vhs_videoinfosource",
+        "output_names": [
+            "fps_",
+            "frame_count_",
+            "duration_",
+            "width_",
+            "height_"
+        ]
+    },
+    "VHS_VideoInfoLoaded": {
+        "class_name": "VHS_VideoInfoLoaded",
+        "module_name": "vhs_videoinfoloaded",
+        "output_names": [
+            "fps_",
+            "frame_count_",
+            "duration_",
+            "width_",
+            "height_"
+        ]
+    },
+    "VHS_SelectFilename": {
+        "class_name": "VHS_SelectFilename",
+        "module_name": "vhs_selectfilename",
+        "output_names": [
+            "filename"
+        ]
+    },
+    "VHS_VAEEncodeBatched": {
+        "class_name": "VHS_VAEEncodeBatched",
+        "module_name": "vhs_vaeencodebatched",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "VHS_VAEDecodeBatched": {
+        "class_name": "VHS_VAEDecodeBatched",
+        "module_name": "vhs_vaedecodebatched",
+        "output_names": [
+            "image"
+        ]
+    },
+    "VHS_SplitLatents": {
+        "class_name": "VHS_SplitLatents",
+        "module_name": "vhs_splitlatents",
+        "output_names": [
+            "latent_a",
+            "a_count",
+            "latent_b",
+            "b_count"
+        ]
+    },
+    "VHS_SplitImages": {
+        "class_name": "VHS_SplitImages",
+        "module_name": "vhs_splitimages",
+        "output_names": [
+            "image_a",
+            "a_count",
+            "image_b",
+            "b_count"
+        ]
+    },
+    "VHS_SplitMasks": {
+        "class_name": "VHS_SplitMasks",
+        "module_name": "vhs_splitmasks",
+        "output_names": [
+            "mask_a",
+            "a_count",
+            "mask_b",
+            "b_count"
+        ]
+    },
+    "VHS_MergeLatents": {
+        "class_name": "VHS_MergeLatents",
+        "module_name": "vhs_mergelatents",
+        "output_names": [
+            "latent",
+            "count"
+        ]
+    },
+    "VHS_MergeImages": {
+        "class_name": "VHS_MergeImages",
+        "module_name": "vhs_mergeimages",
+        "output_names": [
+            "image",
+            "count"
+        ]
+    },
+    "VHS_MergeMasks": {
+        "class_name": "VHS_MergeMasks",
+        "module_name": "vhs_mergemasks",
+        "output_names": [
+            "mask",
+            "count"
+        ]
+    },
+    "VHS_GetLatentCount": {
+        "class_name": "VHS_GetLatentCount",
+        "module_name": "vhs_getlatentcount",
+        "output_names": [
+            "count"
+        ]
+    },
+    "VHS_GetImageCount": {
+        "class_name": "VHS_GetImageCount",
+        "module_name": "vhs_getimagecount",
+        "output_names": [
+            "count"
+        ]
+    },
+    "VHS_GetMaskCount": {
+        "class_name": "VHS_GetMaskCount",
+        "module_name": "vhs_getmaskcount",
+        "output_names": [
+            "count"
+        ]
+    },
+    "VHS_DuplicateLatents": {
+        "class_name": "VHS_DuplicateLatents",
+        "module_name": "vhs_duplicatelatents",
+        "output_names": [
+            "latent",
+            "count"
+        ]
+    },
+    "VHS_DuplicateImages": {
+        "class_name": "VHS_DuplicateImages",
+        "module_name": "vhs_duplicateimages",
+        "output_names": [
+            "image",
+            "count"
+        ]
+    },
+    "VHS_DuplicateMasks": {
+        "class_name": "VHS_DuplicateMasks",
+        "module_name": "vhs_duplicatemasks",
+        "output_names": [
+            "mask",
+            "count"
+        ]
+    },
+    "VHS_SelectEveryNthLatent": {
+        "class_name": "VHS_SelectEveryNthLatent",
+        "module_name": "vhs_selecteverynthlatent",
+        "output_names": [
+            "latent",
+            "count"
+        ]
+    },
+    "VHS_SelectEveryNthImage": {
+        "class_name": "VHS_SelectEveryNthImage",
+        "module_name": "vhs_selecteverynthimage",
+        "output_names": [
+            "image",
+            "count"
+        ]
+    },
+    "VHS_SelectEveryNthMask": {
+        "class_name": "VHS_SelectEveryNthMask",
+        "module_name": "vhs_selecteverynthmask",
+        "output_names": [
+            "mask",
+            "count"
+        ]
+    },
+    "VHS_SelectLatents": {
+        "class_name": "VHS_SelectLatents",
+        "module_name": "vhs_selectlatents",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "VHS_SelectImages": {
+        "class_name": "VHS_SelectImages",
+        "module_name": "vhs_selectimages",
+        "output_names": [
+            "image"
+        ]
+    },
+    "VHS_SelectMasks": {
+        "class_name": "VHS_SelectMasks",
+        "module_name": "vhs_selectmasks",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "VHS_Unbatch": {
+        "class_name": "VHS_Unbatch",
+        "module_name": "vhs_unbatch",
+        "output_names": [
+            "unbatched"
+        ]
+    },
+    "VHS_SelectLatest": {
+        "class_name": "VHS_SelectLatest",
+        "module_name": "vhs_selectlatest",
+        "output_names": [
+            "filename"
+        ]
+    },
+    "WanVideoSampler": {
+        "class_name": "WanVideoSampler",
+        "module_name": "wanvideosampler",
+        "output_names": [
+            "samples"
+        ]
+    },
+    "WanVideoDecode": {
+        "class_name": "WanVideoDecode",
+        "module_name": "wanvideodecode",
+        "output_names": [
+            "images"
+        ]
+    },
+    "WanVideoTextEncode": {
+        "class_name": "WanVideoTextEncode",
+        "module_name": "wanvideotextencode",
+        "output_names": [
+            "text_embeds"
+        ]
+    },
+    "WanVideoTextEncodeSingle": {
+        "class_name": "WanVideoTextEncodeSingle",
+        "module_name": "wanvideotextencodesingle",
+        "output_names": [
+            "text_embeds"
+        ]
+    },
+    "LoadWanVideoT5TextEncoder": {
+        "class_name": "LoadWanVideoT5TextEncoder",
+        "module_name": "loadwanvideot5textencoder",
+        "output_names": [
+            "wan_t5_model"
+        ]
+    },
+    "WanVideoImageClipEncode": {
+        "class_name": "WanVideoImageClipEncode",
+        "module_name": "wanvideoimageclipencode",
+        "output_names": [
+            "image_embeds"
+        ]
+    },
+    "WanVideoClipVisionEncode": {
+        "class_name": "WanVideoClipVisionEncode",
+        "module_name": "wanvideoclipvisionencode",
+        "output_names": [
+            "image_embeds"
+        ]
+    },
+    "WanVideoImageToVideoEncode": {
+        "class_name": "WanVideoImageToVideoEncode",
+        "module_name": "wanvideoimagetovideoencode",
+        "output_names": [
+            "image_embeds"
+        ]
+    },
+    "LoadWanVideoClipTextEncoder": {
+        "class_name": "LoadWanVideoClipTextEncoder",
+        "module_name": "loadwanvideocliptextencoder",
+        "output_names": [
+            "wan_clip_vision"
+        ]
+    },
+    "WanVideoEncode": {
+        "class_name": "WanVideoEncode",
+        "module_name": "wanvideoencode",
+        "output_names": [
+            "samples"
+        ]
+    },
+    "WanVideoBlockSwap": {
+        "class_name": "WanVideoBlockSwap",
+        "module_name": "wanvideoblockswap",
+        "output_names": [
+            "block_swap_args"
+        ]
+    },
+    "WanVideoTorchCompileSettings": {
+        "class_name": "WanVideoTorchCompileSettings",
+        "module_name": "wanvideotorchcompilesettings",
+        "output_names": [
+            "torch_compile_args"
+        ]
+    },
+    "WanVideoEmptyEmbeds": {
+        "class_name": "WanVideoEmptyEmbeds",
+        "module_name": "wanvideoemptyembeds",
+        "output_names": [
+            "image_embeds"
+        ]
+    },
+    "WanVideoEnhanceAVideo": {
+        "class_name": "WanVideoEnhanceAVideo",
+        "module_name": "wanvideoenhanceavideo",
+        "output_names": [
+            "feta_args"
+        ]
+    },
+    "WanVideoContextOptions": {
+        "class_name": "WanVideoContextOptions",
+        "module_name": "wanvideocontextoptions",
+        "output_names": [
+            "context_options"
+        ]
+    },
+    "WanVideoTeaCache": {
+        "class_name": "WanVideoTeaCache",
+        "module_name": "wanvideoteacache",
+        "output_names": [
+            "cache_args"
+        ]
+    },
+    "WanVideoMagCache": {
+        "class_name": "WanVideoMagCache",
+        "module_name": "wanvideomagcache",
+        "output_names": [
+            "cache_args"
+        ]
+    },
+    "WanVideoVRAMManagement": {
+        "class_name": "WanVideoVRAMManagement",
+        "module_name": "wanvideovrammanagement",
+        "output_names": [
+            "vram_management_args"
+        ]
+    },
+    "WanVideoTextEmbedBridge": {
+        "class_name": "WanVideoTextEmbedBridge",
+        "module_name": "wanvideotextembedbridge",
+        "output_names": [
+            "text_embeds"
+        ]
+    },
+    "WanVideoFlowEdit": {
+        "class_name": "WanVideoFlowEdit",
+        "module_name": "wanvideoflowedit",
+        "output_names": [
+            "flowedit_args"
+        ]
+    },
+    "WanVideoControlEmbeds": {
+        "class_name": "WanVideoControlEmbeds",
+        "module_name": "wanvideocontrolembeds",
+        "output_names": [
+            "image_embeds"
+        ]
+    },
+    "WanVideoSLG": {
+        "class_name": "WanVideoSLG",
+        "module_name": "wanvideoslg",
+        "output_names": [
+            "slg_args"
+        ]
+    },
+    "WanVideoLoopArgs": {
+        "class_name": "WanVideoLoopArgs",
+        "module_name": "wanvideoloopargs",
+        "output_names": [
+            "loop_args"
+        ]
+    },
+    "WanVideoImageResizeToClosest": {
+        "class_name": "WanVideoImageResizeToClosest",
+        "module_name": "wanvideoimageresizetoclosest",
+        "output_names": [
+            "image",
+            "width",
+            "height"
+        ]
+    },
+    "WanVideoSetBlockSwap": {
+        "class_name": "WanVideoSetBlockSwap",
+        "module_name": "wanvideosetblockswap",
+        "output_names": [
+            "model"
+        ]
+    },
+    "WanVideoExperimentalArgs": {
+        "class_name": "WanVideoExperimentalArgs",
+        "module_name": "wanvideoexperimentalargs",
+        "output_names": [
+            "exp_args"
+        ]
+    },
+    "WanVideoVACEEncode": {
+        "class_name": "WanVideoVACEEncode",
+        "module_name": "wanvideovaceencode",
+        "output_names": [
+            "vace_embeds"
+        ]
+    },
+    "ExtractStartFramesForContinuations": {
+        "class_name": "ExtractStartFramesForContinuations",
+        "module_name": "extractstartframesforcontinuations",
+        "output_names": [
+            "start_frames"
+        ]
+    },
+    "WanVideoVACEStartToEndFrame": {
+        "class_name": "WanVideoVACEStartToEndFrame",
+        "module_name": "wanvideovacestarttoendframe",
+        "output_names": [
+            "images",
+            "masks"
+        ]
+    },
+    "WanVideoPhantomEmbeds": {
+        "class_name": "WanVideoPhantomEmbeds",
+        "module_name": "wanvideophantomembeds",
+        "output_names": [
+            "image_embeds"
+        ]
+    },
+    "CreateCFGScheduleFloatList": {
+        "class_name": "CreateCFGScheduleFloatList",
+        "module_name": "createcfgschedulefloatlist",
+        "output_names": [
+            "float_list"
+        ]
+    },
+    "WanVideoRealisDanceLatents": {
+        "class_name": "WanVideoRealisDanceLatents",
+        "module_name": "wanvideorealisdancelatents",
+        "output_names": [
+            "add_cond_latents"
+        ]
+    },
+    "WanVideoApplyNAG": {
+        "class_name": "WanVideoApplyNAG",
+        "module_name": "wanvideoapplynag",
+        "output_names": [
+            "text_embeds"
+        ]
+    },
+    "WanVideoMiniMaxRemoverEmbeds": {
+        "class_name": "WanVideoMiniMaxRemoverEmbeds",
+        "module_name": "wanvideominimaxremoverembeds",
+        "output_names": [
+            "image_embeds"
+        ]
+    },
+    "WanVideoReCamMasterCameraEmbed": {
+        "class_name": "WanVideoReCamMasterCameraEmbed",
+        "module_name": "wanvideorecammastercameraembed",
+        "output_names": [
+            "camera_embeds",
+            "camera_poses"
+        ]
+    },
+    "ReCamMasterPoseVisualizer": {
+        "class_name": "ReCamMasterPoseVisualizer",
+        "module_name": "recammasterposevisualizer",
+        "output_names": [
+            "image"
+        ]
+    },
+    "WanVideoReCamMasterGenerateOrbitCamera": {
+        "class_name": "WanVideoReCamMasterGenerateOrbitCamera",
+        "module_name": "wanvideorecammastergenerateorbitcamera",
+        "output_names": [
+            "camera_poses"
+        ]
+    },
+    "WanVideoReCamMasterDefaultCamera": {
+        "class_name": "WanVideoReCamMasterDefaultCamera",
+        "module_name": "wanvideorecammasterdefaultcamera",
+        "output_names": [
+            "camera_poses"
+        ]
+    },
+    "WanVideoUniAnimatePoseInput": {
+        "class_name": "WanVideoUniAnimatePoseInput",
+        "module_name": "wanvideounianimateposeinput",
+        "output_names": [
+            "unianimate_poses"
+        ]
+    },
+    "WanVideoUniAnimateDWPoseDetector": {
+        "class_name": "WanVideoUniAnimateDWPoseDetector",
+        "module_name": "wanvideounianimatedwposedetector",
+        "output_names": [
+            "poses",
+            "reference_pose"
+        ]
+    },
+    "WanVideoDiffusionForcingSampler": {
+        "class_name": "WanVideoDiffusionForcingSampler",
+        "module_name": "wanvideodiffusionforcingsampler",
+        "output_names": [
+            "samples"
+        ]
+    },
+    "DownloadAndLoadWav2VecModel": {
+        "class_name": "DownloadAndLoadWav2VecModel",
+        "module_name": "downloadandloadwav2vecmodel",
+        "output_names": [
+            "wav2vec_model"
+        ]
+    },
+    "FantasyTalkingModelLoader": {
+        "class_name": "FantasyTalkingModelLoader",
+        "module_name": "fantasytalkingmodelloader",
+        "output_names": [
+            "model"
+        ]
+    },
+    "FantasyTalkingWav2VecEmbeds": {
+        "class_name": "FantasyTalkingWav2VecEmbeds",
+        "module_name": "fantasytalkingwav2vecembeds",
+        "output_names": [
+            "fantasytalking_embeds"
+        ]
+    },
+    "WanVideoFunCameraEmbeds": {
+        "class_name": "WanVideoFunCameraEmbeds",
+        "module_name": "wanvideofuncameraembeds",
+        "output_names": [
+            "image_embeds"
+        ]
+    },
+    "WanVideoUni3C_ControlnetLoader": {
+        "class_name": "WanVideoUni3C_ControlnetLoader",
+        "module_name": "wanvideouni3c_controlnetloader",
+        "output_names": [
+            "controlnet"
+        ]
+    },
+    "WanVideoUni3C_embeds": {
+        "class_name": "WanVideoUni3C_embeds",
+        "module_name": "wanvideouni3c_embeds",
+        "output_names": [
+            "uni3c_embeds"
+        ]
+    },
+    "WanVideoControlnetLoader": {
+        "class_name": "WanVideoControlnetLoader",
+        "module_name": "wanvideocontrolnetloader",
+        "output_names": [
+            "controlnet"
+        ]
+    },
+    "WanVideoControlnet": {
+        "class_name": "WanVideoControlnet",
+        "module_name": "wanvideocontrolnet",
+        "output_names": [
+            "model"
+        ]
+    },
+    "WanVideoATITracks": {
+        "class_name": "WanVideoATITracks",
+        "module_name": "wanvideoatitracks",
+        "output_names": [
+            "model"
+        ]
+    },
+    "WanVideoATITracksVisualize": {
+        "class_name": "WanVideoATITracksVisualize",
+        "module_name": "wanvideoatitracksvisualize",
+        "output_names": [
+            "images"
+        ]
+    },
+    "WanVideoATI_comfy": {
+        "class_name": "WanVideoATI_comfy",
+        "module_name": "wanvideoati_comfy",
+        "output_names": [
+            "model"
+        ]
+    },
+    "MultiTalkModelLoader": {
+        "class_name": "MultiTalkModelLoader",
+        "module_name": "multitalkmodelloader",
+        "output_names": [
+            "model"
+        ]
+    },
+    "MultiTalkWav2VecEmbeds": {
+        "class_name": "MultiTalkWav2VecEmbeds",
+        "module_name": "multitalkwav2vecembeds",
+        "output_names": [
+            "multitalk_embeds",
+            "audio"
+        ]
+    },
+    "WanVideoImageToVideoMultiTalk": {
+        "class_name": "WanVideoImageToVideoMultiTalk",
+        "module_name": "wanvideoimagetovideomultitalk",
+        "output_names": [
+            "image_embeds"
+        ]
+    },
+    "WanVideoModelLoader": {
+        "class_name": "WanVideoModelLoader",
+        "module_name": "wanvideomodelloader",
+        "output_names": [
+            "model"
+        ]
+    },
+    "WanVideoVAELoader": {
+        "class_name": "WanVideoVAELoader",
+        "module_name": "wanvideovaeloader",
+        "output_names": [
+            "vae"
+        ]
+    },
+    "WanVideoLoraSelect": {
+        "class_name": "WanVideoLoraSelect",
+        "module_name": "wanvideoloraselect",
+        "output_names": [
+            "lora"
+        ]
+    },
+    "WanVideoLoraBlockEdit": {
+        "class_name": "WanVideoLoraBlockEdit",
+        "module_name": "wanvideolorablockedit",
+        "output_names": [
+            "blocks"
+        ]
+    },
+    "WanVideoTinyVAELoader": {
+        "class_name": "WanVideoTinyVAELoader",
+        "module_name": "wanvideotinyvaeloader",
+        "output_names": [
+            "vae"
+        ]
+    },
+    "WanVideoVACEModelSelect": {
+        "class_name": "WanVideoVACEModelSelect",
+        "module_name": "wanvideovacemodelselect",
+        "output_names": [
+            "vace_model"
+        ]
+    },
+    "WanVideoLoraSelectMulti": {
+        "class_name": "WanVideoLoraSelectMulti",
+        "module_name": "wanvideoloraselectmulti",
+        "output_names": [
+            "lora"
+        ]
+    },
+    "BOOLConstant": {
+        "class_name": "BOOLConstant",
+        "module_name": "boolconstant",
+        "output_names": [
+            "value"
+        ]
+    },
+    "INTConstant": {
+        "class_name": "INTConstant",
+        "module_name": "intconstant",
+        "output_names": [
+            "value"
+        ]
+    },
+    "FloatConstant": {
+        "class_name": "FloatConstant",
+        "module_name": "floatconstant",
+        "output_names": [
+            "value"
+        ]
+    },
+    "StringConstant": {
+        "class_name": "StringConstant",
+        "module_name": "stringconstant",
+        "output_names": [
+            "string"
+        ]
+    },
+    "StringConstantMultiline": {
+        "class_name": "StringConstantMultiline",
+        "module_name": "stringconstantmultiline",
+        "output_names": [
+            "string"
+        ]
+    },
+    "ConditioningMultiCombine": {
+        "class_name": "ConditioningMultiCombine",
+        "module_name": "conditioningmulticombine",
+        "output_names": [
+            "combined",
+            "inputcount"
+        ]
+    },
+    "ConditioningSetMaskAndCombine": {
+        "class_name": "ConditioningSetMaskAndCombine",
+        "module_name": "conditioningsetmaskandcombine",
+        "output_names": [
+            "combined_positive",
+            "combined_negative"
+        ]
+    },
+    "ConditioningSetMaskAndCombine3": {
+        "class_name": "ConditioningSetMaskAndCombine3",
+        "module_name": "conditioningsetmaskandcombine3",
+        "output_names": [
+            "combined_positive",
+            "combined_negative"
+        ]
+    },
+    "ConditioningSetMaskAndCombine4": {
+        "class_name": "ConditioningSetMaskAndCombine4",
+        "module_name": "conditioningsetmaskandcombine4",
+        "output_names": [
+            "combined_positive",
+            "combined_negative"
+        ]
+    },
+    "ConditioningSetMaskAndCombine5": {
+        "class_name": "ConditioningSetMaskAndCombine5",
+        "module_name": "conditioningsetmaskandcombine5",
+        "output_names": [
+            "combined_positive",
+            "combined_negative"
+        ]
+    },
+    "CondPassThrough": {
+        "class_name": "CondPassThrough",
+        "module_name": "condpassthrough",
+        "output_names": [
+            "positive",
+            "negative"
+        ]
+    },
+    "DownloadAndLoadCLIPSeg": {
+        "class_name": "DownloadAndLoadCLIPSeg",
+        "module_name": "downloadandloadclipseg",
+        "output_names": [
+            "clipseg_model"
+        ]
+    },
+    "BatchCLIPSeg": {
+        "class_name": "BatchCLIPSeg",
+        "module_name": "batchclipseg",
+        "output_names": [
+            "mask",
+            "image"
+        ]
+    },
+    "ColorToMask": {
+        "class_name": "ColorToMask",
+        "module_name": "colortomask",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "CreateGradientMask": {
+        "class_name": "CreateGradientMask",
+        "module_name": "creategradientmask",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "CreateTextMask": {
+        "class_name": "CreateTextMask",
+        "module_name": "createtextmask",
+        "output_names": [
+            "image",
+            "mask"
+        ]
+    },
+    "CreateAudioMask": {
+        "class_name": "CreateAudioMask",
+        "module_name": "createaudiomask",
+        "output_names": [
+            "image"
+        ]
+    },
+    "CreateFadeMask": {
+        "class_name": "CreateFadeMask",
+        "module_name": "createfademask",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "CreateFadeMaskAdvanced": {
+        "class_name": "CreateFadeMaskAdvanced",
+        "module_name": "createfademaskadvanced",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "CreateFluidMask": {
+        "class_name": "CreateFluidMask",
+        "module_name": "createfluidmask",
+        "output_names": [
+            "image",
+            "mask"
+        ]
+    },
+    "CreateShapeMask": {
+        "class_name": "CreateShapeMask",
+        "module_name": "createshapemask",
+        "output_names": [
+            "mask",
+            "mask_inverted"
+        ]
+    },
+    "CreateVoronoiMask": {
+        "class_name": "CreateVoronoiMask",
+        "module_name": "createvoronoimask",
+        "output_names": [
+            "mask",
+            "mask_inverted"
+        ]
+    },
+    "CreateMagicMask": {
+        "class_name": "CreateMagicMask",
+        "module_name": "createmagicmask",
+        "output_names": [
+            "mask",
+            "mask_inverted"
+        ]
+    },
+    "GetMaskSizeAndCount": {
+        "class_name": "GetMaskSizeAndCount",
+        "module_name": "getmasksizeandcount",
+        "output_names": [
+            "mask",
+            "width",
+            "height",
+            "count"
+        ]
+    },
+    "GrowMaskWithBlur": {
+        "class_name": "GrowMaskWithBlur",
+        "module_name": "growmaskwithblur",
+        "output_names": [
+            "mask",
+            "mask_inverted"
+        ]
+    },
+    "MaskBatchMulti": {
+        "class_name": "MaskBatchMulti",
+        "module_name": "maskbatchmulti",
+        "output_names": [
+            "masks"
+        ]
+    },
+    "OffsetMask": {
+        "class_name": "OffsetMask",
+        "module_name": "offsetmask",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "RemapMaskRange": {
+        "class_name": "RemapMaskRange",
+        "module_name": "remapmaskrange",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "ResizeMask": {
+        "class_name": "ResizeMask",
+        "module_name": "resizemask",
+        "output_names": [
+            "mask",
+            "width",
+            "height"
+        ]
+    },
+    "RoundMask": {
+        "class_name": "RoundMask",
+        "module_name": "roundmask",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "SeparateMasks": {
+        "class_name": "SeparateMasks",
+        "module_name": "separatemasks",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "AddLabel": {
+        "class_name": "AddLabel",
+        "module_name": "addlabel",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ColorMatch": {
+        "class_name": "ColorMatch",
+        "module_name": "colormatch",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageTensorList": {
+        "class_name": "ImageTensorList",
+        "module_name": "imagetensorlist",
+        "output_names": [
+            "image"
+        ]
+    },
+    "CrossFadeImages": {
+        "class_name": "CrossFadeImages",
+        "module_name": "crossfadeimages",
+        "output_names": [
+            "image"
+        ]
+    },
+    "CrossFadeImagesMulti": {
+        "class_name": "CrossFadeImagesMulti",
+        "module_name": "crossfadeimagesmulti",
+        "output_names": [
+            "image"
+        ]
+    },
+    "GetImagesFromBatchIndexed": {
+        "class_name": "GetImagesFromBatchIndexed",
+        "module_name": "getimagesfrombatchindexed",
+        "output_names": [
+            "image"
+        ]
+    },
+    "GetImageRangeFromBatch": {
+        "class_name": "GetImageRangeFromBatch",
+        "module_name": "getimagerangefrombatch",
+        "output_names": [
+            "image",
+            "mask"
+        ]
+    },
+    "GetLatentRangeFromBatch": {
+        "class_name": "GetLatentRangeFromBatch",
+        "module_name": "getlatentrangefrombatch",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "GetImageSizeAndCount": {
+        "class_name": "GetImageSizeAndCount",
+        "module_name": "getimagesizeandcount",
+        "output_names": [
+            "image",
+            "width",
+            "height",
+            "count"
+        ]
+    },
+    "FastPreview": {
+        "class_name": "FastPreview",
+        "module_name": "fastpreview",
+        "output_names": []
+    },
+    "ImageBatchFilter": {
+        "class_name": "ImageBatchFilter",
+        "module_name": "imagebatchfilter",
+        "output_names": [
+            "images",
+            "removed_indices"
+        ]
+    },
+    "ImageAndMaskPreview": {
+        "class_name": "ImageAndMaskPreview",
+        "module_name": "imageandmaskpreview",
+        "output_names": [
+            "composite"
+        ]
+    },
+    "ImageAddMulti": {
+        "class_name": "ImageAddMulti",
+        "module_name": "imageaddmulti",
+        "output_names": [
+            "images"
+        ]
+    },
+    "ImageBatchMulti": {
+        "class_name": "ImageBatchMulti",
+        "module_name": "imagebatchmulti",
+        "output_names": [
+            "images"
+        ]
+    },
+    "ImageBatchRepeatInterleaving": {
+        "class_name": "ImageBatchRepeatInterleaving",
+        "module_name": "imagebatchrepeatinterleaving",
+        "output_names": [
+            "image",
+            "mask"
+        ]
+    },
+    "ImageBatchTestPattern": {
+        "class_name": "ImageBatchTestPattern",
+        "module_name": "imagebatchtestpattern",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageConcanate": {
+        "class_name": "ImageConcanate",
+        "module_name": "imageconcanate",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageConcatFromBatch": {
+        "class_name": "ImageConcatFromBatch",
+        "module_name": "imageconcatfrombatch",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageConcatMulti": {
+        "class_name": "ImageConcatMulti",
+        "module_name": "imageconcatmulti",
+        "output_names": [
+            "images"
+        ]
+    },
+    "ImageCropByMask": {
+        "class_name": "ImageCropByMask",
+        "module_name": "imagecropbymask",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageCropByMaskAndResize": {
+        "class_name": "ImageCropByMaskAndResize",
+        "module_name": "imagecropbymaskandresize",
+        "output_names": [
+            "images",
+            "masks",
+            "bbox"
+        ]
+    },
+    "ImageCropByMaskBatch": {
+        "class_name": "ImageCropByMaskBatch",
+        "module_name": "imagecropbymaskbatch",
+        "output_names": [
+            "images",
+            "masks"
+        ]
+    },
+    "ImageUncropByMask": {
+        "class_name": "ImageUncropByMask",
+        "module_name": "imageuncropbymask",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageGrabPIL": {
+        "class_name": "ImageGrabPIL",
+        "module_name": "imagegrabpil",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageGridComposite2x2": {
+        "class_name": "ImageGridComposite2x2",
+        "module_name": "imagegridcomposite2x2",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageGridComposite3x3": {
+        "class_name": "ImageGridComposite3x3",
+        "module_name": "imagegridcomposite3x3",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageGridtoBatch": {
+        "class_name": "ImageGridtoBatch",
+        "module_name": "imagegridtobatch",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageNoiseAugmentation": {
+        "class_name": "ImageNoiseAugmentation",
+        "module_name": "imagenoiseaugmentation",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImageNormalize_Neg1_To_1": {
+        "class_name": "ImageNormalize_Neg1_To_1",
+        "module_name": "imagenormalize_neg1_to_1",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImagePass": {
+        "class_name": "ImagePass",
+        "module_name": "imagepass",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ImagePadKJ": {
+        "class_name": "ImagePadKJ",
+        "module_name": "imagepadkj",
+        "output_names": [
+            "images",
+            "masks"
+        ]
+    },
+    "ImagePadForOutpaintMasked": {
+        "class_name": "ImagePadForOutpaintMasked",
+        "module_name": "imagepadforoutpaintmasked",
+        "output_names": [
+            "image",
+            "mask"
+        ]
+    },
+    "ImagePadForOutpaintTargetSize": {
+        "class_name": "ImagePadForOutpaintTargetSize",
+        "module_name": "imagepadforoutpainttargetsize",
+        "output_names": [
+            "image",
+            "mask"
+        ]
+    },
+    "ImagePrepForICLora": {
+        "class_name": "ImagePrepForICLora",
+        "module_name": "imageprepforiclora",
+        "output_names": [
+            "image",
+            "mask"
+        ]
+    },
+    "ImageResizeKJ": {
+        "class_name": "ImageResizeKJ",
+        "module_name": "imageresizekj",
+        "output_names": [
+            "image",
+            "width",
+            "height"
+        ]
+    },
+    "ImageResizeKJv2": {
+        "class_name": "ImageResizeKJv2",
+        "module_name": "imageresizekjv2",
+        "output_names": [
+            "image",
+            "width",
+            "height",
+            "mask"
+        ]
+    },
+    "ImageUpscaleWithModelBatched": {
+        "class_name": "ImageUpscaleWithModelBatched",
+        "module_name": "imageupscalewithmodelbatched",
+        "output_names": [
+            "image"
+        ]
+    },
+    "InsertImagesToBatchIndexed": {
+        "class_name": "InsertImagesToBatchIndexed",
+        "module_name": "insertimagestobatchindexed",
+        "output_names": [
+            "image"
+        ]
+    },
+    "InsertLatentToIndexed": {
+        "class_name": "InsertLatentToIndexed",
+        "module_name": "insertlatenttoindexed",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "LoadAndResizeImage": {
+        "class_name": "LoadAndResizeImage",
+        "module_name": "loadandresizeimage",
+        "output_names": [
+            "image",
+            "mask",
+            "width",
+            "height",
+            "image_path"
+        ]
+    },
+    "LoadImagesFromFolderKJ": {
+        "class_name": "LoadImagesFromFolderKJ",
+        "module_name": "loadimagesfromfolderkj",
+        "output_names": [
+            "image",
+            "mask",
+            "count",
+            "image_path"
+        ]
+    },
+    "MergeImageChannels": {
+        "class_name": "MergeImageChannels",
+        "module_name": "mergeimagechannels",
+        "output_names": [
+            "image"
+        ]
+    },
+    "PadImageBatchInterleaved": {
+        "class_name": "PadImageBatchInterleaved",
+        "module_name": "padimagebatchinterleaved",
+        "output_names": [
+            "images",
+            "masks"
+        ]
+    },
+    "PreviewAnimation": {
+        "class_name": "PreviewAnimation",
+        "module_name": "previewanimation",
+        "output_names": []
+    },
+    "RemapImageRange": {
+        "class_name": "RemapImageRange",
+        "module_name": "remapimagerange",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ReverseImageBatch": {
+        "class_name": "ReverseImageBatch",
+        "module_name": "reverseimagebatch",
+        "output_names": [
+            "image"
+        ]
+    },
+    "ReplaceImagesInBatch": {
+        "class_name": "ReplaceImagesInBatch",
+        "module_name": "replaceimagesinbatch",
+        "output_names": [
+            "image",
+            "mask"
+        ]
+    },
+    "SaveImageWithAlpha": {
+        "class_name": "SaveImageWithAlpha",
+        "module_name": "saveimagewithalpha",
+        "output_names": []
+    },
+    "SaveImageKJ": {
+        "class_name": "SaveImageKJ",
+        "module_name": "saveimagekj",
+        "output_names": [
+            "filename"
+        ]
+    },
+    "ShuffleImageBatch": {
+        "class_name": "ShuffleImageBatch",
+        "module_name": "shuffleimagebatch",
+        "output_names": [
+            "image"
+        ]
+    },
+    "SplitImageChannels": {
+        "class_name": "SplitImageChannels",
+        "module_name": "splitimagechannels",
+        "output_names": [
+            "red",
+            "green",
+            "blue",
+            "mask"
+        ]
+    },
+    "TransitionImagesMulti": {
+        "class_name": "TransitionImagesMulti",
+        "module_name": "transitionimagesmulti",
+        "output_names": [
+            "image"
+        ]
+    },
+    "TransitionImagesInBatch": {
+        "class_name": "TransitionImagesInBatch",
+        "module_name": "transitionimagesinbatch",
+        "output_names": [
+            "image"
+        ]
+    },
+    "BatchCropFromMask": {
+        "class_name": "BatchCropFromMask",
+        "module_name": "batchcropfrommask",
+        "output_names": [
+            "original_images",
+            "cropped_images",
+            "bboxes",
+            "width",
+            "height"
+        ]
+    },
+    "BatchCropFromMaskAdvanced": {
+        "class_name": "BatchCropFromMaskAdvanced",
+        "module_name": "batchcropfrommaskadvanced",
+        "output_names": [
+            "original_images",
+            "cropped_images",
+            "cropped_masks",
+            "combined_crop_image",
+            "combined_crop_masks",
+            "bboxes",
+            "combined_bounding_box",
+            "bbox_width",
+            "bbox_height"
+        ]
+    },
+    "FilterZeroMasksAndCorrespondingImages": {
+        "class_name": "FilterZeroMasksAndCorrespondingImages",
+        "module_name": "filterzeromasksandcorrespondingimages",
+        "output_names": [
+            "non_zero_masks_out",
+            "non_zero_mask_images_out",
+            "zero_mask_images_out",
+            "zero_mask_images_out_indexes"
+        ]
+    },
+    "InsertImageBatchByIndexes": {
+        "class_name": "InsertImageBatchByIndexes",
+        "module_name": "insertimagebatchbyindexes",
+        "output_names": [
+            "images_after_insert"
+        ]
+    },
+    "BatchUncrop": {
+        "class_name": "BatchUncrop",
+        "module_name": "batchuncrop",
+        "output_names": [
+            "image"
+        ]
+    },
+    "BatchUncropAdvanced": {
+        "class_name": "BatchUncropAdvanced",
+        "module_name": "batchuncropadvanced",
+        "output_names": [
+            "image"
+        ]
+    },
+    "SplitBboxes": {
+        "class_name": "SplitBboxes",
+        "module_name": "splitbboxes",
+        "output_names": [
+            "bboxes_a",
+            "bboxes_b"
+        ]
+    },
+    "BboxToInt": {
+        "class_name": "BboxToInt",
+        "module_name": "bboxtoint",
+        "output_names": [
+            "x_min",
+            "y_min",
+            "width",
+            "height",
+            "center_x",
+            "center_y"
+        ]
+    },
+    "BboxVisualize": {
+        "class_name": "BboxVisualize",
+        "module_name": "bboxvisualize",
+        "output_names": [
+            "images"
+        ]
+    },
+    "GenerateNoise": {
+        "class_name": "GenerateNoise",
+        "module_name": "generatenoise",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "FlipSigmasAdjusted": {
+        "class_name": "FlipSigmasAdjusted",
+        "module_name": "flipsigmasadjusted",
+        "output_names": [
+            "sigmas",
+            "sigmas_string"
+        ]
+    },
+    "InjectNoiseToLatent": {
+        "class_name": "InjectNoiseToLatent",
+        "module_name": "injectnoisetolatent",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "CustomSigmas": {
+        "class_name": "CustomSigmas",
+        "module_name": "customsigmas",
+        "output_names": [
+            "sigmas"
+        ]
+    },
+    "StringToFloatList": {
+        "class_name": "StringToFloatList",
+        "module_name": "stringtofloatlist",
+        "output_names": [
+            "float"
+        ]
+    },
+    "WidgetToString": {
+        "class_name": "WidgetToString",
+        "module_name": "widgettostring",
+        "output_names": [
+            "string"
+        ]
+    },
+    "SaveStringKJ": {
+        "class_name": "SaveStringKJ",
+        "module_name": "savestringkj",
+        "output_names": [
+            "filename"
+        ]
+    },
+    "DummyOut": {
+        "class_name": "DummyOut",
+        "module_name": "dummyout",
+        "output_names": [
+            "_"
+        ]
+    },
+    "GetLatentsFromBatchIndexed": {
+        "class_name": "GetLatentsFromBatchIndexed",
+        "module_name": "getlatentsfrombatchindexed",
+        "output_names": [
+            "latent"
+        ]
+    },
+    "ScaleBatchPromptSchedule": {
+        "class_name": "ScaleBatchPromptSchedule",
+        "module_name": "scalebatchpromptschedule",
+        "output_names": [
+            "string"
+        ]
+    },
+    "CameraPoseVisualizer": {
+        "class_name": "CameraPoseVisualizer",
+        "module_name": "cameraposevisualizer",
+        "output_names": [
+            "image"
+        ]
+    },
+    "AppendStringsToList": {
+        "class_name": "AppendStringsToList",
+        "module_name": "appendstringstolist",
+        "output_names": [
+            "string"
+        ]
+    },
+    "JoinStrings": {
+        "class_name": "JoinStrings",
+        "module_name": "joinstrings",
+        "output_names": [
+            "string"
+        ]
+    },
+    "JoinStringMulti": {
+        "class_name": "JoinStringMulti",
+        "module_name": "joinstringmulti",
+        "output_names": [
+            "string"
+        ]
+    },
+    "SomethingToString": {
+        "class_name": "SomethingToString",
+        "module_name": "somethingtostring",
+        "output_names": [
+            "string"
+        ]
+    },
+    "Sleep": {
+        "class_name": "Sleep",
+        "module_name": "sleep",
+        "output_names": [
+            "_"
+        ]
+    },
+    "VRAM_Debug": {
+        "class_name": "VRAM_Debug",
+        "module_name": "vram_debug",
+        "output_names": [
+            "any_output",
+            "image_pass",
+            "model_pass",
+            "freemem_before",
+            "freemem_after"
+        ]
+    },
+    "EmptyLatentImagePresets": {
+        "class_name": "EmptyLatentImagePresets",
+        "module_name": "emptylatentimagepresets",
+        "output_names": [
+            "latent",
+            "width",
+            "height"
+        ]
+    },
+    "EmptyLatentImageCustomPresets": {
+        "class_name": "EmptyLatentImageCustomPresets",
+        "module_name": "emptylatentimagecustompresets",
+        "output_names": [
+            "latent",
+            "width",
+            "height"
+        ]
+    },
+    "ModelPassThrough": {
+        "class_name": "ModelPassThrough",
+        "module_name": "modelpassthrough",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ModelSaveKJ": {
+        "class_name": "ModelSaveKJ",
+        "module_name": "modelsavekj",
+        "output_names": []
+    },
+    "SetShakkerLabsUnionControlNetType": {
+        "class_name": "SetShakkerLabsUnionControlNetType",
+        "module_name": "setshakkerlabsunioncontrolnettype",
+        "output_names": [
+            "control_net"
+        ]
+    },
+    "StyleModelApplyAdvanced": {
+        "class_name": "StyleModelApplyAdvanced",
+        "module_name": "stylemodelapplyadvanced",
+        "output_names": [
+            "conditioning"
+        ]
+    },
+    "NormalizedAmplitudeToMask": {
+        "class_name": "NormalizedAmplitudeToMask",
+        "module_name": "normalizedamplitudetomask",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "NormalizedAmplitudeToFloatList": {
+        "class_name": "NormalizedAmplitudeToFloatList",
+        "module_name": "normalizedamplitudetofloatlist",
+        "output_names": [
+            "float"
+        ]
+    },
+    "OffsetMaskByNormalizedAmplitude": {
+        "class_name": "OffsetMaskByNormalizedAmplitude",
+        "module_name": "offsetmaskbynormalizedamplitude",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "ImageTransformByNormalizedAmplitude": {
+        "class_name": "ImageTransformByNormalizedAmplitude",
+        "module_name": "imagetransformbynormalizedamplitude",
+        "output_names": [
+            "image"
+        ]
+    },
+    "AudioConcatenate": {
+        "class_name": "AudioConcatenate",
+        "module_name": "audioconcatenate",
+        "output_names": [
+            "audio"
+        ]
+    },
+    "SplineEditor": {
+        "class_name": "SplineEditor",
+        "module_name": "splineeditor",
+        "output_names": [
+            "mask",
+            "coord_str",
+            "float",
+            "count",
+            "normalized_str"
+        ]
+    },
+    "CreateShapeImageOnPath": {
+        "class_name": "CreateShapeImageOnPath",
+        "module_name": "createshapeimageonpath",
+        "output_names": [
+            "image",
+            "mask"
+        ]
+    },
+    "CreateShapeMaskOnPath": {
+        "class_name": "CreateShapeMaskOnPath",
+        "module_name": "createshapemaskonpath",
+        "output_names": [
+            "mask",
+            "mask_inverted"
+        ]
+    },
+    "CreateTextOnPath": {
+        "class_name": "CreateTextOnPath",
+        "module_name": "createtextonpath",
+        "output_names": [
+            "image",
+            "mask",
+            "mask_inverted"
+        ]
+    },
+    "CreateGradientFromCoords": {
+        "class_name": "CreateGradientFromCoords",
+        "module_name": "creategradientfromcoords",
+        "output_names": [
+            "image"
+        ]
+    },
+    "CutAndDragOnPath": {
+        "class_name": "CutAndDragOnPath",
+        "module_name": "cutanddragonpath",
+        "output_names": [
+            "image",
+            "mask"
+        ]
+    },
+    "GradientToFloat": {
+        "class_name": "GradientToFloat",
+        "module_name": "gradienttofloat",
+        "output_names": [
+            "float_x",
+            "float_y"
+        ]
+    },
+    "WeightScheduleExtend": {
+        "class_name": "WeightScheduleExtend",
+        "module_name": "weightscheduleextend",
+        "output_names": [
+            "float"
+        ]
+    },
+    "MaskOrImageToWeight": {
+        "class_name": "MaskOrImageToWeight",
+        "module_name": "maskorimagetoweight",
+        "output_names": [
+            "float",
+            "string"
+        ]
+    },
+    "WeightScheduleConvert": {
+        "class_name": "WeightScheduleConvert",
+        "module_name": "weightscheduleconvert",
+        "output_names": [
+            "float",
+            "string",
+            "int"
+        ]
+    },
+    "FloatToMask": {
+        "class_name": "FloatToMask",
+        "module_name": "floattomask",
+        "output_names": [
+            "mask"
+        ]
+    },
+    "FloatToSigmas": {
+        "class_name": "FloatToSigmas",
+        "module_name": "floattosigmas",
+        "output_names": [
+            "sigmas"
+        ]
+    },
+    "SigmasToFloat": {
+        "class_name": "SigmasToFloat",
+        "module_name": "sigmastofloat",
+        "output_names": [
+            "float"
+        ]
+    },
+    "PlotCoordinates": {
+        "class_name": "PlotCoordinates",
+        "module_name": "plotcoordinates",
+        "output_names": [
+            "images",
+            "width",
+            "height",
+            "bbox_width",
+            "bbox_height"
+        ]
+    },
+    "InterpolateCoords": {
+        "class_name": "InterpolateCoords",
+        "module_name": "interpolatecoords",
+        "output_names": [
+            "coordinates"
+        ]
+    },
+    "PointsEditor": {
+        "class_name": "PointsEditor",
+        "module_name": "pointseditor",
+        "output_names": [
+            "positive_coords",
+            "negative_coords",
+            "bbox",
+            "bbox_mask",
+            "cropped_image"
+        ]
+    },
+    "SoundReactive": {
+        "class_name": "SoundReactive",
+        "module_name": "soundreactive",
+        "output_names": [
+            "sound_level",
+            "sound_level_int"
+        ]
+    },
+    "StableZero123_BatchSchedule": {
+        "class_name": "StableZero123_BatchSchedule",
+        "module_name": "stablezero123_batchschedule",
+        "output_names": [
+            "positive",
+            "negative",
+            "latent"
+        ]
+    },
+    "SV3D_BatchSchedule": {
+        "class_name": "SV3D_BatchSchedule",
+        "module_name": "sv3d_batchschedule",
+        "output_names": [
+            "positive",
+            "negative",
+            "latent"
+        ]
+    },
+    "LoadResAdapterNormalization": {
+        "class_name": "LoadResAdapterNormalization",
+        "module_name": "loadresadapternormalization",
+        "output_names": [
+            "model"
+        ]
+    },
+    "Superprompt": {
+        "class_name": "Superprompt",
+        "module_name": "superprompt",
+        "output_names": [
+            "string"
+        ]
+    },
+    "GLIGENTextBoxApplyBatchCoords": {
+        "class_name": "GLIGENTextBoxApplyBatchCoords",
+        "module_name": "gligentextboxapplybatchcoords",
+        "output_names": [
+            "conditioning",
+            "coord_preview"
+        ]
+    },
+    "Intrinsic_lora_sampling": {
+        "class_name": "Intrinsic_lora_sampling",
+        "module_name": "intrinsic_lora_sampling",
+        "output_names": [
+            "image",
+            "latent"
+        ]
+    },
+    "CheckpointPerturbWeights": {
+        "class_name": "CheckpointPerturbWeights",
+        "module_name": "checkpointperturbweights",
+        "output_names": [
+            "model"
+        ]
+    },
+    "Screencap_mss": {
+        "class_name": "Screencap_mss",
+        "module_name": "screencap_mss",
+        "output_names": [
+            "image"
+        ]
+    },
+    "WebcamCaptureCV2": {
+        "class_name": "WebcamCaptureCV2",
+        "module_name": "webcamcapturecv2",
+        "output_names": [
+            "image"
+        ]
+    },
+    "DifferentialDiffusionAdvanced": {
+        "class_name": "DifferentialDiffusionAdvanced",
+        "module_name": "differentialdiffusionadvanced",
+        "output_names": [
+            "model",
+            "latent"
+        ]
+    },
+    "DiTBlockLoraLoader": {
+        "class_name": "DiTBlockLoraLoader",
+        "module_name": "ditblockloraloader",
+        "output_names": [
+            "model",
+            "rank"
+        ]
+    },
+    "FluxBlockLoraSelect": {
+        "class_name": "FluxBlockLoraSelect",
+        "module_name": "fluxblockloraselect",
+        "output_names": [
+            "blocks"
+        ]
+    },
+    "HunyuanVideoBlockLoraSelect": {
+        "class_name": "HunyuanVideoBlockLoraSelect",
+        "module_name": "hunyuanvideoblockloraselect",
+        "output_names": [
+            "blocks"
+        ]
+    },
+    "Wan21BlockLoraSelect": {
+        "class_name": "Wan21BlockLoraSelect",
+        "module_name": "wan21blockloraselect",
+        "output_names": [
+            "blocks"
+        ]
+    },
+    "CustomControlNetWeightsFluxFromList": {
+        "class_name": "CustomControlNetWeightsFluxFromList",
+        "module_name": "customcontrolnetweightsfluxfromlist",
+        "output_names": [
+            "cn_weights",
+            "tk_shortcut"
+        ]
+    },
+    "CheckpointLoaderKJ": {
+        "class_name": "CheckpointLoaderKJ",
+        "module_name": "checkpointloaderkj",
+        "output_names": [
+            "model",
+            "clip",
+            "vae"
+        ]
+    },
+    "DiffusionModelLoaderKJ": {
+        "class_name": "DiffusionModelLoaderKJ",
+        "module_name": "diffusionmodelloaderkj",
+        "output_names": [
+            "model"
+        ]
+    },
+    "TorchCompileModelFluxAdvanced": {
+        "class_name": "TorchCompileModelFluxAdvanced",
+        "module_name": "torchcompilemodelfluxadvanced",
+        "output_names": [
+            "model"
+        ]
+    },
+    "TorchCompileModelFluxAdvancedV2": {
+        "class_name": "TorchCompileModelFluxAdvancedV2",
+        "module_name": "torchcompilemodelfluxadvancedv2",
+        "output_names": [
+            "model"
+        ]
+    },
+    "TorchCompileModelHyVideo": {
+        "class_name": "TorchCompileModelHyVideo",
+        "module_name": "torchcompilemodelhyvideo",
+        "output_names": [
+            "model"
+        ]
+    },
+    "TorchCompileVAE": {
+        "class_name": "TorchCompileVAE",
+        "module_name": "torchcompilevae",
+        "output_names": [
+            "vae"
+        ]
+    },
+    "TorchCompileControlNet": {
+        "class_name": "TorchCompileControlNet",
+        "module_name": "torchcompilecontrolnet",
+        "output_names": [
+            "control_net"
+        ]
+    },
+    "PatchModelPatcherOrder": {
+        "class_name": "PatchModelPatcherOrder",
+        "module_name": "patchmodelpatcherorder",
+        "output_names": [
+            "model"
+        ]
+    },
+    "TorchCompileLTXModel": {
+        "class_name": "TorchCompileLTXModel",
+        "module_name": "torchcompileltxmodel",
+        "output_names": [
+            "model"
+        ]
+    },
+    "TorchCompileCosmosModel": {
+        "class_name": "TorchCompileCosmosModel",
+        "module_name": "torchcompilecosmosmodel",
+        "output_names": [
+            "model"
+        ]
+    },
+    "TorchCompileModelWanVideo": {
+        "class_name": "TorchCompileModelWanVideo",
+        "module_name": "torchcompilemodelwanvideo",
+        "output_names": [
+            "model"
+        ]
+    },
+    "TorchCompileModelWanVideoV2": {
+        "class_name": "TorchCompileModelWanVideoV2",
+        "module_name": "torchcompilemodelwanvideov2",
+        "output_names": [
+            "model"
+        ]
+    },
+    "PathchSageAttentionKJ": {
+        "class_name": "PathchSageAttentionKJ",
+        "module_name": "pathchsageattentionkj",
+        "output_names": [
+            "model"
+        ]
+    },
+    "LeapfusionHunyuanI2VPatcher": {
+        "class_name": "LeapfusionHunyuanI2VPatcher",
+        "module_name": "leapfusionhunyuani2vpatcher",
+        "output_names": [
+            "model"
+        ]
+    },
+    "VAELoaderKJ": {
+        "class_name": "VAELoaderKJ",
+        "module_name": "vaeloaderkj",
+        "output_names": [
+            "vae"
+        ]
+    },
+    "ScheduledCFGGuidance": {
+        "class_name": "ScheduledCFGGuidance",
+        "module_name": "scheduledcfgguidance",
+        "output_names": [
+            "guider"
+        ]
+    },
+    "ApplyRifleXRoPE_HunuyanVideo": {
+        "class_name": "ApplyRifleXRoPE_HunuyanVideo",
+        "module_name": "applyriflexrope_hunuyanvideo",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ApplyRifleXRoPE_WanVideo": {
+        "class_name": "ApplyRifleXRoPE_WanVideo",
+        "module_name": "applyriflexrope_wanvideo",
+        "output_names": [
+            "model"
+        ]
+    },
+    "WanVideoTeaCacheKJ": {
+        "class_name": "WanVideoTeaCacheKJ",
+        "module_name": "wanvideoteacachekj",
+        "output_names": [
+            "model"
+        ]
+    },
+    "WanVideoEnhanceAVideoKJ": {
+        "class_name": "WanVideoEnhanceAVideoKJ",
+        "module_name": "wanvideoenhanceavideokj",
+        "output_names": [
+            "model"
+        ]
+    },
+    "SkipLayerGuidanceWanVideo": {
+        "class_name": "SkipLayerGuidanceWanVideo",
+        "module_name": "skiplayerguidancewanvideo",
+        "output_names": [
+            "model"
+        ]
+    },
+    "TimerNodeKJ": {
+        "class_name": "TimerNodeKJ",
+        "module_name": "timernodekj",
+        "output_names": [
+            "any_output",
+            "timer",
+            "time"
+        ]
+    },
+    "HunyuanVideoEncodeKeyframesToCond": {
+        "class_name": "HunyuanVideoEncodeKeyframesToCond",
+        "module_name": "hunyuanvideoencodekeyframestocond",
+        "output_names": [
+            "model",
+            "positive",
+            "negative",
+            "latent"
+        ]
+    },
+    "CFGZeroStarAndInit": {
+        "class_name": "CFGZeroStarAndInit",
+        "module_name": "cfgzerostarandinit",
+        "output_names": [
+            "model"
+        ]
+    },
+    "ModelPatchTorchSettings": {
+        "class_name": "ModelPatchTorchSettings",
+        "module_name": "modelpatchtorchsettings",
+        "output_names": [
+            "model"
+        ]
+    },
+    "WanVideoNAG": {
+        "class_name": "WanVideoNAG",
+        "module_name": "wanvideonag",
+        "output_names": [
+            "model"
+        ]
+    },
+    "CreateInstanceDiffusionTracking": {
+        "class_name": "CreateInstanceDiffusionTracking",
+        "module_name": "createinstancediffusiontracking",
+        "output_names": [
+            "tracking",
+            "prompt",
+            "width",
+            "height",
+            "bbox_width",
+            "bbox_height"
+        ]
+    },
+    "AppendInstanceDiffusionTracking": {
+        "class_name": "AppendInstanceDiffusionTracking",
+        "module_name": "appendinstancediffusiontracking",
+        "output_names": [
+            "tracking",
+            "prompt"
+        ]
+    },
+    "DrawInstanceDiffusionTracking": {
+        "class_name": "DrawInstanceDiffusionTracking",
+        "module_name": "drawinstancediffusiontracking",
+        "output_names": [
+            "image"
+        ]
+    },
+    "UnetLoaderGGUF": {
+        "class_name": "UnetLoaderGGUF",
+        "module_name": "unetloadergguf",
+        "output_names": [
+            "model"
+        ]
+    },
+    "CLIPLoaderGGUF": {
+        "class_name": "CLIPLoaderGGUF",
+        "module_name": "cliploadergguf",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "DualCLIPLoaderGGUF": {
+        "class_name": "DualCLIPLoaderGGUF",
+        "module_name": "dualcliploadergguf",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "TripleCLIPLoaderGGUF": {
+        "class_name": "TripleCLIPLoaderGGUF",
+        "module_name": "triplecliploadergguf",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "QuadrupleCLIPLoaderGGUF": {
+        "class_name": "QuadrupleCLIPLoaderGGUF",
+        "module_name": "quadruplecliploadergguf",
+        "output_names": [
+            "clip"
+        ]
+    },
+    "UnetLoaderGGUFAdvanced": {
+        "class_name": "UnetLoaderGGUFAdvanced",
+        "module_name": "unetloaderggufadvanced",
+        "output_names": [
+            "model"
+        ]
+    }
+}

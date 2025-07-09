@@ -1,19 +1,11 @@
 import json
 import re
-import textwrap
-import argparse
-import requests
 import importlib
-from typing import Dict, Any, List, Tuple
-from urllib.parse import urlparse
-
-def is_url(url: str) -> bool:
-    """Check if a string is a valid URL."""
-    try:
-        result = urlparse(url)
-        return all([result.scheme, result.netloc])
-    except ValueError:
-        return False
+import sys
+import os
+import inspect
+import argparse
+from typing import Dict, Any, List, Optional
 
 def sanitize_class_name(name: str) -> str:
     """Converts a name into a valid Python class name."""
@@ -21,6 +13,11 @@ def sanitize_class_name(name: str) -> str:
     if sanitized and sanitized[0].isdigit():
         sanitized = "_" + sanitized
     return sanitized
+
+# Add the project root to sys.path to enable importing cb2c_py modules
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+if project_root not in sys.path:
+    sys.path.append(project_root)
 
 def get_output_slot_name(class_name: str, slot_index: int) -> str:
     """
@@ -39,9 +36,27 @@ def get_output_slot_name(class_name: str, slot_index: int) -> str:
         # A better way would be to parse the node class file to get the output names.
         # For now, we will stick to introspection.
         
-        # Let's assume the node can be instantiated without arguments for introspection.
-        # This is a major assumption.
-        dummy_node = node_class()
+        # Inspect the constructor to get required arguments
+        sig = inspect.signature(node_class.__init__)
+        dummy_args = {}
+        for param_name, param in sig.parameters.items():
+            if param_name == 'self':
+                continue
+            if param.kind == inspect.Parameter.POSITIONAL_OR_KEYWORD and param.default is inspect.Parameter.empty:
+                # This is a required argument without a default value
+                # Try to provide a dummy value based on type hint, or None as a fallback
+                if param.annotation is str:
+                    dummy_args[param_name] = ""
+                elif param.annotation is int:
+                    dummy_args[param_name] = 0
+                elif param.annotation is float:
+                    dummy_args[param_name] = 0.0
+                elif param.annotation is bool:
+                    dummy_args[param_name] = False
+                else:
+                    dummy_args[param_name] = None # Fallback for other types
+        
+        dummy_node = node_class(**dummy_args)
         output_slots = dummy_node.outputs
         
         # The slots are stored in a dict, but we need to access them by order.
@@ -57,151 +72,193 @@ def get_output_slot_name(class_name: str, slot_index: int) -> str:
     return f"outputs[{slot_index}] # Fallback"
 
 
-def build_python_script(workflow_json: Dict[str, Any], script_name: str) -> str:
+def build_python_script(workflow_json: Dict[str, Any], script_name: str, workflow_filename: str, discard_notes: bool = False) -> Optional[str]:
     """
-    Generates a Python script from a ComfyUI workflow JSON.
+    Generates a Python script from a ComfyUI workflow JSON, separating constructor args from other properties.
     """
     nodes_by_id: Dict[str, Any] = {str(node["id"]): node for node in workflow_json["nodes"]}
 
-    node_vars: Dict[str, str] = {}
-    
-    for node_id, node_data in nodes_by_id.items():
-        class_type = node_data["type"] # Use "type" for class_type
+    # Pr-check for missing node modules
+    for node_data in nodes_by_id.values():
+        class_type = node_data["type"]
+        if class_type == 'MarkdownNote':
+            continue
         py_class_name = sanitize_class_name(class_type)
-        node_vars[node_id] = f"{py_class_name.lower()}_{node_id}"
+        try:
+            importlib.import_module(f"cb2c_py.nodes.generated.{py_class_name.lower()}")
+        except ImportError:
+            print(f"Warning: Workflow from '{workflow_filename}' could not be processed due to missing node '{class_type}'. Please try adding the missing node to custom-nodes.txt, then rebuild ComfyUI and regenerate the nodes.")
+            return None
 
-    imports = set(["from cb2c_py.lib.workflow import Workflow"])
+    node_vars: Dict[str, str] = {
+        node_id: f"{sanitize_class_name(data['type']).lower()}_{node_id}"
+        for node_id, data in nodes_by_id.items()
+    }
+
+    imports = {"from cb2c_py.lib.workflow import Workflow", "import random"}
+    body = [
+        f'def {script_name}():',
+        '    """',
+        f'    This function was auto-generated from a ComfyUI workflow ({workflow_filename}).',
+        '    """',
+        '    wf = Workflow()',
+        ''
+    ]
+
+    # Topological sort to determine execution order
+    adj: Dict[str, List[str]] = {node_id: [] for node_id in nodes_by_id}
+    in_degree: Dict[str, int] = {node_id: 0 for node_id in nodes_by_id}
+    for link in workflow_json.get("links", []):
+        from_node_id, to_node_id = str(link[1]), str(link[3])
+        if from_node_id in adj and to_node_id in in_degree:
+            adj[from_node_id].append(to_node_id)
+            in_degree[to_node_id] += 1
+
+    queue = [node_id for node_id in nodes_by_id if in_degree[node_id] == 0]
+    sorted_node_ids = []
+    while queue:
+        node_id = queue.pop(0)
+        sorted_node_ids.append(node_id)
+        for neighbor_id in adj.get(node_id, []):
+            in_degree[neighbor_id] -= 1
+            if in_degree[neighbor_id] == 0:
+                queue.append(neighbor_id)
     
-    body = []
-    body.append(f'def {script_name}():')
-    body.append('    """')
-    body.append('    This function was auto-generated from a ComfyUI workflow.')
-    body.append('    """')
-    body.append('    wf = Workflow()')
-    body.append('')
+    if len(sorted_node_ids) < len(nodes_by_id):
+        print("Warning: Cycle detected or disconnected graph. Appending remaining nodes.")
+        sorted_node_ids.extend(node_id for node_id in nodes_by_id if node_id not in sorted_node_ids)
 
-    for node_id, node_data in sorted(nodes_by_id.items(), key=lambda item: int(item[0])):
-        class_type = node_data["type"] # Use "type" for class_type
-        py_class_name = sanitize_class_name(class_type)
+    # Process nodes in sorted order
+    for node_id in sorted_node_ids:
+        node_data = nodes_by_id[node_id]
+        class_type = node_data["type"]
         var_name = node_vars[node_id]
+
+        if class_type == 'MarkdownNote':
+            if not discard_notes and (note_text := (node_data.get("widgets_values") or [""])[0]):
+                body.extend([f"    # Note from {class_type} (ID: {node_id}):", f"    # {note_text.replace(__import__('os').linesep, ' ')}", ""])
+            continue
+
+        py_class_name = sanitize_class_name(class_type)
+        try:
+            module = importlib.import_module(f"cb2c_py.nodes.generated.{py_class_name.lower()}")
+            node_class = getattr(module, py_class_name)
+            imports.add(f"from cb2c_py.nodes.generated import {py_class_name}")
+        except (ImportError, AttributeError) as e:
+            print(f"Error importing node class {py_class_name}: {e}")
+            continue
+
+        # Separate constructor args from other properties
+        sig = inspect.signature(node_class.__init__)
+        constructor_params = {p.name for p in sig.parameters.values() if p.name != 'self'}
         
-        imports.add(f"from cb2c_py.nodes.generated import {py_class_name}")
+        all_params = {}
+        # Linked inputs
+        for inp in node_data.get("inputs", []):
+            if (link_id := inp.get("link")) is not None:
+                link = next((l for l in workflow_json["links"] if l[0] == link_id), None)
+                if link:
+                    from_id, from_slot = str(link[1]), link[2]
+                    from_var = node_vars[from_id]
+                    from_class = sanitize_class_name(nodes_by_id[from_id]["type"])
+                    slot_name = get_output_slot_name(from_class, from_slot)
+                    all_params[inp["name"]] = f"{from_var}.outputs.{slot_name}"
 
-        inputs_data = node_data.get("inputs", [])
-        widgets_values = node_data.get("widgets_values", [])
-        args = []
-        widget_idx = 0
+        # Widget values
+        widget_inputs = [inp["name"] for inp in node_data.get("inputs", []) if "widget" in inp]
+        for i, value in enumerate(node_data.get("widgets_values", [])):
+            if i < len(widget_inputs):
+                all_params[widget_inputs[i]] = repr(value)
 
-        for input_item in inputs_data:
-            input_name = input_item["name"]
-            if "link" in input_item and input_item["link"] is not None:
-                # This input is linked to another node's output
-                link_id = input_item["link"]
-                # Find the link in the workflow_json["links"]
-                # A link looks like: [52, 31, 0, 8, 0, "LATENT"]
-                # [link_id, from_node_id, from_slot_index, to_node_id, to_slot_index, type]
-                
-                # We need to find the link that has this link_id as its first element
-                found_link = None
-                for link in workflow_json["links"]:
-                    if link[0] == link_id:
-                        found_link = link
-                        break
-                
-                if found_link:
-                    from_node_id = str(found_link[1])
-                    from_slot_index = found_link[2]
-                    
-                    from_var_name = node_vars[from_node_id]
-                    from_node_data = nodes_by_id[from_node_id]
-                    from_class_type = from_node_data["type"]
-                    from_py_class_name = sanitize_class_name(from_class_type)
+        constructor_args = {k: v for k, v in all_params.items() if k in constructor_params}
+        property_settings = {k: v for k, v in all_params.items() if k not in constructor_params}
 
-                    output_slot_name = get_output_slot_name(from_py_class_name, from_slot_index)
-                    args.append(f'{input_name}={from_var_name}.outputs.{output_slot_name}')
-                else:
-                    args.append(f'{input_name}=None # Link not found for {link_id}')
-
-            elif "widget" in input_item:
-                # This input is a widget with a direct value
-                if widget_idx < len(widgets_values):
-                    value = widgets_values[widget_idx]
-                    args.append(f'{input_name}={repr(value)}')
-                    widget_idx += 1
-                else:
-                    args.append(f'{input_name}=None # Widget value not found')
-            else:
-                # Fallback for other types of inputs (e.g., direct values not from widgets)
-                # This part might need further refinement based on actual JSON structure
-                args.append(f'{input_name}=None # Unhandled input type')
-        
-        # Handle any remaining widgets_values that might not be directly mapped to inputs
-        # (e.g., if some inputs are optional or dynamically added)
-        while widget_idx < len(widgets_values):
-            # This is a heuristic, assuming remaining widget values are for unnamed inputs
-            # or inputs that don't have a direct 'name' in the 'inputs' list.
-            # This might need more specific logic based on ComfyUI's internal structure.
-            # For now, we'll just add them as positional arguments if possible, or skip.
-            # This part is highly dependent on how ComfyUI maps widgets to inputs.
-            # For now, we'll assume all relevant inputs are in the 'inputs' list.
-            widget_idx += 1 # Just consume the value to avoid infinite loop if not handled
-        
+        # Build the lines of code for this node
         body.append(f"    # Node: {class_type} (ID: {node_id})")
-        body.append(f"    {var_name} = wf.add_node({py_class_name}({', '.join(args)}))")
+        constructor_args_str = ', '.join(f"{k}={v}" for k, v in constructor_args.items())
+        body.append(f"    {var_name} = {py_class_name}({constructor_args_str})")
+        
+        for prop, value in property_settings.items():
+            body.append(f"    {var_name}.{prop} = {value}")
+            
+        body.append(f"    wf.add_node({var_name})")
         body.append("")
 
-    script_content = "\n".join(sorted(list(imports)))
-    script_content += "\n\n"
-    script_content += "\n".join(body)
-    script_content += "\n    return wf\n"
+    script_content = "\n".join(sorted(list(imports))) + "\n\n" + "\n".join(body) + "\n    return wf\n"
 
+    main_block = [
+        '',
+        'if __name__ == "__main__":',
+        '    # Create the workflow',
+        f'    workflow = {script_name}()',
+        '',
+        '    # Run the workflow',
+        '    workflow.run()',
+        ''
+    ]
+    script_content += "\n".join(main_block)
     return script_content
 
 def main():
-    parser = argparse.ArgumentParser(description="Convert a ComfyUI JSON workflow from a URL or Path to a Python script.")
-    parser.add_argument("path", help="The Path (or URL) to the JSON workflow file.")
-    parser.add_argument("-o", "--output", help="The path to save the generated Python script.", required=True)
+    parser = argparse.ArgumentParser(description="Convert all ComfyUI JSON workflows from 'json-workflows' directory to Python scripts.")
+    
+    default_output_dir = os.path.join(project_root, "user", "workflows")
+    
+    parser.add_argument("-o", "--output", 
+                        help=f"The path to save the generated Python scripts. Defaults to {default_output_dir}", 
+                        default=default_output_dir)
+    
+    parser.add_argument("--discard-notes", 
+                        action='store_true',
+                        help="If set, all MarkdownNote nodes will be completely ignored and not even added as comments.")
 
     args = parser.parse_args()
 
-    # Check if the path is a URL
-    if is_url(args.path):
-        try:
-            response = requests.get(args.path)
-            response.raise_for_status()
-            workflow_data = response.json()
-        except requests.exceptions.RequestException as e:
-            print(f"Error fetching URL: {e}")
-            return
-        except json.JSONDecodeError:
-            print("Error: Failed to decode JSON from the response.")
-            return
-    else:
-        # Treat it as a local file path
-        try:
-            with open(args.path, 'r') as f:
-                workflow_data = json.load(f)
-        except IOError as e:
-            print(f"Error reading file: {e}")
-            return
+    output_dir = args.output
+    json_workflows_dir = os.path.join(project_root, "json-workflows")
 
-    if "prompt" in workflow_data:
-        workflow_json = workflow_data["prompt"]
-    else:
-        workflow_json = workflow_data
+    if not os.path.isdir(json_workflows_dir):
+        print(f"Input directory not found: {json_workflows_dir}")
+        print(f"Creating directory {json_workflows_dir}. Please add your JSON workflows there and run again.")
+        os.makedirs(json_workflows_dir)
+        return
 
-    script_name = "build_workflow"
-    if args.output:
-        script_name = re.sub(r'[^a-zA-Z0-9_]', '_', args.output.split('/')[-1].replace('.py', ''))
+    os.makedirs(output_dir, exist_ok=True)
 
-    python_script = build_python_script(workflow_json, script_name)
-    
-    try:
-        with open(args.output, "w") as f:
-            f.write(python_script)
-        print(f"Successfully converted workflow to {args.output}")
-    except IOError as e:
-        print(f"Error writing to file: {e}")
+    for filename in os.listdir(json_workflows_dir):
+        if filename.endswith(".json"):
+            json_path = os.path.join(json_workflows_dir, filename)
+            
+            # Sanitize filename to be a valid python module name
+            py_filename_base = sanitize_class_name(filename.replace(".json", "")).lower()
+            py_filename = py_filename_base + ".py"
+            output_path = os.path.join(output_dir, py_filename)
+            
+            print(f"Processing {json_path} -> {output_path}")
+
+            try:
+                with open(json_path, 'r') as f:
+                    workflow_data = json.load(f)
+            except (IOError, json.JSONDecodeError) as e:
+                print(f"Warning: Could not read or parse {json_path}: {e}")
+                continue
+
+            if "prompt" in workflow_data:
+                workflow_json = workflow_data["prompt"]
+            else:
+                workflow_json = workflow_data
+
+            script_name = py_filename_base
+
+            python_script = build_python_script(workflow_json, script_name, filename, discard_notes=args.discard_notes)
+            
+            if python_script:
+                try:
+                    with open(output_path, "w") as f:
+                        f.write(python_script)
+                    print(f"Successfully converted workflow to {output_path}")
+                except IOError as e:
+                    print(f"Error writing to file: {e}")
 
 if __name__ == "__main__":
     main()
