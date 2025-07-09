@@ -40,11 +40,21 @@ docker compose -f docker/docker-compose.yml up -d
 
 This will start a ComfyUI instance with the necessary configurations.
 
-### 2. Install Custom Nodes
+### 2. Python Environment Setup
+
+It's recommended to set up a Python virtual environment to manage dependencies:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -e .
+```
+
+### 3. Install Custom Nodes
 
 Add the git repository URLs of any custom nodes you need to `custom-nodes.txt`. The `docker/custom-nodes-loader.sh` script will automatically clone them into the correct directory when the container starts.
 
-### 3. Add Models
+### 4. Add Models
 
 To add models to the ComfyUI container, add them to the `models.csv` file at the root of the project. The format is `url,destination`. The `docker/download_models.py` script will then download them into the correct directory:
 
@@ -52,7 +62,7 @@ To add models to the ComfyUI container, add them to the `models.csv` file at the
 python docker/download_models.py
 ```
 
-### 4. Generate Python Node Classes
+### 5. Generate Python Node Classes
 
 Once your ComfyUI instance is running (with all custom nodes loaded), generate the Python wrapper classes:
 
@@ -64,7 +74,7 @@ python -m cb2c_py.nodes.generate_nodes
 
 This will populate the `nodes/generated/` directory with Python modules corresponding to each ComfyUI node.
 
-### 5. Build a Workflow
+### 6. Build a Workflow
 
 Create a Python script to define your workflow using the `Workflow` class and the generated node classes. See `cb2c_py/templates/workflow/text2image.py` for a template.
 
@@ -111,6 +121,7 @@ if __name__ == "__main__":
     print(json.dumps(workflow_json, indent=2))
 ```
 
-### 6. Run the Workflow
+### 7. Run the Workflow
 
-The workflow instance can be run using the `run` method. See `cb2c_py/templates/runner/text2image.py` for an example of how to use it.
+The workflow instance can be run using the `run` method.
+See `cb2c_py/templates/runner/text2image.py` for an example of how to write it. Run with `python -m cb2c_py.templates.runner.text2image`
