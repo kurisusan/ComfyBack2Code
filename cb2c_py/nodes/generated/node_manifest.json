@@ -3087,279 +3087,6 @@
         "module_name": "saveimagewebsocket",
         "output_names": []
     },
-    "Context Big (rgthree)": {
-        "class_name": "Context_Big__rgthree_",
-        "module_name": "context_big__rgthree_",
-        "output_names": [
-            "context",
-            "model",
-            "clip",
-            "vae",
-            "positive",
-            "negative",
-            "latent",
-            "image",
-            "seed",
-            "steps",
-            "step_refiner",
-            "cfg",
-            "ckpt_name",
-            "sampler",
-            "scheduler",
-            "clip_width",
-            "clip_height",
-            "text_pos_g",
-            "text_pos_l",
-            "text_neg_g",
-            "text_neg_l",
-            "mask",
-            "control_net"
-        ]
-    },
-    "Context (rgthree)": {
-        "class_name": "Context__rgthree_",
-        "module_name": "context__rgthree_",
-        "output_names": [
-            "context",
-            "model",
-            "clip",
-            "vae",
-            "positive",
-            "negative",
-            "latent",
-            "image",
-            "seed"
-        ]
-    },
-    "Context Switch (rgthree)": {
-        "class_name": "Context_Switch__rgthree_",
-        "module_name": "context_switch__rgthree_",
-        "output_names": [
-            "context",
-            "model",
-            "clip",
-            "vae",
-            "positive",
-            "negative",
-            "latent",
-            "image",
-            "seed"
-        ]
-    },
-    "Context Switch Big (rgthree)": {
-        "class_name": "Context_Switch_Big__rgthree_",
-        "module_name": "context_switch_big__rgthree_",
-        "output_names": [
-            "context",
-            "model",
-            "clip",
-            "vae",
-            "positive",
-            "negative",
-            "latent",
-            "image",
-            "seed",
-            "steps",
-            "step_refiner",
-            "cfg",
-            "ckpt_name",
-            "sampler",
-            "scheduler",
-            "clip_width",
-            "clip_height",
-            "text_pos_g",
-            "text_pos_l",
-            "text_neg_g",
-            "text_neg_l",
-            "mask",
-            "control_net"
-        ]
-    },
-    "Context Merge (rgthree)": {
-        "class_name": "Context_Merge__rgthree_",
-        "module_name": "context_merge__rgthree_",
-        "output_names": [
-            "context",
-            "model",
-            "clip",
-            "vae",
-            "positive",
-            "negative",
-            "latent",
-            "image",
-            "seed"
-        ]
-    },
-    "Context Merge Big (rgthree)": {
-        "class_name": "Context_Merge_Big__rgthree_",
-        "module_name": "context_merge_big__rgthree_",
-        "output_names": [
-            "context",
-            "model",
-            "clip",
-            "vae",
-            "positive",
-            "negative",
-            "latent",
-            "image",
-            "seed",
-            "steps",
-            "step_refiner",
-            "cfg",
-            "ckpt_name",
-            "sampler",
-            "scheduler",
-            "clip_width",
-            "clip_height",
-            "text_pos_g",
-            "text_pos_l",
-            "text_neg_g",
-            "text_neg_l",
-            "mask",
-            "control_net"
-        ]
-    },
-    "Display Int (rgthree)": {
-        "class_name": "Display_Int__rgthree_",
-        "module_name": "display_int__rgthree_",
-        "output_names": []
-    },
-    "Display Any (rgthree)": {
-        "class_name": "Display_Any__rgthree_",
-        "module_name": "display_any__rgthree_",
-        "output_names": []
-    },
-    "Lora Loader Stack (rgthree)": {
-        "class_name": "Lora_Loader_Stack__rgthree_",
-        "module_name": "lora_loader_stack__rgthree_",
-        "output_names": [
-            "model",
-            "clip"
-        ]
-    },
-    "Seed (rgthree)": {
-        "class_name": "Seed__rgthree_",
-        "module_name": "seed__rgthree_",
-        "output_names": [
-            "seed"
-        ]
-    },
-    "Image Inset Crop (rgthree)": {
-        "class_name": "Image_Inset_Crop__rgthree_",
-        "module_name": "image_inset_crop__rgthree_",
-        "output_names": [
-            "image"
-        ]
-    },
-    "Power Prompt (rgthree)": {
-        "class_name": "Power_Prompt__rgthree_",
-        "module_name": "power_prompt__rgthree_",
-        "output_names": [
-            "conditioning",
-            "model",
-            "clip",
-            "text"
-        ]
-    },
-    "Power Prompt - Simple (rgthree)": {
-        "class_name": "Power_Prompt___Simple__rgthree_",
-        "module_name": "power_prompt___simple__rgthree_",
-        "output_names": [
-            "conditioning",
-            "text"
-        ]
-    },
-    "KSampler Config (rgthree)": {
-        "class_name": "KSampler_Config__rgthree_",
-        "module_name": "ksampler_config__rgthree_",
-        "output_names": [
-            "steps",
-            "refiner_step",
-            "cfg",
-            "sampler",
-            "scheduler"
-        ]
-    },
-    "SDXL Empty Latent Image (rgthree)": {
-        "class_name": "SDXL_Empty_Latent_Image__rgthree_",
-        "module_name": "sdxl_empty_latent_image__rgthree_",
-        "output_names": [
-            "latent",
-            "clip_width",
-            "clip_height"
-        ]
-    },
-    "SDXL Power Prompt - Positive (rgthree)": {
-        "class_name": "SDXL_Power_Prompt___Positive__rgthree_",
-        "module_name": "sdxl_power_prompt___positive__rgthree_",
-        "output_names": [
-            "conditioning",
-            "model",
-            "clip",
-            "text_g",
-            "text_l"
-        ]
-    },
-    "SDXL Power Prompt - Simple / Negative (rgthree)": {
-        "class_name": "SDXL_Power_Prompt___Simple___Negative__rgthree_",
-        "module_name": "sdxl_power_prompt___simple___negative__rgthree_",
-        "output_names": [
-            "conditioning",
-            "text_g",
-            "text_l"
-        ]
-    },
-    "Any Switch (rgthree)": {
-        "class_name": "Any_Switch__rgthree_",
-        "module_name": "any_switch__rgthree_",
-        "output_names": [
-            "_"
-        ]
-    },
-    "Image Comparer (rgthree)": {
-        "class_name": "Image_Comparer__rgthree_",
-        "module_name": "image_comparer__rgthree_",
-        "output_names": []
-    },
-    "Power Lora Loader (rgthree)": {
-        "class_name": "Power_Lora_Loader__rgthree_",
-        "module_name": "power_lora_loader__rgthree_",
-        "output_names": [
-            "model",
-            "clip"
-        ]
-    },
-    "Power Primitive (rgthree)": {
-        "class_name": "Power_Primitive__rgthree_",
-        "module_name": "power_primitive__rgthree_",
-        "output_names": [
-            "_"
-        ]
-    },
-    "Image or Latent Size (rgthree)": {
-        "class_name": "Image_or_Latent_Size__rgthree_",
-        "module_name": "image_or_latent_size__rgthree_",
-        "output_names": [
-            "width",
-            "height"
-        ]
-    },
-    "Image Resize (rgthree)": {
-        "class_name": "Image_Resize__rgthree_",
-        "module_name": "image_resize__rgthree_",
-        "output_names": [
-            "image",
-            "width",
-            "height"
-        ]
-    },
-    "Power Puter (rgthree)": {
-        "class_name": "Power_Puter__rgthree_",
-        "module_name": "power_puter__rgthree_",
-        "output_names": [
-            "_"
-        ]
-    },
     "CLIPTextEncodeSDXL+": {
         "class_name": "CLIPTextEncodeSDXL_",
         "module_name": "cliptextencodesdxl_",
@@ -3985,6 +3712,279 @@
         "output_names": [
             "float",
             "int"
+        ]
+    },
+    "Context Big (rgthree)": {
+        "class_name": "Context_Big__rgthree_",
+        "module_name": "context_big__rgthree_",
+        "output_names": [
+            "context",
+            "model",
+            "clip",
+            "vae",
+            "positive",
+            "negative",
+            "latent",
+            "image",
+            "seed",
+            "steps",
+            "step_refiner",
+            "cfg",
+            "ckpt_name",
+            "sampler",
+            "scheduler",
+            "clip_width",
+            "clip_height",
+            "text_pos_g",
+            "text_pos_l",
+            "text_neg_g",
+            "text_neg_l",
+            "mask",
+            "control_net"
+        ]
+    },
+    "Context (rgthree)": {
+        "class_name": "Context__rgthree_",
+        "module_name": "context__rgthree_",
+        "output_names": [
+            "context",
+            "model",
+            "clip",
+            "vae",
+            "positive",
+            "negative",
+            "latent",
+            "image",
+            "seed"
+        ]
+    },
+    "Context Switch (rgthree)": {
+        "class_name": "Context_Switch__rgthree_",
+        "module_name": "context_switch__rgthree_",
+        "output_names": [
+            "context",
+            "model",
+            "clip",
+            "vae",
+            "positive",
+            "negative",
+            "latent",
+            "image",
+            "seed"
+        ]
+    },
+    "Context Switch Big (rgthree)": {
+        "class_name": "Context_Switch_Big__rgthree_",
+        "module_name": "context_switch_big__rgthree_",
+        "output_names": [
+            "context",
+            "model",
+            "clip",
+            "vae",
+            "positive",
+            "negative",
+            "latent",
+            "image",
+            "seed",
+            "steps",
+            "step_refiner",
+            "cfg",
+            "ckpt_name",
+            "sampler",
+            "scheduler",
+            "clip_width",
+            "clip_height",
+            "text_pos_g",
+            "text_pos_l",
+            "text_neg_g",
+            "text_neg_l",
+            "mask",
+            "control_net"
+        ]
+    },
+    "Context Merge (rgthree)": {
+        "class_name": "Context_Merge__rgthree_",
+        "module_name": "context_merge__rgthree_",
+        "output_names": [
+            "context",
+            "model",
+            "clip",
+            "vae",
+            "positive",
+            "negative",
+            "latent",
+            "image",
+            "seed"
+        ]
+    },
+    "Context Merge Big (rgthree)": {
+        "class_name": "Context_Merge_Big__rgthree_",
+        "module_name": "context_merge_big__rgthree_",
+        "output_names": [
+            "context",
+            "model",
+            "clip",
+            "vae",
+            "positive",
+            "negative",
+            "latent",
+            "image",
+            "seed",
+            "steps",
+            "step_refiner",
+            "cfg",
+            "ckpt_name",
+            "sampler",
+            "scheduler",
+            "clip_width",
+            "clip_height",
+            "text_pos_g",
+            "text_pos_l",
+            "text_neg_g",
+            "text_neg_l",
+            "mask",
+            "control_net"
+        ]
+    },
+    "Display Int (rgthree)": {
+        "class_name": "Display_Int__rgthree_",
+        "module_name": "display_int__rgthree_",
+        "output_names": []
+    },
+    "Display Any (rgthree)": {
+        "class_name": "Display_Any__rgthree_",
+        "module_name": "display_any__rgthree_",
+        "output_names": []
+    },
+    "Lora Loader Stack (rgthree)": {
+        "class_name": "Lora_Loader_Stack__rgthree_",
+        "module_name": "lora_loader_stack__rgthree_",
+        "output_names": [
+            "model",
+            "clip"
+        ]
+    },
+    "Seed (rgthree)": {
+        "class_name": "Seed__rgthree_",
+        "module_name": "seed__rgthree_",
+        "output_names": [
+            "seed"
+        ]
+    },
+    "Image Inset Crop (rgthree)": {
+        "class_name": "Image_Inset_Crop__rgthree_",
+        "module_name": "image_inset_crop__rgthree_",
+        "output_names": [
+            "image"
+        ]
+    },
+    "Power Prompt (rgthree)": {
+        "class_name": "Power_Prompt__rgthree_",
+        "module_name": "power_prompt__rgthree_",
+        "output_names": [
+            "conditioning",
+            "model",
+            "clip",
+            "text"
+        ]
+    },
+    "Power Prompt - Simple (rgthree)": {
+        "class_name": "Power_Prompt___Simple__rgthree_",
+        "module_name": "power_prompt___simple__rgthree_",
+        "output_names": [
+            "conditioning",
+            "text"
+        ]
+    },
+    "KSampler Config (rgthree)": {
+        "class_name": "KSampler_Config__rgthree_",
+        "module_name": "ksampler_config__rgthree_",
+        "output_names": [
+            "steps",
+            "refiner_step",
+            "cfg",
+            "sampler",
+            "scheduler"
+        ]
+    },
+    "SDXL Empty Latent Image (rgthree)": {
+        "class_name": "SDXL_Empty_Latent_Image__rgthree_",
+        "module_name": "sdxl_empty_latent_image__rgthree_",
+        "output_names": [
+            "latent",
+            "clip_width",
+            "clip_height"
+        ]
+    },
+    "SDXL Power Prompt - Positive (rgthree)": {
+        "class_name": "SDXL_Power_Prompt___Positive__rgthree_",
+        "module_name": "sdxl_power_prompt___positive__rgthree_",
+        "output_names": [
+            "conditioning",
+            "model",
+            "clip",
+            "text_g",
+            "text_l"
+        ]
+    },
+    "SDXL Power Prompt - Simple / Negative (rgthree)": {
+        "class_name": "SDXL_Power_Prompt___Simple___Negative__rgthree_",
+        "module_name": "sdxl_power_prompt___simple___negative__rgthree_",
+        "output_names": [
+            "conditioning",
+            "text_g",
+            "text_l"
+        ]
+    },
+    "Any Switch (rgthree)": {
+        "class_name": "Any_Switch__rgthree_",
+        "module_name": "any_switch__rgthree_",
+        "output_names": [
+            "_"
+        ]
+    },
+    "Image Comparer (rgthree)": {
+        "class_name": "Image_Comparer__rgthree_",
+        "module_name": "image_comparer__rgthree_",
+        "output_names": []
+    },
+    "Power Lora Loader (rgthree)": {
+        "class_name": "Power_Lora_Loader__rgthree_",
+        "module_name": "power_lora_loader__rgthree_",
+        "output_names": [
+            "model",
+            "clip"
+        ]
+    },
+    "Power Primitive (rgthree)": {
+        "class_name": "Power_Primitive__rgthree_",
+        "module_name": "power_primitive__rgthree_",
+        "output_names": [
+            "_"
+        ]
+    },
+    "Image or Latent Size (rgthree)": {
+        "class_name": "Image_or_Latent_Size__rgthree_",
+        "module_name": "image_or_latent_size__rgthree_",
+        "output_names": [
+            "width",
+            "height"
+        ]
+    },
+    "Image Resize (rgthree)": {
+        "class_name": "Image_Resize__rgthree_",
+        "module_name": "image_resize__rgthree_",
+        "output_names": [
+            "image",
+            "width",
+            "height"
+        ]
+    },
+    "Power Puter (rgthree)": {
+        "class_name": "Power_Puter__rgthree_",
+        "module_name": "power_puter__rgthree_",
+        "output_names": [
+            "_"
         ]
     },
     "DeviceSelectorMultiGPU": {
