@@ -23,7 +23,16 @@ class ImageCompositeFromMaskBatch_Outputs(OutputSlots):
 class ImageCompositeFromMaskBatch_(Node[ImageCompositeFromMaskBatch_Inputs, ImageCompositeFromMaskBatch_Outputs]):
     """
     Original name: ImageCompositeFromMaskBatch+
-    No description available.
+    Category: essentials/image manipulation
+    
+
+    Inputs:
+        - image_from (Image)
+        - image_to (Image)
+        - mask (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageCompositeFromMaskBatch+'
 

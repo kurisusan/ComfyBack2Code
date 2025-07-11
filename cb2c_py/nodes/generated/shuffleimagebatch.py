@@ -21,7 +21,15 @@ class ShuffleImageBatchOutputs(OutputSlots):
 class ShuffleImageBatch(Node[ShuffleImageBatchInputs, ShuffleImageBatchOutputs]):
     """
     Original name: ShuffleImageBatch
-    No description available.
+    Category: KJNodes/image
+    
+
+    Inputs:
+        - images (Image)
+        - seed (int) (default: 123)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ShuffleImageBatch'
 

@@ -19,7 +19,14 @@ class PreviewAnyOutputs(OutputSlots):
 class PreviewAny(Node[PreviewAnyInputs, PreviewAnyOutputs]):
     """
     Original name: PreviewAny
-    No description available.
+    Category: utils
+    
+
+    Inputs:
+        - source (Any)
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'PreviewAny'
 

@@ -29,7 +29,22 @@ class TorchCompileVAEOutputs(OutputSlots):
 class TorchCompileVAE(Node[TorchCompileVAEInputs, TorchCompileVAEOutputs]):
     """
     Original name: TorchCompileVAE
-    No description available.
+    Category: KJNodes/torchcompile
+    
+
+    Inputs:
+        - vae (Vae)
+        - backend (str)
+        - fullgraph (bool) (default: False)
+          Enable full graph mode
+        - mode (str) (default: 'default')
+        - compile_encoder (bool) (default: True)
+          Compile encoder
+        - compile_decoder (bool) (default: True)
+          Compile decoder
+
+    Outputs:
+        - vae (Vae)
     """
     _original_name: str = 'TorchCompileVAE'
 

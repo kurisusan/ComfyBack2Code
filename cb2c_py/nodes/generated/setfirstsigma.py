@@ -21,7 +21,15 @@ class SetFirstSigmaOutputs(OutputSlots):
 class SetFirstSigma(Node[SetFirstSigmaInputs, SetFirstSigmaOutputs]):
     """
     Original name: SetFirstSigma
-    No description available.
+    Category: sampling/custom_sampling/sigmas
+    
+
+    Inputs:
+        - sigmas (Any)
+        - sigma (float) (default: 136.0)
+
+    Outputs:
+        - sigmas (Any)
     """
     _original_name: str = 'SetFirstSigma'
 

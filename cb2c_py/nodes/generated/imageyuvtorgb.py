@@ -23,7 +23,16 @@ class ImageYUVToRGBOutputs(OutputSlots):
 class ImageYUVToRGB(Node[ImageYUVToRGBInputs, ImageYUVToRGBOutputs]):
     """
     Original name: ImageYUVToRGB
-    No description available.
+    Category: image/batch
+    
+
+    Inputs:
+        - Y (Image)
+        - U (Image)
+        - V (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageYUVToRGB'
 

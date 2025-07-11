@@ -27,7 +27,20 @@ class PikadditionsOutputs(OutputSlots):
 class Pikadditions(Node[PikadditionsInputs, PikadditionsOutputs]):
     """
     Original name: Pikadditions
-    No description available.
+    Category: api node/video/Pika
+    Add any object or image into your video. Upload a video and specify what you'd like to add to create a seamlessly integrated result.
+
+    Inputs:
+        - video (Any)
+          The video to add an image to.
+        - image (Image)
+          The image to add to the video.
+        - prompt_text (str) (default: None)
+        - negative_prompt (str) (default: None)
+        - seed (int) (default: None)
+
+    Outputs:
+        - video (Any)
     """
     _original_name: str = 'Pikadditions'
 

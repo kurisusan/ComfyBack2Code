@@ -23,7 +23,19 @@ class SaveImageKJOutputs(OutputSlots):
 class SaveImageKJ(Node[SaveImageKJInputs, SaveImageKJOutputs]):
     """
     Original name: SaveImageKJ
-    No description available.
+    Category: KJNodes/image
+    Saves the input images to your ComfyUI output directory.
+
+    Inputs:
+        - images (Image)
+          The images to save.
+        - filename_prefix (str) (default: 'ComfyUI')
+          The prefix for the file to save. This may include formatting information such as %date:yyyy-MM-dd% or %Empty Latent Image.width% to include values from nodes.
+        - output_folder (str) (default: 'output')
+          The folder to save the images to.
+
+    Outputs:
+        - filename (str)
     """
     _original_name: str = 'SaveImageKJ'
 

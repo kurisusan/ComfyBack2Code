@@ -25,7 +25,17 @@ class SkipLayerGuidanceWanVideoOutputs(OutputSlots):
 class SkipLayerGuidanceWanVideo(Node[SkipLayerGuidanceWanVideoInputs, SkipLayerGuidanceWanVideoOutputs]):
     """
     Original name: SkipLayerGuidanceWanVideo
-    No description available.
+    Category: advanced/guidance
+    Simplified skip layer guidance that only skips the uncond on selected blocks
+
+    Inputs:
+        - model (Model)
+        - blocks (str) (default: '10')
+        - start_percent (float) (default: 0.2)
+        - end_percent (float) (default: 1.0)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'SkipLayerGuidanceWanVideo'
 

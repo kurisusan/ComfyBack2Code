@@ -25,7 +25,17 @@ class RenderPeopleKpsOutputs(OutputSlots):
 class RenderPeopleKps(Node[RenderPeopleKpsInputs, RenderPeopleKpsOutputs]):
     """
     Original name: RenderPeopleKps
-    No description available.
+    Category: ControlNet Preprocessors/Pose Keypoint Postprocess
+    
+
+    Inputs:
+        - kps (Any)
+        - render_body (bool) (default: True)
+        - render_hand (bool) (default: True)
+        - render_face (bool) (default: True)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'RenderPeopleKps'
 

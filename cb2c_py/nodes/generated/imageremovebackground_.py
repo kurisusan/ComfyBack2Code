@@ -23,7 +23,16 @@ class ImageRemoveBackground_Outputs(OutputSlots):
 class ImageRemoveBackground_(Node[ImageRemoveBackground_Inputs, ImageRemoveBackground_Outputs]):
     """
     Original name: ImageRemoveBackground+
-    No description available.
+    Category: essentials/image manipulation
+    
+
+    Inputs:
+        - rembg_session (Any)
+        - image (Image)
+
+    Outputs:
+        - image (Image)
+        - mask (Image)
     """
     _original_name: str = 'ImageRemoveBackground+'
 

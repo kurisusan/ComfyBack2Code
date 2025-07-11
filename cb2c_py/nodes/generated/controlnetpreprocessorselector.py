@@ -19,7 +19,14 @@ class ControlNetPreprocessorSelectorOutputs(OutputSlots):
 class ControlNetPreprocessorSelector(Node[ControlNetPreprocessorSelectorInputs, ControlNetPreprocessorSelectorOutputs]):
     """
     Original name: ControlNetPreprocessorSelector
-    No description available.
+    Category: ControlNet Preprocessors
+    
+
+    Inputs:
+        - preprocessor (str)
+
+    Outputs:
+        - preprocessor (str)
     """
     _original_name: str = 'ControlNetPreprocessorSelector'
 

@@ -14,7 +14,7 @@ class NunchakuPuLIDLoaderV2Inputs(InputSlots):
     def __init__(self, node: "Node"):
         self.model = Slot[Model](node, "model", 'MODEL')
         self.pulid_file = Slot[str](node, "pulid_file", [])
-        self.eva_clip_file = Slot[str](node, "eva_clip_file", [])
+        self.eva_clip_file = Slot[str](node, "eva_clip_file", ['umt5_xxl_fp8_e4m3fn_scaled.safetensors'])
         self.insight_face_provider = Slot[str](node, "insight_face_provider", ['gpu', 'cpu'])
 
 class NunchakuPuLIDLoaderV2Outputs(OutputSlots):
@@ -27,7 +27,22 @@ class NunchakuPuLIDLoaderV2Outputs(OutputSlots):
 class NunchakuPuLIDLoaderV2(Node[NunchakuPuLIDLoaderV2Inputs, NunchakuPuLIDLoaderV2Outputs]):
     """
     Original name: NunchakuPuLIDLoaderV2
-    No description available.
+    Category: Nunchaku
+    
+
+    Inputs:
+        - model (Model)
+          The nunchaku model.
+        - pulid_file (str)
+          Path to the PuLID model.
+        - eva_clip_file (str)
+          Path to the EVA clip model.
+        - insight_face_provider (str) (default: 'gpu')
+          InsightFace ONNX provider.
+
+    Outputs:
+        - model (Model)
+        - pulid_pipeline (Any)
     """
     _original_name: str = 'NunchakuPuLIDLoaderV2'
 

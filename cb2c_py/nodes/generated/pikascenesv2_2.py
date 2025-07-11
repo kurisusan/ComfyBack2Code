@@ -31,7 +31,21 @@ class PikaScenesV2_2Outputs(OutputSlots):
 class PikaScenesV2_2(Node[PikaScenesV2_2Inputs, PikaScenesV2_2Outputs]):
     """
     Original name: PikaScenesV2_2
-    No description available.
+    Category: api node/video/Pika
+    Combine your images to create a video with the objects in them. Upload multiple images as ingredients and generate a high-quality video that incorporates all of them.
+
+    Inputs:
+        - prompt_text (str) (default: None)
+        - negative_prompt (str) (default: None)
+        - seed (int) (default: None)
+        - resolution (Any) (default: '1080p')
+        - duration (Any) (default: '5')
+        - ingredients_mode (Any) (default: 'creative')
+        - aspect_ratio (float) (default: 1.7777777777777777)
+          Aspect ratio (width / height)
+
+    Outputs:
+        - video (Any)
     """
     _original_name: str = 'PikaScenesV2_2'
 

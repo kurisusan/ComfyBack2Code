@@ -25,7 +25,17 @@ class ControlNetApplyOutputs(OutputSlots):
 class ControlNetApply(Node[ControlNetApplyInputs, ControlNetApplyOutputs]):
     """
     Original name: ControlNetApply
-    No description available.
+    Category: conditioning/controlnet
+    
+
+    Inputs:
+        - conditioning (Conditioning)
+        - control_net (Any)
+        - image (Image)
+        - strength (float) (default: 1.0)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'ControlNetApply'
 

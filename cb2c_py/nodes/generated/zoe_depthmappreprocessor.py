@@ -19,7 +19,14 @@ class Zoe_DepthMapPreprocessorOutputs(OutputSlots):
 class Zoe_DepthMapPreprocessor(Node[Zoe_DepthMapPreprocessorInputs, Zoe_DepthMapPreprocessorOutputs]):
     """
     Original name: Zoe-DepthMapPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Normal and Depth Estimators
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'Zoe-DepthMapPreprocessor'
 

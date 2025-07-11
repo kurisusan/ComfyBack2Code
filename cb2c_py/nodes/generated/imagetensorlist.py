@@ -21,7 +21,17 @@ class ImageTensorListOutputs(OutputSlots):
 class ImageTensorList(Node[ImageTensorListInputs, ImageTensorListOutputs]):
     """
     Original name: ImageTensorList
-    No description available.
+    Category: KJNodes/image
+    
+Creates an image list from the input images.
+
+
+    Inputs:
+        - image1 (Image)
+        - image2 (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageTensorList'
 

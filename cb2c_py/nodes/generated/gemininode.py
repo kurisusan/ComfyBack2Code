@@ -23,7 +23,19 @@ class GeminiNodeOutputs(OutputSlots):
 class GeminiNode(Node[GeminiNodeInputs, GeminiNodeOutputs]):
     """
     Original name: GeminiNode
-    No description available.
+    Category: api node/text/Gemini
+    Generate text responses with Google's Gemini AI model. You can provide multiple types of inputs (text, images, audio, video) as context for generating more relevant and meaningful responses.
+
+    Inputs:
+        - prompt (str) (default: '')
+          Text inputs to the model, used to generate a response. You can include detailed instructions, questions, or context for the model.
+        - model (Any) (default: 'gemini-2.5-pro-preview-05-06')
+          The Gemini model to use for generating responses.
+        - seed (int) (default: 42)
+          When seed is fixed to a specific value, the model makes a best effort to provide the same response for repeated requests. Deterministic output isn't guaranteed. Also, changing the model or parameter settings, such as the temperature, can cause variations in the response even when you use the same seed value. By default, a random seed value is used.
+
+    Outputs:
+        - string (str)
     """
     _original_name: str = 'GeminiNode'
 

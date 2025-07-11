@@ -25,7 +25,20 @@ class StabilityUpscaleConservativeNodeOutputs(OutputSlots):
 class StabilityUpscaleConservativeNode(Node[StabilityUpscaleConservativeNodeInputs, StabilityUpscaleConservativeNodeOutputs]):
     """
     Original name: StabilityUpscaleConservativeNode
-    No description available.
+    Category: api node/image/Stability AI
+    Upscale image with minimal alterations to 4K resolution.
+
+    Inputs:
+        - image (Image)
+        - prompt (str) (default: '')
+          What you wish to see in the output image. A strong, descriptive prompt that clearly defines elements, colors, and subjects will lead to better results.
+        - creativity (float) (default: 0.35)
+          Controls the likelihood of creating additional details not heavily conditioned by the init image.
+        - seed (int) (default: 0)
+          The random seed used for creating the noise.
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'StabilityUpscaleConservativeNode'
 

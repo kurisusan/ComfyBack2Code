@@ -21,7 +21,15 @@ class TextEncodeForSamplerParams_Outputs(OutputSlots):
 class TextEncodeForSamplerParams_(Node[TextEncodeForSamplerParams_Inputs, TextEncodeForSamplerParams_Outputs]):
     """
     Original name: TextEncodeForSamplerParams+
-    No description available.
+    Category: essentials/sampling
+    
+
+    Inputs:
+        - text (str) (default: 'Separate prompts with at least three dashes\n---\nLike so')
+        - clip (Clip)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'TextEncodeForSamplerParams+'
 

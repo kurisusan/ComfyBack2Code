@@ -21,7 +21,15 @@ class SplitImageWithAlphaOutputs(OutputSlots):
 class SplitImageWithAlpha(Node[SplitImageWithAlphaInputs, SplitImageWithAlphaOutputs]):
     """
     Original name: SplitImageWithAlpha
-    No description available.
+    Category: mask/compositing
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
+        - mask (Image)
     """
     _original_name: str = 'SplitImageWithAlpha'
 

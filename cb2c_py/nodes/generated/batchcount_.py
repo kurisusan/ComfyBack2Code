@@ -19,7 +19,14 @@ class BatchCount_Outputs(OutputSlots):
 class BatchCount_(Node[BatchCount_Inputs, BatchCount_Outputs]):
     """
     Original name: BatchCount+
-    No description available.
+    Category: essentials/utilities
+    
+
+    Inputs:
+        - batch (Any)
+
+    Outputs:
+        - int (int)
     """
     _original_name: str = 'BatchCount+'
 

@@ -19,7 +19,14 @@ class ImageInvertOutputs(OutputSlots):
 class ImageInvert(Node[ImageInvertInputs, ImageInvertOutputs]):
     """
     Original name: ImageInvert
-    No description available.
+    Category: image
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageInvert'
 

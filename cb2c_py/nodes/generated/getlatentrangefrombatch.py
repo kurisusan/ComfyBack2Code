@@ -23,7 +23,18 @@ class GetLatentRangeFromBatchOutputs(OutputSlots):
 class GetLatentRangeFromBatch(Node[GetLatentRangeFromBatchInputs, GetLatentRangeFromBatchOutputs]):
     """
     Original name: GetLatentRangeFromBatch
-    No description available.
+    Category: KJNodes/latents
+    
+Returns a range of latents from a batch.
+
+
+    Inputs:
+        - latents (Latent)
+        - start_index (int) (default: 0)
+        - num_frames (int) (default: 1)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'GetLatentRangeFromBatch'
 

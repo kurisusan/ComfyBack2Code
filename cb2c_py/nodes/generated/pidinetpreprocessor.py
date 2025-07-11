@@ -19,7 +19,14 @@ class PiDiNetPreprocessorOutputs(OutputSlots):
 class PiDiNetPreprocessor(Node[PiDiNetPreprocessorInputs, PiDiNetPreprocessorOutputs]):
     """
     Original name: PiDiNetPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Line Extractors
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'PiDiNetPreprocessor'
 

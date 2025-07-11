@@ -23,7 +23,16 @@ class SplitSigmasOutputs(OutputSlots):
 class SplitSigmas(Node[SplitSigmasInputs, SplitSigmasOutputs]):
     """
     Original name: SplitSigmas
-    No description available.
+    Category: sampling/custom_sampling/sigmas
+    
+
+    Inputs:
+        - sigmas (Any)
+        - step (int) (default: 0)
+
+    Outputs:
+        - high_sigmas (Any)
+        - low_sigmas (Any)
     """
     _original_name: str = 'SplitSigmas'
 

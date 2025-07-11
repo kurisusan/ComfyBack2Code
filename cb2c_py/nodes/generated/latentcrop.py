@@ -27,7 +27,18 @@ class LatentCropOutputs(OutputSlots):
 class LatentCrop(Node[LatentCropInputs, LatentCropOutputs]):
     """
     Original name: LatentCrop
-    No description available.
+    Category: latent/transform
+    
+
+    Inputs:
+        - samples (Latent)
+        - width (int) (default: 512)
+        - height (int) (default: 512)
+        - x (int) (default: 0)
+        - y (int) (default: 0)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'LatentCrop'
 

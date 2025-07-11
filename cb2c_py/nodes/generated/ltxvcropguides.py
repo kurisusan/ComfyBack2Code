@@ -27,7 +27,18 @@ class LTXVCropGuidesOutputs(OutputSlots):
 class LTXVCropGuides(Node[LTXVCropGuidesInputs, LTXVCropGuidesOutputs]):
     """
     Original name: LTXVCropGuides
-    No description available.
+    Category: conditioning/video_models
+    
+
+    Inputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - latent (Latent)
+
+    Outputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - latent (Latent)
     """
     _original_name: str = 'LTXVCropGuides'
 

@@ -33,7 +33,27 @@ class WanVideoImageToVideoEncodeOutputs(OutputSlots):
 class WanVideoImageToVideoEncode(Node[WanVideoImageToVideoEncodeInputs, WanVideoImageToVideoEncodeOutputs]):
     """
     Original name: WanVideoImageToVideoEncode
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - vae (Any)
+        - width (int) (default: 832)
+          Width of the image to encode
+        - height (int) (default: 480)
+          Height of the image to encode
+        - num_frames (int) (default: 81)
+          Number of frames to encode
+        - noise_aug_strength (float) (default: 0.0)
+          Strength of noise augmentation, helpful for I2V where some noise can add motion and give sharper results
+        - start_latent_strength (float) (default: 1.0)
+          Additional latent multiplier, helpful for I2V where lower values allow for more motion
+        - end_latent_strength (float) (default: 1.0)
+          Additional latent multiplier, helpful for I2V where lower values allow for more motion
+        - force_offload (bool) (default: True)
+
+    Outputs:
+        - image_embeds (Any)
     """
     _original_name: str = 'WanVideoImageToVideoEncode'
 

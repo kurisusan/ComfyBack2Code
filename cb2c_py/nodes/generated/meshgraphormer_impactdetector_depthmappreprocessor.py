@@ -23,7 +23,16 @@ class MeshGraphormer_ImpactDetector_DepthMapPreprocessorOutputs(OutputSlots):
 class MeshGraphormer_ImpactDetector_DepthMapPreprocessor(Node[MeshGraphormer_ImpactDetector_DepthMapPreprocessorInputs, MeshGraphormer_ImpactDetector_DepthMapPreprocessorOutputs]):
     """
     Original name: MeshGraphormer+ImpactDetector-DepthMapPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Normal and Depth Estimators
+    
+
+    Inputs:
+        - image (Image)
+        - bbox_detector (Any)
+
+    Outputs:
+        - image (Image)
+        - inpainting_mask (Image)
     """
     _original_name: str = 'MeshGraphormer+ImpactDetector-DepthMapPreprocessor'
 

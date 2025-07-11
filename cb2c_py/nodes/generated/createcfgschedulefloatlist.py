@@ -29,7 +29,25 @@ class CreateCFGScheduleFloatListOutputs(OutputSlots):
 class CreateCFGScheduleFloatList(Node[CreateCFGScheduleFloatListInputs, CreateCFGScheduleFloatListOutputs]):
     """
     Original name: CreateCFGScheduleFloatList
-    No description available.
+    Category: WanVideoWrapper
+    Helper node to generate a list of floats that can be used to schedule cfg scale for the steps, outside the set range cfg is set to 1.0
+
+    Inputs:
+        - steps (int) (default: 30)
+          Number of steps to schedule cfg for
+        - cfg_scale_start (float) (default: 5.0)
+          CFG scale to use for the steps
+        - cfg_scale_end (float) (default: 5.0)
+          CFG scale to use for the steps
+        - interpolation (str) (default: 'linear')
+          Interpolation method to use for the cfg scale
+        - start_percent (float) (default: 0.0)
+          Start percent of the steps to apply cfg
+        - end_percent (float) (default: 1.0)
+          End percent of the steps to apply cfg
+
+    Outputs:
+        - float_list (float)
     """
     _original_name: str = 'CreateCFGScheduleFloatList'
 

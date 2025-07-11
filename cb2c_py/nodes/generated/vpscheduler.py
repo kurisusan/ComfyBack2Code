@@ -25,7 +25,17 @@ class VPSchedulerOutputs(OutputSlots):
 class VPScheduler(Node[VPSchedulerInputs, VPSchedulerOutputs]):
     """
     Original name: VPScheduler
-    No description available.
+    Category: sampling/custom_sampling/schedulers
+    
+
+    Inputs:
+        - steps (int) (default: 20)
+        - beta_d (float) (default: 19.9)
+        - beta_min (float) (default: 0.1)
+        - eps_s (float) (default: 0.001)
+
+    Outputs:
+        - sigmas (Any)
     """
     _original_name: str = 'VPScheduler'
 

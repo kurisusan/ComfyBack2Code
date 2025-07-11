@@ -81,7 +81,45 @@ class ModelMergeSD1Outputs(OutputSlots):
 class ModelMergeSD1(Node[ModelMergeSD1Inputs, ModelMergeSD1Outputs]):
     """
     Original name: ModelMergeSD1
-    No description available.
+    Category: advanced/model_merging/model_specific
+    
+
+    Inputs:
+        - model1 (Model)
+        - model2 (Model)
+        - time_embed_ (float) (default: 1.0)
+        - label_emb_ (float) (default: 1.0)
+        - input_blocks_0_ (float) (default: 1.0)
+        - input_blocks_1_ (float) (default: 1.0)
+        - input_blocks_2_ (float) (default: 1.0)
+        - input_blocks_3_ (float) (default: 1.0)
+        - input_blocks_4_ (float) (default: 1.0)
+        - input_blocks_5_ (float) (default: 1.0)
+        - input_blocks_6_ (float) (default: 1.0)
+        - input_blocks_7_ (float) (default: 1.0)
+        - input_blocks_8_ (float) (default: 1.0)
+        - input_blocks_9_ (float) (default: 1.0)
+        - input_blocks_10_ (float) (default: 1.0)
+        - input_blocks_11_ (float) (default: 1.0)
+        - middle_block_0_ (float) (default: 1.0)
+        - middle_block_1_ (float) (default: 1.0)
+        - middle_block_2_ (float) (default: 1.0)
+        - output_blocks_0_ (float) (default: 1.0)
+        - output_blocks_1_ (float) (default: 1.0)
+        - output_blocks_2_ (float) (default: 1.0)
+        - output_blocks_3_ (float) (default: 1.0)
+        - output_blocks_4_ (float) (default: 1.0)
+        - output_blocks_5_ (float) (default: 1.0)
+        - output_blocks_6_ (float) (default: 1.0)
+        - output_blocks_7_ (float) (default: 1.0)
+        - output_blocks_8_ (float) (default: 1.0)
+        - output_blocks_9_ (float) (default: 1.0)
+        - output_blocks_10_ (float) (default: 1.0)
+        - output_blocks_11_ (float) (default: 1.0)
+        - out_ (float) (default: 1.0)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'ModelMergeSD1'
 

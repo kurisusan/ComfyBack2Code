@@ -19,7 +19,14 @@ class MaskPreviewOutputs(OutputSlots):
 class MaskPreview(Node[MaskPreviewInputs, MaskPreviewOutputs]):
     """
     Original name: MaskPreview
-    No description available.
+    Category: mask
+    Saves the input images to your ComfyUI output directory.
+
+    Inputs:
+        - mask (Image)
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'MaskPreview'
 

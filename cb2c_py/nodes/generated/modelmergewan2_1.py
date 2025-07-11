@@ -113,7 +113,61 @@ class ModelMergeWAN2_1Outputs(OutputSlots):
 class ModelMergeWAN2_1(Node[ModelMergeWAN2_1Inputs, ModelMergeWAN2_1Outputs]):
     """
     Original name: ModelMergeWAN2_1
-    No description available.
+    Category: advanced/model_merging/model_specific
+    1.3B model has 30 blocks, 14B model has 40 blocks. Image to video model has the extra img_emb.
+
+    Inputs:
+        - model1 (Model)
+        - model2 (Model)
+        - patch_embedding_ (float) (default: 1.0)
+        - time_embedding_ (float) (default: 1.0)
+        - time_projection_ (float) (default: 1.0)
+        - text_embedding_ (float) (default: 1.0)
+        - img_emb_ (float) (default: 1.0)
+        - blocks_0_ (float) (default: 1.0)
+        - blocks_1_ (float) (default: 1.0)
+        - blocks_2_ (float) (default: 1.0)
+        - blocks_3_ (float) (default: 1.0)
+        - blocks_4_ (float) (default: 1.0)
+        - blocks_5_ (float) (default: 1.0)
+        - blocks_6_ (float) (default: 1.0)
+        - blocks_7_ (float) (default: 1.0)
+        - blocks_8_ (float) (default: 1.0)
+        - blocks_9_ (float) (default: 1.0)
+        - blocks_10_ (float) (default: 1.0)
+        - blocks_11_ (float) (default: 1.0)
+        - blocks_12_ (float) (default: 1.0)
+        - blocks_13_ (float) (default: 1.0)
+        - blocks_14_ (float) (default: 1.0)
+        - blocks_15_ (float) (default: 1.0)
+        - blocks_16_ (float) (default: 1.0)
+        - blocks_17_ (float) (default: 1.0)
+        - blocks_18_ (float) (default: 1.0)
+        - blocks_19_ (float) (default: 1.0)
+        - blocks_20_ (float) (default: 1.0)
+        - blocks_21_ (float) (default: 1.0)
+        - blocks_22_ (float) (default: 1.0)
+        - blocks_23_ (float) (default: 1.0)
+        - blocks_24_ (float) (default: 1.0)
+        - blocks_25_ (float) (default: 1.0)
+        - blocks_26_ (float) (default: 1.0)
+        - blocks_27_ (float) (default: 1.0)
+        - blocks_28_ (float) (default: 1.0)
+        - blocks_29_ (float) (default: 1.0)
+        - blocks_30_ (float) (default: 1.0)
+        - blocks_31_ (float) (default: 1.0)
+        - blocks_32_ (float) (default: 1.0)
+        - blocks_33_ (float) (default: 1.0)
+        - blocks_34_ (float) (default: 1.0)
+        - blocks_35_ (float) (default: 1.0)
+        - blocks_36_ (float) (default: 1.0)
+        - blocks_37_ (float) (default: 1.0)
+        - blocks_38_ (float) (default: 1.0)
+        - blocks_39_ (float) (default: 1.0)
+        - head_ (float) (default: 1.0)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'ModelMergeWAN2_1'
 

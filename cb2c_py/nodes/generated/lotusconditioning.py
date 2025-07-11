@@ -19,7 +19,14 @@ class LotusConditioningOutputs(OutputSlots):
 class LotusConditioning(Node[LotusConditioningInputs, LotusConditioningOutputs]):
     """
     Original name: LotusConditioning
-    No description available.
+    Category: conditioning/lotus
+    
+
+    Inputs:
+        No inputs.
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'LotusConditioning'
 

@@ -21,7 +21,15 @@ class VideoTriangleCFGGuidanceOutputs(OutputSlots):
 class VideoTriangleCFGGuidance(Node[VideoTriangleCFGGuidanceInputs, VideoTriangleCFGGuidanceOutputs]):
     """
     Original name: VideoTriangleCFGGuidance
-    No description available.
+    Category: sampling/video_models
+    
+
+    Inputs:
+        - model (Model)
+        - min_cfg (float) (default: 1.0)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'VideoTriangleCFGGuidance'
 

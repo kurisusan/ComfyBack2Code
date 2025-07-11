@@ -21,7 +21,17 @@ class ExtractStartFramesForContinuationsOutputs(OutputSlots):
 class ExtractStartFramesForContinuations(Node[ExtractStartFramesForContinuationsInputs, ExtractStartFramesForContinuationsOutputs]):
     """
     Original name: ExtractStartFramesForContinuations
-    No description available.
+    Category: WanVideoWrapper
+    Extracts the first N frames from a video sequence for continuations.
+
+    Inputs:
+        - input_video_frames (Image)
+          Input video frames to extract the start frames from.
+        - num_frames (int) (default: 10)
+          Number of frames to get from the start of the video.
+
+    Outputs:
+        - start_frames (Image)
     """
     _original_name: str = 'ExtractStartFramesForContinuations'
 

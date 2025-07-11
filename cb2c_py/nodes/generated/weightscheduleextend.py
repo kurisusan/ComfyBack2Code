@@ -23,7 +23,18 @@ class WeightScheduleExtendOutputs(OutputSlots):
 class WeightScheduleExtend(Node[WeightScheduleExtendInputs, WeightScheduleExtendOutputs]):
     """
     Original name: WeightScheduleExtend
-    No description available.
+    Category: KJNodes/weights
+    
+Extends, and converts if needed, different value lists/series  
+
+
+    Inputs:
+        - input_values_1 (float) (default: 0.0)
+        - input_values_2 (float) (default: 0.0)
+        - output_type (str) (default: 'match_input')
+
+    Outputs:
+        - float (float)
     """
     _original_name: str = 'WeightScheduleExtend'
 

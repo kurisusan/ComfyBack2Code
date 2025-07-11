@@ -29,7 +29,19 @@ class ScheduledCFGGuidanceOutputs(OutputSlots):
 class ScheduledCFGGuidance(Node[ScheduledCFGGuidanceInputs, ScheduledCFGGuidanceOutputs]):
     """
     Original name: ScheduledCFGGuidance
-    No description available.
+    Category: KJNodes/experimental
+    
+
+    Inputs:
+        - model (Model)
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - cfg (float) (default: 6.0)
+        - start_percent (float) (default: 0.0)
+        - end_percent (float) (default: 1.0)
+
+    Outputs:
+        - guider (Any)
     """
     _original_name: str = 'ScheduledCFGGuidance'
 

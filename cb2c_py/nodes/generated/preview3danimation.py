@@ -19,7 +19,14 @@ class Preview3DAnimationOutputs(OutputSlots):
 class Preview3DAnimation(Node[Preview3DAnimationInputs, Preview3DAnimationOutputs]):
     """
     Original name: Preview3DAnimation
-    No description available.
+    Category: 3d
+    
+
+    Inputs:
+        - model_file (str) (default: '')
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'Preview3DAnimation'
 

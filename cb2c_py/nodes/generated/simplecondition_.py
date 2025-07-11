@@ -21,7 +21,15 @@ class SimpleCondition_Outputs(OutputSlots):
 class SimpleCondition_(Node[SimpleCondition_Inputs, SimpleCondition_Outputs]):
     """
     Original name: SimpleCondition+
-    No description available.
+    Category: essentials/utilities
+    
+
+    Inputs:
+        - evaluate (Any) (default: 0)
+        - on_true (Any) (default: 0)
+
+    Outputs:
+        - result (Any)
     """
     _original_name: str = 'SimpleCondition+'
 

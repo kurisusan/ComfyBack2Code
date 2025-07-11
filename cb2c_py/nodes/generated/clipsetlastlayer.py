@@ -21,7 +21,15 @@ class CLIPSetLastLayerOutputs(OutputSlots):
 class CLIPSetLastLayer(Node[CLIPSetLastLayerInputs, CLIPSetLastLayerOutputs]):
     """
     Original name: CLIPSetLastLayer
-    No description available.
+    Category: conditioning
+    
+
+    Inputs:
+        - clip (Clip)
+        - stop_at_clip_layer (int) (default: -1)
+
+    Outputs:
+        - clip (Clip)
     """
     _original_name: str = 'CLIPSetLastLayer'
 

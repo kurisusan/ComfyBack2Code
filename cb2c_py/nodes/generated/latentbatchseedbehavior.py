@@ -21,7 +21,15 @@ class LatentBatchSeedBehaviorOutputs(OutputSlots):
 class LatentBatchSeedBehavior(Node[LatentBatchSeedBehaviorInputs, LatentBatchSeedBehaviorOutputs]):
     """
     Original name: LatentBatchSeedBehavior
-    No description available.
+    Category: latent/advanced
+    
+
+    Inputs:
+        - samples (Latent)
+        - seed_behavior (str) (default: 'fixed')
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'LatentBatchSeedBehavior'
 

@@ -31,7 +31,20 @@ class TransitionMask_Outputs(OutputSlots):
 class TransitionMask_(Node[TransitionMask_Inputs, TransitionMask_Outputs]):
     """
     Original name: TransitionMask+
-    No description available.
+    Category: essentials/mask
+    
+
+    Inputs:
+        - width (int) (default: 512)
+        - height (int) (default: 512)
+        - frames (int) (default: 16)
+        - start_frame (int) (default: 0)
+        - end_frame (int) (default: 9999)
+        - transition_type (str)
+        - timing_function (str)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'TransitionMask+'
 

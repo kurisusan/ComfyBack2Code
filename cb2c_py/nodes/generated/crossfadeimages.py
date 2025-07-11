@@ -31,7 +31,20 @@ class CrossFadeImagesOutputs(OutputSlots):
 class CrossFadeImages(Node[CrossFadeImagesInputs, CrossFadeImagesOutputs]):
     """
     Original name: CrossFadeImages
-    No description available.
+    Category: KJNodes/image
+    
+
+    Inputs:
+        - images_1 (Image)
+        - images_2 (Image)
+        - interpolation (str)
+        - transition_start_index (int) (default: 1)
+        - transitioning_frames (int) (default: 1)
+        - start_level (float) (default: 0.0)
+        - end_level (float) (default: 1.0)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'CrossFadeImages'
 

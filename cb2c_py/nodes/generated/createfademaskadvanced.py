@@ -29,7 +29,33 @@ class CreateFadeMaskAdvancedOutputs(OutputSlots):
 class CreateFadeMaskAdvanced(Node[CreateFadeMaskAdvancedInputs, CreateFadeMaskAdvancedOutputs]):
     """
     Original name: CreateFadeMaskAdvanced
-    No description available.
+    Category: KJNodes/masking/generate
+    
+Create a batch of masks interpolated between given frames and values. 
+Uses same syntax as Fizz' BatchValueSchedule.
+First value is the frame index (not that this starts from 0, not 1) 
+and the second value inside the brackets is the float value of the mask in range 0.0 - 1.0  
+
+For example the default values:  
+0:(0.0)  
+7:(1.0)  
+15:(0.0)  
+  
+Would create a mask batch fo 16 frames, starting from black, 
+interpolating with the chosen curve to fully white at the 8th frame, 
+and interpolating from that to fully black at the 16th frame.
+
+
+    Inputs:
+        - points_string (str) (default: '0:(0.0),\n7:(1.0),\n15:(0.0)\n')
+        - invert (bool) (default: False)
+        - frames (int) (default: 16)
+        - width (int) (default: 512)
+        - height (int) (default: 512)
+        - interpolation (str)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'CreateFadeMaskAdvanced'
 

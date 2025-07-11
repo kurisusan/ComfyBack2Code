@@ -27,7 +27,21 @@ class RunwayImageToVideoNodeGen4Outputs(OutputSlots):
 class RunwayImageToVideoNodeGen4(Node[RunwayImageToVideoNodeGen4Inputs, RunwayImageToVideoNodeGen4Outputs]):
     """
     Original name: RunwayImageToVideoNodeGen4
-    No description available.
+    Category: api node/video/Runway
+    Generate a video from a single starting frame using Gen4 Turbo model. Before diving in, review these best practices to ensure that your input selections will set your generation up for success: https://help.runwayml.com/hc/en-us/articles/37327109429011-Creating-with-Gen-4-Video.
+
+    Inputs:
+        - prompt (str) (default: None)
+          Text prompt for the generation
+        - start_frame (Image)
+          Start frame to be used for the video
+        - duration (Any)
+        - ratio (Any)
+        - seed (int)
+          Random seed for generation
+
+    Outputs:
+        - video (Any)
     """
     _original_name: str = 'RunwayImageToVideoNodeGen4'
 

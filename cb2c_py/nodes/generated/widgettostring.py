@@ -23,7 +23,23 @@ class WidgetToStringOutputs(OutputSlots):
 class WidgetToString(Node[WidgetToStringInputs, WidgetToStringOutputs]):
     """
     Original name: WidgetToString
-    No description available.
+    Category: KJNodes/text
+    
+Selects a node and it's specified widget and outputs the value as a string.  
+If no node id or title is provided it will use the 'any_input' link and use that node.  
+To see node id's, enable node id display from Manager badge menu.  
+Alternatively you can search with the node title. Node titles ONLY exist if they  
+are manually edited!  
+The 'any_input' is required for making sure the node you want the value from exists in the workflow.
+
+
+    Inputs:
+        - id (int) (default: 0)
+        - widget_name (str)
+        - return_all (bool) (default: False)
+
+    Outputs:
+        - string (str)
     """
     _original_name: str = 'WidgetToString'
 

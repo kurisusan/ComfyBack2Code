@@ -97,7 +97,54 @@ class Wan21BlockLoraSelectOutputs(OutputSlots):
 class Wan21BlockLoraSelect(Node[Wan21BlockLoraSelectInputs, Wan21BlockLoraSelectOutputs]):
     """
     Original name: Wan21BlockLoraSelect
-    No description available.
+    Category: KJNodes/experimental
+    Select individual block alpha values, value of 0 removes the block altogether
+
+    Inputs:
+        - blocks_0_ (float) (default: 0.0)
+        - blocks_1_ (float) (default: 0.0)
+        - blocks_2_ (float) (default: 0.0)
+        - blocks_3_ (float) (default: 0.0)
+        - blocks_4_ (float) (default: 0.0)
+        - blocks_5_ (float) (default: 0.0)
+        - blocks_6_ (float) (default: 0.0)
+        - blocks_7_ (float) (default: 0.0)
+        - blocks_8_ (float) (default: 0.0)
+        - blocks_9_ (float) (default: 0.0)
+        - blocks_10_ (float) (default: 0.0)
+        - blocks_11_ (float) (default: 0.0)
+        - blocks_12_ (float) (default: 0.0)
+        - blocks_13_ (float) (default: 0.0)
+        - blocks_14_ (float) (default: 0.0)
+        - blocks_15_ (float) (default: 0.0)
+        - blocks_16_ (float) (default: 0.0)
+        - blocks_17_ (float) (default: 0.0)
+        - blocks_18_ (float) (default: 0.0)
+        - blocks_19_ (float) (default: 0.0)
+        - blocks_20_ (float) (default: 0.0)
+        - blocks_21_ (float) (default: 0.0)
+        - blocks_22_ (float) (default: 0.0)
+        - blocks_23_ (float) (default: 0.0)
+        - blocks_24_ (float) (default: 0.0)
+        - blocks_25_ (float) (default: 0.0)
+        - blocks_26_ (float) (default: 0.0)
+        - blocks_27_ (float) (default: 0.0)
+        - blocks_28_ (float) (default: 0.0)
+        - blocks_29_ (float) (default: 0.0)
+        - blocks_30_ (float) (default: 0.0)
+        - blocks_31_ (float) (default: 0.0)
+        - blocks_32_ (float) (default: 0.0)
+        - blocks_33_ (float) (default: 0.0)
+        - blocks_34_ (float) (default: 0.0)
+        - blocks_35_ (float) (default: 0.0)
+        - blocks_36_ (float) (default: 0.0)
+        - blocks_37_ (float) (default: 0.0)
+        - blocks_38_ (float) (default: 0.0)
+        - blocks_39_ (float) (default: 0.0)
+
+    Outputs:
+        - blocks (Any)
+          The modified diffusion model.
     """
     _original_name: str = 'Wan21BlockLoraSelect'
 

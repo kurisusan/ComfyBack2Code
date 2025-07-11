@@ -19,7 +19,14 @@ class RecraftControlsOutputs(OutputSlots):
 class RecraftControls(Node[RecraftControlsInputs, RecraftControlsOutputs]):
     """
     Original name: RecraftControls
-    No description available.
+    Category: api node/image/Recraft
+    Create Recraft Controls for customizing Recraft generation.
+
+    Inputs:
+        No inputs.
+
+    Outputs:
+        - recraft_controls (Any)
     """
     _original_name: str = 'RecraftControls'
 

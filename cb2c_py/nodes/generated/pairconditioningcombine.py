@@ -27,7 +27,18 @@ class PairConditioningCombineOutputs(OutputSlots):
 class PairConditioningCombine(Node[PairConditioningCombineInputs, PairConditioningCombineOutputs]):
     """
     Original name: PairConditioningCombine
-    No description available.
+    Category: advanced/hooks/cond pair
+    
+
+    Inputs:
+        - positive_A (Conditioning)
+        - negative_A (Conditioning)
+        - positive_B (Conditioning)
+        - negative_B (Conditioning)
+
+    Outputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
     """
     _original_name: str = 'PairConditioningCombine'
 

@@ -29,7 +29,19 @@ class DualCFGGuiderOutputs(OutputSlots):
 class DualCFGGuider(Node[DualCFGGuiderInputs, DualCFGGuiderOutputs]):
     """
     Original name: DualCFGGuider
-    No description available.
+    Category: sampling/custom_sampling/guiders
+    
+
+    Inputs:
+        - model (Model)
+        - cond1 (Conditioning)
+        - cond2 (Conditioning)
+        - negative (Conditioning)
+        - cfg_conds (float) (default: 8.0)
+        - cfg_cond2_negative (float) (default: 8.0)
+
+    Outputs:
+        - guider (Any)
     """
     _original_name: str = 'DualCFGGuider'
 

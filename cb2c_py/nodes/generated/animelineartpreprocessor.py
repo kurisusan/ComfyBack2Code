@@ -19,7 +19,14 @@ class AnimeLineArtPreprocessorOutputs(OutputSlots):
 class AnimeLineArtPreprocessor(Node[AnimeLineArtPreprocessorInputs, AnimeLineArtPreprocessorOutputs]):
     """
     Original name: AnimeLineArtPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Line Extractors
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'AnimeLineArtPreprocessor'
 

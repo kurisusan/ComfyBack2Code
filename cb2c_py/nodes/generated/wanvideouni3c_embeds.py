@@ -27,7 +27,20 @@ class WanVideoUni3C_embedsOutputs(OutputSlots):
 class WanVideoUni3C_embeds(Node[WanVideoUni3C_embedsInputs, WanVideoUni3C_embedsOutputs]):
     """
     Original name: WanVideoUni3C_embeds
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - controlnet (Any)
+        - render_latent (Latent)
+        - strength (float) (default: 1.0)
+        - start_percent (float) (default: 0.0)
+          Start percent of the steps to apply the controlnet
+        - end_percent (float) (default: 1.0)
+          End percent of the steps to apply the controlnet
+
+    Outputs:
+        - uni3c_embeds (Any)
     """
     _original_name: str = 'WanVideoUni3C_embeds'
 

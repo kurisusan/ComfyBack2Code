@@ -25,7 +25,17 @@ class LTXVConditioningOutputs(OutputSlots):
 class LTXVConditioning(Node[LTXVConditioningInputs, LTXVConditioningOutputs]):
     """
     Original name: LTXVConditioning
-    No description available.
+    Category: conditioning/video_models
+    
+
+    Inputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - frame_rate (float) (default: 25.0)
+
+    Outputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
     """
     _original_name: str = 'LTXVConditioning'
 

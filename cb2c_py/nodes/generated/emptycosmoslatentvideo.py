@@ -25,7 +25,17 @@ class EmptyCosmosLatentVideoOutputs(OutputSlots):
 class EmptyCosmosLatentVideo(Node[EmptyCosmosLatentVideoInputs, EmptyCosmosLatentVideoOutputs]):
     """
     Original name: EmptyCosmosLatentVideo
-    No description available.
+    Category: latent/video
+    
+
+    Inputs:
+        - width (int) (default: 1280)
+        - height (int) (default: 704)
+        - length (int) (default: 121)
+        - batch_size (int) (default: 1)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'EmptyCosmosLatentVideo'
 

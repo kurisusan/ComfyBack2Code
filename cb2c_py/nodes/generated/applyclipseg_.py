@@ -31,7 +31,20 @@ class ApplyCLIPSeg_Outputs(OutputSlots):
 class ApplyCLIPSeg_(Node[ApplyCLIPSeg_Inputs, ApplyCLIPSeg_Outputs]):
     """
     Original name: ApplyCLIPSeg+
-    No description available.
+    Category: essentials/segmentation
+    
+
+    Inputs:
+        - clip_seg (Any)
+        - image (Image)
+        - prompt (str) (default: '')
+        - threshold (float) (default: 0.4)
+        - smooth (int) (default: 9)
+        - dilate (int) (default: 0)
+        - blur (int) (default: 0)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'ApplyCLIPSeg+'
 

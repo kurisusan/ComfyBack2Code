@@ -21,7 +21,15 @@ class ImageGenResolutionFromImageOutputs(OutputSlots):
 class ImageGenResolutionFromImage(Node[ImageGenResolutionFromImageInputs, ImageGenResolutionFromImageOutputs]):
     """
     Original name: ImageGenResolutionFromImage
-    No description available.
+    Category: ControlNet Preprocessors
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image_gen_width__int_ (int)
+        - image_gen_height__int_ (int)
     """
     _original_name: str = 'ImageGenResolutionFromImage'
 

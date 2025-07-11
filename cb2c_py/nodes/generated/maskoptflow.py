@@ -23,7 +23,16 @@ class MaskOptFlowOutputs(OutputSlots):
 class MaskOptFlow(Node[MaskOptFlowInputs, MaskOptFlowOutputs]):
     """
     Original name: MaskOptFlow
-    No description available.
+    Category: ControlNet Preprocessors/Optical Flow
+    
+
+    Inputs:
+        - optical_flow (Any)
+        - mask (Image)
+
+    Outputs:
+        - optical_flow (Any)
+        - preview_image (Image)
     """
     _original_name: str = 'MaskOptFlow'
 

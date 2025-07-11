@@ -27,7 +27,20 @@ class LTXVSchedulerOutputs(OutputSlots):
 class LTXVScheduler(Node[LTXVSchedulerInputs, LTXVSchedulerOutputs]):
     """
     Original name: LTXVScheduler
-    No description available.
+    Category: sampling/custom_sampling/schedulers
+    
+
+    Inputs:
+        - steps (int) (default: 20)
+        - max_shift (float) (default: 2.05)
+        - base_shift (float) (default: 0.95)
+        - stretch (bool) (default: True)
+          Stretch the sigmas to be in the range [terminal, 1].
+        - terminal (float) (default: 0.1)
+          The terminal value of the sigmas after stretching.
+
+    Outputs:
+        - sigmas (Any)
     """
     _original_name: str = 'LTXVScheduler'
 

@@ -25,7 +25,17 @@ class CreateGradientMaskOutputs(OutputSlots):
 class CreateGradientMask(Node[CreateGradientMaskInputs, CreateGradientMaskOutputs]):
     """
     Original name: CreateGradientMask
-    No description available.
+    Category: KJNodes/masking/generate
+    
+
+    Inputs:
+        - invert (bool) (default: False)
+        - frames (int) (default: 0)
+        - width (int) (default: 256)
+        - height (int) (default: 256)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'CreateGradientMask'
 

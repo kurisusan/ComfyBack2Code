@@ -23,7 +23,16 @@ class HypernetworkLoaderOutputs(OutputSlots):
 class HypernetworkLoader(Node[HypernetworkLoaderInputs, HypernetworkLoaderOutputs]):
     """
     Original name: HypernetworkLoader
-    No description available.
+    Category: loaders
+    
+
+    Inputs:
+        - model (Model)
+        - hypernetwork_name (str)
+        - strength (float) (default: 1.0)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'HypernetworkLoader'
 

@@ -31,7 +31,22 @@ class CutAndDragOnPathOutputs(OutputSlots):
 class CutAndDragOnPath(Node[CutAndDragOnPathInputs, CutAndDragOnPathOutputs]):
     """
     Original name: CutAndDragOnPath
-    No description available.
+    Category: KJNodes/image
+    
+Cuts the masked area from the image, and drags it along the path. If inpaint is enabled, and no bg_image is provided, the cut area is filled using cv2 TELEA algorithm.
+
+
+    Inputs:
+        - image (Image)
+        - coordinates (str)
+        - mask (Image)
+        - frame_width (int) (default: 512)
+        - frame_height (int) (default: 512)
+        - inpaint (bool) (default: True)
+
+    Outputs:
+        - image (Image)
+        - mask (Image)
     """
     _original_name: str = 'CutAndDragOnPath'
 

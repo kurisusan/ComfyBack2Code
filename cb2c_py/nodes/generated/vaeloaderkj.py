@@ -11,7 +11,7 @@ class VAELoaderKJInputs(InputSlots):
     device: Slot[str]
     weight_dtype: Slot[str]
     def __init__(self, node: "Node"):
-        self.vae_name = Slot[str](node, "vae_name", [])
+        self.vae_name = Slot[str](node, "vae_name", ['wan_2.1_vae.safetensors'])
         self.device = Slot[str](node, "device", ['main_device', 'cpu'])
         self.weight_dtype = Slot[str](node, "weight_dtype", ['bf16', 'fp16', 'fp32'])
 
@@ -23,7 +23,16 @@ class VAELoaderKJOutputs(OutputSlots):
 class VAELoaderKJ(Node[VAELoaderKJInputs, VAELoaderKJOutputs]):
     """
     Original name: VAELoaderKJ
-    No description available.
+    Category: KJNodes/vae
+    
+
+    Inputs:
+        - vae_name (str)
+        - device (str)
+        - weight_dtype (str)
+
+    Outputs:
+        - vae (Vae)
     """
     _original_name: str = 'VAELoaderKJ'
 

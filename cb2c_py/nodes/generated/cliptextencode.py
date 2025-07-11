@@ -21,7 +21,18 @@ class CLIPTextEncodeOutputs(OutputSlots):
 class CLIPTextEncode(Node[CLIPTextEncodeInputs, CLIPTextEncodeOutputs]):
     """
     Original name: CLIPTextEncode
-    No description available.
+    Category: conditioning
+    Encodes a text prompt using a CLIP model into an embedding that can be used to guide the diffusion model towards generating specific images.
+
+    Inputs:
+        - text (str)
+          The text to be encoded.
+        - clip (Clip)
+          The CLIP model used for encoding the text.
+
+    Outputs:
+        - conditioning (Conditioning)
+          A conditioning containing the embedded text used to guide the diffusion model.
     """
     _original_name: str = 'CLIPTextEncode'
 

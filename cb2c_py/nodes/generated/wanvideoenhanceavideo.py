@@ -23,7 +23,19 @@ class WanVideoEnhanceAVideoOutputs(OutputSlots):
 class WanVideoEnhanceAVideo(Node[WanVideoEnhanceAVideoInputs, WanVideoEnhanceAVideoOutputs]):
     """
     Original name: WanVideoEnhanceAVideo
-    No description available.
+    Category: WanVideoWrapper
+    https://github.com/NUS-HPC-AI-Lab/Enhance-A-Video
+
+    Inputs:
+        - weight (float) (default: 2.0)
+          The feta Weight of the Enhance-A-Video
+        - start_percent (float) (default: 0.0)
+          Start percentage of the steps to apply Enhance-A-Video
+        - end_percent (float) (default: 1.0)
+          End percentage of the steps to apply Enhance-A-Video
+
+    Outputs:
+        - feta_args (Any)
     """
     _original_name: str = 'WanVideoEnhanceAVideo'
 

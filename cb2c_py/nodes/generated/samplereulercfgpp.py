@@ -19,7 +19,14 @@ class SamplerEulerCFGppOutputs(OutputSlots):
 class SamplerEulerCFGpp(Node[SamplerEulerCFGppInputs, SamplerEulerCFGppOutputs]):
     """
     Original name: SamplerEulerCFGpp
-    No description available.
+    Category: _for_testing
+    
+
+    Inputs:
+        - version (str)
+
+    Outputs:
+        - sampler (Any)
     """
     _original_name: str = 'SamplerEulerCFGpp'
 

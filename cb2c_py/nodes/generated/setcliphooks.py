@@ -23,7 +23,16 @@ class SetClipHooksOutputs(OutputSlots):
 class SetClipHooks(Node[SetClipHooksInputs, SetClipHooksOutputs]):
     """
     Original name: SetClipHooks
-    No description available.
+    Category: advanced/hooks/clip
+    
+
+    Inputs:
+        - clip (Clip)
+        - apply_to_conds (bool) (default: True)
+        - schedule_clip (bool) (default: False)
+
+    Outputs:
+        - clip (Clip)
     """
     _original_name: str = 'SetClipHooks'
 

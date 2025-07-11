@@ -19,7 +19,17 @@ class DummyOutOutputs(OutputSlots):
 class DummyOut(Node[DummyOutInputs, DummyOutOutputs]):
     """
     Original name: DummyOut
-    No description available.
+    Category: KJNodes/misc
+    
+Does nothing, used to trigger generic workflow output.    
+A way to get previews in the UI without saving anything to disk.
+
+
+    Inputs:
+        - any_input (Any)
+
+    Outputs:
+        - _ (Any)
     """
     _original_name: str = 'DummyOut'
 

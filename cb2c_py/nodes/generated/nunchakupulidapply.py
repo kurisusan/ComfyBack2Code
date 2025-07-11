@@ -25,7 +25,21 @@ class NunchakuPulidApplyOutputs(OutputSlots):
 class NunchakuPulidApply(Node[NunchakuPulidApplyInputs, NunchakuPulidApplyOutputs]):
     """
     Original name: NunchakuPulidApply
-    No description available.
+    Category: Nunchaku
+    
+
+    Inputs:
+        - pulid (Any)
+          from Nunchaku Pulid Loader
+        - image (Image)
+          The image to encode
+        - model (Model)
+          The nunchaku model.
+        - ip_weight (float) (default: 1.0)
+          ip_weight
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'NunchakuPulidApply'
 

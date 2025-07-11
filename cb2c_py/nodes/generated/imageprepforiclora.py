@@ -27,7 +27,18 @@ class ImagePrepForICLoraOutputs(OutputSlots):
 class ImagePrepForICLora(Node[ImagePrepForICLoraInputs, ImagePrepForICLoraOutputs]):
     """
     Original name: ImagePrepForICLora
-    No description available.
+    Category: image
+    
+
+    Inputs:
+        - reference_image (Image)
+        - output_width (int) (default: 1024)
+        - output_height (int) (default: 1024)
+        - border_width (int) (default: 0)
+
+    Outputs:
+        - image (Image)
+        - mask (Image)
     """
     _original_name: str = 'ImagePrepForICLora'
 

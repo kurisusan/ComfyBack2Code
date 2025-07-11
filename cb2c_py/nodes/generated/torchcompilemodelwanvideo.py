@@ -31,7 +31,24 @@ class TorchCompileModelWanVideoOutputs(OutputSlots):
 class TorchCompileModelWanVideo(Node[TorchCompileModelWanVideoInputs, TorchCompileModelWanVideoOutputs]):
     """
     Original name: TorchCompileModelWanVideo
-    No description available.
+    Category: KJNodes/torchcompile
+    
+
+    Inputs:
+        - model (Model)
+        - backend (str) (default: 'inductor')
+        - fullgraph (bool) (default: False)
+          Enable full graph mode
+        - mode (str) (default: 'default')
+        - dynamic (bool) (default: False)
+          Enable dynamic mode
+        - dynamo_cache_size_limit (int) (default: 64)
+          torch._dynamo.config.cache_size_limit
+        - compile_transformer_blocks_only (bool) (default: False)
+          Compile only transformer blocks
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'TorchCompileModelWanVideo'
 

@@ -19,7 +19,14 @@ class DepthAnythingPreprocessorOutputs(OutputSlots):
 class DepthAnythingPreprocessor(Node[DepthAnythingPreprocessorInputs, DepthAnythingPreprocessorOutputs]):
     """
     Original name: DepthAnythingPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Normal and Depth Estimators
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'DepthAnythingPreprocessor'
 

@@ -11,9 +11,9 @@ class TripleCLIPLoaderMultiGPUInputs(InputSlots):
     clip_name2: Slot[str]
     clip_name3: Slot[str]
     def __init__(self, node: "Node"):
-        self.clip_name1 = Slot[str](node, "clip_name1", [])
-        self.clip_name2 = Slot[str](node, "clip_name2", [])
-        self.clip_name3 = Slot[str](node, "clip_name3", [])
+        self.clip_name1 = Slot[str](node, "clip_name1", ['umt5_xxl_fp8_e4m3fn_scaled.safetensors'])
+        self.clip_name2 = Slot[str](node, "clip_name2", ['umt5_xxl_fp8_e4m3fn_scaled.safetensors'])
+        self.clip_name3 = Slot[str](node, "clip_name3", ['umt5_xxl_fp8_e4m3fn_scaled.safetensors'])
 
 class TripleCLIPLoaderMultiGPUOutputs(OutputSlots):
     clip: Slot[Clip]
@@ -23,7 +23,18 @@ class TripleCLIPLoaderMultiGPUOutputs(OutputSlots):
 class TripleCLIPLoaderMultiGPU(Node[TripleCLIPLoaderMultiGPUInputs, TripleCLIPLoaderMultiGPUOutputs]):
     """
     Original name: TripleCLIPLoaderMultiGPU
-    No description available.
+    Category: multigpu
+    [Recipes]
+
+sd3: clip-l, clip-g, t5
+
+    Inputs:
+        - clip_name1 (str)
+        - clip_name2 (str)
+        - clip_name3 (str)
+
+    Outputs:
+        - clip (Clip)
     """
     _original_name: str = 'TripleCLIPLoaderMultiGPU'
 

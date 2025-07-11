@@ -29,7 +29,22 @@ class TorchCompileCosmosModelOutputs(OutputSlots):
 class TorchCompileCosmosModel(Node[TorchCompileCosmosModelInputs, TorchCompileCosmosModelOutputs]):
     """
     Original name: TorchCompileCosmosModel
-    No description available.
+    Category: KJNodes/torchcompile
+    
+
+    Inputs:
+        - model (Model)
+        - backend (str)
+        - fullgraph (bool) (default: False)
+          Enable full graph mode
+        - mode (str) (default: 'default')
+        - dynamic (bool) (default: False)
+          Enable dynamic mode
+        - dynamo_cache_size_limit (int) (default: 64)
+          Set the dynamo cache size limit
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'TorchCompileCosmosModel'
 

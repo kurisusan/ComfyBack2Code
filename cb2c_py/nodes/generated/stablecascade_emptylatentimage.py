@@ -27,7 +27,18 @@ class StableCascade_EmptyLatentImageOutputs(OutputSlots):
 class StableCascade_EmptyLatentImage(Node[StableCascade_EmptyLatentImageInputs, StableCascade_EmptyLatentImageOutputs]):
     """
     Original name: StableCascade_EmptyLatentImage
-    No description available.
+    Category: latent/stable_cascade
+    
+
+    Inputs:
+        - width (int) (default: 1024)
+        - height (int) (default: 1024)
+        - compression (int) (default: 42)
+        - batch_size (int) (default: 1)
+
+    Outputs:
+        - stage_c (Latent)
+        - stage_b (Latent)
     """
     _original_name: str = 'StableCascade_EmptyLatentImage'
 

@@ -23,7 +23,18 @@ class GetLatentsFromBatchIndexedOutputs(OutputSlots):
 class GetLatentsFromBatchIndexed(Node[GetLatentsFromBatchIndexedInputs, GetLatentsFromBatchIndexedOutputs]):
     """
     Original name: GetLatentsFromBatchIndexed
-    No description available.
+    Category: KJNodes/latents
+    
+Selects and returns the latents at the specified indices as an latent batch.
+
+
+    Inputs:
+        - latents (Latent)
+        - indexes (str) (default: '0, 1, 2')
+        - latent_format (str) (default: 'BCHW')
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'GetLatentsFromBatchIndexed'
 

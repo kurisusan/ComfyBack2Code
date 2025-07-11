@@ -25,7 +25,17 @@ class CheckpointLoaderOutputs(OutputSlots):
 class CheckpointLoader(Node[CheckpointLoaderInputs, CheckpointLoaderOutputs]):
     """
     Original name: CheckpointLoader
-    No description available.
+    Category: advanced/loaders
+    
+
+    Inputs:
+        - config_name (str)
+        - ckpt_name (str)
+
+    Outputs:
+        - model (Model)
+        - clip (Clip)
+        - vae (Vae)
     """
     _original_name: str = 'CheckpointLoader'
 

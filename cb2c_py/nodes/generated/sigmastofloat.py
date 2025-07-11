@@ -19,7 +19,17 @@ class SigmasToFloatOutputs(OutputSlots):
 class SigmasToFloat(Node[SigmasToFloatInputs, SigmasToFloatOutputs]):
     """
     Original name: SigmasToFloat
-    No description available.
+    Category: KJNodes/noise
+    
+Creates a float list from sigmas tensors.  
+
+
+
+    Inputs:
+        - sigmas (Any)
+
+    Outputs:
+        - float (float)
     """
     _original_name: str = 'SigmasToFloat'
 

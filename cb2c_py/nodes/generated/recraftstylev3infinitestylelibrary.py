@@ -19,7 +19,15 @@ class RecraftStyleV3InfiniteStyleLibraryOutputs(OutputSlots):
 class RecraftStyleV3InfiniteStyleLibrary(Node[RecraftStyleV3InfiniteStyleLibraryInputs, RecraftStyleV3InfiniteStyleLibraryOutputs]):
     """
     Original name: RecraftStyleV3InfiniteStyleLibrary
-    No description available.
+    Category: api node/image/Recraft
+    Select style based on preexisting UUID from Recraft's Infinite Style Library.
+
+    Inputs:
+        - style_id (str) (default: '')
+          UUID of style from Infinite Style Library.
+
+    Outputs:
+        - recraft_style (Any)
     """
     _original_name: str = 'RecraftStyleV3InfiniteStyleLibrary'
 

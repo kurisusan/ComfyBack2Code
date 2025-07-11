@@ -29,7 +29,21 @@ class VAEEncodeTiledOutputs(OutputSlots):
 class VAEEncodeTiled(Node[VAEEncodeTiledInputs, VAEEncodeTiledOutputs]):
     """
     Original name: VAEEncodeTiled
-    No description available.
+    Category: _for_testing
+    
+
+    Inputs:
+        - pixels (Image)
+        - vae (Vae)
+        - tile_size (int) (default: 512)
+        - overlap (int) (default: 64)
+        - temporal_size (int) (default: 64)
+          Only used for video VAEs: Amount of frames to encode at a time.
+        - temporal_overlap (int) (default: 8)
+          Only used for video VAEs: Amount of frames to overlap.
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'VAEEncodeTiled'
 

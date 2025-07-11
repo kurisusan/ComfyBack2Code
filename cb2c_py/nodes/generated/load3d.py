@@ -37,7 +37,23 @@ class Load3DOutputs(OutputSlots):
 class Load3D(Node[Load3DInputs, Load3DOutputs]):
     """
     Original name: Load3D
-    No description available.
+    Category: 3d
+    
+
+    Inputs:
+        - model_file (str)
+        - image (Any)
+        - width (int) (default: 1024)
+        - height (int) (default: 1024)
+
+    Outputs:
+        - image (Image)
+        - mask (Image)
+        - mesh_path (str)
+        - normal (Image)
+        - lineart (Image)
+        - camera_info (Any)
+        - recording_video (Any)
     """
     _original_name: str = 'Load3D'
 

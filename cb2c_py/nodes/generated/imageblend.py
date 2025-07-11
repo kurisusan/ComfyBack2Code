@@ -25,7 +25,17 @@ class ImageBlendOutputs(OutputSlots):
 class ImageBlend(Node[ImageBlendInputs, ImageBlendOutputs]):
     """
     Original name: ImageBlend
-    No description available.
+    Category: image/postprocessing
+    
+
+    Inputs:
+        - image1 (Image)
+        - image2 (Image)
+        - blend_factor (float) (default: 0.5)
+        - blend_mode (str)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageBlend'
 

@@ -19,7 +19,14 @@ class Manga2Anime_LineArt_PreprocessorOutputs(OutputSlots):
 class Manga2Anime_LineArt_Preprocessor(Node[Manga2Anime_LineArt_PreprocessorInputs, Manga2Anime_LineArt_PreprocessorOutputs]):
     """
     Original name: Manga2Anime_LineArt_Preprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Line Extractors
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'Manga2Anime_LineArt_Preprocessor'
 

@@ -19,7 +19,14 @@ class VHS_LoadAudioOutputs(OutputSlots):
 class VHS_LoadAudio(Node[VHS_LoadAudioInputs, VHS_LoadAudioOutputs]):
     """
     Original name: VHS_LoadAudio
-    No description available.
+    Category: Video Helper Suite 🎥🅥🅗🅢/audio
+    Load Audio (Path) 🎥🅥🅗🅢<div style="font-size: 0.8em"><div id=VHS_shortdesc>Loads an audio file from an arbitrary path</div></div><div style="font-size: 0.8em"><div vhs_title="Outputs" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Outputs: <div vhs_title="audio" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">audio: The loaded audio</div></div></div></div><div vhs_title="Widgets" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Widgets: <div vhs_title="audio_file" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">audio_file: The audio file to be loaded.<div style="font-size: 1em">This is a VHS_PATH input. When edited, it provides a list of possible valid files or directories</div><div style="font-size: 1em"><video preload="none" src=https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite/assets/4284322/729b7185-1fca-41d8-bc8d-a770bb2a5ce6 muted loop controls controlslist="nodownload noremoteplayback noplaybackrate" style="width: 0px; min-width: 100%" class="VHS_loopedvideo"></div><div style="font-size: 1em">The current top-most completion may be selected with Tab</div><div style="font-size: 1em">You can navigate up a directory by pressing Ctrl+B (or Ctrl+W if supported by browser)</div><div style="font-size: 1em">The filter on suggested file types can be disabled by pressing Ctrl+G.</div><div style="font-size: 1em">If converted to an input, this functions as a string</div></div></div><div vhs_title="seek_seconds" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">seek_seconds: An offset from the start of the sound file that the audio should start from</div></div></div></div></div>
+
+    Inputs:
+        - audio_file (str) (default: 'input/')
+
+    Outputs:
+        - audio (Any)
     """
     _original_name: str = 'VHS_LoadAudio'
 

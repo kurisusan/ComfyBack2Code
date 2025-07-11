@@ -27,7 +27,18 @@ class CLIPTextEncodeSD3Outputs(OutputSlots):
 class CLIPTextEncodeSD3(Node[CLIPTextEncodeSD3Inputs, CLIPTextEncodeSD3Outputs]):
     """
     Original name: CLIPTextEncodeSD3
-    No description available.
+    Category: advanced/conditioning
+    
+
+    Inputs:
+        - clip (Clip)
+        - clip_l (str)
+        - clip_g (str)
+        - t5xxl (str)
+        - empty_padding (str)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'CLIPTextEncodeSD3'
 

@@ -19,7 +19,16 @@ class ImageNormalize_Neg1_To_1Outputs(OutputSlots):
 class ImageNormalize_Neg1_To_1(Node[ImageNormalize_Neg1_To_1Inputs, ImageNormalize_Neg1_To_1Outputs]):
     """
     Original name: ImageNormalize_Neg1_To_1
-    No description available.
+    Category: KJNodes/image
+    
+Normalize the images to be in the range [-1, 1]  
+
+
+    Inputs:
+        - images (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageNormalize_Neg1_To_1'
 

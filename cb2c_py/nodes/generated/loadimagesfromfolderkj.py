@@ -31,7 +31,20 @@ class LoadImagesFromFolderKJOutputs(OutputSlots):
 class LoadImagesFromFolderKJ(Node[LoadImagesFromFolderKJInputs, LoadImagesFromFolderKJOutputs]):
     """
     Original name: LoadImagesFromFolderKJ
-    No description available.
+    Category: KJNodes/image
+    Loads images from a folder into a batch, images are resized and loaded into a batch.
+
+    Inputs:
+        - folder (str) (default: '')
+        - width (int) (default: 1024)
+        - height (int) (default: 1024)
+        - keep_aspect_ratio (str)
+
+    Outputs:
+        - image (Image)
+        - mask (Image)
+        - count (int)
+        - image_path (str)
     """
     _original_name: str = 'LoadImagesFromFolderKJ'
 

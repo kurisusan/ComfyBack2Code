@@ -21,7 +21,15 @@ class ImageUpscaleWithModelOutputs(OutputSlots):
 class ImageUpscaleWithModel(Node[ImageUpscaleWithModelInputs, ImageUpscaleWithModelOutputs]):
     """
     Original name: ImageUpscaleWithModel
-    No description available.
+    Category: image/upscaling
+    
+
+    Inputs:
+        - upscale_model (Any)
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageUpscaleWithModel'
 

@@ -37,7 +37,26 @@ class PlotCoordinatesOutputs(OutputSlots):
 class PlotCoordinates(Node[PlotCoordinatesInputs, PlotCoordinatesOutputs]):
     """
     Original name: PlotCoordinates
-    No description available.
+    Category: KJNodes/experimental
+    
+Plots coordinates to sequence of images using Matplotlib.  
+
+
+
+    Inputs:
+        - coordinates (str)
+        - text (str) (default: 'title')
+        - width (int) (default: 512)
+        - height (int) (default: 512)
+        - bbox_width (int) (default: 128)
+        - bbox_height (int) (default: 128)
+
+    Outputs:
+        - images (Image)
+        - width (int)
+        - height (int)
+        - bbox_width (int)
+        - bbox_height (int)
     """
     _original_name: str = 'PlotCoordinates'
 

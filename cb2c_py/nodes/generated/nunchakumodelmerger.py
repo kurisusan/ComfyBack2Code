@@ -21,7 +21,17 @@ class NunchakuModelMergerOutputs(OutputSlots):
 class NunchakuModelMerger(Node[NunchakuModelMergerInputs, NunchakuModelMergerOutputs]):
     """
     Original name: NunchakuModelMerger
-    No description available.
+    Category: Nunchaku
+    
+
+    Inputs:
+        - model_folder (str)
+          Nunchaku FLUX.1 model folder.
+        - save_name (str)
+          Filename to save the merged model as.
+
+    Outputs:
+        - status (str)
     """
     _original_name: str = 'NunchakuModelMerger'
 

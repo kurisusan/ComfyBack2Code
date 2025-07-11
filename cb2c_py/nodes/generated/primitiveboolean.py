@@ -19,7 +19,14 @@ class PrimitiveBooleanOutputs(OutputSlots):
 class PrimitiveBoolean(Node[PrimitiveBooleanInputs, PrimitiveBooleanOutputs]):
     """
     Original name: PrimitiveBoolean
-    No description available.
+    Category: utils/primitive
+    
+
+    Inputs:
+        - value (bool)
+
+    Outputs:
+        - boolean (bool)
     """
     _original_name: str = 'PrimitiveBoolean'
 

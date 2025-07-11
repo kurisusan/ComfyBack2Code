@@ -21,7 +21,15 @@ class StableCascade_StageB_ConditioningOutputs(OutputSlots):
 class StableCascade_StageB_Conditioning(Node[StableCascade_StageB_ConditioningInputs, StableCascade_StageB_ConditioningOutputs]):
     """
     Original name: StableCascade_StageB_Conditioning
-    No description available.
+    Category: conditioning/stable_cascade
+    
+
+    Inputs:
+        - conditioning (Conditioning)
+        - stage_c (Latent)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'StableCascade_StageB_Conditioning'
 

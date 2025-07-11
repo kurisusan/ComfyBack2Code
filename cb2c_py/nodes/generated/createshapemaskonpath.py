@@ -31,7 +31,23 @@ class CreateShapeMaskOnPathOutputs(OutputSlots):
 class CreateShapeMaskOnPath(Node[CreateShapeMaskOnPathInputs, CreateShapeMaskOnPathOutputs]):
     """
     Original name: CreateShapeMaskOnPath
-    No description available.
+    Category: KJNodes/masking/generate
+    
+Creates a mask or batch of masks with the specified shape.  
+Locations are center locations.  
+
+
+    Inputs:
+        - shape (str) (default: 'circle')
+        - coordinates (str)
+        - frame_width (int) (default: 512)
+        - frame_height (int) (default: 512)
+        - shape_width (int) (default: 128)
+        - shape_height (int) (default: 128)
+
+    Outputs:
+        - mask (Image)
+        - mask_inverted (Image)
     """
     _original_name: str = 'CreateShapeMaskOnPath'
 

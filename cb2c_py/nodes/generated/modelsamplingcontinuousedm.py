@@ -25,7 +25,17 @@ class ModelSamplingContinuousEDMOutputs(OutputSlots):
 class ModelSamplingContinuousEDM(Node[ModelSamplingContinuousEDMInputs, ModelSamplingContinuousEDMOutputs]):
     """
     Original name: ModelSamplingContinuousEDM
-    No description available.
+    Category: advanced/model
+    
+
+    Inputs:
+        - model (Model)
+        - sampling (str)
+        - sigma_max (float) (default: 120.0)
+        - sigma_min (float) (default: 0.002)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'ModelSamplingContinuousEDM'
 

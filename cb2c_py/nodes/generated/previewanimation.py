@@ -19,7 +19,14 @@ class PreviewAnimationOutputs(OutputSlots):
 class PreviewAnimation(Node[PreviewAnimationInputs, PreviewAnimationOutputs]):
     """
     Original name: PreviewAnimation
-    No description available.
+    Category: KJNodes/image
+    
+
+    Inputs:
+        - fps (float) (default: 8.0)
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'PreviewAnimation'
 

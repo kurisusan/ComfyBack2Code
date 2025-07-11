@@ -21,7 +21,15 @@ class ControlNetAuxSimpleAddTextOutputs(OutputSlots):
 class ControlNetAuxSimpleAddText(Node[ControlNetAuxSimpleAddTextInputs, ControlNetAuxSimpleAddTextOutputs]):
     """
     Original name: ControlNetAuxSimpleAddText
-    No description available.
+    Category: ControlNet Preprocessors
+    
+
+    Inputs:
+        - image (Image)
+        - text (str) (default: '')
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ControlNetAuxSimpleAddText'
 

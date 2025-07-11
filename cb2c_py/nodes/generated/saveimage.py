@@ -21,7 +21,17 @@ class SaveImageOutputs(OutputSlots):
 class SaveImage(Node[SaveImageInputs, SaveImageOutputs]):
     """
     Original name: SaveImage
-    No description available.
+    Category: image
+    Saves the input images to your ComfyUI output directory.
+
+    Inputs:
+        - images (Image)
+          The images to save.
+        - filename_prefix (str) (default: 'ComfyUI')
+          The prefix for the file to save. This may include formatting information such as %date:yyyy-MM-dd% or %Empty Latent Image.width% to include values from nodes.
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'SaveImage'
 

@@ -19,7 +19,14 @@ class DifferentialDiffusionOutputs(OutputSlots):
 class DifferentialDiffusion(Node[DifferentialDiffusionInputs, DifferentialDiffusionOutputs]):
     """
     Original name: DifferentialDiffusion
-    No description available.
+    Category: _for_testing
+    
+
+    Inputs:
+        - model (Model)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'DifferentialDiffusion'
 

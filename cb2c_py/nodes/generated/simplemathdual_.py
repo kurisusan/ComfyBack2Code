@@ -27,7 +27,18 @@ class SimpleMathDual_Outputs(OutputSlots):
 class SimpleMathDual_(Node[SimpleMathDual_Inputs, SimpleMathDual_Outputs]):
     """
     Original name: SimpleMathDual+
-    No description available.
+    Category: essentials/utilities
+    
+
+    Inputs:
+        - value_1 (str) (default: '')
+        - value_2 (str) (default: '')
+
+    Outputs:
+        - int_1 (int)
+        - float_1 (float)
+        - int_2 (int)
+        - float_2 (float)
     """
     _original_name: str = 'SimpleMathDual+'
 

@@ -19,7 +19,14 @@ class Power_Puter__rgthree_Outputs(OutputSlots):
 class Power_Puter__rgthree_(Node[Power_Puter__rgthree_Inputs, Power_Puter__rgthree_Outputs]):
     """
     Original name: Power Puter (rgthree)
-    No description available.
+    Category: rgthree
+    
+
+    Inputs:
+        No inputs.
+
+    Outputs:
+        - _ (Any)
     """
     _original_name: str = 'Power Puter (rgthree)'
 

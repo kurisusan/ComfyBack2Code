@@ -25,7 +25,20 @@ class SplitImageChannelsOutputs(OutputSlots):
 class SplitImageChannels(Node[SplitImageChannelsInputs, SplitImageChannelsOutputs]):
     """
     Original name: SplitImageChannels
-    No description available.
+    Category: KJNodes/image
+    
+Splits image channels into images where the selected channel  
+is repeated for all channels, and the alpha as a mask. 
+
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - red (Image)
+        - green (Image)
+        - blue (Image)
+        - mask (Image)
     """
     _original_name: str = 'SplitImageChannels'
 

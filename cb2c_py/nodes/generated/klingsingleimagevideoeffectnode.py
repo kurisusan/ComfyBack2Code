@@ -29,7 +29,20 @@ class KlingSingleImageVideoEffectNodeOutputs(OutputSlots):
 class KlingSingleImageVideoEffectNode(Node[KlingSingleImageVideoEffectNodeInputs, KlingSingleImageVideoEffectNodeOutputs]):
     """
     Original name: KlingSingleImageVideoEffectNode
-    No description available.
+    Category: api node/video/Kling
+    Achieve different special effects when generating a video based on the effect_scene.
+
+    Inputs:
+        - image (Image)
+           Reference Image. URL or Base64 encoded string (without data:image prefix). File size cannot exceed 10MB, resolution not less than 300*300px, aspect ratio between 1:2.5 ~ 2.5:1
+        - effect_scene (Any)
+        - model_name (Any)
+        - duration (Any)
+
+    Outputs:
+        - video (Any)
+        - video_id (str)
+        - duration (str)
     """
     _original_name: str = 'KlingSingleImageVideoEffectNode'
 

@@ -27,7 +27,18 @@ class CosmosPredict2ImageToVideoLatentOutputs(OutputSlots):
 class CosmosPredict2ImageToVideoLatent(Node[CosmosPredict2ImageToVideoLatentInputs, CosmosPredict2ImageToVideoLatentOutputs]):
     """
     Original name: CosmosPredict2ImageToVideoLatent
-    No description available.
+    Category: conditioning/inpaint
+    
+
+    Inputs:
+        - vae (Vae)
+        - width (int) (default: 848)
+        - height (int) (default: 480)
+        - length (int) (default: 93)
+        - batch_size (int) (default: 1)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'CosmosPredict2ImageToVideoLatent'
 

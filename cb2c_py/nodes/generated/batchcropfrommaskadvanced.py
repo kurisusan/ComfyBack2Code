@@ -41,7 +41,25 @@ class BatchCropFromMaskAdvancedOutputs(OutputSlots):
 class BatchCropFromMaskAdvanced(Node[BatchCropFromMaskAdvancedInputs, BatchCropFromMaskAdvancedOutputs]):
     """
     Original name: BatchCropFromMaskAdvanced
-    No description available.
+    Category: KJNodes/masking
+    
+
+    Inputs:
+        - original_images (Image)
+        - masks (Image)
+        - crop_size_mult (float) (default: 1.0)
+        - bbox_smooth_alpha (float) (default: 0.5)
+
+    Outputs:
+        - original_images (Image)
+        - cropped_images (Image)
+        - cropped_masks (Image)
+        - combined_crop_image (Image)
+        - combined_crop_masks (Image)
+        - bboxes (Any)
+        - combined_bounding_box (Any)
+        - bbox_width (int)
+        - bbox_height (int)
     """
     _original_name: str = 'BatchCropFromMaskAdvanced'
 

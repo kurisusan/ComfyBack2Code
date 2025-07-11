@@ -37,7 +37,23 @@ class WanPhantomSubjectToVideoOutputs(OutputSlots):
 class WanPhantomSubjectToVideo(Node[WanPhantomSubjectToVideoInputs, WanPhantomSubjectToVideoOutputs]):
     """
     Original name: WanPhantomSubjectToVideo
-    No description available.
+    Category: conditioning/video_models
+    
+
+    Inputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - vae (Vae)
+        - width (int) (default: 832)
+        - height (int) (default: 480)
+        - length (int) (default: 81)
+        - batch_size (int) (default: 1)
+
+    Outputs:
+        - positive (Conditioning)
+        - negative_text (Conditioning)
+        - negative_img_text (Conditioning)
+        - latent (Latent)
     """
     _original_name: str = 'WanPhantomSubjectToVideo'
 

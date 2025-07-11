@@ -21,7 +21,15 @@ class ModelSamplingStableCascadeOutputs(OutputSlots):
 class ModelSamplingStableCascade(Node[ModelSamplingStableCascadeInputs, ModelSamplingStableCascadeOutputs]):
     """
     Original name: ModelSamplingStableCascade
-    No description available.
+    Category: advanced/model
+    
+
+    Inputs:
+        - model (Model)
+        - shift (float) (default: 2.0)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'ModelSamplingStableCascade'
 

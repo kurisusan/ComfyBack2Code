@@ -39,7 +39,24 @@ class MaskFromRGBCMYBW_Outputs(OutputSlots):
 class MaskFromRGBCMYBW_(Node[MaskFromRGBCMYBW_Inputs, MaskFromRGBCMYBW_Outputs]):
     """
     Original name: MaskFromRGBCMYBW+
-    No description available.
+    Category: essentials/mask
+    
+
+    Inputs:
+        - image (Image)
+        - threshold_r (float) (default: 0.15)
+        - threshold_g (float) (default: 0.15)
+        - threshold_b (float) (default: 0.15)
+
+    Outputs:
+        - red (Image)
+        - green (Image)
+        - blue (Image)
+        - cyan (Image)
+        - magenta (Image)
+        - yellow (Image)
+        - black (Image)
+        - white (Image)
     """
     _original_name: str = 'MaskFromRGBCMYBW+'
 

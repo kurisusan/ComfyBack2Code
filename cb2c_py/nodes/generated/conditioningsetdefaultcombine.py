@@ -21,7 +21,15 @@ class ConditioningSetDefaultCombineOutputs(OutputSlots):
 class ConditioningSetDefaultCombine(Node[ConditioningSetDefaultCombineInputs, ConditioningSetDefaultCombineOutputs]):
     """
     Original name: ConditioningSetDefaultCombine
-    No description available.
+    Category: advanced/hooks/cond single
+    
+
+    Inputs:
+        - cond (Conditioning)
+        - cond_DEFAULT (Conditioning)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'ConditioningSetDefaultCombine'
 

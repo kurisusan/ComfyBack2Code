@@ -25,7 +25,21 @@ class StabilityStableImageUltraNodeOutputs(OutputSlots):
 class StabilityStableImageUltraNode(Node[StabilityStableImageUltraNodeInputs, StabilityStableImageUltraNodeOutputs]):
     """
     Original name: StabilityStableImageUltraNode
-    No description available.
+    Category: api node/image/Stability AI
+    Generates images synchronously based on prompt and resolution.
+
+    Inputs:
+        - prompt (str) (default: '')
+          What you wish to see in the output image. A strong, descriptive prompt that clearly definesWhat you wish to see in the output image. A strong, descriptive prompt that clearly defineselements, colors, and subjects will lead to better results. To control the weight of a given word use the format `(word:weight)`,where `word` is the word you'd like to control the weight of and `weight`is a value between 0 and 1. For example: `The sky was a crisp (blue:0.3) and (green:0.8)`would convey a sky that was blue and green, but more green than blue.
+        - aspect_ratio (str) (default: '1:1')
+          Aspect ratio of generated image.
+        - style_preset (str)
+          Optional desired style of generated image.
+        - seed (int) (default: 0)
+          The random seed used for creating the noise.
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'StabilityStableImageUltraNode'
 

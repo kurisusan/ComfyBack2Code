@@ -27,7 +27,18 @@ class ExtendIntermediateSigmasOutputs(OutputSlots):
 class ExtendIntermediateSigmas(Node[ExtendIntermediateSigmasInputs, ExtendIntermediateSigmasOutputs]):
     """
     Original name: ExtendIntermediateSigmas
-    No description available.
+    Category: sampling/custom_sampling/sigmas
+    
+
+    Inputs:
+        - sigmas (Any)
+        - steps (int) (default: 2)
+        - start_at_sigma (float) (default: -1.0)
+        - end_at_sigma (float) (default: 12.0)
+        - spacing (str)
+
+    Outputs:
+        - sigmas (Any)
     """
     _original_name: str = 'ExtendIntermediateSigmas'
 

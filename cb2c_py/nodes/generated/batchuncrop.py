@@ -35,7 +35,22 @@ class BatchUncropOutputs(OutputSlots):
 class BatchUncrop(Node[BatchUncropInputs, BatchUncropOutputs]):
     """
     Original name: BatchUncrop
-    No description available.
+    Category: KJNodes/masking
+    
+
+    Inputs:
+        - original_images (Image)
+        - cropped_images (Image)
+        - bboxes (Any)
+        - border_blending (float) (default: 0.25)
+        - crop_rescale (float) (default: 1.0)
+        - border_top (bool) (default: True)
+        - border_bottom (bool) (default: True)
+        - border_left (bool) (default: True)
+        - border_right (bool) (default: True)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'BatchUncrop'
 

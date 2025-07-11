@@ -115,7 +115,62 @@ class SD3AttentionSeekerLG_Outputs(OutputSlots):
 class SD3AttentionSeekerLG_(Node[SD3AttentionSeekerLG_Inputs, SD3AttentionSeekerLG_Outputs]):
     """
     Original name: SD3AttentionSeekerLG+
-    No description available.
+    Category: essentials/conditioning
+    
+
+    Inputs:
+        - clip (Clip)
+        - apply_to_query (bool) (default: True)
+        - apply_to_key (bool) (default: True)
+        - apply_to_value (bool) (default: True)
+        - apply_to_out (bool) (default: True)
+        - clip_l_0 (float) (default: 1.0)
+        - clip_l_1 (float) (default: 1.0)
+        - clip_l_2 (float) (default: 1.0)
+        - clip_l_3 (float) (default: 1.0)
+        - clip_l_4 (float) (default: 1.0)
+        - clip_l_5 (float) (default: 1.0)
+        - clip_l_6 (float) (default: 1.0)
+        - clip_l_7 (float) (default: 1.0)
+        - clip_l_8 (float) (default: 1.0)
+        - clip_l_9 (float) (default: 1.0)
+        - clip_l_10 (float) (default: 1.0)
+        - clip_l_11 (float) (default: 1.0)
+        - clip_g_0 (float) (default: 1.0)
+        - clip_g_1 (float) (default: 1.0)
+        - clip_g_2 (float) (default: 1.0)
+        - clip_g_3 (float) (default: 1.0)
+        - clip_g_4 (float) (default: 1.0)
+        - clip_g_5 (float) (default: 1.0)
+        - clip_g_6 (float) (default: 1.0)
+        - clip_g_7 (float) (default: 1.0)
+        - clip_g_8 (float) (default: 1.0)
+        - clip_g_9 (float) (default: 1.0)
+        - clip_g_10 (float) (default: 1.0)
+        - clip_g_11 (float) (default: 1.0)
+        - clip_g_12 (float) (default: 1.0)
+        - clip_g_13 (float) (default: 1.0)
+        - clip_g_14 (float) (default: 1.0)
+        - clip_g_15 (float) (default: 1.0)
+        - clip_g_16 (float) (default: 1.0)
+        - clip_g_17 (float) (default: 1.0)
+        - clip_g_18 (float) (default: 1.0)
+        - clip_g_19 (float) (default: 1.0)
+        - clip_g_20 (float) (default: 1.0)
+        - clip_g_21 (float) (default: 1.0)
+        - clip_g_22 (float) (default: 1.0)
+        - clip_g_23 (float) (default: 1.0)
+        - clip_g_24 (float) (default: 1.0)
+        - clip_g_25 (float) (default: 1.0)
+        - clip_g_26 (float) (default: 1.0)
+        - clip_g_27 (float) (default: 1.0)
+        - clip_g_28 (float) (default: 1.0)
+        - clip_g_29 (float) (default: 1.0)
+        - clip_g_30 (float) (default: 1.0)
+        - clip_g_31 (float) (default: 1.0)
+
+    Outputs:
+        - clip (Clip)
     """
     _original_name: str = 'SD3AttentionSeekerLG+'
 

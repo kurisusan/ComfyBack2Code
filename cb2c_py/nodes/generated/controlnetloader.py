@@ -19,7 +19,14 @@ class ControlNetLoaderOutputs(OutputSlots):
 class ControlNetLoader(Node[ControlNetLoaderInputs, ControlNetLoaderOutputs]):
     """
     Original name: ControlNetLoader
-    No description available.
+    Category: loaders
+    
+
+    Inputs:
+        - control_net_name (str)
+
+    Outputs:
+        - control_net (Any)
     """
     _original_name: str = 'ControlNetLoader'
 

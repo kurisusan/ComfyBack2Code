@@ -25,7 +25,17 @@ class ModelSamplingContinuousVOutputs(OutputSlots):
 class ModelSamplingContinuousV(Node[ModelSamplingContinuousVInputs, ModelSamplingContinuousVOutputs]):
     """
     Original name: ModelSamplingContinuousV
-    No description available.
+    Category: advanced/model
+    
+
+    Inputs:
+        - model (Model)
+        - sampling (str)
+        - sigma_max (float) (default: 500.0)
+        - sigma_min (float) (default: 0.03)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'ModelSamplingContinuousV'
 

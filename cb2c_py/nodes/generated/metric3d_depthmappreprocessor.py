@@ -19,7 +19,14 @@ class Metric3D_DepthMapPreprocessorOutputs(OutputSlots):
 class Metric3D_DepthMapPreprocessor(Node[Metric3D_DepthMapPreprocessorInputs, Metric3D_DepthMapPreprocessorOutputs]):
     """
     Original name: Metric3D-DepthMapPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Normal and Depth Estimators
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'Metric3D-DepthMapPreprocessor'
 

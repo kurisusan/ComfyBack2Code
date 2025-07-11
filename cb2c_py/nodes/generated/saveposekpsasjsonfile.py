@@ -21,7 +21,15 @@ class SavePoseKpsAsJsonFileOutputs(OutputSlots):
 class SavePoseKpsAsJsonFile(Node[SavePoseKpsAsJsonFileInputs, SavePoseKpsAsJsonFileOutputs]):
     """
     Original name: SavePoseKpsAsJsonFile
-    No description available.
+    Category: ControlNet Preprocessors/Pose Keypoint Postprocess
+    
+
+    Inputs:
+        - pose_kps (Any)
+        - filename_prefix (str) (default: 'PoseKeypoint')
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'SavePoseKpsAsJsonFile'
 

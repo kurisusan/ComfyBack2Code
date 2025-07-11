@@ -23,7 +23,16 @@ class VHS_DuplicateMasksOutputs(OutputSlots):
 class VHS_DuplicateMasks(Node[VHS_DuplicateMasksInputs, VHS_DuplicateMasksOutputs]):
     """
     Original name: VHS_DuplicateMasks
-    No description available.
+    Category: Video Helper Suite 🎥🅥🅗🅢/mask
+    Repeat Masks 🎥🅥🅗🅢<div style="font-size: 0.8em"><div id=VHS_shortdesc>Append copies of a mask to itself so it repeats</div></div><div style="font-size: 0.8em"><div vhs_title="Inputs" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Inputs: <div vhs_title="masks" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">masks: The masks to be repeated</div></div></div></div><div vhs_title="Outputs" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Outputs: <div vhs_title="LATENT" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">LATENT: The mask with repeats</div></div><div vhs_title="count" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">count: The number of mask in the output. Equal to the length of the input mask * multiply_by</div></div></div></div><div vhs_title="Widgets" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Widgets: <div vhs_title="multiply_by" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">multiply_by: Controls the number of times the mask should repeat. 1, the default, means no change.</div></div></div></div></div>
+
+    Inputs:
+        - mask (Image)
+        - multiply_by (int) (default: 1)
+
+    Outputs:
+        - mask (Image)
+        - count (int)
     """
     _original_name: str = 'VHS_DuplicateMasks'
 

@@ -35,7 +35,24 @@ class WanVideoSamplerOutputs(OutputSlots):
 class WanVideoSampler(Node[WanVideoSamplerInputs, WanVideoSamplerOutputs]):
     """
     Original name: WanVideoSampler
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - model (Any)
+        - image_embeds (Any)
+        - steps (int) (default: 30)
+        - cfg (float) (default: 6.0)
+        - shift (float) (default: 5.0)
+        - seed (int) (default: 0)
+        - force_offload (bool) (default: True)
+          Moves the model to the offload device after sampling
+        - scheduler (str) (default: 'unipc')
+        - riflex_freq_index (int) (default: 0)
+          Frequency index for RIFLEX, disabled when 0, default 6. Allows for new frames to be generated after without looping
+
+    Outputs:
+        - samples (Latent)
     """
     _original_name: str = 'WanVideoSampler'
 

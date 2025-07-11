@@ -21,7 +21,15 @@ class RemBGSession_Outputs(OutputSlots):
 class RemBGSession_(Node[RemBGSession_Inputs, RemBGSession_Outputs]):
     """
     Original name: RemBGSession+
-    No description available.
+    Category: essentials/image manipulation
+    
+
+    Inputs:
+        - model (str)
+        - providers (str)
+
+    Outputs:
+        - rembg_session (Any)
     """
     _original_name: str = 'RemBGSession+'
 

@@ -19,7 +19,14 @@ class GLIGENLoaderOutputs(OutputSlots):
 class GLIGENLoader(Node[GLIGENLoaderInputs, GLIGENLoaderOutputs]):
     """
     Original name: GLIGENLoader
-    No description available.
+    Category: loaders
+    
+
+    Inputs:
+        - gligen_name (str)
+
+    Outputs:
+        - gligen (Any)
     """
     _original_name: str = 'GLIGENLoader'
 

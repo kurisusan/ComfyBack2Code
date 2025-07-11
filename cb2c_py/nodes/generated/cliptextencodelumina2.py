@@ -23,7 +23,20 @@ class CLIPTextEncodeLumina2Outputs(OutputSlots):
 class CLIPTextEncodeLumina2(Node[CLIPTextEncodeLumina2Inputs, CLIPTextEncodeLumina2Outputs]):
     """
     Original name: CLIPTextEncodeLumina2
-    No description available.
+    Category: conditioning
+    Encodes a system prompt and a user prompt using a CLIP model into an embedding that can be used to guide the diffusion model towards generating specific images.
+
+    Inputs:
+        - system_prompt (str)
+          Lumina2 provide two types of system prompts:Superior: You are an assistant designed to generate superior images with the superior degree of image-text alignment based on textual prompts or user prompts. Alignment: You are an assistant designed to generate high-quality images with the highest degree of image-text alignment based on textual prompts.
+        - user_prompt (str)
+          The text to be encoded.
+        - clip (Clip)
+          The CLIP model used for encoding the text.
+
+    Outputs:
+        - conditioning (Conditioning)
+          A conditioning containing the embedded text used to guide the diffusion model.
     """
     _original_name: str = 'CLIPTextEncodeLumina2'
 

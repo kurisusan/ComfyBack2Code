@@ -19,7 +19,14 @@ class SaveImageWebsocketOutputs(OutputSlots):
 class SaveImageWebsocket(Node[SaveImageWebsocketInputs, SaveImageWebsocketOutputs]):
     """
     Original name: SaveImageWebsocket
-    No description available.
+    Category: api/image
+    
+
+    Inputs:
+        - images (Image)
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'SaveImageWebsocket'
 

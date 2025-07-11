@@ -93,7 +93,51 @@ class SamplerSelectHelper_Outputs(OutputSlots):
 class SamplerSelectHelper_(Node[SamplerSelectHelper_Inputs, SamplerSelectHelper_Outputs]):
     """
     Original name: SamplerSelectHelper+
-    No description available.
+    Category: essentials/sampling
+    
+
+    Inputs:
+        - euler (bool) (default: False)
+        - euler_cfg_pp (bool) (default: False)
+        - euler_ancestral (bool) (default: False)
+        - euler_ancestral_cfg_pp (bool) (default: False)
+        - heun (bool) (default: False)
+        - heunpp2 (bool) (default: False)
+        - dpm_2 (bool) (default: False)
+        - dpm_2_ancestral (bool) (default: False)
+        - lms (bool) (default: False)
+        - dpm_fast (bool) (default: False)
+        - dpm_adaptive (bool) (default: False)
+        - dpmpp_2s_ancestral (bool) (default: False)
+        - dpmpp_2s_ancestral_cfg_pp (bool) (default: False)
+        - dpmpp_sde (bool) (default: False)
+        - dpmpp_sde_gpu (bool) (default: False)
+        - dpmpp_2m (bool) (default: False)
+        - dpmpp_2m_cfg_pp (bool) (default: False)
+        - dpmpp_2m_sde (bool) (default: False)
+        - dpmpp_2m_sde_gpu (bool) (default: False)
+        - dpmpp_3m_sde (bool) (default: False)
+        - dpmpp_3m_sde_gpu (bool) (default: False)
+        - ddpm (bool) (default: False)
+        - lcm (bool) (default: False)
+        - ipndm (bool) (default: False)
+        - ipndm_v (bool) (default: False)
+        - deis (bool) (default: False)
+        - res_multistep (bool) (default: False)
+        - res_multistep_cfg_pp (bool) (default: False)
+        - res_multistep_ancestral (bool) (default: False)
+        - res_multistep_ancestral_cfg_pp (bool) (default: False)
+        - gradient_estimation (bool) (default: False)
+        - gradient_estimation_cfg_pp (bool) (default: False)
+        - er_sde (bool) (default: False)
+        - seeds_2 (bool) (default: False)
+        - seeds_3 (bool) (default: False)
+        - ddim (bool) (default: False)
+        - uni_pc (bool) (default: False)
+        - uni_pc_bh2 (bool) (default: False)
+
+    Outputs:
+        - string (str)
     """
     _original_name: str = 'SamplerSelectHelper+'
 

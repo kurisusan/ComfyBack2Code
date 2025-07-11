@@ -31,7 +31,22 @@ class TorchCompileModelFluxAdvancedOutputs(OutputSlots):
 class TorchCompileModelFluxAdvanced(Node[TorchCompileModelFluxAdvancedInputs, TorchCompileModelFluxAdvancedOutputs]):
     """
     Original name: TorchCompileModelFluxAdvanced
-    No description available.
+    Category: KJNodes/torchcompile
+    
+
+    Inputs:
+        - model (Model)
+        - backend (str)
+        - fullgraph (bool) (default: False)
+          Enable full graph mode
+        - mode (str) (default: 'default')
+        - double_blocks (str) (default: '0-18')
+        - single_blocks (str) (default: '0-37')
+        - dynamic (bool) (default: False)
+          Enable dynamic mode
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'TorchCompileModelFluxAdvanced'
 

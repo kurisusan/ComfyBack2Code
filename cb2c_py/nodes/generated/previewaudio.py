@@ -19,7 +19,14 @@ class PreviewAudioOutputs(OutputSlots):
 class PreviewAudio(Node[PreviewAudioInputs, PreviewAudioOutputs]):
     """
     Original name: PreviewAudio
-    No description available.
+    Category: audio
+    
+
+    Inputs:
+        - audio (Any)
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'PreviewAudio'
 

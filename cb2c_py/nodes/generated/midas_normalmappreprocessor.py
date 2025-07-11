@@ -19,7 +19,14 @@ class MiDaS_NormalMapPreprocessorOutputs(OutputSlots):
 class MiDaS_NormalMapPreprocessor(Node[MiDaS_NormalMapPreprocessorInputs, MiDaS_NormalMapPreprocessorOutputs]):
     """
     Original name: MiDaS-NormalMapPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Normal and Depth Estimators
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'MiDaS-NormalMapPreprocessor'
 

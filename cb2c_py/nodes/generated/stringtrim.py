@@ -21,7 +21,15 @@ class StringTrimOutputs(OutputSlots):
 class StringTrim(Node[StringTrimInputs, StringTrimOutputs]):
     """
     Original name: StringTrim
-    No description available.
+    Category: utils/string
+    
+
+    Inputs:
+        - string (str)
+        - mode (Any)
+
+    Outputs:
+        - string (str)
     """
     _original_name: str = 'StringTrim'
 

@@ -21,7 +21,15 @@ class LatentAddOutputs(OutputSlots):
 class LatentAdd(Node[LatentAddInputs, LatentAddOutputs]):
     """
     Original name: LatentAdd
-    No description available.
+    Category: latent/advanced
+    
+
+    Inputs:
+        - samples1 (Latent)
+        - samples2 (Latent)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'LatentAdd'
 

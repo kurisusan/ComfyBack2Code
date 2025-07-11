@@ -23,7 +23,16 @@ class EmptySD3LatentImageOutputs(OutputSlots):
 class EmptySD3LatentImage(Node[EmptySD3LatentImageInputs, EmptySD3LatentImageOutputs]):
     """
     Original name: EmptySD3LatentImage
-    No description available.
+    Category: latent/sd3
+    
+
+    Inputs:
+        - width (int) (default: 1024)
+        - height (int) (default: 1024)
+        - batch_size (int) (default: 1)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'EmptySD3LatentImage'
 

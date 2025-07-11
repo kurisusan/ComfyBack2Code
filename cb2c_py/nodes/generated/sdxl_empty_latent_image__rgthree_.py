@@ -27,7 +27,18 @@ class SDXL_Empty_Latent_Image__rgthree_Outputs(OutputSlots):
 class SDXL_Empty_Latent_Image__rgthree_(Node[SDXL_Empty_Latent_Image__rgthree_Inputs, SDXL_Empty_Latent_Image__rgthree_Outputs]):
     """
     Original name: SDXL Empty Latent Image (rgthree)
-    No description available.
+    Category: rgthree
+    
+
+    Inputs:
+        - dimensions (str) (default: '1024 x 1024  (square)')
+        - clip_scale (float) (default: 2.0)
+        - batch_size (int) (default: 1)
+
+    Outputs:
+        - latent (Latent)
+        - clip_width (int)
+        - clip_height (int)
     """
     _original_name: str = 'SDXL Empty Latent Image (rgthree)'
 

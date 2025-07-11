@@ -19,7 +19,14 @@ class LatentOperationTonemapReinhardOutputs(OutputSlots):
 class LatentOperationTonemapReinhard(Node[LatentOperationTonemapReinhardInputs, LatentOperationTonemapReinhardOutputs]):
     """
     Original name: LatentOperationTonemapReinhard
-    No description available.
+    Category: latent/advanced/operations
+    
+
+    Inputs:
+        - multiplier (float) (default: 1.0)
+
+    Outputs:
+        - latent_operation (Any)
     """
     _original_name: str = 'LatentOperationTonemapReinhard'
 

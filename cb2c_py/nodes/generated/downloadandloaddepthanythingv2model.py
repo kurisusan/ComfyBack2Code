@@ -19,7 +19,19 @@ class DownloadAndLoadDepthAnythingV2ModelOutputs(OutputSlots):
 class DownloadAndLoadDepthAnythingV2Model(Node[DownloadAndLoadDepthAnythingV2ModelInputs, DownloadAndLoadDepthAnythingV2ModelOutputs]):
     """
     Original name: DownloadAndLoadDepthAnythingV2Model
-    No description available.
+    Category: DepthAnythingV2
+    
+Models autodownload to `ComfyUI\models\depthanything` from   
+https://huggingface.co/Kijai/DepthAnythingV2-safetensors/tree/main   
+   
+fp16 reduces quality by a LOT, not recommended.
+
+
+    Inputs:
+        - model (str) (default: 'depth_anything_v2_vitl_fp32.safetensors')
+
+    Outputs:
+        - da_v2_model (Any)
     """
     _original_name: str = 'DownloadAndLoadDepthAnythingV2Model'
 

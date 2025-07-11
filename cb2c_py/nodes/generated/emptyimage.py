@@ -25,7 +25,17 @@ class EmptyImageOutputs(OutputSlots):
 class EmptyImage(Node[EmptyImageInputs, EmptyImageOutputs]):
     """
     Original name: EmptyImage
-    No description available.
+    Category: image
+    
+
+    Inputs:
+        - width (int) (default: 512)
+        - height (int) (default: 512)
+        - batch_size (int) (default: 1)
+        - color (int) (default: 0)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'EmptyImage'
 

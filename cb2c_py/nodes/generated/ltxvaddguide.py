@@ -35,7 +35,24 @@ class LTXVAddGuideOutputs(OutputSlots):
 class LTXVAddGuide(Node[LTXVAddGuideInputs, LTXVAddGuideOutputs]):
     """
     Original name: LTXVAddGuide
-    No description available.
+    Category: conditioning/video_models
+    
+
+    Inputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - vae (Vae)
+        - latent (Latent)
+        - image (Image)
+          Image or video to condition the latent video on. Must be 8*n + 1 frames.If the video is not 8*n + 1 frames, it will be cropped to the nearest 8*n + 1 frames.
+        - frame_idx (int) (default: 0)
+          Frame index to start the conditioning at. For single-frame images or videos with 1-8 frames, any frame_idx value is acceptable. For videos with 9+ frames, frame_idx must be divisible by 8, otherwise it will be rounded down to the nearest multiple of 8. Negative values are counted from the end of the video.
+        - strength (float) (default: 1.0)
+
+    Outputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - latent (Latent)
     """
     _original_name: str = 'LTXVAddGuide'
 

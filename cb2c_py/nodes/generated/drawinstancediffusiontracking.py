@@ -29,7 +29,23 @@ class DrawInstanceDiffusionTrackingOutputs(OutputSlots):
 class DrawInstanceDiffusionTracking(Node[DrawInstanceDiffusionTrackingInputs, DrawInstanceDiffusionTrackingOutputs]):
     """
     Original name: DrawInstanceDiffusionTracking
-    No description available.
+    Category: KJNodes/InstanceDiffusion
+    
+Draws the tracking data from  
+CreateInstanceDiffusionTracking -node.
+
+
+
+    Inputs:
+        - image (Image)
+        - tracking (Any)
+        - box_line_width (int) (default: 2)
+        - draw_text (bool) (default: True)
+        - font (str)
+        - font_size (int) (default: 20)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'DrawInstanceDiffusionTracking'
 

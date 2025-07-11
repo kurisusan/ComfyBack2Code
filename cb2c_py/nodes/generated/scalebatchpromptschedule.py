@@ -23,7 +23,19 @@ class ScaleBatchPromptScheduleOutputs(OutputSlots):
 class ScaleBatchPromptSchedule(Node[ScaleBatchPromptScheduleInputs, ScaleBatchPromptScheduleOutputs]):
     """
     Original name: ScaleBatchPromptSchedule
-    No description available.
+    Category: KJNodes/misc
+    
+Scales a batch schedule from Fizz' nodes BatchPromptSchedule
+to a different frame count.
+
+
+    Inputs:
+        - input_str (str) (default: '0:(0.0),\n7:(1.0),\n15:(0.0)\n')
+        - old_frame_count (int) (default: 1)
+        - new_frame_count (int) (default: 1)
+
+    Outputs:
+        - string (str)
     """
     _original_name: str = 'ScaleBatchPromptSchedule'
 

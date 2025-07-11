@@ -21,7 +21,15 @@ class VAESaveOutputs(OutputSlots):
 class VAESave(Node[VAESaveInputs, VAESaveOutputs]):
     """
     Original name: VAESave
-    No description available.
+    Category: advanced/model_merging
+    
+
+    Inputs:
+        - vae (Vae)
+        - filename_prefix (str) (default: 'vae/ComfyUI_vae')
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'VAESave'
 

@@ -29,7 +29,19 @@ class PorterDuffImageCompositeOutputs(OutputSlots):
 class PorterDuffImageComposite(Node[PorterDuffImageCompositeInputs, PorterDuffImageCompositeOutputs]):
     """
     Original name: PorterDuffImageComposite
-    No description available.
+    Category: mask/compositing
+    
+
+    Inputs:
+        - source (Image)
+        - source_alpha (Image)
+        - destination (Image)
+        - destination_alpha (Image)
+        - mode (str) (default: 'DST')
+
+    Outputs:
+        - image (Image)
+        - mask (Image)
     """
     _original_name: str = 'PorterDuffImageComposite'
 

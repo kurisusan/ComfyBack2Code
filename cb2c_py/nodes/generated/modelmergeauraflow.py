@@ -107,7 +107,58 @@ class ModelMergeAuraflowOutputs(OutputSlots):
 class ModelMergeAuraflow(Node[ModelMergeAuraflowInputs, ModelMergeAuraflowOutputs]):
     """
     Original name: ModelMergeAuraflow
-    No description available.
+    Category: advanced/model_merging/model_specific
+    
+
+    Inputs:
+        - model1 (Model)
+        - model2 (Model)
+        - init_x_linear_ (float) (default: 1.0)
+        - positional_encoding (float) (default: 1.0)
+        - cond_seq_linear_ (float) (default: 1.0)
+        - register_tokens (float) (default: 1.0)
+        - t_embedder_ (float) (default: 1.0)
+        - double_layers_0_ (float) (default: 1.0)
+        - double_layers_1_ (float) (default: 1.0)
+        - double_layers_2_ (float) (default: 1.0)
+        - double_layers_3_ (float) (default: 1.0)
+        - single_layers_0_ (float) (default: 1.0)
+        - single_layers_1_ (float) (default: 1.0)
+        - single_layers_2_ (float) (default: 1.0)
+        - single_layers_3_ (float) (default: 1.0)
+        - single_layers_4_ (float) (default: 1.0)
+        - single_layers_5_ (float) (default: 1.0)
+        - single_layers_6_ (float) (default: 1.0)
+        - single_layers_7_ (float) (default: 1.0)
+        - single_layers_8_ (float) (default: 1.0)
+        - single_layers_9_ (float) (default: 1.0)
+        - single_layers_10_ (float) (default: 1.0)
+        - single_layers_11_ (float) (default: 1.0)
+        - single_layers_12_ (float) (default: 1.0)
+        - single_layers_13_ (float) (default: 1.0)
+        - single_layers_14_ (float) (default: 1.0)
+        - single_layers_15_ (float) (default: 1.0)
+        - single_layers_16_ (float) (default: 1.0)
+        - single_layers_17_ (float) (default: 1.0)
+        - single_layers_18_ (float) (default: 1.0)
+        - single_layers_19_ (float) (default: 1.0)
+        - single_layers_20_ (float) (default: 1.0)
+        - single_layers_21_ (float) (default: 1.0)
+        - single_layers_22_ (float) (default: 1.0)
+        - single_layers_23_ (float) (default: 1.0)
+        - single_layers_24_ (float) (default: 1.0)
+        - single_layers_25_ (float) (default: 1.0)
+        - single_layers_26_ (float) (default: 1.0)
+        - single_layers_27_ (float) (default: 1.0)
+        - single_layers_28_ (float) (default: 1.0)
+        - single_layers_29_ (float) (default: 1.0)
+        - single_layers_30_ (float) (default: 1.0)
+        - single_layers_31_ (float) (default: 1.0)
+        - modF_ (float) (default: 1.0)
+        - final_linear_ (float) (default: 1.0)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'ModelMergeAuraflow'
 

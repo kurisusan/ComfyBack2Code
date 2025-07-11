@@ -23,7 +23,16 @@ class StringSubstringOutputs(OutputSlots):
 class StringSubstring(Node[StringSubstringInputs, StringSubstringOutputs]):
     """
     Original name: StringSubstring
-    No description available.
+    Category: utils/string
+    
+
+    Inputs:
+        - string (str)
+        - start (int)
+        - end (int)
+
+    Outputs:
+        - string (str)
     """
     _original_name: str = 'StringSubstring'
 

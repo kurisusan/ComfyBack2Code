@@ -21,7 +21,17 @@ class InterpolateCoordsOutputs(OutputSlots):
 class InterpolateCoords(Node[InterpolateCoordsInputs, InterpolateCoordsOutputs]):
     """
     Original name: InterpolateCoords
-    No description available.
+    Category: KJNodes/experimental
+    
+Interpolates coordinates based on a curve.   
+
+
+    Inputs:
+        - coordinates (str)
+        - interpolation_curve (float)
+
+    Outputs:
+        - coordinates (str)
     """
     _original_name: str = 'InterpolateCoords'
 

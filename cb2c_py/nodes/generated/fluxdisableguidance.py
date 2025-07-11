@@ -19,7 +19,14 @@ class FluxDisableGuidanceOutputs(OutputSlots):
 class FluxDisableGuidance(Node[FluxDisableGuidanceInputs, FluxDisableGuidanceOutputs]):
     """
     Original name: FluxDisableGuidance
-    No description available.
+    Category: advanced/conditioning/flux
+    This node completely disables the guidance embed on Flux and Flux like models
+
+    Inputs:
+        - conditioning (Conditioning)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'FluxDisableGuidance'
 

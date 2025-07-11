@@ -19,7 +19,14 @@ class ReferenceLatentOutputs(OutputSlots):
 class ReferenceLatent(Node[ReferenceLatentInputs, ReferenceLatentOutputs]):
     """
     Original name: ReferenceLatent
-    No description available.
+    Category: advanced/conditioning/edit_models
+    This node sets the guiding latent for an edit model. If the model supports it you can chain multiple to set multiple reference images.
+
+    Inputs:
+        - conditioning (Conditioning)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'ReferenceLatent'
 

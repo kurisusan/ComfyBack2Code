@@ -43,7 +43,28 @@ class HunyuanVideoEncodeKeyframesToCondOutputs(OutputSlots):
 class HunyuanVideoEncodeKeyframesToCond(Node[HunyuanVideoEncodeKeyframesToCondInputs, HunyuanVideoEncodeKeyframesToCondOutputs]):
     """
     Original name: HunyuanVideoEncodeKeyframesToCond
-    No description available.
+    Category: KJNodes/videomodels
+    
+
+    Inputs:
+        - model (Model)
+        - positive (Conditioning)
+        - vae (Vae)
+        - start_frame (Image)
+        - end_frame (Image)
+        - num_frames (int) (default: 33)
+        - tile_size (int) (default: 512)
+        - overlap (int) (default: 64)
+        - temporal_size (int) (default: 64)
+          Only used for video VAEs: Amount of frames to encode at a time.
+        - temporal_overlap (int) (default: 8)
+          Only used for video VAEs: Amount of frames to overlap.
+
+    Outputs:
+        - model (Model)
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - latent (Latent)
     """
     _original_name: str = 'HunyuanVideoEncodeKeyframesToCond'
 

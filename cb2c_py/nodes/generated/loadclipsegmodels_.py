@@ -19,7 +19,14 @@ class LoadCLIPSegModels_Outputs(OutputSlots):
 class LoadCLIPSegModels_(Node[LoadCLIPSegModels_Inputs, LoadCLIPSegModels_Outputs]):
     """
     Original name: LoadCLIPSegModels+
-    No description available.
+    Category: essentials/segmentation
+    
+
+    Inputs:
+        No inputs.
+
+    Outputs:
+        - clip_seg (Any)
     """
     _original_name: str = 'LoadCLIPSegModels+'
 

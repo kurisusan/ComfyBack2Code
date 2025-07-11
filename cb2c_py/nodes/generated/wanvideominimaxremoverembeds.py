@@ -27,7 +27,23 @@ class WanVideoMiniMaxRemoverEmbedsOutputs(OutputSlots):
 class WanVideoMiniMaxRemoverEmbeds(Node[WanVideoMiniMaxRemoverEmbedsInputs, WanVideoMiniMaxRemoverEmbedsOutputs]):
     """
     Original name: WanVideoMiniMaxRemoverEmbeds
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - width (int) (default: 832)
+          Width of the image to encode
+        - height (int) (default: 480)
+          Height of the image to encode
+        - num_frames (int) (default: 81)
+          Number of frames to encode
+        - latents (Latent)
+          Encoded latents to use as control signals
+        - mask_latents (Latent)
+          Encoded latents to use as mask
+
+    Outputs:
+        - image_embeds (Any)
     """
     _original_name: str = 'WanVideoMiniMaxRemoverEmbeds'
 

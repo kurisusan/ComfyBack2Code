@@ -23,7 +23,20 @@ class CheckpointLoaderSimpleOutputs(OutputSlots):
 class CheckpointLoaderSimple(Node[CheckpointLoaderSimpleInputs, CheckpointLoaderSimpleOutputs]):
     """
     Original name: CheckpointLoaderSimple
-    No description available.
+    Category: loaders
+    Loads a diffusion model checkpoint, diffusion models are used to denoise latents.
+
+    Inputs:
+        - ckpt_name (str)
+          The name of the checkpoint (model) to load.
+
+    Outputs:
+        - model (Model)
+          The model used for denoising latents.
+        - clip (Clip)
+          The CLIP model used for encoding text prompts.
+        - vae (Vae)
+          The VAE model used for encoding and decoding images to and from latent space.
     """
     _original_name: str = 'CheckpointLoaderSimple'
 

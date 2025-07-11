@@ -25,7 +25,19 @@ class WanVideoModelLoaderMultiGPUOutputs(OutputSlots):
 class WanVideoModelLoaderMultiGPU(Node[WanVideoModelLoaderMultiGPUInputs, WanVideoModelLoaderMultiGPUOutputs]):
     """
     Original name: WanVideoModelLoaderMultiGPU
-    No description available.
+    Category: multigpu
+    
+
+    Inputs:
+        - model (str)
+          These models are loaded from the 'ComfyUI/models/diffusion_models' folder
+        - base_precision (str) (default: 'bf16')
+        - quantization (str) (default: 'disabled')
+          optional quantization method
+        - load_device (str) (default: 'main_device')
+
+    Outputs:
+        - model (Any)
     """
     _original_name: str = 'WanVideoModelLoaderMultiGPU'
 

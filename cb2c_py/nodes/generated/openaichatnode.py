@@ -23,7 +23,19 @@ class OpenAIChatNodeOutputs(OutputSlots):
 class OpenAIChatNode(Node[OpenAIChatNodeInputs, OpenAIChatNodeOutputs]):
     """
     Original name: OpenAIChatNode
-    No description available.
+    Category: api node/text/OpenAI
+    Generate text responses from an OpenAI model.
+
+    Inputs:
+        - prompt (str) (default: '')
+          Text inputs to the model, used to generate a response.
+        - persist_context (bool) (default: True)
+          Persist chat context between calls (multi-turn conversation)
+        - model (Any) (default: 'None')
+          The model used to generate the response
+
+    Outputs:
+        - string (str)
     """
     _original_name: str = 'OpenAIChatNode'
 

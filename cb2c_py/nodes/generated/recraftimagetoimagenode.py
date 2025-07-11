@@ -27,7 +27,22 @@ class RecraftImageToImageNodeOutputs(OutputSlots):
 class RecraftImageToImageNode(Node[RecraftImageToImageNodeInputs, RecraftImageToImageNodeOutputs]):
     """
     Original name: RecraftImageToImageNode
-    No description available.
+    Category: api node/image/Recraft
+    Modify image based on prompt and strength.
+
+    Inputs:
+        - image (Image)
+        - prompt (str) (default: '')
+          Prompt for the image generation.
+        - n (int) (default: 1)
+          The number of images to generate.
+        - strength (float) (default: 0.5)
+          Defines the difference with the original image, should lie in [0, 1], where 0 means almost identical, and 1 means miserable similarity.
+        - seed (int) (default: 0)
+          Seed to determine if node should re-run; actual results are nondeterministic regardless of seed.
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'RecraftImageToImageNode'
 

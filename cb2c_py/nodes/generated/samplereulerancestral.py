@@ -21,7 +21,15 @@ class SamplerEulerAncestralOutputs(OutputSlots):
 class SamplerEulerAncestral(Node[SamplerEulerAncestralInputs, SamplerEulerAncestralOutputs]):
     """
     Original name: SamplerEulerAncestral
-    No description available.
+    Category: sampling/custom_sampling/samplers
+    
+
+    Inputs:
+        - eta (float) (default: 1.0)
+        - s_noise (float) (default: 1.0)
+
+    Outputs:
+        - sampler (Any)
     """
     _original_name: str = 'SamplerEulerAncestral'
 

@@ -19,7 +19,14 @@ class PrimitiveIntOutputs(OutputSlots):
 class PrimitiveInt(Node[PrimitiveIntInputs, PrimitiveIntOutputs]):
     """
     Original name: PrimitiveInt
-    No description available.
+    Category: utils/primitive
+    
+
+    Inputs:
+        - value (int)
+
+    Outputs:
+        - int (int)
     """
     _original_name: str = 'PrimitiveInt'
 

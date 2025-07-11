@@ -21,7 +21,15 @@ class ConditioningConcatOutputs(OutputSlots):
 class ConditioningConcat(Node[ConditioningConcatInputs, ConditioningConcatOutputs]):
     """
     Original name: ConditioningConcat
-    No description available.
+    Category: conditioning
+    
+
+    Inputs:
+        - conditioning_to (Conditioning)
+        - conditioning_from (Conditioning)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'ConditioningConcat'
 

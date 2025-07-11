@@ -23,7 +23,19 @@ class WanVideoControlEmbedsOutputs(OutputSlots):
 class WanVideoControlEmbeds(Node[WanVideoControlEmbedsInputs, WanVideoControlEmbedsOutputs]):
     """
     Original name: WanVideoControlEmbeds
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - latents (Latent)
+          Encoded latents to use as control signals
+        - start_percent (float) (default: 0.0)
+          Start percent of the control signal
+        - end_percent (float) (default: 1.0)
+          End percent of the control signal
+
+    Outputs:
+        - image_embeds (Any)
     """
     _original_name: str = 'WanVideoControlEmbeds'
 

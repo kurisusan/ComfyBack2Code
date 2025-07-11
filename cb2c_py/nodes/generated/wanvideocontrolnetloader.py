@@ -25,7 +25,20 @@ class WanVideoControlnetLoaderOutputs(OutputSlots):
 class WanVideoControlnetLoader(Node[WanVideoControlnetLoaderInputs, WanVideoControlnetLoaderOutputs]):
     """
     Original name: WanVideoControlnetLoader
-    No description available.
+    Category: WanVideoWrapper
+    Loads ControlNet model from 'https://huggingface.co/collections/TheDenk/wan21-controlnets-68302b430411dafc0d74d2fc'
+
+    Inputs:
+        - model (str)
+          These models are loaded from the 'ComfyUI/models/controlnet' -folder
+        - base_precision (str) (default: 'bf16')
+        - quantization (str) (default: 'disabled')
+          optional quantization method
+        - load_device (str) (default: 'main_device')
+          Initial device to load the model to, NOT recommended with the larger models unless you have 48GB+ VRAM
+
+    Outputs:
+        - controlnet (Any)
     """
     _original_name: str = 'WanVideoControlnetLoader'
 

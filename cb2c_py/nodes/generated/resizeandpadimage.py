@@ -27,7 +27,18 @@ class ResizeAndPadImageOutputs(OutputSlots):
 class ResizeAndPadImage(Node[ResizeAndPadImageInputs, ResizeAndPadImageOutputs]):
     """
     Original name: ResizeAndPadImage
-    No description available.
+    Category: image/transform
+    
+
+    Inputs:
+        - image (Image)
+        - target_width (int) (default: 512)
+        - target_height (int) (default: 512)
+        - padding_color (str)
+        - interpolation (str)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ResizeAndPadImage'
 

@@ -25,7 +25,17 @@ class PixelPerfectResolutionOutputs(OutputSlots):
 class PixelPerfectResolution(Node[PixelPerfectResolutionInputs, PixelPerfectResolutionOutputs]):
     """
     Original name: PixelPerfectResolution
-    No description available.
+    Category: ControlNet Preprocessors
+    
+
+    Inputs:
+        - original_image (Image)
+        - image_gen_width (int) (default: 512)
+        - image_gen_height (int) (default: 512)
+        - resize_mode (str) (default: 'Just Resize')
+
+    Outputs:
+        - resolution__int_ (int)
     """
     _original_name: str = 'PixelPerfectResolution'
 

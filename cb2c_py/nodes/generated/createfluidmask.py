@@ -37,7 +37,23 @@ class CreateFluidMaskOutputs(OutputSlots):
 class CreateFluidMask(Node[CreateFluidMaskInputs, CreateFluidMaskOutputs]):
     """
     Original name: CreateFluidMask
-    No description available.
+    Category: KJNodes/masking/generate
+    
+
+    Inputs:
+        - invert (bool) (default: False)
+        - frames (int) (default: 1)
+        - width (int) (default: 256)
+        - height (int) (default: 256)
+        - inflow_count (int) (default: 3)
+        - inflow_velocity (int) (default: 1)
+        - inflow_radius (int) (default: 8)
+        - inflow_padding (int) (default: 50)
+        - inflow_duration (int) (default: 60)
+
+    Outputs:
+        - image (Image)
+        - mask (Image)
     """
     _original_name: str = 'CreateFluidMask'
 

@@ -27,7 +27,18 @@ class FreeU_V2Outputs(OutputSlots):
 class FreeU_V2(Node[FreeU_V2Inputs, FreeU_V2Outputs]):
     """
     Original name: FreeU_V2
-    No description available.
+    Category: model_patches/unet
+    
+
+    Inputs:
+        - model (Model)
+        - b1 (float) (default: 1.3)
+        - b2 (float) (default: 1.4)
+        - s1 (float) (default: 0.9)
+        - s2 (float) (default: 0.2)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'FreeU_V2'
 

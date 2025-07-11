@@ -21,7 +21,15 @@ class ImageCASharpening_Outputs(OutputSlots):
 class ImageCASharpening_(Node[ImageCASharpening_Inputs, ImageCASharpening_Outputs]):
     """
     Original name: ImageCASharpening+
-    No description available.
+    Category: essentials/image processing
+    
+
+    Inputs:
+        - image (Image)
+        - amount (float) (default: 0.8)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageCASharpening+'
 

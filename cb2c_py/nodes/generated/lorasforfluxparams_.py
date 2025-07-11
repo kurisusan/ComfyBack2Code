@@ -21,7 +21,16 @@ class LorasForFluxParams_Outputs(OutputSlots):
 class LorasForFluxParams_(Node[LorasForFluxParams_Inputs, LorasForFluxParams_Outputs]):
     """
     Original name: LorasForFluxParams+
-    No description available.
+    Category: essentials/sampling
+    
+
+    Inputs:
+        - lora_1 (str)
+          The name of the LoRA.
+        - strength_model_1 (str) (default: '1.0')
+
+    Outputs:
+        - lora_params (Any)
     """
     _original_name: str = 'LorasForFluxParams+'
 

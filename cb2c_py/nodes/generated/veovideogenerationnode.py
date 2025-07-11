@@ -21,7 +21,17 @@ class VeoVideoGenerationNodeOutputs(OutputSlots):
 class VeoVideoGenerationNode(Node[VeoVideoGenerationNodeInputs, VeoVideoGenerationNodeOutputs]):
     """
     Original name: VeoVideoGenerationNode
-    No description available.
+    Category: api node/video/Veo
+    Generates videos from text prompts using Google's Veo API
+
+    Inputs:
+        - prompt (str) (default: '')
+          Text description of the video
+        - aspect_ratio (Any) (default: '16:9')
+          Aspect ratio of the output video
+
+    Outputs:
+        - video (Any)
     """
     _original_name: str = 'VeoVideoGenerationNode'
 

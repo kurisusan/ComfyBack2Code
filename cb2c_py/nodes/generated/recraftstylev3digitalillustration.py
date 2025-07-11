@@ -19,7 +19,14 @@ class RecraftStyleV3DigitalIllustrationOutputs(OutputSlots):
 class RecraftStyleV3DigitalIllustration(Node[RecraftStyleV3DigitalIllustrationInputs, RecraftStyleV3DigitalIllustrationOutputs]):
     """
     Original name: RecraftStyleV3DigitalIllustration
-    No description available.
+    Category: api node/image/Recraft
+    Select realistic_image style and optional substyle.
+
+    Inputs:
+        - substyle (str)
+
+    Outputs:
+        - recraft_style (Any)
     """
     _original_name: str = 'RecraftStyleV3DigitalIllustration'
 

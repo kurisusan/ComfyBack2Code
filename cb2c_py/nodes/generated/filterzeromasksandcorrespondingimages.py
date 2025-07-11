@@ -25,7 +25,22 @@ class FilterZeroMasksAndCorrespondingImagesOutputs(OutputSlots):
 class FilterZeroMasksAndCorrespondingImages(Node[FilterZeroMasksAndCorrespondingImagesInputs, FilterZeroMasksAndCorrespondingImagesOutputs]):
     """
     Original name: FilterZeroMasksAndCorrespondingImages
-    No description available.
+    Category: KJNodes/masking
+    
+Filter out all the empty (i.e. all zero) mask in masks  
+Also filter out all the corresponding images in original_images by indexes if provide  
+  
+original_images (optional): If provided, need have same length as masks.
+
+
+    Inputs:
+        - masks (Image)
+
+    Outputs:
+        - non_zero_masks_out (Image)
+        - non_zero_mask_images_out (Image)
+        - zero_mask_images_out (Image)
+        - zero_mask_images_out_indexes (Any)
     """
     _original_name: str = 'FilterZeroMasksAndCorrespondingImages'
 

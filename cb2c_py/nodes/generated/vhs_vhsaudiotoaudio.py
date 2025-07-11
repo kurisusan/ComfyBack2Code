@@ -19,7 +19,14 @@ class VHS_VHSAudioToAudioOutputs(OutputSlots):
 class VHS_VHSAudioToAudio(Node[VHS_VHSAudioToAudioInputs, VHS_VHSAudioToAudioOutputs]):
     """
     Original name: VHS_VHSAudioToAudio
-    No description available.
+    Category: Video Helper Suite 🎥🅥🅗🅢/audio
+    Legacy VHS_AUDIO to Audio 🎥🅥🅗🅢<div style="font-size: 0.8em"><div id=VHS_shortdesc>utility function for compatibility with external nodes</div></div><div style="font-size: 0.8em">VHS used to use an internal VHS_AUDIO format for routing audio between inputs and outputs. This format was intended to only be used internally and was designed with a focus on performance over ease of use. Since ComfyUI now has an internal AUDIO format, VHS now uses this format. However, some custom node packs were made that are external to both ComfyUI and VHS that use VHS_AUDIO. This node was added so that those external nodes can still function</div><div style="font-size: 0.8em"><div vhs_title="Inputs" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Inputs: <div vhs_title="vhs_audio" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">vhs_audio: An input in the legacy VHS_AUDIO format produced by an external node</div></div></div></div><div vhs_title="Outputs" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Outputs: <div vhs_title="vhs_audio" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">vhs_audio: An output in the standardized AUDIO format</div></div></div></div></div>
+
+    Inputs:
+        - vhs_audio (Any)
+
+    Outputs:
+        - audio (Any)
     """
     _original_name: str = 'VHS_VHSAudioToAudio'
 

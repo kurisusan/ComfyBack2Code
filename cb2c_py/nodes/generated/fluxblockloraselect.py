@@ -131,7 +131,71 @@ class FluxBlockLoraSelectOutputs(OutputSlots):
 class FluxBlockLoraSelect(Node[FluxBlockLoraSelectInputs, FluxBlockLoraSelectOutputs]):
     """
     Original name: FluxBlockLoraSelect
-    No description available.
+    Category: KJNodes/experimental
+    Select individual block alpha values, value of 0 removes the block altogether
+
+    Inputs:
+        - double_blocks_0_ (float) (default: 0.0)
+        - double_blocks_1_ (float) (default: 0.0)
+        - double_blocks_2_ (float) (default: 0.0)
+        - double_blocks_3_ (float) (default: 0.0)
+        - double_blocks_4_ (float) (default: 0.0)
+        - double_blocks_5_ (float) (default: 0.0)
+        - double_blocks_6_ (float) (default: 0.0)
+        - double_blocks_7_ (float) (default: 0.0)
+        - double_blocks_8_ (float) (default: 0.0)
+        - double_blocks_9_ (float) (default: 0.0)
+        - double_blocks_10_ (float) (default: 0.0)
+        - double_blocks_11_ (float) (default: 0.0)
+        - double_blocks_12_ (float) (default: 0.0)
+        - double_blocks_13_ (float) (default: 0.0)
+        - double_blocks_14_ (float) (default: 0.0)
+        - double_blocks_15_ (float) (default: 0.0)
+        - double_blocks_16_ (float) (default: 0.0)
+        - double_blocks_17_ (float) (default: 0.0)
+        - double_blocks_18_ (float) (default: 0.0)
+        - single_blocks_0_ (float) (default: 0.0)
+        - single_blocks_1_ (float) (default: 0.0)
+        - single_blocks_2_ (float) (default: 0.0)
+        - single_blocks_3_ (float) (default: 0.0)
+        - single_blocks_4_ (float) (default: 0.0)
+        - single_blocks_5_ (float) (default: 0.0)
+        - single_blocks_6_ (float) (default: 0.0)
+        - single_blocks_7_ (float) (default: 0.0)
+        - single_blocks_8_ (float) (default: 0.0)
+        - single_blocks_9_ (float) (default: 0.0)
+        - single_blocks_10_ (float) (default: 0.0)
+        - single_blocks_11_ (float) (default: 0.0)
+        - single_blocks_12_ (float) (default: 0.0)
+        - single_blocks_13_ (float) (default: 0.0)
+        - single_blocks_14_ (float) (default: 0.0)
+        - single_blocks_15_ (float) (default: 0.0)
+        - single_blocks_16_ (float) (default: 0.0)
+        - single_blocks_17_ (float) (default: 0.0)
+        - single_blocks_18_ (float) (default: 0.0)
+        - single_blocks_19_ (float) (default: 0.0)
+        - single_blocks_20_ (float) (default: 0.0)
+        - single_blocks_21_ (float) (default: 0.0)
+        - single_blocks_22_ (float) (default: 0.0)
+        - single_blocks_23_ (float) (default: 0.0)
+        - single_blocks_24_ (float) (default: 0.0)
+        - single_blocks_25_ (float) (default: 0.0)
+        - single_blocks_26_ (float) (default: 0.0)
+        - single_blocks_27_ (float) (default: 0.0)
+        - single_blocks_28_ (float) (default: 0.0)
+        - single_blocks_29_ (float) (default: 0.0)
+        - single_blocks_30_ (float) (default: 0.0)
+        - single_blocks_31_ (float) (default: 0.0)
+        - single_blocks_32_ (float) (default: 0.0)
+        - single_blocks_33_ (float) (default: 0.0)
+        - single_blocks_34_ (float) (default: 0.0)
+        - single_blocks_35_ (float) (default: 0.0)
+        - single_blocks_36_ (float) (default: 0.0)
+        - single_blocks_37_ (float) (default: 0.0)
+
+    Outputs:
+        - blocks (Any)
+          The modified diffusion model.
     """
     _original_name: str = 'FluxBlockLoraSelect'
 

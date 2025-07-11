@@ -21,7 +21,16 @@ class ModelPatchTorchSettingsOutputs(OutputSlots):
 class ModelPatchTorchSettings(Node[ModelPatchTorchSettingsInputs, ModelPatchTorchSettingsOutputs]):
     """
     Original name: ModelPatchTorchSettings
-    No description available.
+    Category: KJNodes/experimental
+    Adds callbacks to model to set torch settings before and after running the model.
+
+    Inputs:
+        - model (Model)
+        - enable_fp16_accumulation (bool) (default: False)
+          Enable torch.backends.cuda.matmul.allow_fp16_accumulation, requires pytorch 2.7.0 nightly.
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'ModelPatchTorchSettings'
 

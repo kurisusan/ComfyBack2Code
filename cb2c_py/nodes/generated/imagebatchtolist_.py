@@ -19,7 +19,14 @@ class ImageBatchToList_Outputs(OutputSlots):
 class ImageBatchToList_(Node[ImageBatchToList_Inputs, ImageBatchToList_Outputs]):
     """
     Original name: ImageBatchToList+
-    No description available.
+    Category: essentials/image batch
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageBatchToList+'
 

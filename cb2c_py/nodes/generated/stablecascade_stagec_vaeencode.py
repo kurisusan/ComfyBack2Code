@@ -25,7 +25,17 @@ class StableCascade_StageC_VAEEncodeOutputs(OutputSlots):
 class StableCascade_StageC_VAEEncode(Node[StableCascade_StageC_VAEEncodeInputs, StableCascade_StageC_VAEEncodeOutputs]):
     """
     Original name: StableCascade_StageC_VAEEncode
-    No description available.
+    Category: latent/stable_cascade
+    
+
+    Inputs:
+        - image (Image)
+        - vae (Vae)
+        - compression (int) (default: 42)
+
+    Outputs:
+        - stage_c (Latent)
+        - stage_b (Latent)
     """
     _original_name: str = 'StableCascade_StageC_VAEEncode'
 

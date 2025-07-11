@@ -25,7 +25,20 @@ class FreScaOutputs(OutputSlots):
 class FreSca(Node[FreScaInputs, FreScaOutputs]):
     """
     Original name: FreSca
-    No description available.
+    Category: _for_testing
+    Applies frequency-dependent scaling to the guidance
+
+    Inputs:
+        - model (Model)
+        - scale_low (float) (default: 1.0)
+          Scaling factor for low-frequency components
+        - scale_high (float) (default: 1.25)
+          Scaling factor for high-frequency components
+        - freq_cutoff (int) (default: 20)
+          Number of frequency indices around center to consider as low-frequency
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'FreSca'
 

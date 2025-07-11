@@ -35,7 +35,23 @@ class ImagePadKJOutputs(OutputSlots):
 class ImagePadKJ(Node[ImagePadKJInputs, ImagePadKJOutputs]):
     """
     Original name: ImagePadKJ
-    No description available.
+    Category: KJNodes/image
+    Pad the input image and optionally mask with the specified padding.
+
+    Inputs:
+        - image (Image)
+        - left (int) (default: 0)
+        - right (int) (default: 0)
+        - top (int) (default: 0)
+        - bottom (int) (default: 0)
+        - extra_padding (int) (default: 0)
+        - pad_mode (str)
+        - color (str) (default: '0, 0, 0')
+          Color as RGB values in range 0-255, separated by commas.
+
+    Outputs:
+        - images (Image)
+        - masks (Image)
     """
     _original_name: str = 'ImagePadKJ'
 

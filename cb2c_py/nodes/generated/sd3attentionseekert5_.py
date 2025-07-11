@@ -75,7 +75,42 @@ class SD3AttentionSeekerT5_Outputs(OutputSlots):
 class SD3AttentionSeekerT5_(Node[SD3AttentionSeekerT5_Inputs, SD3AttentionSeekerT5_Outputs]):
     """
     Original name: SD3AttentionSeekerT5+
-    No description available.
+    Category: essentials/conditioning
+    
+
+    Inputs:
+        - clip (Clip)
+        - apply_to_query (bool) (default: True)
+        - apply_to_key (bool) (default: True)
+        - apply_to_value (bool) (default: True)
+        - apply_to_out (bool) (default: True)
+        - t5xxl_0 (float) (default: 1.0)
+        - t5xxl_1 (float) (default: 1.0)
+        - t5xxl_2 (float) (default: 1.0)
+        - t5xxl_3 (float) (default: 1.0)
+        - t5xxl_4 (float) (default: 1.0)
+        - t5xxl_5 (float) (default: 1.0)
+        - t5xxl_6 (float) (default: 1.0)
+        - t5xxl_7 (float) (default: 1.0)
+        - t5xxl_8 (float) (default: 1.0)
+        - t5xxl_9 (float) (default: 1.0)
+        - t5xxl_10 (float) (default: 1.0)
+        - t5xxl_11 (float) (default: 1.0)
+        - t5xxl_12 (float) (default: 1.0)
+        - t5xxl_13 (float) (default: 1.0)
+        - t5xxl_14 (float) (default: 1.0)
+        - t5xxl_15 (float) (default: 1.0)
+        - t5xxl_16 (float) (default: 1.0)
+        - t5xxl_17 (float) (default: 1.0)
+        - t5xxl_18 (float) (default: 1.0)
+        - t5xxl_19 (float) (default: 1.0)
+        - t5xxl_20 (float) (default: 1.0)
+        - t5xxl_21 (float) (default: 1.0)
+        - t5xxl_22 (float) (default: 1.0)
+        - t5xxl_23 (float) (default: 1.0)
+
+    Outputs:
+        - clip (Clip)
     """
     _original_name: str = 'SD3AttentionSeekerT5+'
 

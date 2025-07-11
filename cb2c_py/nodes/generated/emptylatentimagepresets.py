@@ -27,7 +27,18 @@ class EmptyLatentImagePresetsOutputs(OutputSlots):
 class EmptyLatentImagePresets(Node[EmptyLatentImagePresetsInputs, EmptyLatentImagePresetsOutputs]):
     """
     Original name: EmptyLatentImagePresets
-    No description available.
+    Category: KJNodes/latents
+    
+
+    Inputs:
+        - dimensions (str) (default: '512 x 512 (1:1)')
+        - invert (bool) (default: False)
+        - batch_size (int) (default: 1)
+
+    Outputs:
+        - latent (Latent)
+        - width (int)
+        - height (int)
     """
     _original_name: str = 'EmptyLatentImagePresets'
 

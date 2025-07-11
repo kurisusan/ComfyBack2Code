@@ -19,7 +19,14 @@ class DSINE_NormalMapPreprocessorOutputs(OutputSlots):
 class DSINE_NormalMapPreprocessor(Node[DSINE_NormalMapPreprocessorInputs, DSINE_NormalMapPreprocessorOutputs]):
     """
     Original name: DSINE-NormalMapPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Normal and Depth Estimators
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'DSINE-NormalMapPreprocessor'
 

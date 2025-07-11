@@ -21,7 +21,15 @@ class TrimVideoLatentOutputs(OutputSlots):
 class TrimVideoLatent(Node[TrimVideoLatentInputs, TrimVideoLatentOutputs]):
     """
     Original name: TrimVideoLatent
-    No description available.
+    Category: latent/video
+    
+
+    Inputs:
+        - samples (Latent)
+        - trim_amount (int) (default: 0)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'TrimVideoLatent'
 

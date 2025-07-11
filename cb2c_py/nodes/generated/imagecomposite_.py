@@ -29,7 +29,19 @@ class ImageComposite_Outputs(OutputSlots):
 class ImageComposite_(Node[ImageComposite_Inputs, ImageComposite_Outputs]):
     """
     Original name: ImageComposite+
-    No description available.
+    Category: essentials/image manipulation
+    
+
+    Inputs:
+        - destination (Image)
+        - source (Image)
+        - x (int) (default: 0)
+        - y (int) (default: 0)
+        - offset_x (int) (default: 0)
+        - offset_y (int) (default: 0)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageComposite+'
 

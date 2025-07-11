@@ -39,7 +39,24 @@ class UpperBodyTrackingFromPoseKpsOutputs(OutputSlots):
 class UpperBodyTrackingFromPoseKps(Node[UpperBodyTrackingFromPoseKpsInputs, UpperBodyTrackingFromPoseKpsOutputs]):
     """
     Original name: UpperBodyTrackingFromPoseKps
-    No description available.
+    Category: ControlNet Preprocessors/Pose Keypoint Postprocess
+    
+
+    Inputs:
+        - pose_kps (Any)
+        - id_include (str) (default: '')
+        - Head_width_height (str) (default: '256, 256')
+        - Neck_width_height (str) (default: '100, 100')
+        - Shoulder_width_height (str) (default: '')
+        - Torso_width_height (str) (default: '350, 450')
+        - RArm_width_height (str) (default: '128, 256')
+        - RForearm_width_height (str) (default: '128, 256')
+        - LArm_width_height (str) (default: '128, 256')
+        - LForearm_width_height (str) (default: '128, 256')
+
+    Outputs:
+        - tracking (Any)
+        - prompt (str)
     """
     _original_name: str = 'UpperBodyTrackingFromPoseKps'
 

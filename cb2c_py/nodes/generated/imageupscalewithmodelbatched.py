@@ -23,7 +23,19 @@ class ImageUpscaleWithModelBatchedOutputs(OutputSlots):
 class ImageUpscaleWithModelBatched(Node[ImageUpscaleWithModelBatchedInputs, ImageUpscaleWithModelBatchedOutputs]):
     """
     Original name: ImageUpscaleWithModelBatched
-    No description available.
+    Category: KJNodes/image
+    
+Same as ComfyUI native model upscaling node,  
+but allows setting sub-batches for reduced VRAM usage.
+
+
+    Inputs:
+        - upscale_model (Any)
+        - images (Image)
+        - per_batch (int) (default: 16)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageUpscaleWithModelBatched'
 

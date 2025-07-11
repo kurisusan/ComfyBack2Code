@@ -19,7 +19,14 @@ class StringLengthOutputs(OutputSlots):
 class StringLength(Node[StringLengthInputs, StringLengthOutputs]):
     """
     Original name: StringLength
-    No description available.
+    Category: utils/string
+    
+
+    Inputs:
+        - string (str)
+
+    Outputs:
+        - length (int)
     """
     _original_name: str = 'StringLength'
 

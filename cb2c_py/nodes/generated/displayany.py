@@ -21,7 +21,15 @@ class DisplayAnyOutputs(OutputSlots):
 class DisplayAny(Node[DisplayAnyInputs, DisplayAnyOutputs]):
     """
     Original name: DisplayAny
-    No description available.
+    Category: essentials/utilities
+    
+
+    Inputs:
+        - input (Any)
+        - mode (str)
+
+    Outputs:
+        - string (str)
     """
     _original_name: str = 'DisplayAny'
 

@@ -29,7 +29,21 @@ class CreateGradientFromCoordsOutputs(OutputSlots):
 class CreateGradientFromCoords(Node[CreateGradientFromCoordsInputs, CreateGradientFromCoordsOutputs]):
     """
     Original name: CreateGradientFromCoords
-    No description available.
+    Category: KJNodes/image
+    
+Creates a gradient image from coordinates.    
+
+
+    Inputs:
+        - coordinates (str)
+        - frame_width (int) (default: 512)
+        - frame_height (int) (default: 512)
+        - start_color (str) (default: 'white')
+        - end_color (str) (default: 'black')
+        - multiplier (float) (default: 1.0)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'CreateGradientFromCoords'
 

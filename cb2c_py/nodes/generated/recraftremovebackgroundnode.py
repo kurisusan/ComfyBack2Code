@@ -21,7 +21,15 @@ class RecraftRemoveBackgroundNodeOutputs(OutputSlots):
 class RecraftRemoveBackgroundNode(Node[RecraftRemoveBackgroundNodeInputs, RecraftRemoveBackgroundNodeOutputs]):
     """
     Original name: RecraftRemoveBackgroundNode
-    No description available.
+    Category: api node/image/Recraft
+    Remove background from image, and return processed image and mask.
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
+        - mask (Image)
     """
     _original_name: str = 'RecraftRemoveBackgroundNode'
 

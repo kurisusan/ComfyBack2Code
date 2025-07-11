@@ -19,7 +19,16 @@ class ReverseImageBatchOutputs(OutputSlots):
 class ReverseImageBatch(Node[ReverseImageBatchInputs, ReverseImageBatchOutputs]):
     """
     Original name: ReverseImageBatch
-    No description available.
+    Category: KJNodes/image
+    
+Reverses the order of the images in a batch.
+
+
+    Inputs:
+        - images (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ReverseImageBatch'
 

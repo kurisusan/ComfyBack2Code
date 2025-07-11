@@ -19,7 +19,14 @@ class ControlNetLoaderMultiGPUOutputs(OutputSlots):
 class ControlNetLoaderMultiGPU(Node[ControlNetLoaderMultiGPUInputs, ControlNetLoaderMultiGPUOutputs]):
     """
     Original name: ControlNetLoaderMultiGPU
-    No description available.
+    Category: multigpu
+    
+
+    Inputs:
+        - control_net_name (str)
+
+    Outputs:
+        - control_net (Any)
     """
     _original_name: str = 'ControlNetLoaderMultiGPU'
 

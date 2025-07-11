@@ -23,7 +23,16 @@ class KlingVirtualTryOnNodeOutputs(OutputSlots):
 class KlingVirtualTryOnNode(Node[KlingVirtualTryOnNodeInputs, KlingVirtualTryOnNodeOutputs]):
     """
     Original name: KlingVirtualTryOnNode
-    No description available.
+    Category: api node/image/Kling
+    Kling Virtual Try On Node. Input a human image and a cloth image to try on the cloth on the human. You can merge multiple clothing item pictures into one image with a white background.
+
+    Inputs:
+        - human_image (Image)
+        - cloth_image (Image)
+        - model_name (Any) (default: 'kolors-virtual-try-on-v1')
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'KlingVirtualTryOnNode'
 

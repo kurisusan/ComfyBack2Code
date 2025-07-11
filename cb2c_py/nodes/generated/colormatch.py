@@ -23,7 +23,27 @@ class ColorMatchOutputs(OutputSlots):
 class ColorMatch(Node[ColorMatchInputs, ColorMatchOutputs]):
     """
     Original name: ColorMatch
-    No description available.
+    Category: KJNodes/image
+    
+color-matcher enables color transfer across images which comes in handy for automatic  
+color-grading of photographs, paintings and film sequences as well as light-field  
+and stopmotion corrections.  
+
+The methods behind the mappings are based on the approach from Reinhard et al.,  
+the Monge-Kantorovich Linearization (MKL) as proposed by Pitie et al. and our analytical solution  
+to a Multi-Variate Gaussian Distribution (MVGD) transfer in conjunction with classical histogram   
+matching. As shown below our HM-MVGD-HM compound outperforms existing methods.   
+https://github.com/hahnec/color-matcher/
+
+
+
+    Inputs:
+        - image_ref (Image)
+        - image_target (Image)
+        - method (str) (default: 'mkl')
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ColorMatch'
 

@@ -81,7 +81,45 @@ class ModelMergeSD3_2BOutputs(OutputSlots):
 class ModelMergeSD3_2B(Node[ModelMergeSD3_2BInputs, ModelMergeSD3_2BOutputs]):
     """
     Original name: ModelMergeSD3_2B
-    No description available.
+    Category: advanced/model_merging/model_specific
+    
+
+    Inputs:
+        - model1 (Model)
+        - model2 (Model)
+        - pos_embed_ (float) (default: 1.0)
+        - x_embedder_ (float) (default: 1.0)
+        - context_embedder_ (float) (default: 1.0)
+        - y_embedder_ (float) (default: 1.0)
+        - t_embedder_ (float) (default: 1.0)
+        - joint_blocks_0_ (float) (default: 1.0)
+        - joint_blocks_1_ (float) (default: 1.0)
+        - joint_blocks_2_ (float) (default: 1.0)
+        - joint_blocks_3_ (float) (default: 1.0)
+        - joint_blocks_4_ (float) (default: 1.0)
+        - joint_blocks_5_ (float) (default: 1.0)
+        - joint_blocks_6_ (float) (default: 1.0)
+        - joint_blocks_7_ (float) (default: 1.0)
+        - joint_blocks_8_ (float) (default: 1.0)
+        - joint_blocks_9_ (float) (default: 1.0)
+        - joint_blocks_10_ (float) (default: 1.0)
+        - joint_blocks_11_ (float) (default: 1.0)
+        - joint_blocks_12_ (float) (default: 1.0)
+        - joint_blocks_13_ (float) (default: 1.0)
+        - joint_blocks_14_ (float) (default: 1.0)
+        - joint_blocks_15_ (float) (default: 1.0)
+        - joint_blocks_16_ (float) (default: 1.0)
+        - joint_blocks_17_ (float) (default: 1.0)
+        - joint_blocks_18_ (float) (default: 1.0)
+        - joint_blocks_19_ (float) (default: 1.0)
+        - joint_blocks_20_ (float) (default: 1.0)
+        - joint_blocks_21_ (float) (default: 1.0)
+        - joint_blocks_22_ (float) (default: 1.0)
+        - joint_blocks_23_ (float) (default: 1.0)
+        - final_layer_ (float) (default: 1.0)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'ModelMergeSD3_2B'
 

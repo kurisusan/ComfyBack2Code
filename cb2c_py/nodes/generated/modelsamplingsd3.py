@@ -21,7 +21,15 @@ class ModelSamplingSD3Outputs(OutputSlots):
 class ModelSamplingSD3(Node[ModelSamplingSD3Inputs, ModelSamplingSD3Outputs]):
     """
     Original name: ModelSamplingSD3
-    No description available.
+    Category: advanced/model
+    
+
+    Inputs:
+        - model (Model)
+        - shift (float) (default: 3.0)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'ModelSamplingSD3'
 

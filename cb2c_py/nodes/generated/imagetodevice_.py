@@ -21,7 +21,15 @@ class ImageToDevice_Outputs(OutputSlots):
 class ImageToDevice_(Node[ImageToDevice_Inputs, ImageToDevice_Outputs]):
     """
     Original name: ImageToDevice+
-    No description available.
+    Category: essentials/image utils
+    
+
+    Inputs:
+        - image (Image)
+        - device (str)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageToDevice+'
 

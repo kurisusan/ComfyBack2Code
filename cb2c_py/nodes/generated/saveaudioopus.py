@@ -23,7 +23,16 @@ class SaveAudioOpusOutputs(OutputSlots):
 class SaveAudioOpus(Node[SaveAudioOpusInputs, SaveAudioOpusOutputs]):
     """
     Original name: SaveAudioOpus
-    No description available.
+    Category: audio
+    
+
+    Inputs:
+        - audio (Any)
+        - filename_prefix (str) (default: 'audio/ComfyUI')
+        - quality (str) (default: '128k')
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'SaveAudioOpus'
 

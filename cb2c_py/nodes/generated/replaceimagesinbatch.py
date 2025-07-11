@@ -21,7 +21,18 @@ class ReplaceImagesInBatchOutputs(OutputSlots):
 class ReplaceImagesInBatch(Node[ReplaceImagesInBatchInputs, ReplaceImagesInBatchOutputs]):
     """
     Original name: ReplaceImagesInBatch
-    No description available.
+    Category: KJNodes/image
+    
+Replaces the images in a batch, starting from the specified start index,  
+with the replacement images.
+
+
+    Inputs:
+        - start_index (int) (default: 1)
+
+    Outputs:
+        - image (Image)
+        - mask (Image)
     """
     _original_name: str = 'ReplaceImagesInBatch'
 

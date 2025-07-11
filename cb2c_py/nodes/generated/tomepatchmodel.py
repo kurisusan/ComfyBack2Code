@@ -21,7 +21,15 @@ class TomePatchModelOutputs(OutputSlots):
 class TomePatchModel(Node[TomePatchModelInputs, TomePatchModelOutputs]):
     """
     Original name: TomePatchModel
-    No description available.
+    Category: model_patches/unet
+    
+
+    Inputs:
+        - model (Model)
+        - ratio (float) (default: 0.3)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'TomePatchModel'
 

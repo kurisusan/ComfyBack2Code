@@ -27,7 +27,22 @@ class ImageConcatMultiOutputs(OutputSlots):
 class ImageConcatMulti(Node[ImageConcatMultiInputs, ImageConcatMultiOutputs]):
     """
     Original name: ImageConcatMulti
-    No description available.
+    Category: KJNodes/image
+    
+Creates an image from multiple images.  
+You can set how many inputs the node has,  
+with the **inputcount** and clicking update.
+
+
+    Inputs:
+        - inputcount (int) (default: 2)
+        - image_1 (Image)
+        - image_2 (Image)
+        - direction (str) (default: 'right')
+        - match_image_size (bool) (default: False)
+
+    Outputs:
+        - images (Image)
     """
     _original_name: str = 'ImageConcatMulti'
 

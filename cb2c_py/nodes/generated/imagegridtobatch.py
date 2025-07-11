@@ -23,7 +23,18 @@ class ImageGridtoBatchOutputs(OutputSlots):
 class ImageGridtoBatch(Node[ImageGridtoBatchInputs, ImageGridtoBatchOutputs]):
     """
     Original name: ImageGridtoBatch
-    No description available.
+    Category: KJNodes/image
+    Converts a grid of images to a batch of images.
+
+    Inputs:
+        - image (Image)
+        - columns (int) (default: 3)
+          The number of columns in the grid.
+        - rows (int) (default: 0)
+          The number of rows in the grid. Set to 0 for automatic calculation.
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageGridtoBatch'
 

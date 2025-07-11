@@ -15,8 +15,8 @@ class NunchakuTextEncoderLoaderInputs(InputSlots):
     int4_model: Slot[str]
     def __init__(self, node: "Node"):
         self.model_type = Slot[str](node, "model_type", ['flux'])
-        self.text_encoder1 = Slot[str](node, "text_encoder1", [])
-        self.text_encoder2 = Slot[str](node, "text_encoder2", [])
+        self.text_encoder1 = Slot[str](node, "text_encoder1", ['umt5_xxl_fp8_e4m3fn_scaled.safetensors'])
+        self.text_encoder2 = Slot[str](node, "text_encoder2", ['umt5_xxl_fp8_e4m3fn_scaled.safetensors'])
         self.t5_min_length = Slot[int](node, "t5_min_length", 'INT')
         self.use_4bit_t5 = Slot[str](node, "use_4bit_t5", ['disable', 'enable'])
         self.int4_model = Slot[str](node, "int4_model", ['none'])
@@ -29,7 +29,20 @@ class NunchakuTextEncoderLoaderOutputs(OutputSlots):
 class NunchakuTextEncoderLoader(Node[NunchakuTextEncoderLoaderInputs, NunchakuTextEncoderLoaderOutputs]):
     """
     Original name: NunchakuTextEncoderLoader
-    No description available.
+    Category: Nunchaku
+    
+
+    Inputs:
+        - model_type (str)
+        - text_encoder1 (str)
+        - text_encoder2 (str)
+        - t5_min_length (int) (default: 512)
+        - use_4bit_t5 (str)
+        - int4_model (str)
+          The name of the 4-bit T5 model.
+
+    Outputs:
+        - clip (Clip)
     """
     _original_name: str = 'NunchakuTextEncoderLoader'
 

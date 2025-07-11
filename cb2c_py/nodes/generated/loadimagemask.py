@@ -21,7 +21,15 @@ class LoadImageMaskOutputs(OutputSlots):
 class LoadImageMask(Node[LoadImageMaskInputs, LoadImageMaskOutputs]):
     """
     Original name: LoadImageMask
-    No description available.
+    Category: mask
+    
+
+    Inputs:
+        - image (str)
+        - channel (str)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'LoadImageMask'
 

@@ -23,7 +23,18 @@ class InsertImagesToBatchIndexedOutputs(OutputSlots):
 class InsertImagesToBatchIndexed(Node[InsertImagesToBatchIndexedInputs, InsertImagesToBatchIndexedOutputs]):
     """
     Original name: InsertImagesToBatchIndexed
-    No description available.
+    Category: KJNodes/image
+    
+Inserts images at the specified indices into the original image batch.
+
+
+    Inputs:
+        - original_images (Image)
+        - images_to_insert (Image)
+        - indexes (str) (default: '0, 1, 2')
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'InsertImagesToBatchIndexed'
 

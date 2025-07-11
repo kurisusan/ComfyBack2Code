@@ -21,7 +21,15 @@ class SD3NegativeConditioning_Outputs(OutputSlots):
 class SD3NegativeConditioning_(Node[SD3NegativeConditioning_Inputs, SD3NegativeConditioning_Outputs]):
     """
     Original name: SD3NegativeConditioning+
-    No description available.
+    Category: essentials/conditioning
+    
+
+    Inputs:
+        - conditioning (Conditioning)
+        - end (float) (default: 0.1)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'SD3NegativeConditioning+'
 

@@ -31,7 +31,20 @@ class SD_4XUpscale_ConditioningOutputs(OutputSlots):
 class SD_4XUpscale_Conditioning(Node[SD_4XUpscale_ConditioningInputs, SD_4XUpscale_ConditioningOutputs]):
     """
     Original name: SD_4XUpscale_Conditioning
-    No description available.
+    Category: conditioning/upscale_diffusion
+    
+
+    Inputs:
+        - images (Image)
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - scale_ratio (float) (default: 4.0)
+        - noise_augmentation (float) (default: 0.0)
+
+    Outputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - latent (Latent)
     """
     _original_name: str = 'SD_4XUpscale_Conditioning'
 

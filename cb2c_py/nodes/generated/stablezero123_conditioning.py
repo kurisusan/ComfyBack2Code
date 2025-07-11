@@ -37,7 +37,23 @@ class StableZero123_ConditioningOutputs(OutputSlots):
 class StableZero123_Conditioning(Node[StableZero123_ConditioningInputs, StableZero123_ConditioningOutputs]):
     """
     Original name: StableZero123_Conditioning
-    No description available.
+    Category: conditioning/3d_models
+    
+
+    Inputs:
+        - clip_vision (Any)
+        - init_image (Image)
+        - vae (Vae)
+        - width (int) (default: 256)
+        - height (int) (default: 256)
+        - batch_size (int) (default: 1)
+        - elevation (float) (default: 0.0)
+        - azimuth (float) (default: 0.0)
+
+    Outputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - latent (Latent)
     """
     _original_name: str = 'StableZero123_Conditioning'
 

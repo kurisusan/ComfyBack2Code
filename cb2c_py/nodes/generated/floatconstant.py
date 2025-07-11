@@ -19,7 +19,14 @@ class FloatConstantOutputs(OutputSlots):
 class FloatConstant(Node[FloatConstantInputs, FloatConstantOutputs]):
     """
     Original name: FloatConstant
-    No description available.
+    Category: KJNodes/constants
+    
+
+    Inputs:
+        - value (float) (default: 0.0)
+
+    Outputs:
+        - value (float)
     """
     _original_name: str = 'FloatConstant'
 

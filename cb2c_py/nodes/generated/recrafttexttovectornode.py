@@ -27,7 +27,22 @@ class RecraftTextToVectorNodeOutputs(OutputSlots):
 class RecraftTextToVectorNode(Node[RecraftTextToVectorNodeInputs, RecraftTextToVectorNodeOutputs]):
     """
     Original name: RecraftTextToVectorNode
-    No description available.
+    Category: api node/image/Recraft
+    Generates SVG synchronously based on prompt and resolution.
+
+    Inputs:
+        - prompt (str) (default: '')
+          Prompt for the image generation.
+        - substyle (str)
+        - size (str) (default: '1024x1024')
+          The size of the generated image.
+        - n (int) (default: 1)
+          The number of images to generate.
+        - seed (int) (default: 0)
+          Seed to determine if node should re-run; actual results are nondeterministic regardless of seed.
+
+    Outputs:
+        - svg (Any)
     """
     _original_name: str = 'RecraftTextToVectorNode'
 

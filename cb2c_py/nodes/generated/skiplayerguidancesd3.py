@@ -27,7 +27,18 @@ class SkipLayerGuidanceSD3Outputs(OutputSlots):
 class SkipLayerGuidanceSD3(Node[SkipLayerGuidanceSD3Inputs, SkipLayerGuidanceSD3Outputs]):
     """
     Original name: SkipLayerGuidanceSD3
-    No description available.
+    Category: advanced/guidance
+    Generic version of SkipLayerGuidance node that can be used on every DiT model.
+
+    Inputs:
+        - model (Model)
+        - layers (str) (default: '7, 8, 9')
+        - scale (float) (default: 3.0)
+        - start_percent (float) (default: 0.01)
+        - end_percent (float) (default: 0.15)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'SkipLayerGuidanceSD3'
 

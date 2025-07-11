@@ -33,7 +33,23 @@ class ResizeMaskOutputs(OutputSlots):
 class ResizeMask(Node[ResizeMaskInputs, ResizeMaskOutputs]):
     """
     Original name: ResizeMask
-    No description available.
+    Category: KJNodes/masking
+    
+Resizes the mask or batch of masks to the specified width and height.
+
+
+    Inputs:
+        - mask (Image)
+        - width (int) (default: 512)
+        - height (int) (default: 512)
+        - keep_proportions (bool) (default: False)
+        - upscale_method (str)
+        - crop (str)
+
+    Outputs:
+        - mask (Image)
+        - width (int)
+        - height (int)
     """
     _original_name: str = 'ResizeMask'
 

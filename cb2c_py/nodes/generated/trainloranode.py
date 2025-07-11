@@ -49,7 +49,42 @@ class TrainLoraNodeOutputs(OutputSlots):
 class TrainLoraNode(Node[TrainLoraNodeInputs, TrainLoraNodeOutputs]):
     """
     Original name: TrainLoraNode
-    No description available.
+    Category: training
+    
+
+    Inputs:
+        - model (Model)
+          The model to train the LoRA on.
+        - latents (Latent)
+          The Latents to use for training, serve as dataset/input of the model.
+        - positive (Conditioning)
+          The positive conditioning to use for training.
+        - batch_size (int) (default: 1)
+          The batch size to use for training.
+        - steps (int) (default: 16)
+          The number of steps to train the LoRA for.
+        - learning_rate (float) (default: 0.0005)
+          The learning rate to use for training.
+        - rank (int) (default: 8)
+          The rank of the LoRA layers.
+        - optimizer (str) (default: 'AdamW')
+          The optimizer to use for training.
+        - loss_function (str) (default: 'MSE')
+          The loss function to use for training.
+        - seed (int) (default: 0)
+          The seed to use for training (used in generator for LoRA weight initialization and noise sampling)
+        - training_dtype (str) (default: 'bf16')
+          The dtype to use for training.
+        - lora_dtype (str) (default: 'bf16')
+          The dtype to use for lora.
+        - existing_lora (str) (default: '[None]')
+          The existing LoRA to append to. Set to None for new LoRA.
+
+    Outputs:
+        - model_with_lora (Model)
+        - lora (Any)
+        - loss (Any)
+        - steps (int)
     """
     _original_name: str = 'TrainLoraNode'
 

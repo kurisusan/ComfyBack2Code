@@ -19,7 +19,14 @@ class FakeScribblePreprocessorOutputs(OutputSlots):
 class FakeScribblePreprocessor(Node[FakeScribblePreprocessorInputs, FakeScribblePreprocessorOutputs]):
     """
     Original name: FakeScribblePreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Line Extractors
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'FakeScribblePreprocessor'
 

@@ -29,7 +29,22 @@ class WebcamCaptureCV2Outputs(OutputSlots):
 class WebcamCaptureCV2(Node[WebcamCaptureCV2Inputs, WebcamCaptureCV2Outputs]):
     """
     Original name: WebcamCaptureCV2
-    No description available.
+    Category: KJNodes/experimental
+    
+Captures a frame from a webcam using CV2.  
+Can be used for realtime diffusion with autoqueue.
+
+
+    Inputs:
+        - x (int) (default: 0)
+        - y (int) (default: 0)
+        - width (int) (default: 512)
+        - height (int) (default: 512)
+        - cam_index (int) (default: 0)
+        - release (bool) (default: False)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'WebcamCaptureCV2'
 

@@ -23,7 +23,16 @@ class ModelSamplingLTXVOutputs(OutputSlots):
 class ModelSamplingLTXV(Node[ModelSamplingLTXVInputs, ModelSamplingLTXVOutputs]):
     """
     Original name: ModelSamplingLTXV
-    No description available.
+    Category: advanced/model
+    
+
+    Inputs:
+        - model (Model)
+        - max_shift (float) (default: 2.05)
+        - base_shift (float) (default: 0.95)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'ModelSamplingLTXV'
 

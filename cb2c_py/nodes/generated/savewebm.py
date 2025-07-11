@@ -27,7 +27,19 @@ class SaveWEBMOutputs(OutputSlots):
 class SaveWEBM(Node[SaveWEBMInputs, SaveWEBMOutputs]):
     """
     Original name: SaveWEBM
-    No description available.
+    Category: image/video
+    
+
+    Inputs:
+        - images (Image)
+        - filename_prefix (str) (default: 'ComfyUI')
+        - codec (str)
+        - fps (float) (default: 24.0)
+        - crf (float) (default: 32.0)
+          Higher crf means lower quality with a smaller file size, lower crf means higher quality higher filesize.
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'SaveWEBM'
 

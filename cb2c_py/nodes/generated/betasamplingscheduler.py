@@ -25,7 +25,17 @@ class BetaSamplingSchedulerOutputs(OutputSlots):
 class BetaSamplingScheduler(Node[BetaSamplingSchedulerInputs, BetaSamplingSchedulerOutputs]):
     """
     Original name: BetaSamplingScheduler
-    No description available.
+    Category: sampling/custom_sampling/schedulers
+    
+
+    Inputs:
+        - model (Model)
+        - steps (int) (default: 20)
+        - alpha (float) (default: 0.6)
+        - beta (float) (default: 0.6)
+
+    Outputs:
+        - sigmas (Any)
     """
     _original_name: str = 'BetaSamplingScheduler'
 

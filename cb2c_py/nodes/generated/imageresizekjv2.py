@@ -39,7 +39,31 @@ class ImageResizeKJv2Outputs(OutputSlots):
 class ImageResizeKJv2(Node[ImageResizeKJv2Inputs, ImageResizeKJv2Outputs]):
     """
     Original name: ImageResizeKJv2
-    No description available.
+    Category: KJNodes/image
+    
+Resizes the image to the specified width and height.  
+Size can be retrieved from the input.
+
+Keep proportions keeps the aspect ratio of the image, by  
+highest dimension.  
+
+
+    Inputs:
+        - image (Image)
+        - width (int) (default: 512)
+        - height (int) (default: 512)
+        - upscale_method (str)
+        - keep_proportion (str) (default: 'False')
+        - pad_color (str) (default: '0, 0, 0')
+          Color to use for padding.
+        - crop_position (str) (default: 'center')
+        - divisible_by (int) (default: 2)
+
+    Outputs:
+        - image (Image)
+        - width (int)
+        - height (int)
+        - mask (Image)
     """
     _original_name: str = 'ImageResizeKJv2'
 

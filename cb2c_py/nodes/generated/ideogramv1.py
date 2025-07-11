@@ -21,7 +21,17 @@ class IdeogramV1Outputs(OutputSlots):
 class IdeogramV1(Node[IdeogramV1Inputs, IdeogramV1Outputs]):
     """
     Original name: IdeogramV1
-    No description available.
+    Category: api node/image/Ideogram
+    Generates images using the Ideogram V1 model.
+
+    Inputs:
+        - prompt (str) (default: '')
+          Prompt for the image generation
+        - turbo (bool) (default: False)
+          Whether to use turbo mode (faster generation, potentially lower quality)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'IdeogramV1'
 

@@ -23,7 +23,16 @@ class CLIPVisionEncodeOutputs(OutputSlots):
 class CLIPVisionEncode(Node[CLIPVisionEncodeInputs, CLIPVisionEncodeOutputs]):
     """
     Original name: CLIPVisionEncode
-    No description available.
+    Category: conditioning
+    
+
+    Inputs:
+        - clip_vision (Any)
+        - image (Image)
+        - crop (str)
+
+    Outputs:
+        - clip_vision_output (Any)
     """
     _original_name: str = 'CLIPVisionEncode'
 

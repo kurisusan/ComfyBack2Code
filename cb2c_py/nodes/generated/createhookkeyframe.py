@@ -21,7 +21,15 @@ class CreateHookKeyframeOutputs(OutputSlots):
 class CreateHookKeyframe(Node[CreateHookKeyframeInputs, CreateHookKeyframeOutputs]):
     """
     Original name: CreateHookKeyframe
-    No description available.
+    Category: advanced/hooks/scheduling
+    
+
+    Inputs:
+        - strength_mult (float) (default: 1.0)
+        - start_percent (float) (default: 0.0)
+
+    Outputs:
+        - hook_kf (Any)
     """
     _original_name: str = 'CreateHookKeyframe'
 

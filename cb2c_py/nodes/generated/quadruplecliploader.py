@@ -12,10 +12,10 @@ class QuadrupleCLIPLoaderInputs(InputSlots):
     clip_name3: Slot[str]
     clip_name4: Slot[str]
     def __init__(self, node: "Node"):
-        self.clip_name1 = Slot[str](node, "clip_name1", [])
-        self.clip_name2 = Slot[str](node, "clip_name2", [])
-        self.clip_name3 = Slot[str](node, "clip_name3", [])
-        self.clip_name4 = Slot[str](node, "clip_name4", [])
+        self.clip_name1 = Slot[str](node, "clip_name1", ['umt5_xxl_fp8_e4m3fn_scaled.safetensors'])
+        self.clip_name2 = Slot[str](node, "clip_name2", ['umt5_xxl_fp8_e4m3fn_scaled.safetensors'])
+        self.clip_name3 = Slot[str](node, "clip_name3", ['umt5_xxl_fp8_e4m3fn_scaled.safetensors'])
+        self.clip_name4 = Slot[str](node, "clip_name4", ['umt5_xxl_fp8_e4m3fn_scaled.safetensors'])
 
 class QuadrupleCLIPLoaderOutputs(OutputSlots):
     clip: Slot[Clip]
@@ -25,7 +25,19 @@ class QuadrupleCLIPLoaderOutputs(OutputSlots):
 class QuadrupleCLIPLoader(Node[QuadrupleCLIPLoaderInputs, QuadrupleCLIPLoaderOutputs]):
     """
     Original name: QuadrupleCLIPLoader
-    No description available.
+    Category: advanced/loaders
+    [Recipes]
+
+hidream: long clip-l, long clip-g, t5xxl, llama_8b_3.1_instruct
+
+    Inputs:
+        - clip_name1 (str)
+        - clip_name2 (str)
+        - clip_name3 (str)
+        - clip_name4 (str)
+
+    Outputs:
+        - clip (Clip)
     """
     _original_name: str = 'QuadrupleCLIPLoader'
 

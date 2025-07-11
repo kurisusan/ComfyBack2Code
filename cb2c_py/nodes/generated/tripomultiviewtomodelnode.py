@@ -21,7 +21,15 @@ class TripoMultiviewToModelNodeOutputs(OutputSlots):
 class TripoMultiviewToModelNode(Node[TripoMultiviewToModelNodeInputs, TripoMultiviewToModelNodeOutputs]):
     """
     Original name: TripoMultiviewToModelNode
-    No description available.
+    Category: api node/3d/Tripo
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - model_file (str)
+        - model_task_id (Any)
     """
     _original_name: str = 'TripoMultiviewToModelNode'
 

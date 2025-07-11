@@ -23,7 +23,20 @@ class LoraModelLoaderOutputs(OutputSlots):
 class LoraModelLoader(Node[LoraModelLoaderInputs, LoraModelLoaderOutputs]):
     """
     Original name: LoraModelLoader
-    No description available.
+    Category: loaders
+    Load Trained LoRA weights from Train LoRA node.
+
+    Inputs:
+        - model (Model)
+          The diffusion model the LoRA will be applied to.
+        - lora (Any)
+          The LoRA model to apply to the diffusion model.
+        - strength_model (float) (default: 1.0)
+          How strongly to modify the diffusion model. This value can be negative.
+
+    Outputs:
+        - model (Model)
+          The modified diffusion model.
     """
     _original_name: str = 'LoraModelLoader'
 

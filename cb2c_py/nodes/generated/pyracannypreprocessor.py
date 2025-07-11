@@ -19,7 +19,14 @@ class PyraCannyPreprocessorOutputs(OutputSlots):
 class PyraCannyPreprocessor(Node[PyraCannyPreprocessorInputs, PyraCannyPreprocessorOutputs]):
     """
     Original name: PyraCannyPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Line Extractors
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'PyraCannyPreprocessor'
 

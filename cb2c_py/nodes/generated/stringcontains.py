@@ -23,7 +23,16 @@ class StringContainsOutputs(OutputSlots):
 class StringContains(Node[StringContainsInputs, StringContainsOutputs]):
     """
     Original name: StringContains
-    No description available.
+    Category: utils/string
+    
+
+    Inputs:
+        - string (str)
+        - substring (str)
+        - case_sensitive (bool) (default: True)
+
+    Outputs:
+        - contains (bool)
     """
     _original_name: str = 'StringContains'
 

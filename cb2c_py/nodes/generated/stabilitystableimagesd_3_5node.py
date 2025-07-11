@@ -29,7 +29,24 @@ class StabilityStableImageSD_3_5NodeOutputs(OutputSlots):
 class StabilityStableImageSD_3_5Node(Node[StabilityStableImageSD_3_5NodeInputs, StabilityStableImageSD_3_5NodeOutputs]):
     """
     Original name: StabilityStableImageSD_3_5Node
-    No description available.
+    Category: api node/image/Stability AI
+    Generates images synchronously based on prompt and resolution.
+
+    Inputs:
+        - prompt (str) (default: '')
+          What you wish to see in the output image. A strong, descriptive prompt that clearly defines elements, colors, and subjects will lead to better results.
+        - model (str)
+        - aspect_ratio (str) (default: '1:1')
+          Aspect ratio of generated image.
+        - style_preset (str)
+          Optional desired style of generated image.
+        - cfg_scale (float) (default: 4.0)
+          How strictly the diffusion process adheres to the prompt text (higher values keep your image closer to your prompt)
+        - seed (int) (default: 0)
+          The random seed used for creating the noise.
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'StabilityStableImageSD_3_5Node'
 

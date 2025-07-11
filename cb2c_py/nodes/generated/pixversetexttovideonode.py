@@ -29,7 +29,21 @@ class PixverseTextToVideoNodeOutputs(OutputSlots):
 class PixverseTextToVideoNode(Node[PixverseTextToVideoNodeInputs, PixverseTextToVideoNodeOutputs]):
     """
     Original name: PixverseTextToVideoNode
-    No description available.
+    Category: api node/video/PixVerse
+    Generates videos based on prompt and output_size.
+
+    Inputs:
+        - prompt (str) (default: '')
+          Prompt for the video generation
+        - aspect_ratio (str)
+        - quality (str) (default: '540p')
+        - duration_seconds (str)
+        - motion_mode (str)
+        - seed (int) (default: 0)
+          Seed for video generation.
+
+    Outputs:
+        - video (Any)
     """
     _original_name: str = 'PixverseTextToVideoNode'
 

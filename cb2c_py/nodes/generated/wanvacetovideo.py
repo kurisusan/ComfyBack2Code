@@ -39,7 +39,24 @@ class WanVaceToVideoOutputs(OutputSlots):
 class WanVaceToVideo(Node[WanVaceToVideoInputs, WanVaceToVideoOutputs]):
     """
     Original name: WanVaceToVideo
-    No description available.
+    Category: conditioning/video_models
+    
+
+    Inputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - vae (Vae)
+        - width (int) (default: 832)
+        - height (int) (default: 480)
+        - length (int) (default: 81)
+        - batch_size (int) (default: 1)
+        - strength (float) (default: 1.0)
+
+    Outputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - latent (Latent)
+        - trim_latent (int)
     """
     _original_name: str = 'WanVaceToVideo'
 

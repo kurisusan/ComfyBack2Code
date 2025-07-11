@@ -105,7 +105,57 @@ class ModelMergeCosmos14BOutputs(OutputSlots):
 class ModelMergeCosmos14B(Node[ModelMergeCosmos14BInputs, ModelMergeCosmos14BOutputs]):
     """
     Original name: ModelMergeCosmos14B
-    No description available.
+    Category: advanced/model_merging/model_specific
+    
+
+    Inputs:
+        - model1 (Model)
+        - model2 (Model)
+        - pos_embedder_ (float) (default: 1.0)
+        - extra_pos_embedder_ (float) (default: 1.0)
+        - x_embedder_ (float) (default: 1.0)
+        - t_embedder_ (float) (default: 1.0)
+        - affline_norm_ (float) (default: 1.0)
+        - blocks_block0_ (float) (default: 1.0)
+        - blocks_block1_ (float) (default: 1.0)
+        - blocks_block2_ (float) (default: 1.0)
+        - blocks_block3_ (float) (default: 1.0)
+        - blocks_block4_ (float) (default: 1.0)
+        - blocks_block5_ (float) (default: 1.0)
+        - blocks_block6_ (float) (default: 1.0)
+        - blocks_block7_ (float) (default: 1.0)
+        - blocks_block8_ (float) (default: 1.0)
+        - blocks_block9_ (float) (default: 1.0)
+        - blocks_block10_ (float) (default: 1.0)
+        - blocks_block11_ (float) (default: 1.0)
+        - blocks_block12_ (float) (default: 1.0)
+        - blocks_block13_ (float) (default: 1.0)
+        - blocks_block14_ (float) (default: 1.0)
+        - blocks_block15_ (float) (default: 1.0)
+        - blocks_block16_ (float) (default: 1.0)
+        - blocks_block17_ (float) (default: 1.0)
+        - blocks_block18_ (float) (default: 1.0)
+        - blocks_block19_ (float) (default: 1.0)
+        - blocks_block20_ (float) (default: 1.0)
+        - blocks_block21_ (float) (default: 1.0)
+        - blocks_block22_ (float) (default: 1.0)
+        - blocks_block23_ (float) (default: 1.0)
+        - blocks_block24_ (float) (default: 1.0)
+        - blocks_block25_ (float) (default: 1.0)
+        - blocks_block26_ (float) (default: 1.0)
+        - blocks_block27_ (float) (default: 1.0)
+        - blocks_block28_ (float) (default: 1.0)
+        - blocks_block29_ (float) (default: 1.0)
+        - blocks_block30_ (float) (default: 1.0)
+        - blocks_block31_ (float) (default: 1.0)
+        - blocks_block32_ (float) (default: 1.0)
+        - blocks_block33_ (float) (default: 1.0)
+        - blocks_block34_ (float) (default: 1.0)
+        - blocks_block35_ (float) (default: 1.0)
+        - final_layer_ (float) (default: 1.0)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'ModelMergeCosmos14B'
 

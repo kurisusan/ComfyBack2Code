@@ -43,7 +43,34 @@ class CreateInstanceDiffusionTrackingOutputs(OutputSlots):
 class CreateInstanceDiffusionTracking(Node[CreateInstanceDiffusionTrackingInputs, CreateInstanceDiffusionTrackingOutputs]):
     """
     Original name: CreateInstanceDiffusionTracking
-    No description available.
+    Category: KJNodes/InstanceDiffusion
+    
+Creates tracking data to be used with InstanceDiffusion:  
+https://github.com/logtd/ComfyUI-InstanceDiffusion  
+  
+InstanceDiffusion prompt format:  
+"class_id.class_name": "prompt",  
+for example:  
+"1.head": "((head))",  
+
+
+    Inputs:
+        - coordinates (str)
+        - width (int) (default: 512)
+        - height (int) (default: 512)
+        - bbox_width (int) (default: 512)
+        - bbox_height (int) (default: 512)
+        - class_name (str) (default: 'class_name')
+        - class_id (int) (default: 0)
+        - prompt (str) (default: 'prompt')
+
+    Outputs:
+        - tracking (Any)
+        - prompt (str)
+        - width (int)
+        - height (int)
+        - bbox_width (int)
+        - bbox_height (int)
     """
     _original_name: str = 'CreateInstanceDiffusionTracking'
 

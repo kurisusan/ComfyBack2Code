@@ -19,7 +19,14 @@ class LineArtPreprocessorOutputs(OutputSlots):
 class LineArtPreprocessor(Node[LineArtPreprocessorInputs, LineArtPreprocessorOutputs]):
     """
     Original name: LineArtPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Line Extractors
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'LineArtPreprocessor'
 

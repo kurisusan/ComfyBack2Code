@@ -19,7 +19,14 @@ class CLIPVisionLoaderOutputs(OutputSlots):
 class CLIPVisionLoader(Node[CLIPVisionLoaderInputs, CLIPVisionLoaderOutputs]):
     """
     Original name: CLIPVisionLoader
-    No description available.
+    Category: loaders
+    
+
+    Inputs:
+        - clip_name (str)
+
+    Outputs:
+        - clip_vision (Any)
     """
     _original_name: str = 'CLIPVisionLoader'
 

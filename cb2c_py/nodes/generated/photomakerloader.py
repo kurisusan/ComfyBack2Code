@@ -19,7 +19,14 @@ class PhotoMakerLoaderOutputs(OutputSlots):
 class PhotoMakerLoader(Node[PhotoMakerLoaderInputs, PhotoMakerLoaderOutputs]):
     """
     Original name: PhotoMakerLoader
-    No description available.
+    Category: _for_testing/photomaker
+    
+
+    Inputs:
+        - photomaker_model_name (str)
+
+    Outputs:
+        - photomaker (Any)
     """
     _original_name: str = 'PhotoMakerLoader'
 

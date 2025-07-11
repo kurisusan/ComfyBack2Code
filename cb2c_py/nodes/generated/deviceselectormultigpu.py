@@ -19,7 +19,14 @@ class DeviceSelectorMultiGPUOutputs(OutputSlots):
 class DeviceSelectorMultiGPU(Node[DeviceSelectorMultiGPUInputs, DeviceSelectorMultiGPUOutputs]):
     """
     Original name: DeviceSelectorMultiGPU
-    No description available.
+    Category: multigpu
+    
+
+    Inputs:
+        - device (str) (default: 'cuda:0')
+
+    Outputs:
+        - device (str)
     """
     _original_name: str = 'DeviceSelectorMultiGPU'
 

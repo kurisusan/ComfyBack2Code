@@ -27,7 +27,18 @@ class StyleModelApplyOutputs(OutputSlots):
 class StyleModelApply(Node[StyleModelApplyInputs, StyleModelApplyOutputs]):
     """
     Original name: StyleModelApply
-    No description available.
+    Category: conditioning/style_model
+    
+
+    Inputs:
+        - conditioning (Conditioning)
+        - style_model (Any)
+        - clip_vision_output (Any)
+        - strength (float) (default: 1.0)
+        - strength_type (str)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'StyleModelApply'
 

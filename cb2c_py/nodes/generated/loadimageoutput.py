@@ -21,7 +21,15 @@ class LoadImageOutputOutputs(OutputSlots):
 class LoadImageOutput(Node[LoadImageOutputInputs, LoadImageOutputOutputs]):
     """
     Original name: LoadImageOutput
-    No description available.
+    Category: image
+    Load an image from the output folder. When the refresh button is clicked, the node will update the image list and automatically select the first image, allowing for easy iteration.
+
+    Inputs:
+        - image (Any)
+
+    Outputs:
+        - image (Image)
+        - mask (Image)
     """
     _original_name: str = 'LoadImageOutput'
 

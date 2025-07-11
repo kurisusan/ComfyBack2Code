@@ -21,7 +21,16 @@ class LTXVPreprocessOutputs(OutputSlots):
 class LTXVPreprocess(Node[LTXVPreprocessInputs, LTXVPreprocessOutputs]):
     """
     Original name: LTXVPreprocess
-    No description available.
+    Category: image
+    
+
+    Inputs:
+        - image (Image)
+        - img_compression (int) (default: 35)
+          Amount of compression to apply on image.
+
+    Outputs:
+        - output_image (Image)
     """
     _original_name: str = 'LTXVPreprocess'
 

@@ -25,7 +25,21 @@ class RecraftTextToImageNodeOutputs(OutputSlots):
 class RecraftTextToImageNode(Node[RecraftTextToImageNodeInputs, RecraftTextToImageNodeOutputs]):
     """
     Original name: RecraftTextToImageNode
-    No description available.
+    Category: api node/image/Recraft
+    Generates images synchronously based on prompt and resolution.
+
+    Inputs:
+        - prompt (str) (default: '')
+          Prompt for the image generation.
+        - size (str) (default: '1024x1024')
+          The size of the generated image.
+        - n (int) (default: 1)
+          The number of images to generate.
+        - seed (int) (default: 0)
+          Seed to determine if node should re-run; actual results are nondeterministic regardless of seed.
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'RecraftTextToImageNode'
 

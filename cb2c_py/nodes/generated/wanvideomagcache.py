@@ -27,7 +27,23 @@ class WanVideoMagCacheOutputs(OutputSlots):
 class WanVideoMagCache(Node[WanVideoMagCacheInputs, WanVideoMagCacheOutputs]):
     """
     Original name: WanVideoMagCache
-    No description available.
+    Category: WanVideoWrapper
+    MagCache for WanVideoWrapper, source https://github.com/Zehong-Ma/MagCache
+
+    Inputs:
+        - magcache_thresh (float) (default: 0.02)
+          How strongly to cache the output of diffusion model. This value must be non-negative.
+        - magcache_K (int) (default: 4)
+          The maxium skip steps of MagCache.
+        - start_step (int) (default: 1)
+          Step to start applying MagCache
+        - end_step (int) (default: -1)
+          Step to end applying MagCache
+        - cache_device (str) (default: 'offload_device')
+          Device to cache to
+
+    Outputs:
+        - cache_args (Any)
     """
     _original_name: str = 'WanVideoMagCache'
 

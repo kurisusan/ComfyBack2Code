@@ -21,7 +21,15 @@ class SetUnionControlNetTypeOutputs(OutputSlots):
 class SetUnionControlNetType(Node[SetUnionControlNetTypeInputs, SetUnionControlNetTypeOutputs]):
     """
     Original name: SetUnionControlNetType
-    No description available.
+    Category: conditioning/controlnet
+    
+
+    Inputs:
+        - control_net (Any)
+        - type (str)
+
+    Outputs:
+        - control_net (Any)
     """
     _original_name: str = 'SetUnionControlNetType'
 

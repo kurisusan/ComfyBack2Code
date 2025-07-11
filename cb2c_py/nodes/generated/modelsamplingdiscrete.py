@@ -23,7 +23,16 @@ class ModelSamplingDiscreteOutputs(OutputSlots):
 class ModelSamplingDiscrete(Node[ModelSamplingDiscreteInputs, ModelSamplingDiscreteOutputs]):
     """
     Original name: ModelSamplingDiscrete
-    No description available.
+    Category: advanced/model
+    
+
+    Inputs:
+        - model (Model)
+        - sampling (str)
+        - zsnr (bool) (default: False)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'ModelSamplingDiscrete'
 

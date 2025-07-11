@@ -29,7 +29,20 @@ class PikaImageToVideoNode2_2Outputs(OutputSlots):
 class PikaImageToVideoNode2_2(Node[PikaImageToVideoNode2_2Inputs, PikaImageToVideoNode2_2Outputs]):
     """
     Original name: PikaImageToVideoNode2_2
-    No description available.
+    Category: api node/video/Pika
+    Sends an image and prompt to the Pika API v2.2 to generate a video.
+
+    Inputs:
+        - image (Image)
+          The image to convert to video
+        - prompt_text (str) (default: None)
+        - negative_prompt (str) (default: None)
+        - seed (int) (default: None)
+        - resolution (Any) (default: '1080p')
+        - duration (Any) (default: '5')
+
+    Outputs:
+        - video (Any)
     """
     _original_name: str = 'PikaImageToVideoNode2_2'
 

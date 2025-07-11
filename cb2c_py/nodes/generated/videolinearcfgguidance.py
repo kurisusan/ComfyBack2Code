@@ -21,7 +21,15 @@ class VideoLinearCFGGuidanceOutputs(OutputSlots):
 class VideoLinearCFGGuidance(Node[VideoLinearCFGGuidanceInputs, VideoLinearCFGGuidanceOutputs]):
     """
     Original name: VideoLinearCFGGuidance
-    No description available.
+    Category: sampling/video_models
+    
+
+    Inputs:
+        - model (Model)
+        - min_cfg (float) (default: 1.0)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'VideoLinearCFGGuidance'
 

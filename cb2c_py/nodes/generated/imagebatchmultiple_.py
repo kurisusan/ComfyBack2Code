@@ -21,7 +21,15 @@ class ImageBatchMultiple_Outputs(OutputSlots):
 class ImageBatchMultiple_(Node[ImageBatchMultiple_Inputs, ImageBatchMultiple_Outputs]):
     """
     Original name: ImageBatchMultiple+
-    No description available.
+    Category: essentials/image batch
+    
+
+    Inputs:
+        - image_1 (Image)
+        - method (str) (default: 'lanczos')
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageBatchMultiple+'
 

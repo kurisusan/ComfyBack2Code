@@ -33,7 +33,27 @@ class Image_Resize__rgthree_Outputs(OutputSlots):
 class Image_Resize__rgthree_(Node[Image_Resize__rgthree_Inputs, Image_Resize__rgthree_Outputs]):
     """
     Original name: Image Resize (rgthree)
-    No description available.
+    Category: rgthree
+    Resize the image.
+
+    Inputs:
+        - image (Image)
+        - measurement (str)
+        - width (int) (default: 0)
+          The width of the desired resize. A pixel value if measurement is 'pixels' or a 100% scale percentage value if measurement is 'percentage'. Passing '0' will calculate the dimension based on the height.
+        - height (int) (default: 0)
+        - fit (str)
+          'crop' resizes so the image covers the desired width and height, and center-crops the excess, returning exactly the desired width and height.
+'pad' resizes so the image fits inside the desired width and height, and fills the empty space returning exactly the desired width and height.
+'contain' resizes so the image fits inside the desired width and height, and returns the image with it's new size, with one side liekly smaller than the desired.
+
+Note, if either width or height is '0', the effective fit is 'contain'.
+        - method (str)
+
+    Outputs:
+        - image (Image)
+        - width (int)
+        - height (int)
     """
     _original_name: str = 'Image Resize (rgthree)'
 

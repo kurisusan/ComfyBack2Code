@@ -23,7 +23,16 @@ class SelfAttentionGuidanceOutputs(OutputSlots):
 class SelfAttentionGuidance(Node[SelfAttentionGuidanceInputs, SelfAttentionGuidanceOutputs]):
     """
     Original name: SelfAttentionGuidance
-    No description available.
+    Category: _for_testing
+    
+
+    Inputs:
+        - model (Model)
+        - scale (float) (default: 0.5)
+        - blur_sigma (float) (default: 2.0)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'SelfAttentionGuidance'
 

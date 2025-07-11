@@ -25,7 +25,17 @@ class StyleModelApplyAdvancedOutputs(OutputSlots):
 class StyleModelApplyAdvanced(Node[StyleModelApplyAdvancedInputs, StyleModelApplyAdvancedOutputs]):
     """
     Original name: StyleModelApplyAdvanced
-    No description available.
+    Category: KJNodes/experimental
+    StyleModelApply but with strength parameter
+
+    Inputs:
+        - conditioning (Conditioning)
+        - style_model (Any)
+        - clip_vision_output (Any)
+        - strength (float) (default: 1.0)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'StyleModelApplyAdvanced'
 

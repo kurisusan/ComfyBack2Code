@@ -21,7 +21,15 @@ class VAEDecodeAudioOutputs(OutputSlots):
 class VAEDecodeAudio(Node[VAEDecodeAudioInputs, VAEDecodeAudioOutputs]):
     """
     Original name: VAEDecodeAudio
-    No description available.
+    Category: latent/audio
+    
+
+    Inputs:
+        - samples (Latent)
+        - vae (Vae)
+
+    Outputs:
+        - audio (Any)
     """
     _original_name: str = 'VAEDecodeAudio'
 

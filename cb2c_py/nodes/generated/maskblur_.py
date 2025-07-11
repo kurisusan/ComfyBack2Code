@@ -23,7 +23,16 @@ class MaskBlur_Outputs(OutputSlots):
 class MaskBlur_(Node[MaskBlur_Inputs, MaskBlur_Outputs]):
     """
     Original name: MaskBlur+
-    No description available.
+    Category: essentials/mask
+    
+
+    Inputs:
+        - mask (Image)
+        - amount (int) (default: 6)
+        - device (str)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'MaskBlur+'
 

@@ -21,7 +21,17 @@ class WanVideoReCamMasterDefaultCameraOutputs(OutputSlots):
 class WanVideoReCamMasterDefaultCamera(Node[WanVideoReCamMasterDefaultCameraInputs, WanVideoReCamMasterDefaultCameraOutputs]):
     """
     Original name: WanVideoReCamMasterDefaultCamera
-    No description available.
+    Category: WanVideoWrapper
+    https://github.com/KwaiVGI/ReCamMaster
+
+    Inputs:
+        - camera_type (str) (default: 'pan_right')
+          Camera type to use
+        - latents (Latent)
+          source video
+
+    Outputs:
+        - camera_poses (Any)
     """
     _original_name: str = 'WanVideoReCamMasterDefaultCamera'
 

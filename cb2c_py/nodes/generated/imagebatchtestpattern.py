@@ -33,7 +33,21 @@ class ImageBatchTestPatternOutputs(OutputSlots):
 class ImageBatchTestPattern(Node[ImageBatchTestPatternInputs, ImageBatchTestPatternOutputs]):
     """
     Original name: ImageBatchTestPattern
-    No description available.
+    Category: KJNodes/text
+    
+
+    Inputs:
+        - batch_size (int) (default: 1)
+        - start_from (int) (default: 0)
+        - text_x (int) (default: 256)
+        - text_y (int) (default: 256)
+        - width (int) (default: 512)
+        - height (int) (default: 512)
+        - font (str)
+        - font_size (int) (default: 255)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageBatchTestPattern'
 

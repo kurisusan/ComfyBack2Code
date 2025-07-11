@@ -19,7 +19,14 @@ class LoadLatentOutputs(OutputSlots):
 class LoadLatent(Node[LoadLatentInputs, LoadLatentOutputs]):
     """
     Original name: LoadLatent
-    No description available.
+    Category: _for_testing
+    
+
+    Inputs:
+        - latent (str)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'LoadLatent'
 

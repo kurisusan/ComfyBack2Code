@@ -25,7 +25,20 @@ class APGOutputs(OutputSlots):
 class APG(Node[APGInputs, APGOutputs]):
     """
     Original name: APG
-    No description available.
+    Category: sampling/custom_sampling
+    
+
+    Inputs:
+        - model (Model)
+        - eta (float) (default: 1.0)
+          Controls the scale of the parallel guidance vector. Default CFG behavior at a setting of 1.
+        - norm_threshold (float) (default: 5.0)
+          Normalize guidance vector to this value, normalization disable at a setting of 0.
+        - momentum (float) (default: 0.0)
+          Controls a running average of guidance during diffusion, disabled at a setting of 0.
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'APG'
 

@@ -19,7 +19,14 @@ class TilePreprocessorOutputs(OutputSlots):
 class TilePreprocessor(Node[TilePreprocessorInputs, TilePreprocessorOutputs]):
     """
     Original name: TilePreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/tile
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'TilePreprocessor'
 

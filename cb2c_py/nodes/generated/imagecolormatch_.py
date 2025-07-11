@@ -29,7 +29,19 @@ class ImageColorMatch_Outputs(OutputSlots):
 class ImageColorMatch_(Node[ImageColorMatch_Inputs, ImageColorMatch_Outputs]):
     """
     Original name: ImageColorMatch+
-    No description available.
+    Category: essentials/image processing
+    
+
+    Inputs:
+        - image (Image)
+        - reference (Image)
+        - color_space (str)
+        - factor (float) (default: 1.0)
+        - device (str)
+        - batch_size (int) (default: 0)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageColorMatch+'
 

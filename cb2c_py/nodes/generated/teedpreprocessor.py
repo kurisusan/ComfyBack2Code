@@ -19,7 +19,14 @@ class TEEDPreprocessorOutputs(OutputSlots):
 class TEEDPreprocessor(Node[TEEDPreprocessorInputs, TEEDPreprocessorOutputs]):
     """
     Original name: TEEDPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Line Extractors
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'TEEDPreprocessor'
 

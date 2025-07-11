@@ -19,7 +19,17 @@ class DownloadAndLoadCLIPSegOutputs(OutputSlots):
 class DownloadAndLoadCLIPSeg(Node[DownloadAndLoadCLIPSegInputs, DownloadAndLoadCLIPSegOutputs]):
     """
     Original name: DownloadAndLoadCLIPSeg
-    No description available.
+    Category: KJNodes/masking
+    
+Downloads and loads CLIPSeg model with huggingface_hub,  
+to ComfyUI/models/clip_seg
+
+
+    Inputs:
+        - model (str)
+
+    Outputs:
+        - clipseg_model (Any)
     """
     _original_name: str = 'DownloadAndLoadCLIPSeg'
 

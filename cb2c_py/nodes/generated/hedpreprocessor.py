@@ -19,7 +19,14 @@ class HEDPreprocessorOutputs(OutputSlots):
 class HEDPreprocessor(Node[HEDPreprocessorInputs, HEDPreprocessorOutputs]):
     """
     Original name: HEDPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Line Extractors
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'HEDPreprocessor'
 

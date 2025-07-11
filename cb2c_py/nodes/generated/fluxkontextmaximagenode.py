@@ -29,7 +29,25 @@ class FluxKontextMaxImageNodeOutputs(OutputSlots):
 class FluxKontextMaxImageNode(Node[FluxKontextMaxImageNodeInputs, FluxKontextMaxImageNodeOutputs]):
     """
     Original name: FluxKontextMaxImageNode
-    No description available.
+    Category: api node/image/BFL
+    Edits images using Flux.1 Kontext [max] via api based on prompt and aspect ratio.
+
+    Inputs:
+        - prompt (str) (default: '')
+          Prompt for the image generation - specify what and how to edit.
+        - aspect_ratio (str) (default: '16:9')
+          Aspect ratio of image; must be between 1:4 and 4:1.
+        - guidance (float) (default: 3.0)
+          Guidance strength for the image generation process
+        - steps (int) (default: 50)
+          Number of steps for the image generation process
+        - seed (int) (default: 1234)
+          The random seed used for creating the noise.
+        - prompt_upsampling (bool) (default: False)
+          Whether to perform upsampling on the prompt. If active, automatically modifies the prompt for more creative generation, but results are nondeterministic (same seed will not produce exactly the same result).
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'FluxKontextMaxImageNode'
 

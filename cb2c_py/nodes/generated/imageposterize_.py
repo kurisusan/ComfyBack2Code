@@ -21,7 +21,15 @@ class ImagePosterize_Outputs(OutputSlots):
 class ImagePosterize_(Node[ImagePosterize_Inputs, ImagePosterize_Outputs]):
     """
     Original name: ImagePosterize+
-    No description available.
+    Category: essentials/image processing
+    
+
+    Inputs:
+        - image (Image)
+        - threshold (float) (default: 0.5)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImagePosterize+'
 

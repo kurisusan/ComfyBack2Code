@@ -31,7 +31,22 @@ class GenerateNoiseOutputs(OutputSlots):
 class GenerateNoise(Node[GenerateNoiseInputs, GenerateNoiseOutputs]):
     """
     Original name: GenerateNoise
-    No description available.
+    Category: KJNodes/noise
+    
+Generates noise for injection or to be used as empty latents on samplers with add_noise off.
+
+
+    Inputs:
+        - width (int) (default: 512)
+        - height (int) (default: 512)
+        - batch_size (int) (default: 1)
+        - seed (int) (default: 123)
+        - multiplier (float) (default: 1.0)
+        - constant_batch_noise (bool) (default: False)
+        - normalize (bool) (default: False)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'GenerateNoise'
 

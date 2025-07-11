@@ -21,7 +21,15 @@ class ModelSaveOutputs(OutputSlots):
 class ModelSave(Node[ModelSaveInputs, ModelSaveOutputs]):
     """
     Original name: ModelSave
-    No description available.
+    Category: advanced/model_merging
+    
+
+    Inputs:
+        - model (Model)
+        - filename_prefix (str) (default: 'diffusion_models/ComfyUI')
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'ModelSave'
 

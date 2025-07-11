@@ -29,7 +29,22 @@ class LeapfusionHunyuanI2VPatcherOutputs(OutputSlots):
 class LeapfusionHunyuanI2VPatcher(Node[LeapfusionHunyuanI2VPatcherInputs, LeapfusionHunyuanI2VPatcherOutputs]):
     """
     Original name: LeapfusionHunyuanI2VPatcher
-    No description available.
+    Category: KJNodes/experimental
+    
+
+    Inputs:
+        - model (Model)
+        - latent (Latent)
+        - index (int) (default: 0)
+          The index of the latent to be replaced. 0 for first frame and -1 for last
+        - start_percent (float) (default: 0.0)
+          The start percentage of steps to apply
+        - end_percent (float) (default: 1.0)
+          The end percentage of steps to apply
+        - strength (float) (default: 1.0)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'LeapfusionHunyuanI2VPatcher'
 

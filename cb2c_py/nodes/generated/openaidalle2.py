@@ -19,7 +19,15 @@ class OpenAIDalle2Outputs(OutputSlots):
 class OpenAIDalle2(Node[OpenAIDalle2Inputs, OpenAIDalle2Outputs]):
     """
     Original name: OpenAIDalle2
-    No description available.
+    Category: api node/image/OpenAI
+    Generates images synchronously via OpenAI's DALL·E 2 endpoint.
+
+    Inputs:
+        - prompt (str) (default: '')
+          Text prompt for DALL·E
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'OpenAIDalle2'
 

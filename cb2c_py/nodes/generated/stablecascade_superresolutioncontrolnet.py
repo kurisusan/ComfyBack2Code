@@ -25,7 +25,17 @@ class StableCascade_SuperResolutionControlnetOutputs(OutputSlots):
 class StableCascade_SuperResolutionControlnet(Node[StableCascade_SuperResolutionControlnetInputs, StableCascade_SuperResolutionControlnetOutputs]):
     """
     Original name: StableCascade_SuperResolutionControlnet
-    No description available.
+    Category: _for_testing/stable_cascade
+    
+
+    Inputs:
+        - image (Image)
+        - vae (Vae)
+
+    Outputs:
+        - controlnet_input (Image)
+        - stage_c (Latent)
+        - stage_b (Latent)
     """
     _original_name: str = 'StableCascade_SuperResolutionControlnet'
 

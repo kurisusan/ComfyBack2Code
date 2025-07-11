@@ -21,7 +21,15 @@ class SetLatentNoiseMaskOutputs(OutputSlots):
 class SetLatentNoiseMask(Node[SetLatentNoiseMaskInputs, SetLatentNoiseMaskOutputs]):
     """
     Original name: SetLatentNoiseMask
-    No description available.
+    Category: latent/inpaint
+    
+
+    Inputs:
+        - samples (Latent)
+        - mask (Image)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'SetLatentNoiseMask'
 

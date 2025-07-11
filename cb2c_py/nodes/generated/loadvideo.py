@@ -19,7 +19,14 @@ class LoadVideoOutputs(OutputSlots):
 class LoadVideo(Node[LoadVideoInputs, LoadVideoOutputs]):
     """
     Original name: LoadVideo
-    No description available.
+    Category: image/video
+    
+
+    Inputs:
+        - file (str)
+
+    Outputs:
+        - video (Any)
     """
     _original_name: str = 'LoadVideo'
 

@@ -25,7 +25,19 @@ class SamplerER_SDEOutputs(OutputSlots):
 class SamplerER_SDE(Node[SamplerER_SDEInputs, SamplerER_SDEOutputs]):
     """
     Original name: SamplerER_SDE
-    No description available.
+    Category: sampling/custom_sampling/samplers
+    
+
+    Inputs:
+        - solver_type (Any)
+        - max_stage (int) (default: 3)
+        - eta (float) (default: 1.0)
+          Stochastic strength of reverse-time SDE.
+When eta=0, it reduces to deterministic ODE. This setting doesn't apply to ER-SDE solver type.
+        - s_noise (float) (default: 1.0)
+
+    Outputs:
+        - sampler (Any)
     """
     _original_name: str = 'SamplerER_SDE'
 

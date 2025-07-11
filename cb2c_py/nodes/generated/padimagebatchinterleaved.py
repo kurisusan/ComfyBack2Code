@@ -27,7 +27,20 @@ class PadImageBatchInterleavedOutputs(OutputSlots):
 class PadImageBatchInterleaved(Node[PadImageBatchInterleavedInputs, PadImageBatchInterleavedOutputs]):
     """
     Original name: PadImageBatchInterleaved
-    No description available.
+    Category: KJNodes/image
+    
+Inserts empty frames between the images in a batch.
+
+
+    Inputs:
+        - images (Image)
+        - empty_frames_per_image (int) (default: 1)
+        - pad_frame_value (float) (default: 0.0)
+        - add_after_last (bool) (default: False)
+
+    Outputs:
+        - images (Image)
+        - masks (Image)
     """
     _original_name: str = 'PadImageBatchInterleaved'
 

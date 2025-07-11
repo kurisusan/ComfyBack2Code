@@ -19,7 +19,17 @@ class ModelPassThroughOutputs(OutputSlots):
 class ModelPassThrough(Node[ModelPassThroughInputs, ModelPassThroughOutputs]):
     """
     Original name: ModelPassThrough
-    No description available.
+    Category: KJNodes/misc
+    
+    Simply passes through the model,
+    workaround for Set node not allowing bypassed inputs.
+
+
+    Inputs:
+        No inputs.
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'ModelPassThrough'
 

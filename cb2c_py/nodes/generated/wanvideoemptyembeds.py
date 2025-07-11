@@ -23,7 +23,19 @@ class WanVideoEmptyEmbedsOutputs(OutputSlots):
 class WanVideoEmptyEmbeds(Node[WanVideoEmptyEmbedsInputs, WanVideoEmptyEmbedsOutputs]):
     """
     Original name: WanVideoEmptyEmbeds
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - width (int) (default: 832)
+          Width of the image to encode
+        - height (int) (default: 480)
+          Height of the image to encode
+        - num_frames (int) (default: 81)
+          Number of frames to encode
+
+    Outputs:
+        - image_embeds (Any)
     """
     _original_name: str = 'WanVideoEmptyEmbeds'
 

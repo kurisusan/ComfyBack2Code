@@ -21,7 +21,17 @@ class WanVideoLoraSelectOutputs(OutputSlots):
 class WanVideoLoraSelect(Node[WanVideoLoraSelectInputs, WanVideoLoraSelectOutputs]):
     """
     Original name: WanVideoLoraSelect
-    No description available.
+    Category: WanVideoWrapper
+    Select a LoRA model from ComfyUI/models/loras
+
+    Inputs:
+        - lora (str)
+          LORA models are expected to be in ComfyUI/models/loras with .safetensors extension
+        - strength (float) (default: 1.0)
+          LORA strength, set to 0.0 to unmerge the LORA
+
+    Outputs:
+        - lora (Any)
     """
     _original_name: str = 'WanVideoLoraSelect'
 

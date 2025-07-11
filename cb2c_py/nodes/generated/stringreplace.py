@@ -23,7 +23,16 @@ class StringReplaceOutputs(OutputSlots):
 class StringReplace(Node[StringReplaceInputs, StringReplaceOutputs]):
     """
     Original name: StringReplace
-    No description available.
+    Category: utils/string
+    
+
+    Inputs:
+        - string (str)
+        - find (str)
+        - replace (str)
+
+    Outputs:
+        - string (str)
     """
     _original_name: str = 'StringReplace'
 

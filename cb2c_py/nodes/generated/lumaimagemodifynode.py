@@ -27,7 +27,21 @@ class LumaImageModifyNodeOutputs(OutputSlots):
 class LumaImageModifyNode(Node[LumaImageModifyNodeInputs, LumaImageModifyNodeOutputs]):
     """
     Original name: LumaImageModifyNode
-    No description available.
+    Category: api node/image/Luma
+    Modifies images synchronously based on prompt and aspect ratio.
+
+    Inputs:
+        - image (Image)
+        - prompt (str) (default: '')
+          Prompt for the image generation
+        - image_weight (float) (default: 0.1)
+          Weight of the image; the closer to 1.0, the less the image will be modified.
+        - model (str)
+        - seed (int) (default: 0)
+          Seed to determine if node should re-run; actual results are nondeterministic regardless of seed.
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'LumaImageModifyNode'
 

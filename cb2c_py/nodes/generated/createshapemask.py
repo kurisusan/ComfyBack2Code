@@ -37,7 +37,27 @@ class CreateShapeMaskOutputs(OutputSlots):
 class CreateShapeMask(Node[CreateShapeMaskInputs, CreateShapeMaskOutputs]):
     """
     Original name: CreateShapeMask
-    No description available.
+    Category: KJNodes/masking/generate
+    
+Creates a mask or batch of masks with the specified shape.  
+Locations are center locations.  
+Grow value is the amount to grow the shape on each frame, creating animated masks.
+
+
+    Inputs:
+        - shape (str) (default: 'circle')
+        - frames (int) (default: 1)
+        - location_x (int) (default: 256)
+        - location_y (int) (default: 256)
+        - grow (int) (default: 0)
+        - frame_width (int) (default: 512)
+        - frame_height (int) (default: 512)
+        - shape_width (int) (default: 128)
+        - shape_height (int) (default: 128)
+
+    Outputs:
+        - mask (Image)
+        - mask_inverted (Image)
     """
     _original_name: str = 'CreateShapeMask'
 

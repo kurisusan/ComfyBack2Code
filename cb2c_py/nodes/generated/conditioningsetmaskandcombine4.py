@@ -53,7 +53,33 @@ class ConditioningSetMaskAndCombine4Outputs(OutputSlots):
 class ConditioningSetMaskAndCombine4(Node[ConditioningSetMaskAndCombine4Inputs, ConditioningSetMaskAndCombine4Outputs]):
     """
     Original name: ConditioningSetMaskAndCombine4
-    No description available.
+    Category: KJNodes/masking/conditioning
+    
+Bundles multiple conditioning mask and combine nodes into one,functionality is identical to ComfyUI native nodes
+
+
+    Inputs:
+        - positive_1 (Conditioning)
+        - negative_1 (Conditioning)
+        - positive_2 (Conditioning)
+        - negative_2 (Conditioning)
+        - positive_3 (Conditioning)
+        - negative_3 (Conditioning)
+        - positive_4 (Conditioning)
+        - negative_4 (Conditioning)
+        - mask_1 (Image)
+        - mask_2 (Image)
+        - mask_3 (Image)
+        - mask_4 (Image)
+        - mask_1_strength (float) (default: 1.0)
+        - mask_2_strength (float) (default: 1.0)
+        - mask_3_strength (float) (default: 1.0)
+        - mask_4_strength (float) (default: 1.0)
+        - set_cond_area (str)
+
+    Outputs:
+        - combined_positive (Conditioning)
+        - combined_negative (Conditioning)
     """
     _original_name: str = 'ConditioningSetMaskAndCombine4'
 

@@ -23,7 +23,16 @@ class VHS_VAEDecodeBatchedOutputs(OutputSlots):
 class VHS_VAEDecodeBatched(Node[VHS_VAEDecodeBatchedInputs, VHS_VAEDecodeBatchedOutputs]):
     """
     Original name: VHS_VAEDecodeBatched
-    No description available.
+    Category: Video Helper Suite 🎥🅥🅗🅢/batched nodes
+    VAE Decode Batched 🎥🅥🅗🅢<div style="font-size: 0.8em"><div id=VHS_shortdesc>Decode latents to images with a manually specified batch size</div></div><div style="font-size: 0.8em">Some people have ran into VRAM issues when encoding or decoding large batches of images. As a workaround, this node lets you manually set a batch size when decoding latents.</div><div style="font-size: 0.8em">Unless these issues have been encountered, it is simpler to use the native VAE Decode or to decode from a Video Combine directly</div><div style="font-size: 0.8em"><div vhs_title="Inputs" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Inputs: <div vhs_title="samples" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">samples: The latents to be decoded.</div></div><div vhs_title="vae" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">vae: The VAE to use when decoding.</div></div></div></div><div vhs_title="Outputs" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Outputs: <div vhs_title="IMAGE" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">IMAGE: The decoded images.</div></div></div></div><div vhs_title="Widgets" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Widgets: <div vhs_title="per_batch" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">per_batch: The maximum number of images to decode in each batch.</div></div></div></div></div>
+
+    Inputs:
+        - samples (Latent)
+        - vae (Vae)
+        - per_batch (int) (default: 16)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'VHS_VAEDecodeBatched'
 

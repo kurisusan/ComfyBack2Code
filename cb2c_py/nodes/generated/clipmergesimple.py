@@ -23,7 +23,16 @@ class CLIPMergeSimpleOutputs(OutputSlots):
 class CLIPMergeSimple(Node[CLIPMergeSimpleInputs, CLIPMergeSimpleOutputs]):
     """
     Original name: CLIPMergeSimple
-    No description available.
+    Category: advanced/model_merging
+    
+
+    Inputs:
+        - clip1 (Clip)
+        - clip2 (Clip)
+        - ratio (float) (default: 1.0)
+
+    Outputs:
+        - clip (Clip)
     """
     _original_name: str = 'CLIPMergeSimple'
 

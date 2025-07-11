@@ -27,7 +27,18 @@ class ImageCropOutputs(OutputSlots):
 class ImageCrop(Node[ImageCropInputs, ImageCropOutputs]):
     """
     Original name: ImageCrop
-    No description available.
+    Category: image/transform
+    
+
+    Inputs:
+        - image (Image)
+        - width (int) (default: 512)
+        - height (int) (default: 512)
+        - x (int) (default: 0)
+        - y (int) (default: 0)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageCrop'
 

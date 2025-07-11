@@ -21,7 +21,16 @@ class FantasyTalkingModelLoaderOutputs(OutputSlots):
 class FantasyTalkingModelLoader(Node[FantasyTalkingModelLoaderInputs, FantasyTalkingModelLoaderOutputs]):
     """
     Original name: FantasyTalkingModelLoader
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - model (str)
+          These models are loaded from the 'ComfyUI/models/diffusion_models' -folder
+        - base_precision (str) (default: 'fp16')
+
+    Outputs:
+        - model (Any)
     """
     _original_name: str = 'FantasyTalkingModelLoader'
 

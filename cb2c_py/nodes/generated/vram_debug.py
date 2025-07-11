@@ -31,7 +31,24 @@ class VRAM_DebugOutputs(OutputSlots):
 class VRAM_Debug(Node[VRAM_DebugInputs, VRAM_DebugOutputs]):
     """
     Original name: VRAM_Debug
-    No description available.
+    Category: KJNodes/misc
+    
+Returns the inputs unchanged, they are only used as triggers,  
+and performs comfy model management functions and garbage collection,  
+reports free VRAM before and after the operations.
+
+
+    Inputs:
+        - empty_cache (bool) (default: True)
+        - gc_collect (bool) (default: True)
+        - unload_all_models (bool) (default: False)
+
+    Outputs:
+        - any_output (Any)
+        - image_pass (Image)
+        - model_pass (Model)
+        - freemem_before (int)
+        - freemem_after (int)
     """
     _original_name: str = 'VRAM_Debug'
 

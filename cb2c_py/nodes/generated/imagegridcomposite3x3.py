@@ -35,7 +35,24 @@ class ImageGridComposite3x3Outputs(OutputSlots):
 class ImageGridComposite3x3(Node[ImageGridComposite3x3Inputs, ImageGridComposite3x3Outputs]):
     """
     Original name: ImageGridComposite3x3
-    No description available.
+    Category: KJNodes/image
+    
+Concatenates the 9 input images into a 3x3 grid. 
+
+
+    Inputs:
+        - image1 (Image)
+        - image2 (Image)
+        - image3 (Image)
+        - image4 (Image)
+        - image5 (Image)
+        - image6 (Image)
+        - image7 (Image)
+        - image8 (Image)
+        - image9 (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageGridComposite3x3'
 

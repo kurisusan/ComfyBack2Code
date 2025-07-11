@@ -19,7 +19,14 @@ class BAE_NormalMapPreprocessorOutputs(OutputSlots):
 class BAE_NormalMapPreprocessor(Node[BAE_NormalMapPreprocessorInputs, BAE_NormalMapPreprocessorOutputs]):
     """
     Original name: BAE-NormalMapPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Normal and Depth Estimators
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'BAE-NormalMapPreprocessor'
 

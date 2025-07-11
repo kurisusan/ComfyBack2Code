@@ -23,7 +23,17 @@ class ImageAddNoiseOutputs(OutputSlots):
 class ImageAddNoise(Node[ImageAddNoiseInputs, ImageAddNoiseOutputs]):
     """
     Original name: ImageAddNoise
-    No description available.
+    Category: image
+    
+
+    Inputs:
+        - image (Image)
+        - seed (int) (default: 0)
+          The random seed used for creating the noise.
+        - strength (float) (default: 0.5)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageAddNoise'
 

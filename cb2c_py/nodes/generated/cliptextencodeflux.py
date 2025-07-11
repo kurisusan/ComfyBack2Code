@@ -25,7 +25,17 @@ class CLIPTextEncodeFluxOutputs(OutputSlots):
 class CLIPTextEncodeFlux(Node[CLIPTextEncodeFluxInputs, CLIPTextEncodeFluxOutputs]):
     """
     Original name: CLIPTextEncodeFlux
-    No description available.
+    Category: advanced/conditioning/flux
+    
+
+    Inputs:
+        - clip (Clip)
+        - clip_l (str)
+        - t5xxl (str)
+        - guidance (float) (default: 3.5)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'CLIPTextEncodeFlux'
 

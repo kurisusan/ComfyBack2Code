@@ -19,7 +19,15 @@ class OpenAIInputFilesOutputs(OutputSlots):
 class OpenAIInputFiles(Node[OpenAIInputFilesInputs, OpenAIInputFilesOutputs]):
     """
     Original name: OpenAIInputFiles
-    No description available.
+    Category: api node/text/OpenAI
+    Loads and prepares input files (text, pdf, etc.) to include as inputs for the OpenAI Chat Node. The files will be read by the OpenAI model when generating a response. 🛈 TIP: Can be chained together with other OpenAI Input File nodes.
+
+    Inputs:
+        - file (Any) (default: 'None')
+          Input files to include as context for the model. Only accepts text (.txt) and PDF (.pdf) files for now.
+
+    Outputs:
+        - openai_input_files (Any)
     """
     _original_name: str = 'OpenAIInputFiles'
 

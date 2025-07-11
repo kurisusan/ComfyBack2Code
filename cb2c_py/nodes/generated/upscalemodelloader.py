@@ -19,7 +19,14 @@ class UpscaleModelLoaderOutputs(OutputSlots):
 class UpscaleModelLoader(Node[UpscaleModelLoaderInputs, UpscaleModelLoaderOutputs]):
     """
     Original name: UpscaleModelLoader
-    No description available.
+    Category: loaders
+    
+
+    Inputs:
+        - model_name (str)
+
+    Outputs:
+        - upscale_model (Any)
     """
     _original_name: str = 'UpscaleModelLoader'
 

@@ -19,7 +19,15 @@ class LoadImageSetFromFolderNodeOutputs(OutputSlots):
 class LoadImageSetFromFolderNode(Node[LoadImageSetFromFolderNodeInputs, LoadImageSetFromFolderNodeOutputs]):
     """
     Original name: LoadImageSetFromFolderNode
-    No description available.
+    Category: loaders
+    Loads a batch of images from a directory for training.
+
+    Inputs:
+        - folder (str)
+          The folder to load images from.
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'LoadImageSetFromFolderNode'
 

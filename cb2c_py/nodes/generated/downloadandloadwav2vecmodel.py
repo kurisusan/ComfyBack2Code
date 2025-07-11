@@ -23,7 +23,17 @@ class DownloadAndLoadWav2VecModelOutputs(OutputSlots):
 class DownloadAndLoadWav2VecModel(Node[DownloadAndLoadWav2VecModelInputs, DownloadAndLoadWav2VecModelOutputs]):
     """
     Original name: DownloadAndLoadWav2VecModel
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - model (str)
+        - base_precision (str) (default: 'fp16')
+        - load_device (str) (default: 'main_device')
+          Initial device to load the model to, NOT recommended with the larger models unless you have 48GB+ VRAM
+
+    Outputs:
+        - wav2vec_model (Any)
     """
     _original_name: str = 'DownloadAndLoadWav2VecModel'
 

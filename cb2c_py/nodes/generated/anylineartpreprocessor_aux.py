@@ -19,7 +19,14 @@ class AnyLineArtPreprocessor_auxOutputs(OutputSlots):
 class AnyLineArtPreprocessor_aux(Node[AnyLineArtPreprocessor_auxInputs, AnyLineArtPreprocessor_auxOutputs]):
     """
     Original name: AnyLineArtPreprocessor_aux
-    No description available.
+    Category: ControlNet Preprocessors/Line Extractors
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'AnyLineArtPreprocessor_aux'
 

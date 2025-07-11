@@ -21,7 +21,15 @@ class LatentApplyOperationCFGOutputs(OutputSlots):
 class LatentApplyOperationCFG(Node[LatentApplyOperationCFGInputs, LatentApplyOperationCFGOutputs]):
     """
     Original name: LatentApplyOperationCFG
-    No description available.
+    Category: latent/advanced/operations
+    
+
+    Inputs:
+        - model (Model)
+        - operation (Any)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'LatentApplyOperationCFG'
 

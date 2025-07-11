@@ -45,7 +45,74 @@ class SplineEditorOutputs(OutputSlots):
 class SplineEditor(Node[SplineEditorInputs, SplineEditorOutputs]):
     """
     Original name: SplineEditor
-    No description available.
+    Category: KJNodes/weights
+    
+# WORK IN PROGRESS  
+Do not count on this as part of your workflow yet,  
+probably contains lots of bugs and stability is not  
+guaranteed!!  
+  
+## Graphical editor to create values for various   
+## schedules and/or mask batches.  
+
+**Shift + click** to add control point at end.
+**Ctrl + click** to add control point (subdivide) between two points.  
+**Right click on a point** to delete it.    
+Note that you can't delete from start/end.  
+  
+Right click on canvas for context menu:  
+NEW!:
+- Add new spline
+    - Creates a new spline on same canvas, currently these paths are only outputed  
+      as coordinates.
+- Add single point
+    - Creates a single point that only returns it's current position coords  
+- Delete spline
+    - Deletes the currently selected spline, you can select a spline by clicking on   
+    it's path, or cycle through them with the 'Next spline' -option.  
+
+These are purely visual options, doesn't affect the output:  
+ - Toggle handles visibility
+ - Display sample points: display the points to be returned.  
+
+**points_to_sample** value sets the number of samples  
+returned from the **drawn spline itself**, this is independent from the  
+actual control points, so the interpolation type matters.  
+sampling_method: 
+ - time: samples along the time axis, used for schedules  
+ - path: samples along the path itself, useful for coordinates  
+ - controlpoints: samples only the control points themselves  
+
+output types:
+ - mask batch  
+        example compatible nodes: anything that takes masks  
+ - list of floats
+        example compatible nodes: IPAdapter weights  
+ - pandas series
+        example compatible nodes: anything that takes Fizz'  
+        nodes Batch Value Schedule  
+ - torch tensor  
+        example compatible nodes: unknown
+
+
+    Inputs:
+        - points_store (str)
+        - coordinates (str)
+        - mask_width (int) (default: 512)
+        - mask_height (int) (default: 512)
+        - points_to_sample (int) (default: 16)
+        - sampling_method (str) (default: 'time')
+        - interpolation (str) (default: 'cardinal')
+        - tension (float) (default: 0.5)
+        - repeat_output (int) (default: 1)
+        - float_output_type (str) (default: 'list')
+
+    Outputs:
+        - mask (Image)
+        - coord_str (str)
+        - float (float)
+        - count (int)
+        - normalized_str (str)
     """
     _original_name: str = 'SplineEditor'
 

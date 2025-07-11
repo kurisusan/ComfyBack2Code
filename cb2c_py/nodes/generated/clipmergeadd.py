@@ -21,7 +21,15 @@ class CLIPMergeAddOutputs(OutputSlots):
 class CLIPMergeAdd(Node[CLIPMergeAddInputs, CLIPMergeAddOutputs]):
     """
     Original name: CLIPMergeAdd
-    No description available.
+    Category: advanced/model_merging
+    
+
+    Inputs:
+        - clip1 (Clip)
+        - clip2 (Clip)
+
+    Outputs:
+        - clip (Clip)
     """
     _original_name: str = 'CLIPMergeAdd'
 

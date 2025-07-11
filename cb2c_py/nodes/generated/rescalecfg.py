@@ -21,7 +21,15 @@ class RescaleCFGOutputs(OutputSlots):
 class RescaleCFG(Node[RescaleCFGInputs, RescaleCFGOutputs]):
     """
     Original name: RescaleCFG
-    No description available.
+    Category: advanced/model
+    
+
+    Inputs:
+        - model (Model)
+        - multiplier (float) (default: 0.7)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'RescaleCFG'
 

@@ -37,7 +37,28 @@ class WanVideoLoraSelectMultiOutputs(OutputSlots):
 class WanVideoLoraSelectMulti(Node[WanVideoLoraSelectMultiInputs, WanVideoLoraSelectMultiOutputs]):
     """
     Original name: WanVideoLoraSelectMulti
-    No description available.
+    Category: WanVideoWrapper
+    Select a LoRA model from ComfyUI/models/loras
+
+    Inputs:
+        - lora_0 (str) (default: 'none')
+        - strength_0 (float) (default: 1.0)
+          LORA strength, set to 0.0 to unmerge the LORA
+        - lora_1 (str) (default: 'none')
+        - strength_1 (float) (default: 1.0)
+          LORA strength, set to 0.0 to unmerge the LORA
+        - lora_2 (str) (default: 'none')
+        - strength_2 (float) (default: 1.0)
+          LORA strength, set to 0.0 to unmerge the LORA
+        - lora_3 (str) (default: 'none')
+        - strength_3 (float) (default: 1.0)
+          LORA strength, set to 0.0 to unmerge the LORA
+        - lora_4 (str) (default: 'none')
+        - strength_4 (float) (default: 1.0)
+          LORA strength, set to 0.0 to unmerge the LORA
+
+    Outputs:
+        - lora (Any)
     """
     _original_name: str = 'WanVideoLoraSelectMulti'
 

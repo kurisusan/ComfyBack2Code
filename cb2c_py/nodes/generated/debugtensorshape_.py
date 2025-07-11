@@ -19,7 +19,14 @@ class DebugTensorShape_Outputs(OutputSlots):
 class DebugTensorShape_(Node[DebugTensorShape_Inputs, DebugTensorShape_Outputs]):
     """
     Original name: DebugTensorShape+
-    No description available.
+    Category: essentials/utilities
+    
+
+    Inputs:
+        - tensor (Any)
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'DebugTensorShape+'
 

@@ -25,7 +25,19 @@ class ImageConcanateOutputs(OutputSlots):
 class ImageConcanate(Node[ImageConcanateInputs, ImageConcanateOutputs]):
     """
     Original name: ImageConcanate
-    No description available.
+    Category: KJNodes/image
+    
+Concatenates the image2 to image1 in the specified direction.
+
+
+    Inputs:
+        - image1 (Image)
+        - image2 (Image)
+        - direction (str) (default: 'right')
+        - match_image_size (bool) (default: True)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageConcanate'
 

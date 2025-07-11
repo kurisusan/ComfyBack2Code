@@ -9,7 +9,7 @@ from typing import Dict, Any, List, Union
 class VAELoaderInputs(InputSlots):
     vae_name: Slot[str]
     def __init__(self, node: "Node"):
-        self.vae_name = Slot[str](node, "vae_name", [])
+        self.vae_name = Slot[str](node, "vae_name", ['wan_2.1_vae.safetensors'])
 
 class VAELoaderOutputs(OutputSlots):
     vae: Slot[Vae]
@@ -19,7 +19,14 @@ class VAELoaderOutputs(OutputSlots):
 class VAELoader(Node[VAELoaderInputs, VAELoaderOutputs]):
     """
     Original name: VAELoader
-    No description available.
+    Category: loaders
+    
+
+    Inputs:
+        - vae_name (str)
+
+    Outputs:
+        - vae (Vae)
     """
     _original_name: str = 'VAELoader'
 

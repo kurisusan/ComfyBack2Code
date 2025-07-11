@@ -27,7 +27,21 @@ class LumaImageNodeOutputs(OutputSlots):
 class LumaImageNode(Node[LumaImageNodeInputs, LumaImageNodeOutputs]):
     """
     Original name: LumaImageNode
-    No description available.
+    Category: api node/image/Luma
+    Generates images synchronously based on prompt and aspect ratio.
+
+    Inputs:
+        - prompt (str) (default: '')
+          Prompt for the image generation
+        - model (str)
+        - aspect_ratio (str) (default: '16:9')
+        - seed (int) (default: 0)
+          Seed to determine if node should re-run; actual results are nondeterministic regardless of seed.
+        - style_image_weight (float) (default: 1.0)
+          Weight of style image. Ignored if no style_image provided.
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'LumaImageNode'
 

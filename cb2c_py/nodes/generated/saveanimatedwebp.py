@@ -29,7 +29,19 @@ class SaveAnimatedWEBPOutputs(OutputSlots):
 class SaveAnimatedWEBP(Node[SaveAnimatedWEBPInputs, SaveAnimatedWEBPOutputs]):
     """
     Original name: SaveAnimatedWEBP
-    No description available.
+    Category: image/animation
+    
+
+    Inputs:
+        - images (Image)
+        - filename_prefix (str) (default: 'ComfyUI')
+        - fps (float) (default: 6.0)
+        - lossless (bool) (default: True)
+        - quality (int) (default: 80)
+        - method (str)
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'SaveAnimatedWEBP'
 

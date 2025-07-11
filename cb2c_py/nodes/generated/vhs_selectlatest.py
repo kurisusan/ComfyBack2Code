@@ -21,7 +21,15 @@ class VHS_SelectLatestOutputs(OutputSlots):
 class VHS_SelectLatest(Node[VHS_SelectLatestInputs, VHS_SelectLatestOutputs]):
     """
     Original name: VHS_SelectLatest
-    No description available.
+    Category: Video Helper Suite 🎥🅥🅗🅢
+    Select Latest 🎥🅥🅗🅢<div style="font-size: 0.8em"><div id=VHS_shortdesc>Experimental virtual node to select the most recently modified file from a given folder</div></div><div style="font-size: 0.8em">Assists in the creation of workflows where outputs from one execution are used elsewhere in subsequent executions.</div><div style="font-size: 0.8em"><div vhs_title="Inputs" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Inputs: <div vhs_title="filename_prefix" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">filename_prefix: A path which can consist of a combination of folders and a prefix which candidate files must match</div></div><div vhs_title="filename_postfix" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">filename_postfix: A string which chich the selected file must end with. Useful for limiting to a target extension.</div></div></div></div><div vhs_title="Outputs" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Outputs: <div vhs_title="Filename" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Filename: A string representing a file path to the most recently modified file.</div></div></div></div></div>
+
+    Inputs:
+        - filename_prefix (str) (default: 'output/AnimateDiff')
+        - filename_postfix (str)
+
+    Outputs:
+        - filename (str)
     """
     _original_name: str = 'VHS_SelectLatest'
 

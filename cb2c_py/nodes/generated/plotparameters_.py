@@ -31,7 +31,20 @@ class PlotParameters_Outputs(OutputSlots):
 class PlotParameters_(Node[PlotParameters_Inputs, PlotParameters_Outputs]):
     """
     Original name: PlotParameters+
-    No description available.
+    Category: essentials/sampling
+    
+
+    Inputs:
+        - images (Image)
+        - params (Any)
+        - order_by (str)
+        - cols_value (str)
+        - cols_num (int) (default: -1)
+        - add_prompt (str)
+        - add_params (str) (default: 'true')
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'PlotParameters+'
 

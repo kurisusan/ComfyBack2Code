@@ -27,7 +27,18 @@ class Unimatch_OptFlowPreprocessorOutputs(OutputSlots):
 class Unimatch_OptFlowPreprocessor(Node[Unimatch_OptFlowPreprocessorInputs, Unimatch_OptFlowPreprocessorOutputs]):
     """
     Original name: Unimatch_OptFlowPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Optical Flow
+    
+
+    Inputs:
+        - image (Image)
+        - ckpt_name (str) (default: 'gmflow-scale2-regrefine6-mixdata.pth')
+        - backward_flow (bool) (default: False)
+        - bidirectional_flow (bool) (default: False)
+
+    Outputs:
+        - optical_flow (Any)
+        - preview_image (Image)
     """
     _original_name: str = 'Unimatch_OptFlowPreprocessor'
 

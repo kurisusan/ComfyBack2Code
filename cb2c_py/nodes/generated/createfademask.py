@@ -35,7 +35,22 @@ class CreateFadeMaskOutputs(OutputSlots):
 class CreateFadeMask(Node[CreateFadeMaskInputs, CreateFadeMaskOutputs]):
     """
     Original name: CreateFadeMask
-    No description available.
+    Category: KJNodes/deprecated
+    
+
+    Inputs:
+        - invert (bool) (default: False)
+        - frames (int) (default: 2)
+        - width (int) (default: 256)
+        - height (int) (default: 256)
+        - interpolation (str)
+        - start_level (float) (default: 1.0)
+        - midpoint_level (float) (default: 0.5)
+        - end_level (float) (default: 0.0)
+        - midpoint_frame (int) (default: 0)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'CreateFadeMask'
 

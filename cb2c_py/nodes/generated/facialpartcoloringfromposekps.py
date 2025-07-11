@@ -35,7 +35,22 @@ class FacialPartColoringFromPoseKpsOutputs(OutputSlots):
 class FacialPartColoringFromPoseKps(Node[FacialPartColoringFromPoseKpsInputs, FacialPartColoringFromPoseKpsOutputs]):
     """
     Original name: FacialPartColoringFromPoseKps
-    No description available.
+    Category: ControlNet Preprocessors/Pose Keypoint Postprocess
+    
+
+    Inputs:
+        - pose_kps (Any)
+        - mode (str) (default: 'polygon')
+        - skin (str) (default: 'rgb(0, 153, 255)')
+        - left_eye (str) (default: 'rgb(0, 204, 153)')
+        - right_eye (str) (default: 'rgb(255, 153, 0)')
+        - nose (str) (default: 'rgb(255, 102, 255)')
+        - upper_lip (str) (default: 'rgb(102, 0, 51)')
+        - inner_mouth (str) (default: 'rgb(255, 204, 255)')
+        - lower_lip (str) (default: 'rgb(255, 0, 102)')
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'FacialPartColoringFromPoseKps'
 

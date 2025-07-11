@@ -29,7 +29,19 @@ class NunchakuFluxPuLIDApplyV2Outputs(OutputSlots):
 class NunchakuFluxPuLIDApplyV2(Node[NunchakuFluxPuLIDApplyV2Inputs, NunchakuFluxPuLIDApplyV2Outputs]):
     """
     Original name: NunchakuFluxPuLIDApplyV2
-    No description available.
+    Category: Nunchaku
+    
+
+    Inputs:
+        - model (Model)
+        - pulid_pipline (Any)
+        - image (Image)
+        - weight (float) (default: 1.0)
+        - start_at (float) (default: 0.0)
+        - end_at (float) (default: 1.0)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'NunchakuFluxPuLIDApplyV2'
 

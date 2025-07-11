@@ -29,7 +29,19 @@ class ImagePadForOutpaintTargetSizeOutputs(OutputSlots):
 class ImagePadForOutpaintTargetSize(Node[ImagePadForOutpaintTargetSizeInputs, ImagePadForOutpaintTargetSizeOutputs]):
     """
     Original name: ImagePadForOutpaintTargetSize
-    No description available.
+    Category: image
+    
+
+    Inputs:
+        - image (Image)
+        - target_width (int) (default: 0)
+        - target_height (int) (default: 0)
+        - feathering (int) (default: 0)
+        - upscale_method (str)
+
+    Outputs:
+        - image (Image)
+        - mask (Image)
     """
     _original_name: str = 'ImagePadForOutpaintTargetSize'
 

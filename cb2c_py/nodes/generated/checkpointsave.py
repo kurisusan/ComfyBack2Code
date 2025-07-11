@@ -25,7 +25,17 @@ class CheckpointSaveOutputs(OutputSlots):
 class CheckpointSave(Node[CheckpointSaveInputs, CheckpointSaveOutputs]):
     """
     Original name: CheckpointSave
-    No description available.
+    Category: advanced/model_merging
+    
+
+    Inputs:
+        - model (Model)
+        - clip (Clip)
+        - vae (Vae)
+        - filename_prefix (str) (default: 'checkpoints/ComfyUI')
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'CheckpointSave'
 

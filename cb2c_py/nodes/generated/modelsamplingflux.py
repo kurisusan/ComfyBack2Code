@@ -27,7 +27,18 @@ class ModelSamplingFluxOutputs(OutputSlots):
 class ModelSamplingFlux(Node[ModelSamplingFluxInputs, ModelSamplingFluxOutputs]):
     """
     Original name: ModelSamplingFlux
-    No description available.
+    Category: advanced/model
+    
+
+    Inputs:
+        - model (Model)
+        - max_shift (float) (default: 1.15)
+        - base_shift (float) (default: 0.5)
+        - width (int) (default: 1024)
+        - height (int) (default: 1024)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'ModelSamplingFlux'
 

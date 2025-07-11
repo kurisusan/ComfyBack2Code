@@ -23,7 +23,16 @@ class LatentInterpolateOutputs(OutputSlots):
 class LatentInterpolate(Node[LatentInterpolateInputs, LatentInterpolateOutputs]):
     """
     Original name: LatentInterpolate
-    No description available.
+    Category: latent/advanced
+    
+
+    Inputs:
+        - samples1 (Latent)
+        - samples2 (Latent)
+        - ratio (float) (default: 1.0)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'LatentInterpolate'
 

@@ -27,7 +27,44 @@ class WanVideoTeaCacheOutputs(OutputSlots):
 class WanVideoTeaCache(Node[WanVideoTeaCacheInputs, WanVideoTeaCacheOutputs]):
     """
     Original name: WanVideoTeaCache
-    No description available.
+    Category: WanVideoWrapper
+    
+Patch WanVideo model to use TeaCache. Speeds up inference by caching the output and  
+applying it instead of doing the step.  Best results are achieved by choosing the  
+appropriate coefficients for the model. Early steps should never be skipped, with too  
+aggressive values this can happen and the motion suffers. Starting later can help with that too.   
+When NOT using coefficients, the threshold value should be  
+about 10 times smaller than the value used with coefficients.  
+
+Official recommended values https://github.com/ali-vilab/TeaCache/tree/main/TeaCache4Wan2.1:
+
+
+<pre style='font-family:monospace'>
++-------------------+--------+---------+--------+
+|       Model       |  Low   | Medium  |  High  |
++-------------------+--------+---------+--------+
+| Wan2.1 t2v 1.3B  |  0.05  |  0.07   |  0.08  |
+| Wan2.1 t2v 14B   |  0.14  |  0.15   |  0.20  |
+| Wan2.1 i2v 480P  |  0.13  |  0.19   |  0.26  |
+| Wan2.1 i2v 720P  |  0.18  |  0.20   |  0.30  |
++-------------------+--------+---------+--------+
+</pre> 
+
+
+    Inputs:
+        - rel_l1_thresh (float) (default: 0.3)
+          Higher values will make TeaCache more aggressive, faster, but may cause artifacts. Good value range for 1.3B: 0.05 - 0.08, for other models 0.15-0.30
+        - start_step (int) (default: 1)
+          Start percentage of the steps to apply TeaCache
+        - end_step (int) (default: -1)
+          End steps to apply TeaCache
+        - cache_device (str) (default: 'offload_device')
+          Device to cache to
+        - use_coefficients (bool) (default: True)
+          Use calculated coefficients for more accuracy. When enabled therel_l1_thresh should be about 10 times higher than without
+
+    Outputs:
+        - cache_args (Any)
     """
     _original_name: str = 'WanVideoTeaCache'
 

@@ -21,7 +21,15 @@ class ModelMergeAddOutputs(OutputSlots):
 class ModelMergeAdd(Node[ModelMergeAddInputs, ModelMergeAddOutputs]):
     """
     Original name: ModelMergeAdd
-    No description available.
+    Category: advanced/model_merging
+    
+
+    Inputs:
+        - model1 (Model)
+        - model2 (Model)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'ModelMergeAdd'
 

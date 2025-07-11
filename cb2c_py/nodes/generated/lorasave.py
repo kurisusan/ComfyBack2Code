@@ -25,7 +25,17 @@ class LoraSaveOutputs(OutputSlots):
 class LoraSave(Node[LoraSaveInputs, LoraSaveOutputs]):
     """
     Original name: LoraSave
-    No description available.
+    Category: _for_testing
+    
+
+    Inputs:
+        - filename_prefix (str) (default: 'loras/ComfyUI_extracted_lora')
+        - rank (int) (default: 8)
+        - lora_type (str)
+        - bias_diff (bool) (default: True)
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'LoraSave'
 

@@ -27,7 +27,18 @@ class ImageApplyLUT_Outputs(OutputSlots):
 class ImageApplyLUT_(Node[ImageApplyLUT_Inputs, ImageApplyLUT_Outputs]):
     """
     Original name: ImageApplyLUT+
-    No description available.
+    Category: essentials/image processing
+    
+
+    Inputs:
+        - image (Image)
+        - lut_file (str)
+        - gamma_correction (bool) (default: True)
+        - clip_values (bool) (default: True)
+        - strength (float) (default: 1.0)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageApplyLUT+'
 

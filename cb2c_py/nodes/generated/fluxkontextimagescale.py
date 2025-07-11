@@ -19,7 +19,14 @@ class FluxKontextImageScaleOutputs(OutputSlots):
 class FluxKontextImageScale(Node[FluxKontextImageScaleInputs, FluxKontextImageScaleOutputs]):
     """
     Original name: FluxKontextImageScale
-    No description available.
+    Category: advanced/conditioning/flux
+    This node resizes the image to one that is more optimal for flux kontext.
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'FluxKontextImageScale'
 

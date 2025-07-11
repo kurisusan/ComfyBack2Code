@@ -19,7 +19,14 @@ class Zoe_DepthAnythingPreprocessorOutputs(OutputSlots):
 class Zoe_DepthAnythingPreprocessor(Node[Zoe_DepthAnythingPreprocessorInputs, Zoe_DepthAnythingPreprocessorOutputs]):
     """
     Original name: Zoe_DepthAnythingPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Normal and Depth Estimators
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'Zoe_DepthAnythingPreprocessor'
 

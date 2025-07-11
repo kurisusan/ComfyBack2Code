@@ -23,7 +23,16 @@ class MaskFromBatch_Outputs(OutputSlots):
 class MaskFromBatch_(Node[MaskFromBatch_Inputs, MaskFromBatch_Outputs]):
     """
     Original name: MaskFromBatch+
-    No description available.
+    Category: essentials/mask batch
+    
+
+    Inputs:
+        - mask (Image)
+        - start (int) (default: 0)
+        - length (int) (default: 1)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'MaskFromBatch+'
 

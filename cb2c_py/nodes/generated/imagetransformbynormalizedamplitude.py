@@ -29,7 +29,23 @@ class ImageTransformByNormalizedAmplitudeOutputs(OutputSlots):
 class ImageTransformByNormalizedAmplitude(Node[ImageTransformByNormalizedAmplitudeInputs, ImageTransformByNormalizedAmplitudeOutputs]):
     """
     Original name: ImageTransformByNormalizedAmplitude
-    No description available.
+    Category: KJNodes/audio
+    
+Works as a bridge to the AudioScheduler -nodes:  
+https://github.com/a1lazydog/ComfyUI-AudioScheduler  
+Transforms image based on the normalized amplitude.
+
+
+    Inputs:
+        - normalized_amp (Any)
+        - zoom_scale (float) (default: 0.0)
+        - x_offset (int) (default: 0)
+        - y_offset (int) (default: 0)
+        - cumulative (bool) (default: False)
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageTransformByNormalizedAmplitude'
 

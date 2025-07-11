@@ -23,7 +23,16 @@ class ImageEnhanceDifference_Outputs(OutputSlots):
 class ImageEnhanceDifference_(Node[ImageEnhanceDifference_Inputs, ImageEnhanceDifference_Outputs]):
     """
     Original name: ImageEnhanceDifference+
-    No description available.
+    Category: essentials/image analysis
+    
+
+    Inputs:
+        - image1 (Image)
+        - image2 (Image)
+        - exponent (float) (default: 0.75)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageEnhanceDifference+'
 

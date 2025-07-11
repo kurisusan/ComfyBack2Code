@@ -27,7 +27,18 @@ class ConditioningStableAudioOutputs(OutputSlots):
 class ConditioningStableAudio(Node[ConditioningStableAudioInputs, ConditioningStableAudioOutputs]):
     """
     Original name: ConditioningStableAudio
-    No description available.
+    Category: conditioning
+    
+
+    Inputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - seconds_start (float) (default: 0.0)
+        - seconds_total (float) (default: 47.0)
+
+    Outputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
     """
     _original_name: str = 'ConditioningStableAudio'
 

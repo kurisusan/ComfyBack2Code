@@ -33,7 +33,21 @@ class ConditioningSetAreaPercentageVideoOutputs(OutputSlots):
 class ConditioningSetAreaPercentageVideo(Node[ConditioningSetAreaPercentageVideoInputs, ConditioningSetAreaPercentageVideoOutputs]):
     """
     Original name: ConditioningSetAreaPercentageVideo
-    No description available.
+    Category: conditioning
+    
+
+    Inputs:
+        - conditioning (Conditioning)
+        - width (float) (default: 1.0)
+        - height (float) (default: 1.0)
+        - temporal (float) (default: 1.0)
+        - x (float) (default: 0)
+        - y (float) (default: 0)
+        - z (float) (default: 0)
+        - strength (float) (default: 1.0)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'ConditioningSetAreaPercentageVideo'
 

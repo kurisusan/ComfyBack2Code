@@ -23,7 +23,20 @@ class ImageBatchRepeatInterleavingOutputs(OutputSlots):
 class ImageBatchRepeatInterleaving(Node[ImageBatchRepeatInterleavingInputs, ImageBatchRepeatInterleavingOutputs]):
     """
     Original name: ImageBatchRepeatInterleaving
-    No description available.
+    Category: KJNodes/image
+    
+Repeats each image in a batch by the specified number of times.  
+Example batch of 5 images: 0, 1 ,2, 3, 4  
+with repeats 2 becomes batch of 10 images: 0, 0, 1, 1, 2, 2, 3, 3, 4, 4  
+
+
+    Inputs:
+        - images (Image)
+        - repeats (int) (default: 1)
+
+    Outputs:
+        - image (Image)
+        - mask (Image)
     """
     _original_name: str = 'ImageBatchRepeatInterleaving'
 

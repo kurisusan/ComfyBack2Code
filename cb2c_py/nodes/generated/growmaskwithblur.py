@@ -35,7 +35,32 @@ class GrowMaskWithBlurOutputs(OutputSlots):
 class GrowMaskWithBlur(Node[GrowMaskWithBlurInputs, GrowMaskWithBlurOutputs]):
     """
     Original name: GrowMaskWithBlur
-    No description available.
+    Category: KJNodes/masking
+    
+# GrowMaskWithBlur
+- mask: Input mask or mask batch
+- expand: Expand or contract mask or mask batch by a given amount
+- incremental_expandrate: increase expand rate by a given amount per frame
+- tapered_corners: use tapered corners
+- flip_input: flip input mask
+- blur_radius: value higher than 0 will blur the mask
+- lerp_alpha: alpha value for interpolation between frames
+- decay_factor: decay value for interpolation between frames
+- fill_holes: fill holes in the mask (slow)
+
+    Inputs:
+        - mask (Image)
+        - expand (int) (default: 0)
+        - incremental_expandrate (float) (default: 0.0)
+        - tapered_corners (bool) (default: True)
+        - flip_input (bool) (default: False)
+        - blur_radius (float) (default: 0.0)
+        - lerp_alpha (float) (default: 1.0)
+        - decay_factor (float) (default: 1.0)
+
+    Outputs:
+        - mask (Image)
+        - mask_inverted (Image)
     """
     _original_name: str = 'GrowMaskWithBlur'
 

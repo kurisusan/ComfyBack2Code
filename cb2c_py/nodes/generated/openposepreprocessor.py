@@ -21,7 +21,15 @@ class OpenposePreprocessorOutputs(OutputSlots):
 class OpenposePreprocessor(Node[OpenposePreprocessorInputs, OpenposePreprocessorOutputs]):
     """
     Original name: OpenposePreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Faces and Poses Estimators
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
+        - pose_keypoint (Any)
     """
     _original_name: str = 'OpenposePreprocessor'
 

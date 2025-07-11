@@ -27,7 +27,18 @@ class CrossFadeImagesMultiOutputs(OutputSlots):
 class CrossFadeImagesMulti(Node[CrossFadeImagesMultiInputs, CrossFadeImagesMultiOutputs]):
     """
     Original name: CrossFadeImagesMulti
-    No description available.
+    Category: KJNodes/image
+    
+
+    Inputs:
+        - inputcount (int) (default: 2)
+        - image_1 (Image)
+        - image_2 (Image)
+        - interpolation (str)
+        - transitioning_frames (int) (default: 1)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'CrossFadeImagesMulti'
 

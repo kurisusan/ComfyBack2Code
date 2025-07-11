@@ -37,7 +37,23 @@ class VHS_VideoInfoOutputs(OutputSlots):
 class VHS_VideoInfo(Node[VHS_VideoInfoInputs, VHS_VideoInfoOutputs]):
     """
     Original name: VHS_VideoInfo
-    No description available.
+    Category: Video Helper Suite 🎥🅥🅗🅢
+    Video Info 🎥🅥🅗🅢<div style="font-size: 0.8em"><div id=VHS_shortdesc>Splits information on a video into a numerous outputs</div></div><div style="font-size: 0.8em"><div vhs_title="Inputs" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Inputs: <div vhs_title="video_info" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">video_info: A connection to a Load Video node</div></div></div></div><div vhs_title="Outputs" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Outputs: <div vhs_title="source_fps🟨" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">source_fps🟨: The frame rate of the video</div></div><div vhs_title="source_frame_count🟨" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">source_frame_count🟨: How many total frames the video contains before accounting for frame rate or select_every_nth</div></div><div vhs_title="source_duration🟨" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">source_duration🟨: The length of images just returned in seconds</div></div><div vhs_title="source_width🟨" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">source_width🟨: The width</div></div><div vhs_title="source_height🟨" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">source_height🟨: The height</div></div><div vhs_title="loaded_fps🟦" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">loaded_fps🟦: The frame rate after accounting for force_rate and select_every_nth. This output is of particular use as it can be connected to the converted frame_rate input of a Video Combine node to ensure audio remains synchronized.</div></div><div vhs_title="loaded_frame_count🟦" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">loaded_frame_count🟦: The number of frames returned by the current execution. Identical to the frame_count returned by the node itself</div></div><div vhs_title="loaded_duration🟦" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">loaded_duration🟦: The duration in seconds of returned images after accounting for frame_load_cap</div></div><div vhs_title="loaded_width🟦" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">loaded_width🟦: The width of the video after scaling. These coordinates are in image space even if loading to latent space</div></div><div vhs_title="loaded_height🟦" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">loaded_height🟦: The height of the video after scaling. These coordinates are in image space even if loading to latent space</div></div></div></div></div>
+
+    Inputs:
+        - video_info (Any)
+
+    Outputs:
+        - source_fps_ (float)
+        - source_frame_count_ (int)
+        - source_duration_ (float)
+        - source_width_ (int)
+        - source_height_ (int)
+        - loaded_fps_ (float)
+        - loaded_frame_count_ (int)
+        - loaded_duration_ (float)
+        - loaded_width_ (int)
+        - loaded_height_ (int)
     """
     _original_name: str = 'VHS_VideoInfo'
 

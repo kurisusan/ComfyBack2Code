@@ -25,7 +25,17 @@ class PolyexponentialSchedulerOutputs(OutputSlots):
 class PolyexponentialScheduler(Node[PolyexponentialSchedulerInputs, PolyexponentialSchedulerOutputs]):
     """
     Original name: PolyexponentialScheduler
-    No description available.
+    Category: sampling/custom_sampling/schedulers
+    
+
+    Inputs:
+        - steps (int) (default: 20)
+        - sigma_max (float) (default: 14.614642)
+        - sigma_min (float) (default: 0.0291675)
+        - rho (float) (default: 1.0)
+
+    Outputs:
+        - sigmas (Any)
     """
     _original_name: str = 'PolyexponentialScheduler'
 

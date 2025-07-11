@@ -35,7 +35,22 @@ class Context_Switch__rgthree_Outputs(OutputSlots):
 class Context_Switch__rgthree_(Node[Context_Switch__rgthree_Inputs, Context_Switch__rgthree_Outputs]):
     """
     Original name: Context Switch (rgthree)
-    No description available.
+    Category: rgthree
+    
+
+    Inputs:
+        No inputs.
+
+    Outputs:
+        - context (Any)
+        - model (Model)
+        - clip (Clip)
+        - vae (Vae)
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - latent (Latent)
+        - image (Image)
+        - seed (int)
     """
     _original_name: str = 'Context Switch (rgthree)'
 

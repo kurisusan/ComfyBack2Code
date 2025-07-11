@@ -27,7 +27,21 @@ class WanVideoATITracksVisualizeOutputs(OutputSlots):
 class WanVideoATITracksVisualize(Node[WanVideoATITracksVisualizeInputs, WanVideoATITracksVisualizeOutputs]):
     """
     Original name: WanVideoATITracksVisualize
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - images (Image)
+        - tracks (str)
+        - min_radius (int) (default: 1)
+          radius for the very first point (oldest)
+        - max_radius (int) (default: 6)
+          radius for the current point (newest)
+        - max_retain (int) (default: 50)
+          Maximum number of points to retain
+
+    Outputs:
+        - images (Image)
     """
     _original_name: str = 'WanVideoATITracksVisualize'
 

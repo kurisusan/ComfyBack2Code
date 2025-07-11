@@ -29,7 +29,19 @@ class WanVideoFlowEditOutputs(OutputSlots):
 class WanVideoFlowEdit(Node[WanVideoFlowEditInputs, WanVideoFlowEditOutputs]):
     """
     Original name: WanVideoFlowEdit
-    No description available.
+    Category: WanVideoWrapper
+    Flowedit options for WanVideo
+
+    Inputs:
+        - source_embeds (Any)
+        - skip_steps (int) (default: 4)
+        - drift_steps (int) (default: 0)
+        - drift_flow_shift (float) (default: 3.0)
+        - source_cfg (float) (default: 6.0)
+        - drift_cfg (float) (default: 6.0)
+
+    Outputs:
+        - flowedit_args (Any)
     """
     _original_name: str = 'WanVideoFlowEdit'
 

@@ -37,7 +37,23 @@ class SamplerDPMAdaptativeOutputs(OutputSlots):
 class SamplerDPMAdaptative(Node[SamplerDPMAdaptativeInputs, SamplerDPMAdaptativeOutputs]):
     """
     Original name: SamplerDPMAdaptative
-    No description available.
+    Category: sampling/custom_sampling/samplers
+    
+
+    Inputs:
+        - order (int) (default: 3)
+        - rtol (float) (default: 0.05)
+        - atol (float) (default: 0.0078)
+        - h_init (float) (default: 0.05)
+        - pcoeff (float) (default: 0.0)
+        - icoeff (float) (default: 1.0)
+        - dcoeff (float) (default: 0.0)
+        - accept_safety (float) (default: 0.81)
+        - eta (float) (default: 0.0)
+        - s_noise (float) (default: 1.0)
+
+    Outputs:
+        - sampler (Any)
     """
     _original_name: str = 'SamplerDPMAdaptative'
 

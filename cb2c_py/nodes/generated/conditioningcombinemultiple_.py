@@ -21,7 +21,15 @@ class ConditioningCombineMultiple_Outputs(OutputSlots):
 class ConditioningCombineMultiple_(Node[ConditioningCombineMultiple_Inputs, ConditioningCombineMultiple_Outputs]):
     """
     Original name: ConditioningCombineMultiple+
-    No description available.
+    Category: essentials/conditioning
+    
+
+    Inputs:
+        - conditioning_1 (Conditioning)
+        - conditioning_2 (Conditioning)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'ConditioningCombineMultiple+'
 

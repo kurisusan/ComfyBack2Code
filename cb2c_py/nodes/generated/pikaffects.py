@@ -27,7 +27,19 @@ class PikaffectsOutputs(OutputSlots):
 class Pikaffects(Node[PikaffectsInputs, PikaffectsOutputs]):
     """
     Original name: Pikaffects
-    No description available.
+    Category: api node/video/Pika
+    Generate a video with a specific Pikaffect. Supported Pikaffects: Cake-ify, Crumble, Crush, Decapitate, Deflate, Dissolve, Explode, Eye-pop, Inflate, Levitate, Melt, Peel, Poke, Squish, Ta-da, Tear
+
+    Inputs:
+        - image (Image)
+          The reference image to apply the Pikaffect to.
+        - pikaffect (Any) (default: 'Cake-ify')
+        - prompt_text (str) (default: None)
+        - negative_prompt (str) (default: None)
+        - seed (int) (default: None)
+
+    Outputs:
+        - video (Any)
     """
     _original_name: str = 'Pikaffects'
 

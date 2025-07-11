@@ -19,7 +19,14 @@ class OneFormer_COCO_SemSegPreprocessorOutputs(OutputSlots):
 class OneFormer_COCO_SemSegPreprocessor(Node[OneFormer_COCO_SemSegPreprocessorInputs, OneFormer_COCO_SemSegPreprocessorOutputs]):
     """
     Original name: OneFormer-COCO-SemSegPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Semantic Segmentation
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'OneFormer-COCO-SemSegPreprocessor'
 

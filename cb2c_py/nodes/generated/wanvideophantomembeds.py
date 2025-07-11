@@ -27,7 +27,23 @@ class WanVideoPhantomEmbedsOutputs(OutputSlots):
 class WanVideoPhantomEmbeds(Node[WanVideoPhantomEmbedsInputs, WanVideoPhantomEmbedsOutputs]):
     """
     Original name: WanVideoPhantomEmbeds
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - num_frames (int) (default: 81)
+          Number of frames to encode
+        - phantom_latent_1 (Latent)
+          reference latents for the phantom model
+        - phantom_cfg_scale (float) (default: 5.0)
+          CFG scale for the extra phantom cond pass
+        - phantom_start_percent (float) (default: 0.0)
+          Start percent of the phantom model
+        - phantom_end_percent (float) (default: 1.0)
+          End percent of the phantom model
+
+    Outputs:
+        - image_embeds (Any)
     """
     _original_name: str = 'WanVideoPhantomEmbeds'
 

@@ -43,7 +43,26 @@ class KSamplerAdvancedOutputs(OutputSlots):
 class KSamplerAdvanced(Node[KSamplerAdvancedInputs, KSamplerAdvancedOutputs]):
     """
     Original name: KSamplerAdvanced
-    No description available.
+    Category: sampling
+    
+
+    Inputs:
+        - model (Model)
+        - add_noise (str)
+        - noise_seed (int) (default: 0)
+        - steps (int) (default: 20)
+        - cfg (float) (default: 8.0)
+        - sampler_name (str)
+        - scheduler (str)
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - latent_image (Latent)
+        - start_at_step (int) (default: 0)
+        - end_at_step (int) (default: 10000)
+        - return_with_leftover_noise (str)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'KSamplerAdvanced'
 

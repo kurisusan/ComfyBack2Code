@@ -19,7 +19,14 @@ class StringToFloatListOutputs(OutputSlots):
 class StringToFloatList(Node[StringToFloatListInputs, StringToFloatListOutputs]):
     """
     Original name: StringToFloatList
-    No description available.
+    Category: KJNodes/misc
+    
+
+    Inputs:
+        - string (str) (default: '1, 2, 3')
+
+    Outputs:
+        - float (float)
     """
     _original_name: str = 'StringToFloatList'
 

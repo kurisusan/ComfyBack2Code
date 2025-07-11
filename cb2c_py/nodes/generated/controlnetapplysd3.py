@@ -35,7 +35,22 @@ class ControlNetApplySD3Outputs(OutputSlots):
 class ControlNetApplySD3(Node[ControlNetApplySD3Inputs, ControlNetApplySD3Outputs]):
     """
     Original name: ControlNetApplySD3
-    No description available.
+    Category: conditioning/controlnet
+    
+
+    Inputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - control_net (Any)
+        - vae (Vae)
+        - image (Image)
+        - strength (float) (default: 1.0)
+        - start_percent (float) (default: 0.0)
+        - end_percent (float) (default: 1.0)
+
+    Outputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
     """
     _original_name: str = 'ControlNetApplySD3'
 

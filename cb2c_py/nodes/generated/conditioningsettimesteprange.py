@@ -23,7 +23,16 @@ class ConditioningSetTimestepRangeOutputs(OutputSlots):
 class ConditioningSetTimestepRange(Node[ConditioningSetTimestepRangeInputs, ConditioningSetTimestepRangeOutputs]):
     """
     Original name: ConditioningSetTimestepRange
-    No description available.
+    Category: advanced/conditioning
+    
+
+    Inputs:
+        - conditioning (Conditioning)
+        - start (float) (default: 0.0)
+        - end (float) (default: 1.0)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'ConditioningSetTimestepRange'
 

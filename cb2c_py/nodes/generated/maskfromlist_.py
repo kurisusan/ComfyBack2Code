@@ -21,7 +21,15 @@ class MaskFromList_Outputs(OutputSlots):
 class MaskFromList_(Node[MaskFromList_Inputs, MaskFromList_Outputs]):
     """
     Original name: MaskFromList+
-    No description available.
+    Category: essentials/mask
+    
+
+    Inputs:
+        - width (int) (default: 32)
+        - height (int) (default: 32)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'MaskFromList+'
 

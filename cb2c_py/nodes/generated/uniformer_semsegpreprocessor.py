@@ -19,7 +19,14 @@ class UniFormer_SemSegPreprocessorOutputs(OutputSlots):
 class UniFormer_SemSegPreprocessor(Node[UniFormer_SemSegPreprocessorInputs, UniFormer_SemSegPreprocessorOutputs]):
     """
     Original name: UniFormer-SemSegPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Semantic Segmentation
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'UniFormer-SemSegPreprocessor'
 

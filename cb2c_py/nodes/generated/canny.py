@@ -23,7 +23,16 @@ class CannyOutputs(OutputSlots):
 class Canny(Node[CannyInputs, CannyOutputs]):
     """
     Original name: Canny
-    No description available.
+    Category: image/preprocessors
+    
+
+    Inputs:
+        - image (Image)
+        - low_threshold (float) (default: 0.4)
+        - high_threshold (float) (default: 0.8)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'Canny'
 

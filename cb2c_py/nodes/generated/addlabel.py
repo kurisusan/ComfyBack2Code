@@ -37,7 +37,29 @@ class AddLabelOutputs(OutputSlots):
 class AddLabel(Node[AddLabelInputs, AddLabelOutputs]):
     """
     Original name: AddLabel
-    No description available.
+    Category: KJNodes/text
+    
+Creates a new with the given text, and concatenates it to  
+either above or below the input image.  
+Note that this changes the input image's height!  
+Fonts are loaded from this folder:  
+ComfyUI/custom_nodes/ComfyUI-KJNodes/fonts
+
+
+    Inputs:
+        - image (Image)
+        - text_x (int) (default: 10)
+        - text_y (int) (default: 2)
+        - height (int) (default: 48)
+        - font_size (int) (default: 32)
+        - font_color (str) (default: 'white')
+        - label_color (str) (default: 'black')
+        - font (str)
+        - text (str) (default: 'Text')
+        - direction (str) (default: 'up')
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'AddLabel'
 

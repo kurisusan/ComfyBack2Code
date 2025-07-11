@@ -25,7 +25,17 @@ class GuidanceTimestepping_Outputs(OutputSlots):
 class GuidanceTimestepping_(Node[GuidanceTimestepping_Inputs, GuidanceTimestepping_Outputs]):
     """
     Original name: GuidanceTimestepping+
-    No description available.
+    Category: essentials/sampling
+    
+
+    Inputs:
+        - model (Model)
+        - value (float) (default: 2.0)
+        - start_at (float) (default: 0.2)
+        - end_at (float) (default: 0.8)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'GuidanceTimestepping+'
 

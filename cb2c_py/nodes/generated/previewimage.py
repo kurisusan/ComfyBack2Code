@@ -19,7 +19,14 @@ class PreviewImageOutputs(OutputSlots):
 class PreviewImage(Node[PreviewImageInputs, PreviewImageOutputs]):
     """
     Original name: PreviewImage
-    No description available.
+    Category: image
+    Saves the input images to your ComfyUI output directory.
+
+    Inputs:
+        - images (Image)
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'PreviewImage'
 

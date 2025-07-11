@@ -25,7 +25,21 @@ class GetImageSizeAndCountOutputs(OutputSlots):
 class GetImageSizeAndCount(Node[GetImageSizeAndCountInputs, GetImageSizeAndCountOutputs]):
     """
     Original name: GetImageSizeAndCount
-    No description available.
+    Category: KJNodes/image
+    
+Returns width, height and batch size of the image,  
+and passes it through unchanged.  
+
+
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
+        - width (int)
+        - height (int)
+        - count (int)
     """
     _original_name: str = 'GetImageSizeAndCount'
 

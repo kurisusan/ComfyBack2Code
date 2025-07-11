@@ -35,7 +35,22 @@ class ImageResize_Outputs(OutputSlots):
 class ImageResize_(Node[ImageResize_Inputs, ImageResize_Outputs]):
     """
     Original name: ImageResize+
-    No description available.
+    Category: essentials/image manipulation
+    
+
+    Inputs:
+        - image (Image)
+        - width (int) (default: 512)
+        - height (int) (default: 512)
+        - interpolation (str)
+        - method (str)
+        - condition (str)
+        - multiple_of (int) (default: 0)
+
+    Outputs:
+        - image (Image)
+        - width (int)
+        - height (int)
     """
     _original_name: str = 'ImageResize+'
 

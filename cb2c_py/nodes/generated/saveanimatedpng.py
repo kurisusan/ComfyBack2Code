@@ -25,7 +25,17 @@ class SaveAnimatedPNGOutputs(OutputSlots):
 class SaveAnimatedPNG(Node[SaveAnimatedPNGInputs, SaveAnimatedPNGOutputs]):
     """
     Original name: SaveAnimatedPNG
-    No description available.
+    Category: image/animation
+    
+
+    Inputs:
+        - images (Image)
+        - filename_prefix (str) (default: 'ComfyUI')
+        - fps (float) (default: 6.0)
+        - compress_level (int) (default: 4)
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'SaveAnimatedPNG'
 

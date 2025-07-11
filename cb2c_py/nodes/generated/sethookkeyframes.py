@@ -19,7 +19,14 @@ class SetHookKeyframesOutputs(OutputSlots):
 class SetHookKeyframes(Node[SetHookKeyframesInputs, SetHookKeyframesOutputs]):
     """
     Original name: SetHookKeyframes
-    No description available.
+    Category: advanced/hooks/scheduling
+    
+
+    Inputs:
+        - hooks (Any)
+
+    Outputs:
+        - hooks (Any)
     """
     _original_name: str = 'SetHookKeyframes'
 

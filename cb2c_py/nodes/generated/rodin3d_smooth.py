@@ -19,7 +19,14 @@ class Rodin3D_SmoothOutputs(OutputSlots):
 class Rodin3D_Smooth(Node[Rodin3D_SmoothInputs, Rodin3D_SmoothOutputs]):
     """
     Original name: Rodin3D_Smooth
-    No description available.
+    Category: api node/3d/Rodin
+    Generate 3D Assets using Rodin API
+
+    Inputs:
+        - Images (Image)
+
+    Outputs:
+        - _3d_model_path (str)
     """
     _original_name: str = 'Rodin3D_Smooth'
 

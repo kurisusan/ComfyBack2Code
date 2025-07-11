@@ -35,7 +35,22 @@ class WanFunControlToVideoOutputs(OutputSlots):
 class WanFunControlToVideo(Node[WanFunControlToVideoInputs, WanFunControlToVideoOutputs]):
     """
     Original name: WanFunControlToVideo
-    No description available.
+    Category: conditioning/video_models
+    
+
+    Inputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - vae (Vae)
+        - width (int) (default: 832)
+        - height (int) (default: 480)
+        - length (int) (default: 81)
+        - batch_size (int) (default: 1)
+
+    Outputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - latent (Latent)
     """
     _original_name: str = 'WanFunControlToVideo'
 

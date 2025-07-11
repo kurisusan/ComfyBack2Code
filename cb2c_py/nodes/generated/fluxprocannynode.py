@@ -35,7 +35,30 @@ class FluxProCannyNodeOutputs(OutputSlots):
 class FluxProCannyNode(Node[FluxProCannyNodeInputs, FluxProCannyNodeOutputs]):
     """
     Original name: FluxProCannyNode
-    No description available.
+    Category: api node/image/BFL
+    Generate image using a control image (canny).
+
+    Inputs:
+        - control_image (Image)
+        - prompt (str) (default: '')
+          Prompt for the image generation
+        - prompt_upsampling (bool) (default: False)
+          Whether to perform upsampling on the prompt. If active, automatically modifies the prompt for more creative generation, but results are nondeterministic (same seed will not produce exactly the same result).
+        - canny_low_threshold (float) (default: 0.1)
+          Low threshold for Canny edge detection; ignored if skip_processing is True
+        - canny_high_threshold (float) (default: 0.4)
+          High threshold for Canny edge detection; ignored if skip_processing is True
+        - skip_preprocessing (bool) (default: False)
+          Whether to skip preprocessing; set to True if control_image already is canny-fied, False if it is a raw image.
+        - guidance (float) (default: 30)
+          Guidance strength for the image generation process
+        - steps (int) (default: 50)
+          Number of steps for the image generation process
+        - seed (int) (default: 0)
+          The random seed used for creating the noise.
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'FluxProCannyNode'
 

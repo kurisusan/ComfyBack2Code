@@ -23,7 +23,18 @@ class WanVideoVACEStartToEndFrameOutputs(OutputSlots):
 class WanVideoVACEStartToEndFrame(Node[WanVideoVACEStartToEndFrameInputs, WanVideoVACEStartToEndFrameOutputs]):
     """
     Original name: WanVideoVACEStartToEndFrame
-    No description available.
+    Category: WanVideoWrapper
+    Helper node to create start/end frame batch and masks for VACE
+
+    Inputs:
+        - num_frames (int) (default: 81)
+          Number of frames to encode
+        - empty_frame_level (float) (default: 0.5)
+          White level of empty frame to use
+
+    Outputs:
+        - images (Image)
+        - masks (Image)
     """
     _original_name: str = 'WanVideoVACEStartToEndFrame'
 

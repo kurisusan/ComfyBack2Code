@@ -33,7 +33,21 @@ class MaskBoundingBox_Outputs(OutputSlots):
 class MaskBoundingBox_(Node[MaskBoundingBox_Inputs, MaskBoundingBox_Outputs]):
     """
     Original name: MaskBoundingBox+
-    No description available.
+    Category: essentials/mask
+    
+
+    Inputs:
+        - mask (Image)
+        - padding (int) (default: 0)
+        - blur (int) (default: 0)
+
+    Outputs:
+        - mask (Image)
+        - image (Image)
+        - x (int)
+        - y (int)
+        - width (int)
+        - height (int)
     """
     _original_name: str = 'MaskBoundingBox+'
 

@@ -21,7 +21,15 @@ class ImageFlip_Outputs(OutputSlots):
 class ImageFlip_(Node[ImageFlip_Inputs, ImageFlip_Outputs]):
     """
     Original name: ImageFlip+
-    No description available.
+    Category: essentials/image manipulation
+    
+
+    Inputs:
+        - image (Image)
+        - axis (str)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageFlip+'
 

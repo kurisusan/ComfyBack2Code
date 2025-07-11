@@ -21,7 +21,15 @@ class LatentApplyOperationOutputs(OutputSlots):
 class LatentApplyOperation(Node[LatentApplyOperationInputs, LatentApplyOperationOutputs]):
     """
     Original name: LatentApplyOperation
-    No description available.
+    Category: latent/advanced/operations
+    
+
+    Inputs:
+        - samples (Latent)
+        - operation (Any)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'LatentApplyOperation'
 

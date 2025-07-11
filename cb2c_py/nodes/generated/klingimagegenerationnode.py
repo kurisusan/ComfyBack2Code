@@ -33,7 +33,26 @@ class KlingImageGenerationNodeOutputs(OutputSlots):
 class KlingImageGenerationNode(Node[KlingImageGenerationNodeInputs, KlingImageGenerationNodeOutputs]):
     """
     Original name: KlingImageGenerationNode
-    No description available.
+    Category: api node/image/Kling
+    Kling Image Generation Node. Generate an image from a text prompt with an optional reference image.
+
+    Inputs:
+        - prompt (str)
+          Positive text prompt
+        - negative_prompt (str) (default: None)
+          Negative text prompt
+        - image_type (Any) (default: 'None')
+        - image_fidelity (float) (default: 0.5)
+          Reference intensity for user-uploaded images
+        - human_fidelity (float) (default: 0.45)
+          Subject reference similarity
+        - model_name (Any) (default: 'kling-v1')
+        - aspect_ratio (Any) (default: '16:9')
+        - n (int) (default: 1)
+          Number of generated images
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'KlingImageGenerationNode'
 

@@ -35,7 +35,24 @@ class TransitionImagesMultiOutputs(OutputSlots):
 class TransitionImagesMulti(Node[TransitionImagesMultiInputs, TransitionImagesMultiOutputs]):
     """
     Original name: TransitionImagesMulti
-    No description available.
+    Category: KJNodes/image
+    
+Creates transitions between images.
+
+
+    Inputs:
+        - inputcount (int) (default: 2)
+        - image_1 (Image)
+        - image_2 (Image)
+        - interpolation (str)
+        - transition_type (str)
+        - transitioning_frames (int) (default: 1)
+        - blur_radius (float) (default: 0.0)
+        - reverse (bool) (default: False)
+        - device (str) (default: 'CPU')
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'TransitionImagesMulti'
 

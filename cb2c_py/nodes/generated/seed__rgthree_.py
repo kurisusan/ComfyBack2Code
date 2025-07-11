@@ -19,7 +19,14 @@ class Seed__rgthree_Outputs(OutputSlots):
 class Seed__rgthree_(Node[Seed__rgthree_Inputs, Seed__rgthree_Outputs]):
     """
     Original name: Seed (rgthree)
-    No description available.
+    Category: rgthree
+    
+
+    Inputs:
+        - seed (int) (default: 0)
+
+    Outputs:
+        - seed (int)
     """
     _original_name: str = 'Seed (rgthree)'
 

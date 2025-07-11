@@ -33,7 +33,21 @@ class GLIGENTextBoxApplyOutputs(OutputSlots):
 class GLIGENTextBoxApply(Node[GLIGENTextBoxApplyInputs, GLIGENTextBoxApplyOutputs]):
     """
     Original name: GLIGENTextBoxApply
-    No description available.
+    Category: conditioning/gligen
+    
+
+    Inputs:
+        - conditioning_to (Conditioning)
+        - clip (Clip)
+        - gligen_textbox_model (Any)
+        - text (str)
+        - width (int) (default: 64)
+        - height (int) (default: 64)
+        - x (int) (default: 0)
+        - y (int) (default: 0)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'GLIGENTextBoxApply'
 

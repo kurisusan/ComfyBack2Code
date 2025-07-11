@@ -27,7 +27,18 @@ class MaskFromColor_Outputs(OutputSlots):
 class MaskFromColor_(Node[MaskFromColor_Inputs, MaskFromColor_Outputs]):
     """
     Original name: MaskFromColor+
-    No description available.
+    Category: essentials/mask
+    
+
+    Inputs:
+        - image (Image)
+        - red (int) (default: 255)
+        - green (int) (default: 255)
+        - blue (int) (default: 255)
+        - threshold (int) (default: 0)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'MaskFromColor+'
 

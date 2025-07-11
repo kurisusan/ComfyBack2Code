@@ -21,7 +21,15 @@ class ConditioningSetAreaStrengthOutputs(OutputSlots):
 class ConditioningSetAreaStrength(Node[ConditioningSetAreaStrengthInputs, ConditioningSetAreaStrengthOutputs]):
     """
     Original name: ConditioningSetAreaStrength
-    No description available.
+    Category: conditioning
+    
+
+    Inputs:
+        - conditioning (Conditioning)
+        - strength (float) (default: 1.0)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'ConditioningSetAreaStrength'
 

@@ -37,7 +37,26 @@ class CreateTextOnPathOutputs(OutputSlots):
 class CreateTextOnPath(Node[CreateTextOnPathInputs, CreateTextOnPathOutputs]):
     """
     Original name: CreateTextOnPath
-    No description available.
+    Category: KJNodes/masking/generate
+    
+Creates a mask or batch of masks with the specified text.  
+Locations are center locations.  
+
+
+    Inputs:
+        - coordinates (str)
+        - text (str) (default: 'text')
+        - frame_width (int) (default: 512)
+        - frame_height (int) (default: 512)
+        - font (str)
+        - font_size (int) (default: 42)
+        - alignment (str) (default: 'center')
+        - text_color (str) (default: 'white')
+
+    Outputs:
+        - image (Image)
+        - mask (Image)
+        - mask_inverted (Image)
     """
     _original_name: str = 'CreateTextOnPath'
 

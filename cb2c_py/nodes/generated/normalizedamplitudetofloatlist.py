@@ -19,7 +19,18 @@ class NormalizedAmplitudeToFloatListOutputs(OutputSlots):
 class NormalizedAmplitudeToFloatList(Node[NormalizedAmplitudeToFloatListInputs, NormalizedAmplitudeToFloatListOutputs]):
     """
     Original name: NormalizedAmplitudeToFloatList
-    No description available.
+    Category: KJNodes/audio
+    
+Works as a bridge to the AudioScheduler -nodes:  
+https://github.com/a1lazydog/ComfyUI-AudioScheduler  
+Creates a list of floats from the normalized amplitude.
+
+
+    Inputs:
+        - normalized_amp (Any)
+
+    Outputs:
+        - float (float)
     """
     _original_name: str = 'NormalizedAmplitudeToFloatList'
 

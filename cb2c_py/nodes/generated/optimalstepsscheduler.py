@@ -23,7 +23,16 @@ class OptimalStepsSchedulerOutputs(OutputSlots):
 class OptimalStepsScheduler(Node[OptimalStepsSchedulerInputs, OptimalStepsSchedulerOutputs]):
     """
     Original name: OptimalStepsScheduler
-    No description available.
+    Category: sampling/custom_sampling/schedulers
+    
+
+    Inputs:
+        - model_type (str)
+        - steps (int) (default: 20)
+        - denoise (float) (default: 1.0)
+
+    Outputs:
+        - sigmas (Any)
     """
     _original_name: str = 'OptimalStepsScheduler'
 

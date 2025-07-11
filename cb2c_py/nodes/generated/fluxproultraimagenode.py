@@ -27,7 +27,23 @@ class FluxProUltraImageNodeOutputs(OutputSlots):
 class FluxProUltraImageNode(Node[FluxProUltraImageNodeInputs, FluxProUltraImageNodeOutputs]):
     """
     Original name: FluxProUltraImageNode
-    No description available.
+    Category: api node/image/BFL
+    Generates images using Flux Pro 1.1 Ultra via api based on prompt and resolution.
+
+    Inputs:
+        - prompt (str) (default: '')
+          Prompt for the image generation
+        - prompt_upsampling (bool) (default: False)
+          Whether to perform upsampling on the prompt. If active, automatically modifies the prompt for more creative generation, but results are nondeterministic (same seed will not produce exactly the same result).
+        - seed (int) (default: 0)
+          The random seed used for creating the noise.
+        - aspect_ratio (str) (default: '16:9')
+          Aspect ratio of image; must be between 1:4 and 4:1.
+        - raw (bool) (default: False)
+          When True, generate less processed, more natural-looking images.
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'FluxProUltraImageNode'
 

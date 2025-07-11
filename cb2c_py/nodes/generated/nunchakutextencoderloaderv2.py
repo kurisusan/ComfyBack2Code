@@ -13,8 +13,8 @@ class NunchakuTextEncoderLoaderV2Inputs(InputSlots):
     t5_min_length: Slot[int]
     def __init__(self, node: "Node"):
         self.model_type = Slot[str](node, "model_type", ['flux.1'])
-        self.text_encoder1 = Slot[str](node, "text_encoder1", [])
-        self.text_encoder2 = Slot[str](node, "text_encoder2", [])
+        self.text_encoder1 = Slot[str](node, "text_encoder1", ['umt5_xxl_fp8_e4m3fn_scaled.safetensors'])
+        self.text_encoder2 = Slot[str](node, "text_encoder2", ['umt5_xxl_fp8_e4m3fn_scaled.safetensors'])
         self.t5_min_length = Slot[int](node, "t5_min_length", 'INT')
 
 class NunchakuTextEncoderLoaderV2Outputs(OutputSlots):
@@ -25,7 +25,17 @@ class NunchakuTextEncoderLoaderV2Outputs(OutputSlots):
 class NunchakuTextEncoderLoaderV2(Node[NunchakuTextEncoderLoaderV2Inputs, NunchakuTextEncoderLoaderV2Outputs]):
     """
     Original name: NunchakuTextEncoderLoaderV2
-    No description available.
+    Category: Nunchaku
+    
+
+    Inputs:
+        - model_type (str)
+        - text_encoder1 (str)
+        - text_encoder2 (str)
+        - t5_min_length (int) (default: 512)
+
+    Outputs:
+        - clip (Clip)
     """
     _original_name: str = 'NunchakuTextEncoderLoaderV2'
 

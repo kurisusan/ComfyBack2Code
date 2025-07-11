@@ -27,7 +27,21 @@ class EmptyLatentImageCustomPresetsOutputs(OutputSlots):
 class EmptyLatentImageCustomPresets(Node[EmptyLatentImageCustomPresetsInputs, EmptyLatentImageCustomPresetsOutputs]):
     """
     Original name: EmptyLatentImageCustomPresets
-    No description available.
+    Category: KJNodes/latents
+    
+Generates an empty latent image with the specified dimensions.  
+The choices are loaded from 'custom_dimensions.json' in the nodes folder.
+
+
+    Inputs:
+        - dimensions (str)
+        - invert (bool) (default: False)
+        - batch_size (int) (default: 1)
+
+    Outputs:
+        - latent (Latent)
+        - width (int)
+        - height (int)
     """
     _original_name: str = 'EmptyLatentImageCustomPresets'
 

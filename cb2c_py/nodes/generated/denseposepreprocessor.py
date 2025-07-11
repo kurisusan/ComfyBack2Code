@@ -19,7 +19,14 @@ class DensePosePreprocessorOutputs(OutputSlots):
 class DensePosePreprocessor(Node[DensePosePreprocessorInputs, DensePosePreprocessorOutputs]):
     """
     Original name: DensePosePreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Faces and Poses Estimators
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'DensePosePreprocessor'
 

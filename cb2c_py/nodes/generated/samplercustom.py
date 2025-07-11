@@ -37,7 +37,23 @@ class SamplerCustomOutputs(OutputSlots):
 class SamplerCustom(Node[SamplerCustomInputs, SamplerCustomOutputs]):
     """
     Original name: SamplerCustom
-    No description available.
+    Category: sampling/custom_sampling
+    
+
+    Inputs:
+        - model (Model)
+        - add_noise (bool) (default: True)
+        - noise_seed (int) (default: 0)
+        - cfg (float) (default: 8.0)
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - sampler (Any)
+        - sigmas (Any)
+        - latent_image (Latent)
+
+    Outputs:
+        - output (Latent)
+        - denoised_output (Latent)
     """
     _original_name: str = 'SamplerCustom'
 

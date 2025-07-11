@@ -23,7 +23,16 @@ class StringConcatenateOutputs(OutputSlots):
 class StringConcatenate(Node[StringConcatenateInputs, StringConcatenateOutputs]):
     """
     Original name: StringConcatenate
-    No description available.
+    Category: utils/string
+    
+
+    Inputs:
+        - string_a (str)
+        - string_b (str)
+        - delimiter (str) (default: '')
+
+    Outputs:
+        - string (str)
     """
     _original_name: str = 'StringConcatenate'
 

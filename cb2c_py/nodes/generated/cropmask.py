@@ -27,7 +27,18 @@ class CropMaskOutputs(OutputSlots):
 class CropMask(Node[CropMaskInputs, CropMaskOutputs]):
     """
     Original name: CropMask
-    No description available.
+    Category: mask
+    
+
+    Inputs:
+        - mask (Image)
+        - x (int) (default: 0)
+        - y (int) (default: 0)
+        - width (int) (default: 512)
+        - height (int) (default: 512)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'CropMask'
 

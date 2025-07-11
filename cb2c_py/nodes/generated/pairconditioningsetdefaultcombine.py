@@ -27,7 +27,18 @@ class PairConditioningSetDefaultCombineOutputs(OutputSlots):
 class PairConditioningSetDefaultCombine(Node[PairConditioningSetDefaultCombineInputs, PairConditioningSetDefaultCombineOutputs]):
     """
     Original name: PairConditioningSetDefaultCombine
-    No description available.
+    Category: advanced/hooks/cond pair
+    
+
+    Inputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - positive_DEFAULT (Conditioning)
+        - negative_DEFAULT (Conditioning)
+
+    Outputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
     """
     _original_name: str = 'PairConditioningSetDefaultCombine'
 

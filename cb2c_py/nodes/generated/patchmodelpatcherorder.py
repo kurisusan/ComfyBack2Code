@@ -23,7 +23,18 @@ class PatchModelPatcherOrderOutputs(OutputSlots):
 class PatchModelPatcherOrder(Node[PatchModelPatcherOrderInputs, PatchModelPatcherOrderOutputs]):
     """
     Original name: PatchModelPatcherOrder
-    No description available.
+    Category: KJNodes/experimental
+    Patch the comfy patch_model function patching order, useful for torch.compile (used as object_patch) as it should come last if you want to use LoRAs with compile
+
+    Inputs:
+        - model (Model)
+        - patch_order (str) (default: 'weight_patch_first')
+          Patch the comfy patch_model function to load weight patches (LoRAs) before compiling the model
+        - full_load (str) (default: 'auto')
+          Disabling may help with memory issues when loading large models, when changing this you should probably force model reload to avoid issues!
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'PatchModelPatcherOrder'
 

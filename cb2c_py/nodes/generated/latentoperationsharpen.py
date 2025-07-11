@@ -23,7 +23,16 @@ class LatentOperationSharpenOutputs(OutputSlots):
 class LatentOperationSharpen(Node[LatentOperationSharpenInputs, LatentOperationSharpenOutputs]):
     """
     Original name: LatentOperationSharpen
-    No description available.
+    Category: latent/advanced/operations
+    
+
+    Inputs:
+        - sharpen_radius (int) (default: 9)
+        - sigma (float) (default: 1.0)
+        - alpha (float) (default: 0.1)
+
+    Outputs:
+        - latent_operation (Any)
     """
     _original_name: str = 'LatentOperationSharpen'
 

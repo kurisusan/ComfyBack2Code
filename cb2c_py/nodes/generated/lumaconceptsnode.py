@@ -25,7 +25,17 @@ class LumaConceptsNodeOutputs(OutputSlots):
 class LumaConceptsNode(Node[LumaConceptsNodeInputs, LumaConceptsNodeOutputs]):
     """
     Original name: LumaConceptsNode
-    No description available.
+    Category: api node/video/Luma
+    Holds one or more Camera Concepts for use with Luma Text to Video and Luma Image to Video nodes.
+
+    Inputs:
+        - concept1 (str)
+        - concept2 (str)
+        - concept3 (str)
+        - concept4 (str)
+
+    Outputs:
+        - luma_concepts (Any)
     """
     _original_name: str = 'LumaConceptsNode'
 

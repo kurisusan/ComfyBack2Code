@@ -21,7 +21,15 @@ class TripoImageToModelNodeOutputs(OutputSlots):
 class TripoImageToModelNode(Node[TripoImageToModelNodeInputs, TripoImageToModelNodeOutputs]):
     """
     Original name: TripoImageToModelNode
-    No description available.
+    Category: api node/3d/Tripo
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - model_file (str)
+        - model_task_id (Any)
     """
     _original_name: str = 'TripoImageToModelNode'
 

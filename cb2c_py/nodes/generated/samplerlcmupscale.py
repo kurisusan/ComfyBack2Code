@@ -23,7 +23,16 @@ class SamplerLCMUpscaleOutputs(OutputSlots):
 class SamplerLCMUpscale(Node[SamplerLCMUpscaleInputs, SamplerLCMUpscaleOutputs]):
     """
     Original name: SamplerLCMUpscale
-    No description available.
+    Category: sampling/custom_sampling/samplers
+    
+
+    Inputs:
+        - scale_ratio (float) (default: 1.0)
+        - scale_steps (int) (default: -1)
+        - upscale_method (str)
+
+    Outputs:
+        - sampler (Any)
     """
     _original_name: str = 'SamplerLCMUpscale'
 

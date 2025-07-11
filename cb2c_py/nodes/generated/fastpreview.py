@@ -23,7 +23,16 @@ class FastPreviewOutputs(OutputSlots):
 class FastPreview(Node[FastPreviewInputs, FastPreviewOutputs]):
     """
     Original name: FastPreview
-    No description available.
+    Category: KJNodes/experimental
+    Experimental node for faster image previews by displaying through base64 it without saving to disk.
+
+    Inputs:
+        - image (Image)
+        - format (str) (default: 'JPEG')
+        - quality (int) (default: 75)
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'FastPreview'
 

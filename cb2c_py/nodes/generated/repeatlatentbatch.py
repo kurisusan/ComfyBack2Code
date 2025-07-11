@@ -21,7 +21,15 @@ class RepeatLatentBatchOutputs(OutputSlots):
 class RepeatLatentBatch(Node[RepeatLatentBatchInputs, RepeatLatentBatchOutputs]):
     """
     Original name: RepeatLatentBatch
-    No description available.
+    Category: latent/batch
+    
+
+    Inputs:
+        - samples (Latent)
+        - amount (int) (default: 1)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'RepeatLatentBatch'
 

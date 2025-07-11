@@ -23,7 +23,18 @@ class InsertLatentToIndexedOutputs(OutputSlots):
 class InsertLatentToIndexed(Node[InsertLatentToIndexedInputs, InsertLatentToIndexedOutputs]):
     """
     Original name: InsertLatentToIndexed
-    No description available.
+    Category: KJNodes/latents
+    
+Inserts a latent at the specified index into the original latent batch.
+
+
+    Inputs:
+        - source (Latent)
+        - destination (Latent)
+        - index (int) (default: 0)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'InsertLatentToIndexed'
 

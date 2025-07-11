@@ -27,7 +27,18 @@ class LatentUpscaleOutputs(OutputSlots):
 class LatentUpscale(Node[LatentUpscaleInputs, LatentUpscaleOutputs]):
     """
     Original name: LatentUpscale
-    No description available.
+    Category: latent
+    
+
+    Inputs:
+        - samples (Latent)
+        - upscale_method (str)
+        - width (int) (default: 512)
+        - height (int) (default: 512)
+        - crop (str)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'LatentUpscale'
 

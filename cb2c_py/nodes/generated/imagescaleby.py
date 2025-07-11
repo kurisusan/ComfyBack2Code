@@ -23,7 +23,16 @@ class ImageScaleByOutputs(OutputSlots):
 class ImageScaleBy(Node[ImageScaleByInputs, ImageScaleByOutputs]):
     """
     Original name: ImageScaleBy
-    No description available.
+    Category: image/upscaling
+    
+
+    Inputs:
+        - image (Image)
+        - upscale_method (str)
+        - scale_by (float) (default: 1.0)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageScaleBy'
 

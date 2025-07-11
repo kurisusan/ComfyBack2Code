@@ -33,7 +33,27 @@ class ImageResizeKJOutputs(OutputSlots):
 class ImageResizeKJ(Node[ImageResizeKJInputs, ImageResizeKJOutputs]):
     """
     Original name: ImageResizeKJ
-    No description available.
+    Category: KJNodes/image
+    
+DEPRECATED!
+
+Due to ComfyUI frontend changes, this node should no longer be used, please check the   
+v2 of the node. This node is only kept to not completely break older workflows.  
+
+
+
+    Inputs:
+        - image (Image)
+        - width (int) (default: 512)
+        - height (int) (default: 512)
+        - upscale_method (str)
+        - keep_proportion (bool) (default: False)
+        - divisible_by (int) (default: 2)
+
+    Outputs:
+        - image (Image)
+        - width (int)
+        - height (int)
     """
     _original_name: str = 'ImageResizeKJ'
 

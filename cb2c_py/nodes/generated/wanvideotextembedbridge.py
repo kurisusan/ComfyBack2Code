@@ -19,7 +19,14 @@ class WanVideoTextEmbedBridgeOutputs(OutputSlots):
 class WanVideoTextEmbedBridge(Node[WanVideoTextEmbedBridgeInputs, WanVideoTextEmbedBridgeOutputs]):
     """
     Original name: WanVideoTextEmbedBridge
-    No description available.
+    Category: WanVideoWrapper
+    Bridge between ComfyUI native text embedding and WanVideoWrapper text embedding
+
+    Inputs:
+        - positive (Conditioning)
+
+    Outputs:
+        - text_embeds (Any)
     """
     _original_name: str = 'WanVideoTextEmbedBridge'
 

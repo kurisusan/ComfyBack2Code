@@ -27,7 +27,18 @@ class PairConditioningSetPropertiesOutputs(OutputSlots):
 class PairConditioningSetProperties(Node[PairConditioningSetPropertiesInputs, PairConditioningSetPropertiesOutputs]):
     """
     Original name: PairConditioningSetProperties
-    No description available.
+    Category: advanced/hooks/cond pair
+    
+
+    Inputs:
+        - positive_NEW (Conditioning)
+        - negative_NEW (Conditioning)
+        - strength (float) (default: 1.0)
+        - set_cond_area (str)
+
+    Outputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
     """
     _original_name: str = 'PairConditioningSetProperties'
 

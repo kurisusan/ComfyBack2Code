@@ -19,7 +19,14 @@ class BinaryPreprocessorOutputs(OutputSlots):
 class BinaryPreprocessor(Node[BinaryPreprocessorInputs, BinaryPreprocessorOutputs]):
     """
     Original name: BinaryPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Line Extractors
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'BinaryPreprocessor'
 

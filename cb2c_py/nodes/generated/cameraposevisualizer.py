@@ -31,7 +31,23 @@ class CameraPoseVisualizerOutputs(OutputSlots):
 class CameraPoseVisualizer(Node[CameraPoseVisualizerInputs, CameraPoseVisualizerOutputs]):
     """
     Original name: CameraPoseVisualizer
-    No description available.
+    Category: KJNodes/misc
+    
+Visualizes the camera poses, from Animatediff-Evolved CameraCtrl Pose  
+or a .txt file with RealEstate camera intrinsics and coordinates, in a 3D plot. 
+
+
+    Inputs:
+        - pose_file_path (str) (default: '')
+        - base_xval (float) (default: 0.2)
+        - zval (float) (default: 0.3)
+        - scale (float) (default: 1.0)
+        - use_exact_fx (bool) (default: False)
+        - relative_c2w (bool) (default: True)
+        - use_viewer (bool) (default: False)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'CameraPoseVisualizer'
 

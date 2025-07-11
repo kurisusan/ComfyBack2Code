@@ -27,7 +27,18 @@ class WanVideoApplyNAGOutputs(OutputSlots):
 class WanVideoApplyNAG(Node[WanVideoApplyNAGInputs, WanVideoApplyNAGOutputs]):
     """
     Original name: WanVideoApplyNAG
-    No description available.
+    Category: WanVideoWrapper
+    Adds NAG prompt embeds to original prompt embeds: 'https://github.com/ChenDarYen/Normalized-Attention-Guidance'
+
+    Inputs:
+        - original_text_embeds (Any)
+        - nag_text_embeds (Any)
+        - nag_scale (float) (default: 11.0)
+        - nag_tau (float) (default: 2.5)
+        - nag_alpha (float) (default: 0.25)
+
+    Outputs:
+        - text_embeds (Any)
     """
     _original_name: str = 'WanVideoApplyNAG'
 

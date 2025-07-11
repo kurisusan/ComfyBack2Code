@@ -11,9 +11,9 @@ class TripleCLIPLoaderGGUFInputs(InputSlots):
     clip_name2: Slot[str]
     clip_name3: Slot[str]
     def __init__(self, node: "Node"):
-        self.clip_name1 = Slot[str](node, "clip_name1", [])
-        self.clip_name2 = Slot[str](node, "clip_name2", [])
-        self.clip_name3 = Slot[str](node, "clip_name3", [])
+        self.clip_name1 = Slot[str](node, "clip_name1", ['umt5_xxl_fp8_e4m3fn_scaled.safetensors'])
+        self.clip_name2 = Slot[str](node, "clip_name2", ['umt5_xxl_fp8_e4m3fn_scaled.safetensors'])
+        self.clip_name3 = Slot[str](node, "clip_name3", ['umt5_xxl_fp8_e4m3fn_scaled.safetensors'])
 
 class TripleCLIPLoaderGGUFOutputs(OutputSlots):
     clip: Slot[Clip]
@@ -23,7 +23,16 @@ class TripleCLIPLoaderGGUFOutputs(OutputSlots):
 class TripleCLIPLoaderGGUF(Node[TripleCLIPLoaderGGUFInputs, TripleCLIPLoaderGGUFOutputs]):
     """
     Original name: TripleCLIPLoaderGGUF
-    No description available.
+    Category: bootleg
+    
+
+    Inputs:
+        - clip_name1 (str)
+        - clip_name2 (str)
+        - clip_name3 (str)
+
+    Outputs:
+        - clip (Clip)
     """
     _original_name: str = 'TripleCLIPLoaderGGUF'
 

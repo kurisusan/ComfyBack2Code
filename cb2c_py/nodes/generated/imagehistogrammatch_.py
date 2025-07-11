@@ -27,7 +27,18 @@ class ImageHistogramMatch_Outputs(OutputSlots):
 class ImageHistogramMatch_(Node[ImageHistogramMatch_Inputs, ImageHistogramMatch_Outputs]):
     """
     Original name: ImageHistogramMatch+
-    No description available.
+    Category: essentials/image processing
+    
+
+    Inputs:
+        - image (Image)
+        - reference (Image)
+        - method (str)
+        - factor (float) (default: 1.0)
+        - device (str)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageHistogramMatch+'
 

@@ -21,7 +21,15 @@ class AnimeFace_SemSegPreprocessorOutputs(OutputSlots):
 class AnimeFace_SemSegPreprocessor(Node[AnimeFace_SemSegPreprocessorInputs, AnimeFace_SemSegPreprocessorOutputs]):
     """
     Original name: AnimeFace_SemSegPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Semantic Segmentation
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
+        - abg_character_mask__mask_ (Image)
     """
     _original_name: str = 'AnimeFace_SemSegPreprocessor'
 

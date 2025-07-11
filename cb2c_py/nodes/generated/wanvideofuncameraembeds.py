@@ -29,7 +29,24 @@ class WanVideoFunCameraEmbedsOutputs(OutputSlots):
 class WanVideoFunCameraEmbeds(Node[WanVideoFunCameraEmbedsInputs, WanVideoFunCameraEmbedsOutputs]):
     """
     Original name: WanVideoFunCameraEmbeds
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - poses (Any)
+        - width (int) (default: 832)
+          Width of the image to encode
+        - height (int) (default: 480)
+          Height of the image to encode
+        - strength (float) (default: 1.0)
+          Strength of the camera motion
+        - start_percent (float) (default: 0.0)
+          Start percent of the steps to apply camera motion
+        - end_percent (float) (default: 1.0)
+          End percent of the steps to apply camera motion
+
+    Outputs:
+        - image_embeds (Any)
     """
     _original_name: str = 'WanVideoFunCameraEmbeds'
 

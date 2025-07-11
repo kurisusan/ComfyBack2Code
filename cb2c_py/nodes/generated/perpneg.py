@@ -23,7 +23,16 @@ class PerpNegOutputs(OutputSlots):
 class PerpNeg(Node[PerpNegInputs, PerpNegOutputs]):
     """
     Original name: PerpNeg
-    No description available.
+    Category: _for_testing
+    
+
+    Inputs:
+        - model (Model)
+        - empty_conditioning (Conditioning)
+        - neg_scale (float) (default: 1.0)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'PerpNeg'
 

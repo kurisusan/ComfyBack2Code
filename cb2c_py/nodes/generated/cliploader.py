@@ -10,7 +10,7 @@ class CLIPLoaderInputs(InputSlots):
     clip_name: Slot[str]
     type: Slot[str]
     def __init__(self, node: "Node"):
-        self.clip_name = Slot[str](node, "clip_name", [])
+        self.clip_name = Slot[str](node, "clip_name", ['umt5_xxl_fp8_e4m3fn_scaled.safetensors'])
         self.type = Slot[str](node, "type", ['stable_diffusion', 'stable_cascade', 'sd3', 'stable_audio', 'mochi', 'ltxv', 'pixart', 'cosmos', 'lumina2', 'wan', 'hidream', 'chroma', 'ace', 'omnigen2'])
 
 class CLIPLoaderOutputs(OutputSlots):
@@ -21,7 +21,26 @@ class CLIPLoaderOutputs(OutputSlots):
 class CLIPLoader(Node[CLIPLoaderInputs, CLIPLoaderOutputs]):
     """
     Original name: CLIPLoader
-    No description available.
+    Category: advanced/loaders
+    [Recipes]
+
+stable_diffusion: clip-l
+stable_cascade: clip-g
+sd3: t5 xxl/ clip-g / clip-l
+stable_audio: t5 base
+mochi: t5 xxl
+cosmos: old t5 xxl
+lumina2: gemma 2 2B
+wan: umt5 xxl
+ hidream: llama-3.1 (Recommend) or t5
+omnigen2: qwen vl 2.5 3B
+
+    Inputs:
+        - clip_name (str)
+        - type (str)
+
+    Outputs:
+        - clip (Clip)
     """
     _original_name: str = 'CLIPLoader'
 

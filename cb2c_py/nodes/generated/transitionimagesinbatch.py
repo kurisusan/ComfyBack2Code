@@ -31,7 +31,22 @@ class TransitionImagesInBatchOutputs(OutputSlots):
 class TransitionImagesInBatch(Node[TransitionImagesInBatchInputs, TransitionImagesInBatchOutputs]):
     """
     Original name: TransitionImagesInBatch
-    No description available.
+    Category: KJNodes/image
+    
+Creates transitions between images in a batch.
+
+
+    Inputs:
+        - images (Image)
+        - interpolation (str)
+        - transition_type (str)
+        - transitioning_frames (int) (default: 1)
+        - blur_radius (float) (default: 0.0)
+        - reverse (bool) (default: False)
+        - device (str) (default: 'CPU')
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'TransitionImagesInBatch'
 

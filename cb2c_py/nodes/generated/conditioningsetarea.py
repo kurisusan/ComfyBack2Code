@@ -29,7 +29,19 @@ class ConditioningSetAreaOutputs(OutputSlots):
 class ConditioningSetArea(Node[ConditioningSetAreaInputs, ConditioningSetAreaOutputs]):
     """
     Original name: ConditioningSetArea
-    No description available.
+    Category: conditioning
+    
+
+    Inputs:
+        - conditioning (Conditioning)
+        - width (int) (default: 64)
+        - height (int) (default: 64)
+        - x (int) (default: 0)
+        - y (int) (default: 0)
+        - strength (float) (default: 1.0)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'ConditioningSetArea'
 

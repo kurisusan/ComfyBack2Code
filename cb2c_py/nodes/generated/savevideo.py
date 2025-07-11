@@ -25,7 +25,21 @@ class SaveVideoOutputs(OutputSlots):
 class SaveVideo(Node[SaveVideoInputs, SaveVideoOutputs]):
     """
     Original name: SaveVideo
-    No description available.
+    Category: image/video
+    Saves the input images to your ComfyUI output directory.
+
+    Inputs:
+        - video (Any)
+          The video to save.
+        - filename_prefix (str) (default: 'video/ComfyUI')
+          The prefix for the file to save. This may include formatting information such as %date:yyyy-MM-dd% or %Empty Latent Image.width% to include values from nodes.
+        - format (str) (default: 'auto')
+          The format to save the video as.
+        - codec (str) (default: 'auto')
+          The codec to use for the video.
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'SaveVideo'
 

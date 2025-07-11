@@ -27,7 +27,18 @@ class InjectNoiseToLatentOutputs(OutputSlots):
 class InjectNoiseToLatent(Node[InjectNoiseToLatentInputs, InjectNoiseToLatentOutputs]):
     """
     Original name: InjectNoiseToLatent
-    No description available.
+    Category: KJNodes/noise
+    
+
+    Inputs:
+        - latents (Latent)
+        - strength (float) (default: 0.1)
+        - noise (Latent)
+        - normalize (bool) (default: False)
+        - average (bool) (default: False)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'InjectNoiseToLatent'
 

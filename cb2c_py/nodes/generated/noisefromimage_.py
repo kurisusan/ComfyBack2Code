@@ -37,7 +37,23 @@ class NoiseFromImage_Outputs(OutputSlots):
 class NoiseFromImage_(Node[NoiseFromImage_Inputs, NoiseFromImage_Outputs]):
     """
     Original name: NoiseFromImage+
-    No description available.
+    Category: essentials/image utils
+    
+
+    Inputs:
+        - image (Image)
+        - noise_strenght (float) (default: 1.0)
+        - noise_size (float) (default: 1.0)
+        - color_noise (float) (default: 0.2)
+        - mask_strength (float) (default: 0.5)
+        - mask_scale_diff (float) (default: 0.0)
+        - mask_contrast (float) (default: 1.0)
+        - saturation (float) (default: 2.0)
+        - contrast (float) (default: 1.0)
+        - blur (float) (default: 1.0)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'NoiseFromImage+'
 

@@ -23,7 +23,16 @@ class ImageDesaturate_Outputs(OutputSlots):
 class ImageDesaturate_(Node[ImageDesaturate_Inputs, ImageDesaturate_Outputs]):
     """
     Original name: ImageDesaturate+
-    No description available.
+    Category: essentials/image processing
+    
+
+    Inputs:
+        - image (Image)
+        - factor (float) (default: 1.0)
+        - method (str)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageDesaturate+'
 

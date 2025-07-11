@@ -23,7 +23,16 @@ class DiffusersLoaderOutputs(OutputSlots):
 class DiffusersLoader(Node[DiffusersLoaderInputs, DiffusersLoaderOutputs]):
     """
     Original name: DiffusersLoader
-    No description available.
+    Category: advanced/loaders/deprecated
+    
+
+    Inputs:
+        - model_path (str)
+
+    Outputs:
+        - model (Model)
+        - clip (Clip)
+        - vae (Vae)
     """
     _original_name: str = 'DiffusersLoader'
 

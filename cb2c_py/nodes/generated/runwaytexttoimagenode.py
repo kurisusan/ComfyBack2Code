@@ -21,7 +21,16 @@ class RunwayTextToImageNodeOutputs(OutputSlots):
 class RunwayTextToImageNode(Node[RunwayTextToImageNodeInputs, RunwayTextToImageNodeOutputs]):
     """
     Original name: RunwayTextToImageNode
-    No description available.
+    Category: api node/image/Runway
+    Generate an image from a text prompt using Runway's Gen 4 model. You can also include reference images to guide the generation.
+
+    Inputs:
+        - prompt (str)
+          Text prompt for the image generation
+        - ratio (Any)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'RunwayTextToImageNode'
 

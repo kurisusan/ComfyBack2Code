@@ -21,7 +21,15 @@ class LatentFlipOutputs(OutputSlots):
 class LatentFlip(Node[LatentFlipInputs, LatentFlipOutputs]):
     """
     Original name: LatentFlip
-    No description available.
+    Category: latent/transform
+    
+
+    Inputs:
+        - samples (Latent)
+        - flip_method (str)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'LatentFlip'
 

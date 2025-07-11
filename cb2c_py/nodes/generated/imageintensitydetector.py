@@ -19,7 +19,14 @@ class ImageIntensityDetectorOutputs(OutputSlots):
 class ImageIntensityDetector(Node[ImageIntensityDetectorInputs, ImageIntensityDetectorOutputs]):
     """
     Original name: ImageIntensityDetector
-    No description available.
+    Category: ControlNet Preprocessors/Recolor
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageIntensityDetector'
 

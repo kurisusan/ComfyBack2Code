@@ -19,7 +19,14 @@ class ExecuteAllControlNetPreprocessorsOutputs(OutputSlots):
 class ExecuteAllControlNetPreprocessors(Node[ExecuteAllControlNetPreprocessorsInputs, ExecuteAllControlNetPreprocessorsOutputs]):
     """
     Original name: ExecuteAllControlNetPreprocessors
-    No description available.
+    Category: ControlNet Preprocessors
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ExecuteAllControlNetPreprocessors'
 

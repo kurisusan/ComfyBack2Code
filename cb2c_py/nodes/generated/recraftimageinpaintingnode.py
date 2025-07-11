@@ -27,7 +27,21 @@ class RecraftImageInpaintingNodeOutputs(OutputSlots):
 class RecraftImageInpaintingNode(Node[RecraftImageInpaintingNodeInputs, RecraftImageInpaintingNodeOutputs]):
     """
     Original name: RecraftImageInpaintingNode
-    No description available.
+    Category: api node/image/Recraft
+    Modify image based on prompt and mask.
+
+    Inputs:
+        - image (Image)
+        - mask (Image)
+        - prompt (str) (default: '')
+          Prompt for the image generation.
+        - n (int) (default: 1)
+          The number of images to generate.
+        - seed (int) (default: 0)
+          Seed to determine if node should re-run; actual results are nondeterministic regardless of seed.
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'RecraftImageInpaintingNode'
 

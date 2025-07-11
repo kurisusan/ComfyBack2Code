@@ -25,7 +25,17 @@ class ImageRandomTransform_Outputs(OutputSlots):
 class ImageRandomTransform_(Node[ImageRandomTransform_Inputs, ImageRandomTransform_Outputs]):
     """
     Original name: ImageRandomTransform+
-    No description available.
+    Category: essentials/image manipulation
+    
+
+    Inputs:
+        - image (Image)
+        - seed (int) (default: 0)
+        - repeat (int) (default: 1)
+        - variation (float) (default: 0.1)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageRandomTransform+'
 

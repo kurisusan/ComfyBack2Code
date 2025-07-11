@@ -35,7 +35,22 @@ class Load3DAnimationOutputs(OutputSlots):
 class Load3DAnimation(Node[Load3DAnimationInputs, Load3DAnimationOutputs]):
     """
     Original name: Load3DAnimation
-    No description available.
+    Category: 3d
+    
+
+    Inputs:
+        - model_file (str)
+        - image (Any)
+        - width (int) (default: 1024)
+        - height (int) (default: 1024)
+
+    Outputs:
+        - image (Image)
+        - mask (Image)
+        - mesh_path (str)
+        - normal (Image)
+        - camera_info (Any)
+        - recording_video (Any)
     """
     _original_name: str = 'Load3DAnimation'
 

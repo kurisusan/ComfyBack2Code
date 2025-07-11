@@ -23,7 +23,18 @@ class MergeImageChannelsOutputs(OutputSlots):
 class MergeImageChannels(Node[MergeImageChannelsInputs, MergeImageChannelsOutputs]):
     """
     Original name: MergeImageChannels
-    No description available.
+    Category: KJNodes/image
+    
+Merges channel data into an image.  
+
+
+    Inputs:
+        - red (Image)
+        - green (Image)
+        - blue (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'MergeImageChannels'
 

@@ -23,7 +23,16 @@ class LatentFromBatchOutputs(OutputSlots):
 class LatentFromBatch(Node[LatentFromBatchInputs, LatentFromBatchOutputs]):
     """
     Original name: LatentFromBatch
-    No description available.
+    Category: latent/batch
+    
+
+    Inputs:
+        - samples (Latent)
+        - batch_index (int) (default: 0)
+        - length (int) (default: 1)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'LatentFromBatch'
 

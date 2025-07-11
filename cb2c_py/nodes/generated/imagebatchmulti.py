@@ -23,7 +23,20 @@ class ImageBatchMultiOutputs(OutputSlots):
 class ImageBatchMulti(Node[ImageBatchMultiInputs, ImageBatchMultiOutputs]):
     """
     Original name: ImageBatchMulti
-    No description available.
+    Category: KJNodes/image
+    
+Creates an image batch from multiple images.  
+You can set how many inputs the node has,  
+with the **inputcount** and clicking update.
+
+
+    Inputs:
+        - inputcount (int) (default: 2)
+        - image_1 (Image)
+        - image_2 (Image)
+
+    Outputs:
+        - images (Image)
     """
     _original_name: str = 'ImageBatchMulti'
 

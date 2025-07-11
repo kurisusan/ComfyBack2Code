@@ -19,7 +19,15 @@ class WanVideoVACEModelSelectOutputs(OutputSlots):
 class WanVideoVACEModelSelect(Node[WanVideoVACEModelSelectInputs, WanVideoVACEModelSelectOutputs]):
     """
     Original name: WanVideoVACEModelSelect
-    No description available.
+    Category: WanVideoWrapper
+    VACE model to use when not using model that has it included, loaded from 'ComfyUI/models/diffusion_models'
+
+    Inputs:
+        - vace_model (str)
+          These models are loaded from the 'ComfyUI/models/diffusion_models' VACE model to use when not using model that has it included
+
+    Outputs:
+        - vace_model (Any)
     """
     _original_name: str = 'WanVideoVACEModelSelect'
 

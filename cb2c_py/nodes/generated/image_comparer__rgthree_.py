@@ -19,7 +19,14 @@ class Image_Comparer__rgthree_Outputs(OutputSlots):
 class Image_Comparer__rgthree_(Node[Image_Comparer__rgthree_Inputs, Image_Comparer__rgthree_Outputs]):
     """
     Original name: Image Comparer (rgthree)
-    No description available.
+    Category: rgthree
+    Saves the input images to your ComfyUI output directory.
+
+    Inputs:
+        No inputs.
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'Image Comparer (rgthree)'
 

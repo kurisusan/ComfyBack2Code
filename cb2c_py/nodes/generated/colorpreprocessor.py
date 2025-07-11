@@ -19,7 +19,14 @@ class ColorPreprocessorOutputs(OutputSlots):
 class ColorPreprocessor(Node[ColorPreprocessorInputs, ColorPreprocessorOutputs]):
     """
     Original name: ColorPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/T2IAdapter-only
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ColorPreprocessor'
 

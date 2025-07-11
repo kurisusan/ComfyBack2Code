@@ -19,7 +19,15 @@ class IdeogramV3Outputs(OutputSlots):
 class IdeogramV3(Node[IdeogramV3Inputs, IdeogramV3Outputs]):
     """
     Original name: IdeogramV3
-    No description available.
+    Category: api node/image/Ideogram
+    Generates images using the Ideogram V3 model. Supports both regular image generation from text prompts and image editing with mask.
+
+    Inputs:
+        - prompt (str) (default: '')
+          Prompt for the image generation or editing
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'IdeogramV3'
 

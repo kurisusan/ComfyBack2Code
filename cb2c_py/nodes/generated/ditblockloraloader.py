@@ -23,7 +23,20 @@ class DiTBlockLoraLoaderOutputs(OutputSlots):
 class DiTBlockLoraLoader(Node[DiTBlockLoraLoaderInputs, DiTBlockLoraLoaderOutputs]):
     """
     Original name: DiTBlockLoraLoader
-    No description available.
+    Category: KJNodes/experimental
+    
+
+    Inputs:
+        - model (Model)
+          The diffusion model the LoRA will be applied to.
+        - strength_model (float) (default: 1.0)
+          How strongly to modify the diffusion model. This value can be negative.
+
+    Outputs:
+        - model (Model)
+          The modified diffusion model.
+        - rank (str)
+          possible rank of the LoRA.
     """
     _original_name: str = 'DiTBlockLoraLoader'
 

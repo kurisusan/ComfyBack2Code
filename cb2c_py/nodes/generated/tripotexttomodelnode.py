@@ -21,7 +21,15 @@ class TripoTextToModelNodeOutputs(OutputSlots):
 class TripoTextToModelNode(Node[TripoTextToModelNodeInputs, TripoTextToModelNodeOutputs]):
     """
     Original name: TripoTextToModelNode
-    No description available.
+    Category: api node/3d/Tripo
+    
+
+    Inputs:
+        - prompt (str)
+
+    Outputs:
+        - model_file (str)
+        - model_task_id (Any)
     """
     _original_name: str = 'TripoTextToModelNode'
 

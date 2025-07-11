@@ -31,7 +31,20 @@ class CreateHookKeyframesInterpolatedOutputs(OutputSlots):
 class CreateHookKeyframesInterpolated(Node[CreateHookKeyframesInterpolatedInputs, CreateHookKeyframesInterpolatedOutputs]):
     """
     Original name: CreateHookKeyframesInterpolated
-    No description available.
+    Category: advanced/hooks/scheduling
+    
+
+    Inputs:
+        - strength_start (float) (default: 1.0)
+        - strength_end (float) (default: 1.0)
+        - interpolation (str)
+        - start_percent (float) (default: 0.0)
+        - end_percent (float) (default: 1.0)
+        - keyframes_count (int) (default: 5)
+        - print_keyframes (bool) (default: False)
+
+    Outputs:
+        - hook_kf (Any)
     """
     _original_name: str = 'CreateHookKeyframesInterpolated'
 

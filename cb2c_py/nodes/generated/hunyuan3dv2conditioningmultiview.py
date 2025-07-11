@@ -21,7 +21,15 @@ class Hunyuan3Dv2ConditioningMultiViewOutputs(OutputSlots):
 class Hunyuan3Dv2ConditioningMultiView(Node[Hunyuan3Dv2ConditioningMultiViewInputs, Hunyuan3Dv2ConditioningMultiViewOutputs]):
     """
     Original name: Hunyuan3Dv2ConditioningMultiView
-    No description available.
+    Category: conditioning/video_models
+    
+
+    Inputs:
+        No inputs.
+
+    Outputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
     """
     _original_name: str = 'Hunyuan3Dv2ConditioningMultiView'
 

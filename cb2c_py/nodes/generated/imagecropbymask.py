@@ -21,7 +21,15 @@ class ImageCropByMaskOutputs(OutputSlots):
 class ImageCropByMask(Node[ImageCropByMaskInputs, ImageCropByMaskOutputs]):
     """
     Original name: ImageCropByMask
-    No description available.
+    Category: KJNodes/image
+    Crops the input images based on the provided mask.
+
+    Inputs:
+        - image (Image)
+        - mask (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageCropByMask'
 

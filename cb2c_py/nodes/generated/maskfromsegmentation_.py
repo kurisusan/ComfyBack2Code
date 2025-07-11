@@ -27,7 +27,18 @@ class MaskFromSegmentation_Outputs(OutputSlots):
 class MaskFromSegmentation_(Node[MaskFromSegmentation_Inputs, MaskFromSegmentation_Outputs]):
     """
     Original name: MaskFromSegmentation+
-    No description available.
+    Category: essentials/mask
+    
+
+    Inputs:
+        - image (Image)
+        - segments (int) (default: 6)
+        - remove_isolated_pixels (int) (default: 0)
+        - remove_small_masks (float) (default: 0.0)
+        - fill_holes (bool) (default: False)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'MaskFromSegmentation+'
 

@@ -29,7 +29,19 @@ class Image_Inset_Crop__rgthree_Outputs(OutputSlots):
 class Image_Inset_Crop__rgthree_(Node[Image_Inset_Crop__rgthree_Inputs, Image_Inset_Crop__rgthree_Outputs]):
     """
     Original name: Image Inset Crop (rgthree)
-    No description available.
+    Category: rgthree
+    
+
+    Inputs:
+        - image (Image)
+        - measurement (str)
+        - left (int) (default: 0)
+        - right (int) (default: 0)
+        - top (int) (default: 0)
+        - bottom (int) (default: 0)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'Image Inset Crop (rgthree)'
 

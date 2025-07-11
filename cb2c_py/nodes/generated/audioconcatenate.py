@@ -23,7 +23,18 @@ class AudioConcatenateOutputs(OutputSlots):
 class AudioConcatenate(Node[AudioConcatenateInputs, AudioConcatenateOutputs]):
     """
     Original name: AudioConcatenate
-    No description available.
+    Category: KJNodes/audio
+    
+Concatenates the audio1 to audio2 in the specified direction.
+
+
+    Inputs:
+        - audio1 (Any)
+        - audio2 (Any)
+        - direction (str) (default: 'right')
+
+    Outputs:
+        - audio (Any)
     """
     _original_name: str = 'AudioConcatenate'
 

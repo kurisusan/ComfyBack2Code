@@ -25,7 +25,17 @@ class EmptyLTXVLatentVideoOutputs(OutputSlots):
 class EmptyLTXVLatentVideo(Node[EmptyLTXVLatentVideoInputs, EmptyLTXVLatentVideoOutputs]):
     """
     Original name: EmptyLTXVLatentVideo
-    No description available.
+    Category: latent/video/ltxv
+    
+
+    Inputs:
+        - width (int) (default: 768)
+        - height (int) (default: 512)
+        - length (int) (default: 97)
+        - batch_size (int) (default: 1)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'EmptyLTXVLatentVideo'
 

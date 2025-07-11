@@ -19,7 +19,14 @@ class CLIPVisionLoaderMultiGPUOutputs(OutputSlots):
 class CLIPVisionLoaderMultiGPU(Node[CLIPVisionLoaderMultiGPUInputs, CLIPVisionLoaderMultiGPUOutputs]):
     """
     Original name: CLIPVisionLoaderMultiGPU
-    No description available.
+    Category: multigpu
+    
+
+    Inputs:
+        - clip_name (str)
+
+    Outputs:
+        - clip_vision (Any)
     """
     _original_name: str = 'CLIPVisionLoaderMultiGPU'
 

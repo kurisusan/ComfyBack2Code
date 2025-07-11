@@ -23,7 +23,16 @@ class LatentBlendOutputs(OutputSlots):
 class LatentBlend(Node[LatentBlendInputs, LatentBlendOutputs]):
     """
     Original name: LatentBlend
-    No description available.
+    Category: _for_testing
+    
+
+    Inputs:
+        - samples1 (Latent)
+        - samples2 (Latent)
+        - blend_factor (float) (default: 0.5)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'LatentBlend'
 

@@ -21,7 +21,15 @@ class SaveLatentOutputs(OutputSlots):
 class SaveLatent(Node[SaveLatentInputs, SaveLatentOutputs]):
     """
     Original name: SaveLatent
-    No description available.
+    Category: _for_testing
+    
+
+    Inputs:
+        - samples (Latent)
+        - filename_prefix (str) (default: 'latents/ComfyUI')
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'SaveLatent'
 

@@ -31,7 +31,20 @@ class ImagePadForOutpaintMaskedOutputs(OutputSlots):
 class ImagePadForOutpaintMasked(Node[ImagePadForOutpaintMaskedInputs, ImagePadForOutpaintMaskedOutputs]):
     """
     Original name: ImagePadForOutpaintMasked
-    No description available.
+    Category: image
+    
+
+    Inputs:
+        - image (Image)
+        - left (int) (default: 0)
+        - top (int) (default: 0)
+        - right (int) (default: 0)
+        - bottom (int) (default: 0)
+        - feathering (int) (default: 0)
+
+    Outputs:
+        - image (Image)
+        - mask (Image)
     """
     _original_name: str = 'ImagePadForOutpaintMasked'
 

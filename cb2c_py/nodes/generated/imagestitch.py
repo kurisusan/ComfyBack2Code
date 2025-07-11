@@ -27,7 +27,22 @@ class ImageStitchOutputs(OutputSlots):
 class ImageStitch(Node[ImageStitchInputs, ImageStitchOutputs]):
     """
     Original name: ImageStitch
-    No description available.
+    Category: image/transform
+    
+Stitches image2 to image1 in the specified direction.
+If image2 is not provided, returns image1 unchanged.
+Optional spacing can be added between images.
+
+
+    Inputs:
+        - image1 (Image)
+        - direction (str) (default: 'right')
+        - match_image_size (bool) (default: True)
+        - spacing_width (int) (default: 0)
+        - spacing_color (str) (default: 'white')
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageStitch'
 

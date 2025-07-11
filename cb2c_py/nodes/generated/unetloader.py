@@ -21,7 +21,15 @@ class UNETLoaderOutputs(OutputSlots):
 class UNETLoader(Node[UNETLoaderInputs, UNETLoaderOutputs]):
     """
     Original name: UNETLoader
-    No description available.
+    Category: advanced/loaders
+    
+
+    Inputs:
+        - unet_name (str)
+        - weight_dtype (str)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'UNETLoader'
 

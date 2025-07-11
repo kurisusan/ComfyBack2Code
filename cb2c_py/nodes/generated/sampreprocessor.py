@@ -19,7 +19,14 @@ class SAMPreprocessorOutputs(OutputSlots):
 class SAMPreprocessor(Node[SAMPreprocessorInputs, SAMPreprocessorOutputs]):
     """
     Original name: SAMPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/others
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'SAMPreprocessor'
 

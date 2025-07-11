@@ -21,7 +21,15 @@ class LoadResAdapterNormalizationOutputs(OutputSlots):
 class LoadResAdapterNormalization(Node[LoadResAdapterNormalizationInputs, LoadResAdapterNormalizationOutputs]):
     """
     Original name: LoadResAdapterNormalization
-    No description available.
+    Category: KJNodes/experimental
+    
+
+    Inputs:
+        - model (Model)
+        - resadapter_path (str)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'LoadResAdapterNormalization'
 

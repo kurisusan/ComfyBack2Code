@@ -29,7 +29,23 @@ class WanVideoImageClipEncodeOutputs(OutputSlots):
 class WanVideoImageClipEncode(Node[WanVideoImageClipEncodeInputs, WanVideoImageClipEncodeOutputs]):
     """
     Original name: WanVideoImageClipEncode
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - clip_vision (Any)
+        - image (Image)
+          Image to encode
+        - vae (Any)
+        - generation_width (int) (default: 832)
+          Width of the image to encode
+        - generation_height (int) (default: 480)
+          Height of the image to encode
+        - num_frames (int) (default: 81)
+          Number of frames to encode
+
+    Outputs:
+        - image_embeds (Any)
     """
     _original_name: str = 'WanVideoImageClipEncode'
 

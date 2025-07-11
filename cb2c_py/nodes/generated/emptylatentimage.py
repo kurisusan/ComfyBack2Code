@@ -23,7 +23,20 @@ class EmptyLatentImageOutputs(OutputSlots):
 class EmptyLatentImage(Node[EmptyLatentImageInputs, EmptyLatentImageOutputs]):
     """
     Original name: EmptyLatentImage
-    No description available.
+    Category: latent
+    Create a new batch of empty latent images to be denoised via sampling.
+
+    Inputs:
+        - width (int) (default: 512)
+          The width of the latent images in pixels.
+        - height (int) (default: 512)
+          The height of the latent images in pixels.
+        - batch_size (int) (default: 1)
+          The number of latent images in the batch.
+
+    Outputs:
+        - latent (Latent)
+          The empty latent image batch.
     """
     _original_name: str = 'EmptyLatentImage'
 

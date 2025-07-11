@@ -27,7 +27,18 @@ class SimpleMathSliderLowRes_Outputs(OutputSlots):
 class SimpleMathSliderLowRes_(Node[SimpleMathSliderLowRes_Inputs, SimpleMathSliderLowRes_Outputs]):
     """
     Original name: SimpleMathSliderLowRes+
-    No description available.
+    Category: essentials/utilities
+    
+
+    Inputs:
+        - value (int) (default: 5)
+        - min (float) (default: 0.0)
+        - max (float) (default: 1.0)
+        - rounding (int) (default: 0)
+
+    Outputs:
+        - float (float)
+        - int (int)
     """
     _original_name: str = 'SimpleMathSliderLowRes+'
 

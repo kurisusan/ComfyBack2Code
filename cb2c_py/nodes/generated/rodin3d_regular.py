@@ -19,7 +19,14 @@ class Rodin3D_RegularOutputs(OutputSlots):
 class Rodin3D_Regular(Node[Rodin3D_RegularInputs, Rodin3D_RegularOutputs]):
     """
     Original name: Rodin3D_Regular
-    No description available.
+    Category: api node/3d/Rodin
+    Generate 3D Assets using Rodin API
+
+    Inputs:
+        - Images (Image)
+
+    Outputs:
+        - _3d_model_path (str)
     """
     _original_name: str = 'Rodin3D_Regular'
 

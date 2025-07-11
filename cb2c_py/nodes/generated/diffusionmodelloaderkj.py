@@ -29,7 +29,24 @@ class DiffusionModelLoaderKJOutputs(OutputSlots):
 class DiffusionModelLoaderKJ(Node[DiffusionModelLoaderKJInputs, DiffusionModelLoaderKJOutputs]):
     """
     Original name: DiffusionModelLoaderKJ
-    No description available.
+    Category: KJNodes/experimental
+    Node for patching torch.nn.Linear with CublasLinear.
+
+    Inputs:
+        - model_name (str)
+          The name of the checkpoint (model) to load.
+        - weight_dtype (str)
+        - compute_dtype (str) (default: 'default')
+          The compute dtype to use for the model.
+        - patch_cublaslinear (bool) (default: False)
+          Enable or disable the patching, won't take effect on already loaded models!
+        - sage_attention (str) (default: 'False')
+          Patch comfy attention to use sageattn.
+        - enable_fp16_accumulation (bool) (default: False)
+          Enable torch.backends.cuda.matmul.allow_fp16_accumulation, requires pytorch 2.7.0 nightly.
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'DiffusionModelLoaderKJ'
 

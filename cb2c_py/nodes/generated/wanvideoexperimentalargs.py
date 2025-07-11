@@ -33,7 +33,25 @@ class WanVideoExperimentalArgsOutputs(OutputSlots):
 class WanVideoExperimentalArgs(Node[WanVideoExperimentalArgsInputs, WanVideoExperimentalArgsOutputs]):
     """
     Original name: WanVideoExperimentalArgs
-    No description available.
+    Category: WanVideoWrapper
+    Experimental stuff
+
+    Inputs:
+        - video_attention_split_steps (str) (default: '')
+          Steps to split self attention when using multiple prompts
+        - cfg_zero_star (bool) (default: False)
+          https://github.com/WeichenFan/CFG-Zero-star
+        - use_zero_init (bool) (default: False)
+        - zero_star_steps (int) (default: 0)
+          Steps to split self attention when using multiple prompts
+        - use_fresca (bool) (default: False)
+          https://github.com/WikiChao/FreSca
+        - fresca_scale_low (float) (default: 1.0)
+        - fresca_scale_high (float) (default: 1.25)
+        - fresca_freq_cutoff (int) (default: 20)
+
+    Outputs:
+        - exp_args (Any)
     """
     _original_name: str = 'WanVideoExperimentalArgs'
 

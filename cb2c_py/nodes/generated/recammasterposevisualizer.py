@@ -27,7 +27,21 @@ class ReCamMasterPoseVisualizerOutputs(OutputSlots):
 class ReCamMasterPoseVisualizer(Node[ReCamMasterPoseVisualizerInputs, ReCamMasterPoseVisualizerOutputs]):
     """
     Original name: ReCamMasterPoseVisualizer
-    No description available.
+    Category: WanVideoWrapper
+    
+Visualizes the camera poses, from Animatediff-Evolved CameraCtrl Pose  
+or a .txt file with RealEstate camera intrinsics and coordinates, in a 3D plot. 
+
+
+    Inputs:
+        - camera_poses (Any)
+        - base_xval (float) (default: 0.2)
+        - zval (float) (default: 0.3)
+        - scale (float) (default: 1.0)
+        - arrow_length (float) (default: 1)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ReCamMasterPoseVisualizer'
 

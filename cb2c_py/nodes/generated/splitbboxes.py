@@ -23,7 +23,18 @@ class SplitBboxesOutputs(OutputSlots):
 class SplitBboxes(Node[SplitBboxesInputs, SplitBboxesOutputs]):
     """
     Original name: SplitBboxes
-    No description available.
+    Category: KJNodes/masking
+    
+Splits the specified bbox list at the given index into two lists.
+
+
+    Inputs:
+        - bboxes (Any)
+        - index (int) (default: 0)
+
+    Outputs:
+        - bboxes_a (Any)
+        - bboxes_b (Any)
     """
     _original_name: str = 'SplitBboxes'
 

@@ -29,7 +29,19 @@ class ImagePreviewFromLatent_Outputs(OutputSlots):
 class ImagePreviewFromLatent_(Node[ImagePreviewFromLatent_Inputs, ImagePreviewFromLatent_Outputs]):
     """
     Original name: ImagePreviewFromLatent+
-    No description available.
+    Category: essentials/image utils
+    Saves the input images to your ComfyUI output directory.
+
+    Inputs:
+        - latent (Latent)
+        - vae (Vae)
+        - tile_size (int) (default: 0)
+
+    Outputs:
+        - image (Image)
+        - mask (Image)
+        - width (int)
+        - height (int)
     """
     _original_name: str = 'ImagePreviewFromLatent+'
 

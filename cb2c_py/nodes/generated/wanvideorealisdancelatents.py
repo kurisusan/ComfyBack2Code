@@ -25,7 +25,21 @@ class WanVideoRealisDanceLatentsOutputs(OutputSlots):
 class WanVideoRealisDanceLatents(Node[WanVideoRealisDanceLatentsInputs, WanVideoRealisDanceLatentsOutputs]):
     """
     Original name: WanVideoRealisDanceLatents
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - ref_latent (Latent)
+          Reference image to encode
+        - smpl_latent (Latent)
+          SMPL pose image to encode
+        - pose_cond_start_percent (float) (default: 0.0)
+          Start percent of the SMPL model
+        - pose_cond_end_percent (float) (default: 1.0)
+          End percent of the SMPL model
+
+    Outputs:
+        - add_cond_latents (Any)
     """
     _original_name: str = 'WanVideoRealisDanceLatents'
 

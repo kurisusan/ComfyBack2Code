@@ -21,7 +21,18 @@ class CondPassThroughOutputs(OutputSlots):
 class CondPassThrough(Node[CondPassThroughInputs, CondPassThroughOutputs]):
     """
     Original name: CondPassThrough
-    No description available.
+    Category: KJNodes/misc
+    
+    Simply passes through the positive and negative conditioning,
+    workaround for Set node not allowing bypassed inputs.
+
+
+    Inputs:
+        No inputs.
+
+    Outputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
     """
     _original_name: str = 'CondPassThrough'
 

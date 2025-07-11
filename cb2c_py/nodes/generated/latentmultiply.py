@@ -21,7 +21,15 @@ class LatentMultiplyOutputs(OutputSlots):
 class LatentMultiply(Node[LatentMultiplyInputs, LatentMultiplyOutputs]):
     """
     Original name: LatentMultiply
-    No description available.
+    Category: latent/advanced
+    
+
+    Inputs:
+        - samples (Latent)
+        - multiplier (float) (default: 1.0)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'LatentMultiply'
 

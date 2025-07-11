@@ -21,7 +21,15 @@ class ModelSamplingAuraFlowOutputs(OutputSlots):
 class ModelSamplingAuraFlow(Node[ModelSamplingAuraFlowInputs, ModelSamplingAuraFlowOutputs]):
     """
     Original name: ModelSamplingAuraFlow
-    No description available.
+    Category: advanced/model
+    
+
+    Inputs:
+        - model (Model)
+        - shift (float) (default: 1.73)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'ModelSamplingAuraFlow'
 

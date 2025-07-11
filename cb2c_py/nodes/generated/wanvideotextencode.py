@@ -23,7 +23,16 @@ class WanVideoTextEncodeOutputs(OutputSlots):
 class WanVideoTextEncode(Node[WanVideoTextEncodeInputs, WanVideoTextEncodeOutputs]):
     """
     Original name: WanVideoTextEncode
-    No description available.
+    Category: WanVideoWrapper
+    Encodes text prompts into text embeddings. For rudimentary prompt travel you can input multiple prompts separated by '|', they will be equally spread over the video length
+
+    Inputs:
+        - t5 (Any)
+        - positive_prompt (str) (default: '')
+        - negative_prompt (str) (default: '')
+
+    Outputs:
+        - text_embeds (Any)
     """
     _original_name: str = 'WanVideoTextEncode'
 

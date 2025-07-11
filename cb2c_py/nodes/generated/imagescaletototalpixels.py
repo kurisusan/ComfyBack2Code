@@ -23,7 +23,16 @@ class ImageScaleToTotalPixelsOutputs(OutputSlots):
 class ImageScaleToTotalPixels(Node[ImageScaleToTotalPixelsInputs, ImageScaleToTotalPixelsOutputs]):
     """
     Original name: ImageScaleToTotalPixels
-    No description available.
+    Category: image/upscaling
+    
+
+    Inputs:
+        - image (Image)
+        - upscale_method (str)
+        - megapixels (float) (default: 1.0)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageScaleToTotalPixels'
 

@@ -31,7 +31,26 @@ class KlingCameraControlsOutputs(OutputSlots):
 class KlingCameraControls(Node[KlingCameraControlsInputs, KlingCameraControlsOutputs]):
     """
     Original name: KlingCameraControls
-    No description available.
+    Category: api node/video/Kling
+    Allows specifying configuration options for Kling Camera Controls and motion control effects.
+
+    Inputs:
+        - camera_control_type (Any) (default: 'None')
+        - horizontal_movement (float) (default: 0.0)
+          Controls camera's movement along horizontal axis (x-axis). Negative indicates left, positive indicates right
+        - vertical_movement (float) (default: 0.0)
+          Controls camera's movement along vertical axis (y-axis). Negative indicates downward, positive indicates upward.
+        - pan (float) (default: 0.5)
+          Controls camera's rotation in vertical plane (x-axis). Negative indicates downward rotation, positive indicates upward rotation.
+        - tilt (float) (default: 0.0)
+          Controls camera's rotation in horizontal plane (y-axis). Negative indicates left rotation, positive indicates right rotation.
+        - roll (float) (default: 0.0)
+          Controls camera's rolling amount (z-axis). Negative indicates counterclockwise, positive indicates clockwise.
+        - zoom (float) (default: 0.0)
+          Controls change in camera's focal length. Negative indicates narrower field of view, positive indicates wider field of view.
+
+    Outputs:
+        - camera_control (Any)
     """
     _original_name: str = 'KlingCameraControls'
 

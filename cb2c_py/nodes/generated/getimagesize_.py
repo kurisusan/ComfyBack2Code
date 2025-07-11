@@ -23,7 +23,16 @@ class GetImageSize_Outputs(OutputSlots):
 class GetImageSize_(Node[GetImageSize_Inputs, GetImageSize_Outputs]):
     """
     Original name: GetImageSize+
-    No description available.
+    Category: essentials/image utils
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - width (int)
+        - height (int)
+        - count (int)
     """
     _original_name: str = 'GetImageSize+'
 

@@ -21,7 +21,16 @@ class EmptyLatentHunyuan3Dv2Outputs(OutputSlots):
 class EmptyLatentHunyuan3Dv2(Node[EmptyLatentHunyuan3Dv2Inputs, EmptyLatentHunyuan3Dv2Outputs]):
     """
     Original name: EmptyLatentHunyuan3Dv2
-    No description available.
+    Category: latent/3d
+    
+
+    Inputs:
+        - resolution (int) (default: 3072)
+        - batch_size (int) (default: 1)
+          The number of latent images in the batch.
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'EmptyLatentHunyuan3Dv2'
 

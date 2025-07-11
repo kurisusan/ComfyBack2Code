@@ -31,7 +31,20 @@ class PixelOEPixelize_Outputs(OutputSlots):
 class PixelOEPixelize_(Node[PixelOEPixelize_Inputs, PixelOEPixelize_Outputs]):
     """
     Original name: PixelOEPixelize+
-    No description available.
+    Category: essentials/image processing
+    
+
+    Inputs:
+        - image (Image)
+        - downscale_mode (str)
+        - target_size (int) (default: 128)
+        - patch_size (int) (default: 16)
+        - thickness (int) (default: 2)
+        - color_matching (bool) (default: True)
+        - upscale (bool) (default: True)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'PixelOEPixelize+'
 

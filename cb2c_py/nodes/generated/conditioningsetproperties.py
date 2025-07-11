@@ -23,7 +23,16 @@ class ConditioningSetPropertiesOutputs(OutputSlots):
 class ConditioningSetProperties(Node[ConditioningSetPropertiesInputs, ConditioningSetPropertiesOutputs]):
     """
     Original name: ConditioningSetProperties
-    No description available.
+    Category: advanced/hooks/cond single
+    
+
+    Inputs:
+        - cond_NEW (Conditioning)
+        - strength (float) (default: 1.0)
+        - set_cond_area (str)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'ConditioningSetProperties'
 

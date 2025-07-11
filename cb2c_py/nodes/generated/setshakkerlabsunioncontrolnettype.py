@@ -21,7 +21,15 @@ class SetShakkerLabsUnionControlNetTypeOutputs(OutputSlots):
 class SetShakkerLabsUnionControlNetType(Node[SetShakkerLabsUnionControlNetTypeInputs, SetShakkerLabsUnionControlNetTypeOutputs]):
     """
     Original name: SetShakkerLabsUnionControlNetType
-    No description available.
+    Category: conditioning/controlnet
+    
+
+    Inputs:
+        - control_net (Any)
+        - type (str)
+
+    Outputs:
+        - control_net (Any)
     """
     _original_name: str = 'SetShakkerLabsUnionControlNetType'
 

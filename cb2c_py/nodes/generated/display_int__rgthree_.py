@@ -19,7 +19,14 @@ class Display_Int__rgthree_Outputs(OutputSlots):
 class Display_Int__rgthree_(Node[Display_Int__rgthree_Inputs, Display_Int__rgthree_Outputs]):
     """
     Original name: Display Int (rgthree)
-    No description available.
+    Category: rgthree
+    
+
+    Inputs:
+        - input (int)
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'Display Int (rgthree)'
 

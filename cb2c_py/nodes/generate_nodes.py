@@ -29,7 +29,14 @@ class {class_name}Outputs(OutputSlots):
 class {class_name}(Node[{class_name}Inputs, {class_name}Outputs]):
     """
     Original name: {original_name}
-    {docstring}
+    Category: {category}
+    {description}
+
+    Inputs:
+{inputs_doc}
+
+    Outputs:
+{outputs_doc}
     """
     _original_name: str = {original_name_repr}
 
@@ -127,26 +134,48 @@ def generate_node_files() -> None:
         inputs_data = details.get("input", {}).get("required", {})
         
         input_slots_annotations, input_slots_assignments = [], []
+        inputs_doc_list = []
         for name, config in inputs_data.items():
             s_name = sanitize_name(name)
             slot_type, param_opts = config[0], config[1] if len(config) > 1 else {}
             default_val = param_opts.get("default")
+            tooltip = param_opts.get("tooltip")
             
             py_type = get_python_type_for_input(slot_type, default_val)
             slot_py_type = py_type if "Slot" in py_type else f"Slot[{py_type}]"
             
             input_slots_annotations.append(f"    {s_name}: {slot_py_type}")
             input_slots_assignments.append(f'        self.{s_name} = {slot_py_type}(node, "{s_name}", {repr(slot_type)})')
+            
+            doc_type = get_python_type(slot_type).replace('Slot[', '').replace(']', '')
+            doc_line = f"        - {s_name} ({doc_type})"
+            if "default" in param_opts:
+                doc_line += f" (default: {get_valid_default_value(default_val, slot_type)})"
+            if tooltip:
+                doc_line += f"\n          {tooltip}"
+            inputs_doc_list.append(doc_line)
+
         if not input_slots_assignments: input_slots_assignments.append("        pass")
+        if not inputs_doc_list: inputs_doc_list.append("        No inputs.")
 
         output_slots_annotations, output_slots_assignments = [], []
-        for name, slot_type in zip(details.get("output_name", []), details.get("output", [])):
+        outputs_doc_list = []
+        output_tooltips = details.get("output_tooltips", [])
+        for i, (name, slot_type) in enumerate(zip(details.get("output_name", []), details.get("output", []))):
             prop_name = sanitize_name(name.lower())
             py_type = get_python_type(slot_type)
             slot_py_type = py_type if "Slot" in py_type else f"Slot[{py_type}]"
             output_slots_annotations.append(f"    {prop_name}: {slot_py_type}")
             output_slots_assignments.append(f'        self.{prop_name} = {slot_py_type}(node, "{name}", {repr(slot_type)})')
+            
+            doc_type = py_type.replace('Slot[', '').replace(']', '')
+            doc_line = f"        - {prop_name} ({doc_type})"
+            if i < len(output_tooltips) and output_tooltips[i]:
+                doc_line += f"\n          {output_tooltips[i]}"
+            outputs_doc_list.append(doc_line)
+
         if not output_slots_assignments: output_slots_assignments.append("        pass")
+        if not outputs_doc_list: outputs_doc_list.append("        No outputs.")
 
         params_with_defaults, params_without_defaults = [], []
         for name, config in inputs_data.items():
@@ -168,7 +197,10 @@ def generate_node_files() -> None:
             class_name=class_name,
             original_name=original_name.replace('"', "'"),
             original_name_repr=repr(original_name),
-            docstring=details.get("_meta", {}).get("description", "No description available."),
+            category=details.get("category", "Unknown"),
+            description=details.get("description", "No description available."),
+            inputs_doc="\n".join(inputs_doc_list),
+            outputs_doc="\n".join(outputs_doc_list),
             input_slots_annotations="\n".join(input_slots_annotations),
             input_slots_assignments="\n".join(input_slots_assignments),
             output_slots_annotations="\n".join(output_slots_annotations),

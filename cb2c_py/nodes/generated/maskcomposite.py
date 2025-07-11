@@ -27,7 +27,18 @@ class MaskCompositeOutputs(OutputSlots):
 class MaskComposite(Node[MaskCompositeInputs, MaskCompositeOutputs]):
     """
     Original name: MaskComposite
-    No description available.
+    Category: mask
+    
+
+    Inputs:
+        - destination (Image)
+        - source (Image)
+        - x (int) (default: 0)
+        - y (int) (default: 0)
+        - operation (str)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'MaskComposite'
 

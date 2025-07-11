@@ -29,7 +29,19 @@ class MaskFix_Outputs(OutputSlots):
 class MaskFix_(Node[MaskFix_Inputs, MaskFix_Outputs]):
     """
     Original name: MaskFix+
-    No description available.
+    Category: essentials/mask
+    
+
+    Inputs:
+        - mask (Image)
+        - erode_dilate (int) (default: 0)
+        - fill_holes (int) (default: 0)
+        - remove_isolated_pixels (int) (default: 0)
+        - smooth (int) (default: 0)
+        - blur (int) (default: 0)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'MaskFix+'
 

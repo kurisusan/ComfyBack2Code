@@ -23,7 +23,18 @@ class RemapMaskRangeOutputs(OutputSlots):
 class RemapMaskRange(Node[RemapMaskRangeInputs, RemapMaskRangeOutputs]):
     """
     Original name: RemapMaskRange
-    No description available.
+    Category: KJNodes/masking
+    
+Sets new min and max values for the mask.
+
+
+    Inputs:
+        - mask (Image)
+        - min (float) (default: 0.0)
+        - max (float) (default: 1.0)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'RemapMaskRange'
 

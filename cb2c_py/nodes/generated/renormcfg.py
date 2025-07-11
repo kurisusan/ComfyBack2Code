@@ -23,7 +23,16 @@ class RenormCFGOutputs(OutputSlots):
 class RenormCFG(Node[RenormCFGInputs, RenormCFGOutputs]):
     """
     Original name: RenormCFG
-    No description available.
+    Category: advanced/model
+    
+
+    Inputs:
+        - model (Model)
+        - cfg_trunc (float) (default: 100)
+        - renorm_cfg (float) (default: 1.0)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'RenormCFG'
 

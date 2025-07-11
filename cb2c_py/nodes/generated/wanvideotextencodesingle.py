@@ -21,7 +21,15 @@ class WanVideoTextEncodeSingleOutputs(OutputSlots):
 class WanVideoTextEncodeSingle(Node[WanVideoTextEncodeSingleInputs, WanVideoTextEncodeSingleOutputs]):
     """
     Original name: WanVideoTextEncodeSingle
-    No description available.
+    Category: WanVideoWrapper
+    Encodes text prompt into text embedding.
+
+    Inputs:
+        - t5 (Any)
+        - prompt (str) (default: '')
+
+    Outputs:
+        - text_embeds (Any)
     """
     _original_name: str = 'WanVideoTextEncodeSingle'
 

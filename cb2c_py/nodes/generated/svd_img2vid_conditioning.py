@@ -39,7 +39,24 @@ class SVD_img2vid_ConditioningOutputs(OutputSlots):
 class SVD_img2vid_Conditioning(Node[SVD_img2vid_ConditioningInputs, SVD_img2vid_ConditioningOutputs]):
     """
     Original name: SVD_img2vid_Conditioning
-    No description available.
+    Category: conditioning/video_models
+    
+
+    Inputs:
+        - clip_vision (Any)
+        - init_image (Image)
+        - vae (Vae)
+        - width (int) (default: 1024)
+        - height (int) (default: 576)
+        - video_frames (int) (default: 14)
+        - motion_bucket_id (int) (default: 127)
+        - fps (int) (default: 6)
+        - augmentation_level (float) (default: 0.0)
+
+    Outputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - latent (Latent)
     """
     _original_name: str = 'SVD_img2vid_Conditioning'
 

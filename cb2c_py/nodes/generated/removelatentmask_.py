@@ -19,7 +19,14 @@ class RemoveLatentMask_Outputs(OutputSlots):
 class RemoveLatentMask_(Node[RemoveLatentMask_Inputs, RemoveLatentMask_Outputs]):
     """
     Original name: RemoveLatentMask+
-    No description available.
+    Category: essentials/utilities
+    
+
+    Inputs:
+        - samples (Latent)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'RemoveLatentMask+'
 

@@ -21,7 +21,15 @@ class Power_Lora_Loader__rgthree_Outputs(OutputSlots):
 class Power_Lora_Loader__rgthree_(Node[Power_Lora_Loader__rgthree_Inputs, Power_Lora_Loader__rgthree_Outputs]):
     """
     Original name: Power Lora Loader (rgthree)
-    No description available.
+    Category: rgthree
+    
+
+    Inputs:
+        - model (Model)
+
+    Outputs:
+        - model (Model)
+        - clip (Clip)
     """
     _original_name: str = 'Power Lora Loader (rgthree)'
 

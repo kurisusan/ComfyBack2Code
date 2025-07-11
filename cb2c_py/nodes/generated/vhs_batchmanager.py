@@ -19,7 +19,14 @@ class VHS_BatchManagerOutputs(OutputSlots):
 class VHS_BatchManager(Node[VHS_BatchManagerInputs, VHS_BatchManagerOutputs]):
     """
     Original name: VHS_BatchManager
-    No description available.
+    Category: Video Helper Suite 🎥🅥🅗🅢
+    Meta Batch Manager 🎥🅥🅗🅢<div style="font-size: 0.8em"><div id=VHS_shortdesc>Split the processing of a very long video into sets of smaller Meta Batches</div></div><div style="font-size: 0.8em">The Meta Batch Manager allows for extremely long input videos to be processed when all other methods for fitting the content in RAM fail. It does not effect VRAM usage.</div><div style="font-size: 0.8em">It must be connected to at least one Input (a Load Video or Load Images) AND at least one Video Combine</div><div style="font-size: 0.8em"><img src=https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite/assets/4284322/7cb3fb7e-59d8-4cb2-a09f-9c6698de8b1f loading=lazy style="width: 0px; min-width: 100%"></div><div style="font-size: 0.8em">It functions by holding both the inputs and ouputs open between executions, and automatically requeue's the workflow until one of the inputs is unable to provide additional images.</div><div style="font-size: 0.8em">Because each sub execution only contains a subset of the total frames, each sub execution creates a hard window which temporal smoothing can not be applied across. This results in jumps in the output.</div><div style="font-size: 0.8em"><div vhs_title="Outputs" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Outputs: <div vhs_title="meta_batch" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">meta_batch: Add all connected nodes to this Meta Batch</div></div></div></div><div vhs_title="Widgets" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Widgets: <div vhs_title="frames_per_batch" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">frames_per_batch: How many frames to process for each sub execution. If loading as image, each frame will use about 50MB of RAM (not VRAM), and this can safely be set in the 100-1000 range, depending on available memory. When loading and combining from latent space (no blue image noodles exist), this value can be much higher, around the 2,000 to 20,000 range</div></div></div></div></div>
+
+    Inputs:
+        - frames_per_batch (int) (default: 16)
+
+    Outputs:
+        - meta_batch (Any)
     """
     _original_name: str = 'VHS_BatchManager'
 

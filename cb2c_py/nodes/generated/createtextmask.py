@@ -43,7 +43,33 @@ class CreateTextMaskOutputs(OutputSlots):
 class CreateTextMask(Node[CreateTextMaskInputs, CreateTextMaskOutputs]):
     """
     Original name: CreateTextMask
-    No description available.
+    Category: KJNodes/text
+    
+Creates a text image and mask.  
+Looks for fonts from this folder:  
+ComfyUI/custom_nodes/ComfyUI-KJNodes/fonts
+  
+If start_rotation and/or end_rotation are different values,  
+creates animation between them.
+
+
+    Inputs:
+        - invert (bool) (default: False)
+        - frames (int) (default: 1)
+        - text_x (int) (default: 0)
+        - text_y (int) (default: 0)
+        - font_size (int) (default: 32)
+        - font_color (str) (default: 'white')
+        - text (str) (default: 'HELLO!')
+        - font (str)
+        - width (int) (default: 512)
+        - height (int) (default: 512)
+        - start_rotation (int) (default: 0)
+        - end_rotation (int) (default: 0)
+
+    Outputs:
+        - image (Image)
+        - mask (Image)
     """
     _original_name: str = 'CreateTextMask'
 

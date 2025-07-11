@@ -23,7 +23,16 @@ class VoxelToMeshOutputs(OutputSlots):
 class VoxelToMesh(Node[VoxelToMeshInputs, VoxelToMeshOutputs]):
     """
     Original name: VoxelToMesh
-    No description available.
+    Category: 3d
+    
+
+    Inputs:
+        - voxel (Any)
+        - algorithm (str)
+        - threshold (float) (default: 0.6)
+
+    Outputs:
+        - mesh (Any)
     """
     _original_name: str = 'VoxelToMesh'
 

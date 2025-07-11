@@ -25,7 +25,21 @@ class GetMaskSizeAndCountOutputs(OutputSlots):
 class GetMaskSizeAndCount(Node[GetMaskSizeAndCountInputs, GetMaskSizeAndCountOutputs]):
     """
     Original name: GetMaskSizeAndCount
-    No description available.
+    Category: KJNodes/masking
+    
+Returns the width, height and batch size of the mask,  
+and passes it through unchanged.  
+
+
+
+    Inputs:
+        - mask (Image)
+
+    Outputs:
+        - mask (Image)
+        - width (int)
+        - height (int)
+        - count (int)
     """
     _original_name: str = 'GetMaskSizeAndCount'
 

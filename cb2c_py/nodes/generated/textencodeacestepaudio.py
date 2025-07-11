@@ -25,7 +25,17 @@ class TextEncodeAceStepAudioOutputs(OutputSlots):
 class TextEncodeAceStepAudio(Node[TextEncodeAceStepAudioInputs, TextEncodeAceStepAudioOutputs]):
     """
     Original name: TextEncodeAceStepAudio
-    No description available.
+    Category: conditioning
+    
+
+    Inputs:
+        - clip (Clip)
+        - tags (str)
+        - lyrics (str)
+        - lyrics_strength (float) (default: 1.0)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'TextEncodeAceStepAudio'
 

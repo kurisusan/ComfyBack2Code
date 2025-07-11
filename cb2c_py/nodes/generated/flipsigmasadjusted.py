@@ -27,7 +27,18 @@ class FlipSigmasAdjustedOutputs(OutputSlots):
 class FlipSigmasAdjusted(Node[FlipSigmasAdjustedInputs, FlipSigmasAdjustedOutputs]):
     """
     Original name: FlipSigmasAdjusted
-    No description available.
+    Category: KJNodes/noise
+    
+
+    Inputs:
+        - sigmas (Any)
+        - divide_by_last_sigma (bool) (default: False)
+        - divide_by (float) (default: 1)
+        - offset_by (int) (default: 1)
+
+    Outputs:
+        - sigmas (Any)
+        - sigmas_string (str)
     """
     _original_name: str = 'FlipSigmasAdjusted'
 

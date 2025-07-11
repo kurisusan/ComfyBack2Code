@@ -19,7 +19,14 @@ class RecraftVectorizeImageNodeOutputs(OutputSlots):
 class RecraftVectorizeImageNode(Node[RecraftVectorizeImageNodeInputs, RecraftVectorizeImageNodeOutputs]):
     """
     Original name: RecraftVectorizeImageNode
-    No description available.
+    Category: api node/image/Recraft
+    Generates SVG synchronously from an input image.
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - svg (Any)
     """
     _original_name: str = 'RecraftVectorizeImageNode'
 

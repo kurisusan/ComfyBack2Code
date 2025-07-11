@@ -21,7 +21,15 @@ class ThresholdMaskOutputs(OutputSlots):
 class ThresholdMask(Node[ThresholdMaskInputs, ThresholdMaskOutputs]):
     """
     Original name: ThresholdMask
-    No description available.
+    Category: mask
+    
+
+    Inputs:
+        - mask (Image)
+        - value (float) (default: 0.5)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'ThresholdMask'
 

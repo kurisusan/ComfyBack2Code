@@ -31,7 +31,24 @@ class WanVideoImageToVideoMultiTalkOutputs(OutputSlots):
 class WanVideoImageToVideoMultiTalk(Node[WanVideoImageToVideoMultiTalkInputs, WanVideoImageToVideoMultiTalkOutputs]):
     """
     Original name: WanVideoImageToVideoMultiTalk
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - vae (Any)
+        - width (int) (default: 832)
+          Width of the image to encode
+        - height (int) (default: 480)
+          Height of the image to encode
+        - frame_window_size (int) (default: 81)
+          Number of frames to encode
+        - motion_frame (int) (default: 25)
+          Driven frame length used in the long video generation.
+        - force_offload (bool) (default: True)
+        - colormatch (str) (default: 'disabled')
+
+    Outputs:
+        - image_embeds (Any)
     """
     _original_name: str = 'WanVideoImageToVideoMultiTalk'
 

@@ -25,7 +25,17 @@ class Power_Prompt__rgthree_Outputs(OutputSlots):
 class Power_Prompt__rgthree_(Node[Power_Prompt__rgthree_Inputs, Power_Prompt__rgthree_Outputs]):
     """
     Original name: Power Prompt (rgthree)
-    No description available.
+    Category: rgthree
+    
+
+    Inputs:
+        - prompt (str)
+
+    Outputs:
+        - conditioning (Conditioning)
+        - model (Model)
+        - clip (Clip)
+        - text (str)
     """
     _original_name: str = 'Power Prompt (rgthree)'
 

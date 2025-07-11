@@ -69,7 +69,39 @@ class ModelMergeSDXLOutputs(OutputSlots):
 class ModelMergeSDXL(Node[ModelMergeSDXLInputs, ModelMergeSDXLOutputs]):
     """
     Original name: ModelMergeSDXL
-    No description available.
+    Category: advanced/model_merging/model_specific
+    
+
+    Inputs:
+        - model1 (Model)
+        - model2 (Model)
+        - time_embed_ (float) (default: 1.0)
+        - label_emb_ (float) (default: 1.0)
+        - input_blocks_0 (float) (default: 1.0)
+        - input_blocks_1 (float) (default: 1.0)
+        - input_blocks_2 (float) (default: 1.0)
+        - input_blocks_3 (float) (default: 1.0)
+        - input_blocks_4 (float) (default: 1.0)
+        - input_blocks_5 (float) (default: 1.0)
+        - input_blocks_6 (float) (default: 1.0)
+        - input_blocks_7 (float) (default: 1.0)
+        - input_blocks_8 (float) (default: 1.0)
+        - middle_block_0 (float) (default: 1.0)
+        - middle_block_1 (float) (default: 1.0)
+        - middle_block_2 (float) (default: 1.0)
+        - output_blocks_0 (float) (default: 1.0)
+        - output_blocks_1 (float) (default: 1.0)
+        - output_blocks_2 (float) (default: 1.0)
+        - output_blocks_3 (float) (default: 1.0)
+        - output_blocks_4 (float) (default: 1.0)
+        - output_blocks_5 (float) (default: 1.0)
+        - output_blocks_6 (float) (default: 1.0)
+        - output_blocks_7 (float) (default: 1.0)
+        - output_blocks_8 (float) (default: 1.0)
+        - out_ (float) (default: 1.0)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'ModelMergeSDXL'
 

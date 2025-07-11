@@ -23,7 +23,18 @@ class BboxVisualizeOutputs(OutputSlots):
 class BboxVisualize(Node[BboxVisualizeInputs, BboxVisualizeOutputs]):
     """
     Original name: BboxVisualize
-    No description available.
+    Category: KJNodes/masking
+    
+Visualizes the specified bbox on the image.
+
+
+    Inputs:
+        - images (Image)
+        - bboxes (Any)
+        - line_width (int) (default: 1)
+
+    Outputs:
+        - images (Image)
     """
     _original_name: str = 'BboxVisualize'
 

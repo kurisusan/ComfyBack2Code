@@ -19,7 +19,14 @@ class AIO_PreprocessorOutputs(OutputSlots):
 class AIO_Preprocessor(Node[AIO_PreprocessorInputs, AIO_PreprocessorOutputs]):
     """
     Original name: AIO_Preprocessor
-    No description available.
+    Category: ControlNet Preprocessors
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'AIO_Preprocessor'
 

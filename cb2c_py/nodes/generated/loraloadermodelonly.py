@@ -23,7 +23,17 @@ class LoraLoaderModelOnlyOutputs(OutputSlots):
 class LoraLoaderModelOnly(Node[LoraLoaderModelOnlyInputs, LoraLoaderModelOnlyOutputs]):
     """
     Original name: LoraLoaderModelOnly
-    No description available.
+    Category: loaders
+    LoRAs are used to modify diffusion and CLIP models, altering the way in which latents are denoised such as applying styles. Multiple LoRA nodes can be linked together.
+
+    Inputs:
+        - model (Model)
+        - lora_name (str)
+        - strength_model (float) (default: 1.0)
+
+    Outputs:
+        - model (Model)
+          The modified diffusion model.
     """
     _original_name: str = 'LoraLoaderModelOnly'
 

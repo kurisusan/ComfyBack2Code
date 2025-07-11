@@ -27,7 +27,18 @@ class CLIPAttentionMultiplyOutputs(OutputSlots):
 class CLIPAttentionMultiply(Node[CLIPAttentionMultiplyInputs, CLIPAttentionMultiplyOutputs]):
     """
     Original name: CLIPAttentionMultiply
-    No description available.
+    Category: _for_testing/attention_experiments
+    
+
+    Inputs:
+        - clip (Clip)
+        - q (float) (default: 1.0)
+        - k (float) (default: 1.0)
+        - v (float) (default: 1.0)
+        - out (float) (default: 1.0)
+
+    Outputs:
+        - clip (Clip)
     """
     _original_name: str = 'CLIPAttentionMultiply'
 

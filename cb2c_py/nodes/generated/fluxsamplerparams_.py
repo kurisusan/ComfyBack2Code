@@ -41,7 +41,25 @@ class FluxSamplerParams_Outputs(OutputSlots):
 class FluxSamplerParams_(Node[FluxSamplerParams_Inputs, FluxSamplerParams_Outputs]):
     """
     Original name: FluxSamplerParams+
-    No description available.
+    Category: essentials/sampling
+    
+
+    Inputs:
+        - model (Model)
+        - conditioning (Conditioning)
+        - latent_image (Latent)
+        - seed (str) (default: '?')
+        - sampler (str) (default: 'euler')
+        - scheduler (str) (default: 'simple')
+        - steps (str) (default: '20')
+        - guidance (str) (default: '3.5')
+        - max_shift (str) (default: '')
+        - base_shift (str) (default: '')
+        - denoise (str) (default: '1.0')
+
+    Outputs:
+        - latent (Latent)
+        - params (Any)
     """
     _original_name: str = 'FluxSamplerParams+'
 

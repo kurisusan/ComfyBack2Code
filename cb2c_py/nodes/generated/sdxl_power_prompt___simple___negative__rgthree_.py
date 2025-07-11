@@ -25,7 +25,17 @@ class SDXL_Power_Prompt___Simple___Negative__rgthree_Outputs(OutputSlots):
 class SDXL_Power_Prompt___Simple___Negative__rgthree_(Node[SDXL_Power_Prompt___Simple___Negative__rgthree_Inputs, SDXL_Power_Prompt___Simple___Negative__rgthree_Outputs]):
     """
     Original name: SDXL Power Prompt - Simple / Negative (rgthree)
-    No description available.
+    Category: rgthree
+    
+
+    Inputs:
+        - prompt_g (str)
+        - prompt_l (str)
+
+    Outputs:
+        - conditioning (Conditioning)
+        - text_g (str)
+        - text_l (str)
     """
     _original_name: str = 'SDXL Power Prompt - Simple / Negative (rgthree)'
 

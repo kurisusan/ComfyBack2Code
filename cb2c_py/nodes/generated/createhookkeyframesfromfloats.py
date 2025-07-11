@@ -25,7 +25,17 @@ class CreateHookKeyframesFromFloatsOutputs(OutputSlots):
 class CreateHookKeyframesFromFloats(Node[CreateHookKeyframesFromFloatsInputs, CreateHookKeyframesFromFloatsOutputs]):
     """
     Original name: CreateHookKeyframesFromFloats
-    No description available.
+    Category: advanced/hooks/scheduling
+    
+
+    Inputs:
+        - floats_strength (Any) (default: -1)
+        - start_percent (float) (default: 0.0)
+        - end_percent (float) (default: 1.0)
+        - print_keyframes (bool) (default: False)
+
+    Outputs:
+        - hook_kf (Any)
     """
     _original_name: str = 'CreateHookKeyframesFromFloats'
 

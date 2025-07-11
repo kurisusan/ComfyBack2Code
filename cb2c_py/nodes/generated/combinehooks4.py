@@ -19,7 +19,14 @@ class CombineHooks4Outputs(OutputSlots):
 class CombineHooks4(Node[CombineHooks4Inputs, CombineHooks4Outputs]):
     """
     Original name: CombineHooks4
-    No description available.
+    Category: advanced/hooks/combine
+    
+
+    Inputs:
+        No inputs.
+
+    Outputs:
+        - hooks (Any)
     """
     _original_name: str = 'CombineHooks4'
 

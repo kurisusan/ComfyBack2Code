@@ -19,7 +19,14 @@ class VHS_GetImageCountOutputs(OutputSlots):
 class VHS_GetImageCount(Node[VHS_GetImageCountInputs, VHS_GetImageCountOutputs]):
     """
     Original name: VHS_GetImageCount
-    No description available.
+    Category: Video Helper Suite 🎥🅥🅗🅢/image
+    Get Image Count 🎥🅥🅗🅢<div style="font-size: 0.8em"><div id=VHS_shortdesc>Return the number of images in an input as an INT</div></div><div style="font-size: 0.8em"><div vhs_title="Inputs" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Inputs: <div vhs_title="images" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">images: The input image</div></div></div></div><div vhs_title="Outputs" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Outputs: <div vhs_title="count" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">count: The number of images in the input</div></div></div></div></div>
+
+    Inputs:
+        - images (Image)
+
+    Outputs:
+        - count (int)
     """
     _original_name: str = 'VHS_GetImageCount'
 

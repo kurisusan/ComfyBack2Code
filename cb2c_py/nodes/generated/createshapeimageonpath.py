@@ -39,7 +39,27 @@ class CreateShapeImageOnPathOutputs(OutputSlots):
 class CreateShapeImageOnPath(Node[CreateShapeImageOnPathInputs, CreateShapeImageOnPathOutputs]):
     """
     Original name: CreateShapeImageOnPath
-    No description available.
+    Category: KJNodes/image
+    
+Creates an image or batch of images with the specified shape.  
+Locations are center locations.  
+
+
+    Inputs:
+        - shape (str) (default: 'circle')
+        - coordinates (str)
+        - frame_width (int) (default: 512)
+        - frame_height (int) (default: 512)
+        - shape_width (int) (default: 128)
+        - shape_height (int) (default: 128)
+        - shape_color (str) (default: 'white')
+        - bg_color (str) (default: 'black')
+        - blur_radius (float) (default: 0.0)
+        - intensity (float) (default: 1.0)
+
+    Outputs:
+        - image (Image)
+        - mask (Image)
     """
     _original_name: str = 'CreateShapeImageOnPath'
 

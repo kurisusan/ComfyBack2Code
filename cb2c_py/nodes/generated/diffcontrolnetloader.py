@@ -21,7 +21,15 @@ class DiffControlNetLoaderOutputs(OutputSlots):
 class DiffControlNetLoader(Node[DiffControlNetLoaderInputs, DiffControlNetLoaderOutputs]):
     """
     Original name: DiffControlNetLoader
-    No description available.
+    Category: loaders
+    
+
+    Inputs:
+        - model (Model)
+        - control_net_name (str)
+
+    Outputs:
+        - control_net (Any)
     """
     _original_name: str = 'DiffControlNetLoader'
 

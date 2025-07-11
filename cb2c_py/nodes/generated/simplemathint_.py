@@ -19,7 +19,14 @@ class SimpleMathInt_Outputs(OutputSlots):
 class SimpleMathInt_(Node[SimpleMathInt_Inputs, SimpleMathInt_Outputs]):
     """
     Original name: SimpleMathInt+
-    No description available.
+    Category: essentials/utilities
+    
+
+    Inputs:
+        - value (int) (default: 0)
+
+    Outputs:
+        - int (int)
     """
     _original_name: str = 'SimpleMathInt+'
 

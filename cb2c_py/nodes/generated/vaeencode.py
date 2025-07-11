@@ -21,7 +21,15 @@ class VAEEncodeOutputs(OutputSlots):
 class VAEEncode(Node[VAEEncodeInputs, VAEEncodeOutputs]):
     """
     Original name: VAEEncode
-    No description available.
+    Category: latent
+    
+
+    Inputs:
+        - pixels (Image)
+        - vae (Vae)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'VAEEncode'
 

@@ -27,7 +27,18 @@ class ImageScaleOutputs(OutputSlots):
 class ImageScale(Node[ImageScaleInputs, ImageScaleOutputs]):
     """
     Original name: ImageScale
-    No description available.
+    Category: image/upscaling
+    
+
+    Inputs:
+        - image (Image)
+        - upscale_method (str)
+        - width (int) (default: 512)
+        - height (int) (default: 512)
+        - crop (str)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageScale'
 

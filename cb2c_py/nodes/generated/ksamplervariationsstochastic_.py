@@ -41,7 +41,25 @@ class KSamplerVariationsStochastic_Outputs(OutputSlots):
 class KSamplerVariationsStochastic_(Node[KSamplerVariationsStochastic_Inputs, KSamplerVariationsStochastic_Outputs]):
     """
     Original name: KSamplerVariationsStochastic+
-    No description available.
+    Category: essentials/sampling
+    
+
+    Inputs:
+        - model (Model)
+        - latent_image (Latent)
+        - noise_seed (int) (default: 0)
+        - steps (int) (default: 25)
+        - cfg (float) (default: 7.0)
+        - sampler (str)
+        - scheduler (str)
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - variation_seed (Any) (default: 0)
+        - variation_strength (float) (default: 0.2)
+        - cfg_scale (float) (default: 1.0)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'KSamplerVariationsStochastic+'
 

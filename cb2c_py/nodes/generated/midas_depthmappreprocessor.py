@@ -19,7 +19,14 @@ class MiDaS_DepthMapPreprocessorOutputs(OutputSlots):
 class MiDaS_DepthMapPreprocessor(Node[MiDaS_DepthMapPreprocessorInputs, MiDaS_DepthMapPreprocessorOutputs]):
     """
     Original name: MiDaS-DepthMapPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Normal and Depth Estimators
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'MiDaS-DepthMapPreprocessor'
 

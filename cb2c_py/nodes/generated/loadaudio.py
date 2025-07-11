@@ -19,7 +19,14 @@ class LoadAudioOutputs(OutputSlots):
 class LoadAudio(Node[LoadAudioInputs, LoadAudioOutputs]):
     """
     Original name: LoadAudio
-    No description available.
+    Category: audio
+    
+
+    Inputs:
+        - audio (str)
+
+    Outputs:
+        - audio (Any)
     """
     _original_name: str = 'LoadAudio'
 

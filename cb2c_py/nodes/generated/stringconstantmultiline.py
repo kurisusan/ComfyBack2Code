@@ -21,7 +21,15 @@ class StringConstantMultilineOutputs(OutputSlots):
 class StringConstantMultiline(Node[StringConstantMultilineInputs, StringConstantMultilineOutputs]):
     """
     Original name: StringConstantMultiline
-    No description available.
+    Category: KJNodes/constants
+    
+
+    Inputs:
+        - string (str) (default: '')
+        - strip_newlines (bool) (default: True)
+
+    Outputs:
+        - string (str)
     """
     _original_name: str = 'StringConstantMultiline'
 

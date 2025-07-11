@@ -27,7 +27,18 @@ class UNetCrossAttentionMultiplyOutputs(OutputSlots):
 class UNetCrossAttentionMultiply(Node[UNetCrossAttentionMultiplyInputs, UNetCrossAttentionMultiplyOutputs]):
     """
     Original name: UNetCrossAttentionMultiply
-    No description available.
+    Category: _for_testing/attention_experiments
+    
+
+    Inputs:
+        - model (Model)
+        - q (float) (default: 1.0)
+        - k (float) (default: 1.0)
+        - v (float) (default: 1.0)
+        - out (float) (default: 1.0)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'UNetCrossAttentionMultiply'
 

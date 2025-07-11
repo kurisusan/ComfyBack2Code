@@ -27,7 +27,18 @@ class LatentCompositeMaskedOutputs(OutputSlots):
 class LatentCompositeMasked(Node[LatentCompositeMaskedInputs, LatentCompositeMaskedOutputs]):
     """
     Original name: LatentCompositeMasked
-    No description available.
+    Category: latent
+    
+
+    Inputs:
+        - destination (Latent)
+        - source (Latent)
+        - x (int) (default: 0)
+        - y (int) (default: 0)
+        - resize_source (bool) (default: False)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'LatentCompositeMasked'
 

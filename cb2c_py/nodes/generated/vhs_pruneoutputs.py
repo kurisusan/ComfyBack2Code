@@ -21,7 +21,15 @@ class VHS_PruneOutputsOutputs(OutputSlots):
 class VHS_PruneOutputs(Node[VHS_PruneOutputsInputs, VHS_PruneOutputsOutputs]):
     """
     Original name: VHS_PruneOutputs
-    No description available.
+    Category: Video Helper Suite 🎥🅥🅗🅢
+    Prune Outputs 🎥🅥🅗🅢<div style="font-size: 0.8em"><div id=VHS_shortdesc>Automates deletion of undesired outputs from a Video Combine node.</div></div><div style="font-size: 0.8em">Video Combine produces a number of file outputs in addition to the final output. Some of these, such as a video file without audio included, are implementation limitations and are not feasible to solve. As an alternative, the Prune Outputs node is added to automate the deletion of these file outputs if they are not desired</div><div style="font-size: 0.8em"><div vhs_title="Inputs" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Inputs: <div vhs_title="filenames" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">filenames: A connection from a Video Combine node to indicate which outputs should be pruned</div></div></div></div><div vhs_title="Widgets" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Widgets: <div vhs_title="options" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">options: Which files should be deleted<div style="font-size: 1em"><div vhs_title="Intermediate" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Intermediate: Delete any files that were required for intermediate processing but are not the final output, like the no-audio output file when audio is included</div></div><div vhs_title="Intermediate and Utility" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Intermediate and Utility: Delete all produced files that aren't the final output, including the first frame png</div></div></div></div></div></div></div></div>
+
+    Inputs:
+        - filenames (Any)
+        - options (str)
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'VHS_PruneOutputs'
 

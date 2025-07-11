@@ -23,7 +23,16 @@ class MorphologyOutputs(OutputSlots):
 class Morphology(Node[MorphologyInputs, MorphologyOutputs]):
     """
     Original name: Morphology
-    No description available.
+    Category: image/postprocessing
+    
+
+    Inputs:
+        - image (Image)
+        - operation (str)
+        - kernel_size (int) (default: 3)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'Morphology'
 

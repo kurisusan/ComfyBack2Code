@@ -21,7 +21,15 @@ class TripoConversionNodeOutputs(OutputSlots):
 class TripoConversionNode(Node[TripoConversionNodeInputs, TripoConversionNodeOutputs]):
     """
     Original name: TripoConversionNode
-    No description available.
+    Category: api node/3d/Tripo
+    
+
+    Inputs:
+        - original_model_task_id (Any)
+        - format (str)
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'TripoConversionNode'
 

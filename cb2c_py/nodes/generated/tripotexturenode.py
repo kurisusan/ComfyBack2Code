@@ -21,7 +21,15 @@ class TripoTextureNodeOutputs(OutputSlots):
 class TripoTextureNode(Node[TripoTextureNodeInputs, TripoTextureNodeOutputs]):
     """
     Original name: TripoTextureNode
-    No description available.
+    Category: api node/3d/Tripo
+    
+
+    Inputs:
+        - model_task_id (Any)
+
+    Outputs:
+        - model_file (str)
+        - model_task_id (Any)
     """
     _original_name: str = 'TripoTextureNode'
 

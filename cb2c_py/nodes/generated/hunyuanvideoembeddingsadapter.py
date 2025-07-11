@@ -19,7 +19,14 @@ class HunyuanVideoEmbeddingsAdapterOutputs(OutputSlots):
 class HunyuanVideoEmbeddingsAdapter(Node[HunyuanVideoEmbeddingsAdapterInputs, HunyuanVideoEmbeddingsAdapterOutputs]):
     """
     Original name: HunyuanVideoEmbeddingsAdapter
-    No description available.
+    Category: multigpu
+    
+
+    Inputs:
+        - hyvid_embeds (Any)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'HunyuanVideoEmbeddingsAdapter'
 

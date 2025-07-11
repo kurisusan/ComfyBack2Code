@@ -29,7 +29,19 @@ class SDXLEmptyLatentSizePicker_Outputs(OutputSlots):
 class SDXLEmptyLatentSizePicker_(Node[SDXLEmptyLatentSizePicker_Inputs, SDXLEmptyLatentSizePicker_Outputs]):
     """
     Original name: SDXLEmptyLatentSizePicker+
-    No description available.
+    Category: essentials/utilities
+    
+
+    Inputs:
+        - resolution (str) (default: '1024x1024 (1.0)')
+        - batch_size (int) (default: 1)
+        - width_override (int) (default: 0)
+        - height_override (int) (default: 0)
+
+    Outputs:
+        - latent (Latent)
+        - width (int)
+        - height (int)
     """
     _original_name: str = 'SDXLEmptyLatentSizePicker+'
 

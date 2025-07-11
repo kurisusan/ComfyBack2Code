@@ -21,7 +21,15 @@ class RebatchImagesOutputs(OutputSlots):
 class RebatchImages(Node[RebatchImagesInputs, RebatchImagesOutputs]):
     """
     Original name: RebatchImages
-    No description available.
+    Category: image/batch
+    
+
+    Inputs:
+        - images (Image)
+        - batch_size (int) (default: 1)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'RebatchImages'
 

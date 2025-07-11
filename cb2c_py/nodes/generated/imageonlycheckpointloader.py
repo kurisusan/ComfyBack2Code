@@ -23,7 +23,16 @@ class ImageOnlyCheckpointLoaderOutputs(OutputSlots):
 class ImageOnlyCheckpointLoader(Node[ImageOnlyCheckpointLoaderInputs, ImageOnlyCheckpointLoaderOutputs]):
     """
     Original name: ImageOnlyCheckpointLoader
-    No description available.
+    Category: loaders/video_models
+    
+
+    Inputs:
+        - ckpt_name (str)
+
+    Outputs:
+        - model (Model)
+        - clip_vision (Any)
+        - vae (Vae)
     """
     _original_name: str = 'ImageOnlyCheckpointLoader'
 

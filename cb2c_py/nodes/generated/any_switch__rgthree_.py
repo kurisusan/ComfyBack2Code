@@ -19,7 +19,14 @@ class Any_Switch__rgthree_Outputs(OutputSlots):
 class Any_Switch__rgthree_(Node[Any_Switch__rgthree_Inputs, Any_Switch__rgthree_Outputs]):
     """
     Original name: Any Switch (rgthree)
-    No description available.
+    Category: rgthree
+    
+
+    Inputs:
+        No inputs.
+
+    Outputs:
+        - _ (Any)
     """
     _original_name: str = 'Any Switch (rgthree)'
 

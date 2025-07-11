@@ -39,7 +39,26 @@ class WanVideoDiffusionForcingSamplerOutputs(OutputSlots):
 class WanVideoDiffusionForcingSampler(Node[WanVideoDiffusionForcingSamplerInputs, WanVideoDiffusionForcingSamplerOutputs]):
     """
     Original name: WanVideoDiffusionForcingSampler
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - model (Any)
+        - text_embeds (Any)
+        - image_embeds (Any)
+        - addnoise_condition (int) (default: 10)
+          Improves consistency in long video generation
+        - fps (float) (default: 24.0)
+        - steps (int) (default: 30)
+        - cfg (float) (default: 6.0)
+        - shift (float) (default: 8.0)
+        - seed (int) (default: 0)
+        - force_offload (bool) (default: True)
+          Moves the model to the offload device after sampling
+        - scheduler (str) (default: 'unipc')
+
+    Outputs:
+        - samples (Latent)
     """
     _original_name: str = 'WanVideoDiffusionForcingSampler'
 

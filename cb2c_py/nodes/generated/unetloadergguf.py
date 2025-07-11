@@ -9,7 +9,7 @@ from typing import Dict, Any, List, Union
 class UnetLoaderGGUFInputs(InputSlots):
     unet_name: Slot[str]
     def __init__(self, node: "Node"):
-        self.unet_name = Slot[str](node, "unet_name", [])
+        self.unet_name = Slot[str](node, "unet_name", ['wan2.1-t2v-14b-Q4_K_M.gguf'])
 
 class UnetLoaderGGUFOutputs(OutputSlots):
     model: Slot[Model]
@@ -19,7 +19,14 @@ class UnetLoaderGGUFOutputs(OutputSlots):
 class UnetLoaderGGUF(Node[UnetLoaderGGUFInputs, UnetLoaderGGUFOutputs]):
     """
     Original name: UnetLoaderGGUF
-    No description available.
+    Category: bootleg
+    
+
+    Inputs:
+        - unet_name (str)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'UnetLoaderGGUF'
 

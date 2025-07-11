@@ -23,7 +23,23 @@ class ImageAndMaskPreviewOutputs(OutputSlots):
 class ImageAndMaskPreview(Node[ImageAndMaskPreviewInputs, ImageAndMaskPreviewOutputs]):
     """
     Original name: ImageAndMaskPreview
-    No description available.
+    Category: KJNodes/masking
+    
+Preview an image or a mask, when both inputs are used  
+composites the mask on top of the image.
+with pass_through on the preview is disabled and the  
+composite is returned from the composite slot instead,  
+this allows for the preview to be passed for video combine  
+nodes for example.
+
+
+    Inputs:
+        - mask_opacity (float) (default: 1.0)
+        - mask_color (str) (default: '255, 255, 255')
+        - pass_through (bool) (default: False)
+
+    Outputs:
+        - composite (Image)
     """
     _original_name: str = 'ImageAndMaskPreview'
 

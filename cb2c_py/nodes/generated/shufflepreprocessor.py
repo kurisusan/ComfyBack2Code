@@ -19,7 +19,14 @@ class ShufflePreprocessorOutputs(OutputSlots):
 class ShufflePreprocessor(Node[ShufflePreprocessorInputs, ShufflePreprocessorOutputs]):
     """
     Original name: ShufflePreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/T2IAdapter-only
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ShufflePreprocessor'
 

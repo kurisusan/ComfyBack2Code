@@ -23,7 +23,17 @@ class WanVideoReCamMasterCameraEmbedOutputs(OutputSlots):
 class WanVideoReCamMasterCameraEmbed(Node[WanVideoReCamMasterCameraEmbedInputs, WanVideoReCamMasterCameraEmbedOutputs]):
     """
     Original name: WanVideoReCamMasterCameraEmbed
-    No description available.
+    Category: WanVideoWrapper
+    https://github.com/KwaiVGI/ReCamMaster
+
+    Inputs:
+        - camera_poses (Any)
+        - latents (Latent)
+          source video
+
+    Outputs:
+        - camera_embeds (Any)
+        - camera_poses (Any)
     """
     _original_name: str = 'WanVideoReCamMasterCameraEmbed'
 

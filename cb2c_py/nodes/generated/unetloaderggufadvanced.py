@@ -12,7 +12,7 @@ class UnetLoaderGGUFAdvancedInputs(InputSlots):
     patch_dtype: Slot[str]
     patch_on_device: Slot[bool]
     def __init__(self, node: "Node"):
-        self.unet_name = Slot[str](node, "unet_name", [])
+        self.unet_name = Slot[str](node, "unet_name", ['wan2.1-t2v-14b-Q4_K_M.gguf'])
         self.dequant_dtype = Slot[str](node, "dequant_dtype", ['default', 'target', 'float32', 'float16', 'bfloat16'])
         self.patch_dtype = Slot[str](node, "patch_dtype", ['default', 'target', 'float32', 'float16', 'bfloat16'])
         self.patch_on_device = Slot[bool](node, "patch_on_device", 'BOOLEAN')
@@ -25,7 +25,17 @@ class UnetLoaderGGUFAdvancedOutputs(OutputSlots):
 class UnetLoaderGGUFAdvanced(Node[UnetLoaderGGUFAdvancedInputs, UnetLoaderGGUFAdvancedOutputs]):
     """
     Original name: UnetLoaderGGUFAdvanced
-    No description available.
+    Category: bootleg
+    
+
+    Inputs:
+        - unet_name (str)
+        - dequant_dtype (str) (default: 'default')
+        - patch_dtype (str) (default: 'default')
+        - patch_on_device (bool) (default: False)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'UnetLoaderGGUFAdvanced'
 

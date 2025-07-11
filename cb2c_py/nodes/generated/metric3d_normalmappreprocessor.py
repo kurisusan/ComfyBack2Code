@@ -19,7 +19,14 @@ class Metric3D_NormalMapPreprocessorOutputs(OutputSlots):
 class Metric3D_NormalMapPreprocessor(Node[Metric3D_NormalMapPreprocessorInputs, Metric3D_NormalMapPreprocessorOutputs]):
     """
     Original name: Metric3D-NormalMapPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Normal and Depth Estimators
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'Metric3D-NormalMapPreprocessor'
 

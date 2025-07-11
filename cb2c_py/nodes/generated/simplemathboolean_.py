@@ -19,7 +19,14 @@ class SimpleMathBoolean_Outputs(OutputSlots):
 class SimpleMathBoolean_(Node[SimpleMathBoolean_Inputs, SimpleMathBoolean_Outputs]):
     """
     Original name: SimpleMathBoolean+
-    No description available.
+    Category: essentials/utilities
+    
+
+    Inputs:
+        - value (bool) (default: False)
+
+    Outputs:
+        - boolean (bool)
     """
     _original_name: str = 'SimpleMathBoolean+'
 

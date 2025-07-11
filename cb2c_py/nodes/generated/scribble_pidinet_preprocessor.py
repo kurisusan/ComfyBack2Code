@@ -19,7 +19,14 @@ class Scribble_PiDiNet_PreprocessorOutputs(OutputSlots):
 class Scribble_PiDiNet_Preprocessor(Node[Scribble_PiDiNet_PreprocessorInputs, Scribble_PiDiNet_PreprocessorOutputs]):
     """
     Original name: Scribble_PiDiNet_Preprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Line Extractors
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'Scribble_PiDiNet_Preprocessor'
 

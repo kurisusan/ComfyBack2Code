@@ -23,7 +23,19 @@ class SaveStringKJOutputs(OutputSlots):
 class SaveStringKJ(Node[SaveStringKJInputs, SaveStringKJOutputs]):
     """
     Original name: SaveStringKJ
-    No description available.
+    Category: KJNodes/misc
+    Saves the input string to your ComfyUI output directory.
+
+    Inputs:
+        - string (str)
+          string to save as .txt file
+        - filename_prefix (str) (default: 'text')
+          The prefix for the file to save. This may include formatting information such as %date:yyyy-MM-dd% or %Empty Latent Image.width% to include values from nodes.
+        - output_folder (str) (default: 'output')
+          The folder to save the images to.
+
+    Outputs:
+        - filename (str)
     """
     _original_name: str = 'SaveStringKJ'
 

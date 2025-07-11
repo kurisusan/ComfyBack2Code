@@ -21,7 +21,15 @@ class MaskSmooth_Outputs(OutputSlots):
 class MaskSmooth_(Node[MaskSmooth_Inputs, MaskSmooth_Outputs]):
     """
     Original name: MaskSmooth+
-    No description available.
+    Category: essentials/mask
+    
+
+    Inputs:
+        - mask (Image)
+        - amount (int) (default: 0)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'MaskSmooth+'
 

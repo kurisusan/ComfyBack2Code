@@ -29,7 +29,25 @@ class NunchakuFluxDiTLoaderOutputs(OutputSlots):
 class NunchakuFluxDiTLoader(Node[NunchakuFluxDiTLoaderInputs, NunchakuFluxDiTLoaderOutputs]):
     """
     Original name: NunchakuFluxDiTLoader
-    No description available.
+    Category: Nunchaku
+    
+
+    Inputs:
+        - model_path (str)
+          The SVDQuant quantized FLUX.1 models.
+        - cache_threshold (float) (default: 0)
+          Adjusts the caching tolerance like `residual_diff_threshold` in WaveSpeed. Increasing the value enhances speed at the cost of quality. A typical setting is 0.12. Setting it to 0 disables the effect.
+        - attention (str) (default: 'nunchaku-fp16')
+          Attention implementation. The default implementation is `flash-attention2`. `nunchaku-fp16` use FP16 attention, offering ~1.2× speedup. Note that 20-series GPUs can only use `nunchaku-fp16`.
+        - cpu_offload (str) (default: 'auto')
+          Whether to enable CPU offload for the transformer model.auto' will enable it if the GPU memory is less than 14G.
+        - device_id (int) (default: 0)
+          The GPU device ID to use for the model.
+        - data_type (str) (default: 'bfloat16')
+          Specifies the model's data type. Default is `bfloat16`. For 20-series GPUs, which do not support `bfloat16`, use `float16` instead.
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'NunchakuFluxDiTLoader'
 

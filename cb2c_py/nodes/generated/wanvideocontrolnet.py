@@ -31,7 +31,24 @@ class WanVideoControlnetOutputs(OutputSlots):
 class WanVideoControlnet(Node[WanVideoControlnetInputs, WanVideoControlnetOutputs]):
     """
     Original name: WanVideoControlnet
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - model (Any)
+        - controlnet (Any)
+        - control_images (Image)
+        - strength (float) (default: 1.0)
+          controlnet strength
+        - control_stride (int) (default: 3)
+          controlnet stride
+        - control_start_percent (float) (default: 0.0)
+          Start percent of the steps to apply controlnet
+        - control_end_percent (float) (default: 1.0)
+          End percent of the steps to apply controlnet
+
+    Outputs:
+        - model (Any)
     """
     _original_name: str = 'WanVideoControlnet'
 

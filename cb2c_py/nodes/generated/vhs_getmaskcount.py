@@ -19,7 +19,14 @@ class VHS_GetMaskCountOutputs(OutputSlots):
 class VHS_GetMaskCount(Node[VHS_GetMaskCountInputs, VHS_GetMaskCountOutputs]):
     """
     Original name: VHS_GetMaskCount
-    No description available.
+    Category: Video Helper Suite 🎥🅥🅗🅢/mask
+    Get Mask Count 🎥🅥🅗🅢<div style="font-size: 0.8em"><div id=VHS_shortdesc>Return the number of masks in an input as an INT</div></div><div style="font-size: 0.8em"><div vhs_title="Inputs" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Inputs: <div vhs_title="masks" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">masks: The input mask</div></div></div></div><div vhs_title="Outputs" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Outputs: <div vhs_title="count" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">count: The number of masks in the input</div></div></div></div></div>
+
+    Inputs:
+        - mask (Image)
+
+    Outputs:
+        - count (int)
     """
     _original_name: str = 'VHS_GetMaskCount'
 

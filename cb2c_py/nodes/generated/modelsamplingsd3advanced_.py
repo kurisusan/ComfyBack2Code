@@ -25,7 +25,17 @@ class ModelSamplingSD3Advanced_Outputs(OutputSlots):
 class ModelSamplingSD3Advanced_(Node[ModelSamplingSD3Advanced_Inputs, ModelSamplingSD3Advanced_Outputs]):
     """
     Original name: ModelSamplingSD3Advanced+
-    No description available.
+    Category: essentials/sampling
+    
+
+    Inputs:
+        - model (Model)
+        - shift (float) (default: 3.0)
+        - cut_off (float) (default: 0.5)
+        - shift_multiplier (float) (default: 2)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'ModelSamplingSD3Advanced+'
 

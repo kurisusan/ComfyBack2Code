@@ -27,7 +27,18 @@ class ImageSeamCarving_Outputs(OutputSlots):
 class ImageSeamCarving_(Node[ImageSeamCarving_Inputs, ImageSeamCarving_Outputs]):
     """
     Original name: ImageSeamCarving+
-    No description available.
+    Category: essentials/image manipulation
+    
+
+    Inputs:
+        - image (Image)
+        - width (int) (default: 512)
+        - height (int) (default: 512)
+        - energy (str)
+        - order (str)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageSeamCarving+'
 

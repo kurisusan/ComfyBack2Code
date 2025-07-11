@@ -25,7 +25,17 @@ class StringCompareOutputs(OutputSlots):
 class StringCompare(Node[StringCompareInputs, StringCompareOutputs]):
     """
     Original name: StringCompare
-    No description available.
+    Category: utils/string
+    
+
+    Inputs:
+        - string_a (str)
+        - string_b (str)
+        - mode (Any)
+        - case_sensitive (bool) (default: True)
+
+    Outputs:
+        - boolean (bool)
     """
     _original_name: str = 'StringCompare'
 

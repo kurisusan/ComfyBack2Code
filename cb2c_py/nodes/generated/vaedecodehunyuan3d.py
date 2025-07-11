@@ -25,7 +25,17 @@ class VAEDecodeHunyuan3DOutputs(OutputSlots):
 class VAEDecodeHunyuan3D(Node[VAEDecodeHunyuan3DInputs, VAEDecodeHunyuan3DOutputs]):
     """
     Original name: VAEDecodeHunyuan3D
-    No description available.
+    Category: latent/3d
+    
+
+    Inputs:
+        - samples (Latent)
+        - vae (Vae)
+        - num_chunks (int) (default: 8000)
+        - octree_resolution (int) (default: 256)
+
+    Outputs:
+        - voxel (Any)
     """
     _original_name: str = 'VAEDecodeHunyuan3D'
 

@@ -21,7 +21,16 @@ class NunchakuDepthPreprocessorOutputs(OutputSlots):
 class NunchakuDepthPreprocessor(Node[NunchakuDepthPreprocessorInputs, NunchakuDepthPreprocessorOutputs]):
     """
     Original name: NunchakuDepthPreprocessor
-    No description available.
+    Category: Nunchaku
+    
+
+    Inputs:
+        - image (Image)
+        - model_path (str)
+          Name of the depth preprocessor model.
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'NunchakuDepthPreprocessor'
 

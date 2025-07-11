@@ -25,7 +25,17 @@ class InjectLatentNoise_Outputs(OutputSlots):
 class InjectLatentNoise_(Node[InjectLatentNoise_Inputs, InjectLatentNoise_Outputs]):
     """
     Original name: InjectLatentNoise+
-    No description available.
+    Category: essentials/sampling
+    
+
+    Inputs:
+        - latent (Latent)
+        - noise_seed (int) (default: 0)
+        - noise_strength (float) (default: 1.0)
+        - normalize (str) (default: 'false')
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'InjectLatentNoise+'
 

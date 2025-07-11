@@ -35,7 +35,45 @@ class GLIGENTextBoxApplyBatchCoordsOutputs(OutputSlots):
 class GLIGENTextBoxApplyBatchCoords(Node[GLIGENTextBoxApplyBatchCoordsInputs, GLIGENTextBoxApplyBatchCoordsOutputs]):
     """
     Original name: GLIGENTextBoxApplyBatchCoords
-    No description available.
+    Category: KJNodes/experimental
+    
+This node allows scheduling GLIGEN text box positions in a batch,  
+to be used with AnimateDiff-Evolved. Intended to pair with the  
+Spline Editor -node.  
+
+GLIGEN model can be downloaded through the Manage's "Install Models" menu.  
+Or directly from here:  
+https://huggingface.co/comfyanonymous/GLIGEN_pruned_safetensors/tree/main  
+  
+Inputs:  
+- **latents** input is used to calculate batch size  
+- **clip** is your standard text encoder, use same as for the main prompt  
+- **gligen_textbox_model** connects to GLIGEN Loader  
+- **coordinates** takes a json string of points, directly compatible  
+with the spline editor node.
+- **text** is the part of the prompt to set position for  
+- **width** and **height** are the size of the GLIGEN bounding box  
+  
+Outputs:
+- **conditioning** goes between to clip text encode and the sampler  
+- **coord_preview** is an optional preview of the coordinates and  
+bounding boxes.
+
+
+
+    Inputs:
+        - conditioning_to (Conditioning)
+        - latents (Latent)
+        - clip (Clip)
+        - gligen_textbox_model (Any)
+        - coordinates (str)
+        - text (str)
+        - width (int) (default: 128)
+        - height (int) (default: 128)
+
+    Outputs:
+        - conditioning (Conditioning)
+        - coord_preview (Image)
     """
     _original_name: str = 'GLIGENTextBoxApplyBatchCoords'
 

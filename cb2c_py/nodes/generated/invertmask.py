@@ -19,7 +19,14 @@ class InvertMaskOutputs(OutputSlots):
 class InvertMask(Node[InvertMaskInputs, InvertMaskOutputs]):
     """
     Original name: InvertMask
-    No description available.
+    Category: mask
+    
+
+    Inputs:
+        - mask (Image)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'InvertMask'
 

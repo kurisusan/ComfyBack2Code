@@ -19,7 +19,14 @@ class Rodin3D_DetailOutputs(OutputSlots):
 class Rodin3D_Detail(Node[Rodin3D_DetailInputs, Rodin3D_DetailOutputs]):
     """
     Original name: Rodin3D_Detail
-    No description available.
+    Category: api node/3d/Rodin
+    Generate 3D Assets using Rodin API
+
+    Inputs:
+        - Images (Image)
+
+    Outputs:
+        - _3d_model_path (str)
     """
     _original_name: str = 'Rodin3D_Detail'
 

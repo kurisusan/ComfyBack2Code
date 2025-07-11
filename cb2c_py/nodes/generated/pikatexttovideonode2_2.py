@@ -29,7 +29,20 @@ class PikaTextToVideoNode2_2Outputs(OutputSlots):
 class PikaTextToVideoNode2_2(Node[PikaTextToVideoNode2_2Inputs, PikaTextToVideoNode2_2Outputs]):
     """
     Original name: PikaTextToVideoNode2_2
-    No description available.
+    Category: api node/video/Pika
+    Sends a text prompt to the Pika API v2.2 to generate a video.
+
+    Inputs:
+        - prompt_text (str)
+        - negative_prompt (str) (default: None)
+        - seed (int) (default: None)
+        - resolution (Any) (default: '1080p')
+        - duration (Any) (default: '5')
+        - aspect_ratio (float) (default: 1.7777777777777777)
+          Aspect ratio (width / height)
+
+    Outputs:
+        - video (Any)
     """
     _original_name: str = 'PikaTextToVideoNode2_2'
 

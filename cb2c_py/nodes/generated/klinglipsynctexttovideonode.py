@@ -29,7 +29,21 @@ class KlingLipSyncTextToVideoNodeOutputs(OutputSlots):
 class KlingLipSyncTextToVideoNode(Node[KlingLipSyncTextToVideoNodeInputs, KlingLipSyncTextToVideoNodeOutputs]):
     """
     Original name: KlingLipSyncTextToVideoNode
-    No description available.
+    Category: api node/video/Kling
+    Kling Lip Sync Text to Video Node. Syncs mouth movements in a video file to a text prompt. The video file should not be larger than 100MB, should have height/width between 720px and 1920px, and should be between 2s and 10s in length.
+
+    Inputs:
+        - video (Any)
+        - text (str) (default: None)
+          Text Content for Lip-Sync Video Generation. Required when mode is text2video. Maximum length is 120 characters.
+        - voice (str) (default: 'Melody')
+        - voice_speed (float) (default: 1)
+          Speech Rate. Valid range: 0.8~2.0, accurate to one decimal place.
+
+    Outputs:
+        - video (Any)
+        - video_id (str)
+        - duration (str)
     """
     _original_name: str = 'KlingLipSyncTextToVideoNode'
 

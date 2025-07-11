@@ -19,7 +19,15 @@ class OpenAIGPTImage1Outputs(OutputSlots):
 class OpenAIGPTImage1(Node[OpenAIGPTImage1Inputs, OpenAIGPTImage1Outputs]):
     """
     Original name: OpenAIGPTImage1
-    No description available.
+    Category: api node/image/OpenAI
+    Generates images synchronously via OpenAI's GPT Image 1 endpoint.
+
+    Inputs:
+        - prompt (str) (default: '')
+          Text prompt for GPT Image 1
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'OpenAIGPTImage1'
 

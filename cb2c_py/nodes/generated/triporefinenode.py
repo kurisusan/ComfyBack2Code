@@ -21,7 +21,16 @@ class TripoRefineNodeOutputs(OutputSlots):
 class TripoRefineNode(Node[TripoRefineNodeInputs, TripoRefineNodeOutputs]):
     """
     Original name: TripoRefineNode
-    No description available.
+    Category: api node/3d/Tripo
+    Refine a draft model created by v1.4 Tripo models only.
+
+    Inputs:
+        - model_task_id (Any)
+          Must be a v1.4 Tripo model
+
+    Outputs:
+        - model_file (str)
+        - model_task_id (Any)
     """
     _original_name: str = 'TripoRefineNode'
 

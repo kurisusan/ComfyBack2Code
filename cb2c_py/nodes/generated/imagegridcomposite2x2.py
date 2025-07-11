@@ -25,7 +25,19 @@ class ImageGridComposite2x2Outputs(OutputSlots):
 class ImageGridComposite2x2(Node[ImageGridComposite2x2Inputs, ImageGridComposite2x2Outputs]):
     """
     Original name: ImageGridComposite2x2
-    No description available.
+    Category: KJNodes/image
+    
+Concatenates the 4 input images into a 2x2 grid. 
+
+
+    Inputs:
+        - image1 (Image)
+        - image2 (Image)
+        - image3 (Image)
+        - image4 (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageGridComposite2x2'
 

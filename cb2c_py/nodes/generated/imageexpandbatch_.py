@@ -23,7 +23,16 @@ class ImageExpandBatch_Outputs(OutputSlots):
 class ImageExpandBatch_(Node[ImageExpandBatch_Inputs, ImageExpandBatch_Outputs]):
     """
     Original name: ImageExpandBatch+
-    No description available.
+    Category: essentials/image batch
+    
+
+    Inputs:
+        - image (Image)
+        - size (int) (default: 16)
+        - method (str)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageExpandBatch+'
 

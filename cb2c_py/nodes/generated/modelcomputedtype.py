@@ -21,7 +21,15 @@ class ModelComputeDtypeOutputs(OutputSlots):
 class ModelComputeDtype(Node[ModelComputeDtypeInputs, ModelComputeDtypeOutputs]):
     """
     Original name: ModelComputeDtype
-    No description available.
+    Category: advanced/debug/model
+    
+
+    Inputs:
+        - model (Model)
+        - dtype (str)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'ModelComputeDtype'
 

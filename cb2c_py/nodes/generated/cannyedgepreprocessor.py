@@ -19,7 +19,14 @@ class CannyEdgePreprocessorOutputs(OutputSlots):
 class CannyEdgePreprocessor(Node[CannyEdgePreprocessorInputs, CannyEdgePreprocessorOutputs]):
     """
     Original name: CannyEdgePreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Line Extractors
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'CannyEdgePreprocessor'
 

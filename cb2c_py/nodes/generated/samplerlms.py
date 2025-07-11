@@ -19,7 +19,14 @@ class SamplerLMSOutputs(OutputSlots):
 class SamplerLMS(Node[SamplerLMSInputs, SamplerLMSOutputs]):
     """
     Original name: SamplerLMS
-    No description available.
+    Category: sampling/custom_sampling/samplers
+    
+
+    Inputs:
+        - order (int) (default: 4)
+
+    Outputs:
+        - sampler (Any)
     """
     _original_name: str = 'SamplerLMS'
 

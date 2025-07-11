@@ -31,7 +31,22 @@ class KlingDualCharacterVideoEffectNodeOutputs(OutputSlots):
 class KlingDualCharacterVideoEffectNode(Node[KlingDualCharacterVideoEffectNodeInputs, KlingDualCharacterVideoEffectNodeOutputs]):
     """
     Original name: KlingDualCharacterVideoEffectNode
-    No description available.
+    Category: api node/video/Kling
+    Achieve different special effects when generating a video based on the effect_scene. First image will be positioned on left side, second on right side of the composite.
+
+    Inputs:
+        - image_left (Image)
+          Left side image
+        - image_right (Image)
+          Right side image
+        - effect_scene (Any)
+        - model_name (Any) (default: 'kling-v1')
+        - mode (Any) (default: 'std')
+        - duration (Any)
+
+    Outputs:
+        - video (Any)
+        - duration (str)
     """
     _original_name: str = 'KlingDualCharacterVideoEffectNode'
 

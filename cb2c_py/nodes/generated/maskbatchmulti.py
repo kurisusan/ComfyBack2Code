@@ -23,7 +23,20 @@ class MaskBatchMultiOutputs(OutputSlots):
 class MaskBatchMulti(Node[MaskBatchMultiInputs, MaskBatchMultiOutputs]):
     """
     Original name: MaskBatchMulti
-    No description available.
+    Category: KJNodes/masking
+    
+Creates an image batch from multiple masks.  
+You can set how many inputs the node has,  
+with the **inputcount** and clicking update.
+
+
+    Inputs:
+        - inputcount (int) (default: 2)
+        - mask_1 (Image)
+        - mask_2 (Image)
+
+    Outputs:
+        - masks (Image)
     """
     _original_name: str = 'MaskBatchMulti'
 

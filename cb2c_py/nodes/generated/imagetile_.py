@@ -37,7 +37,23 @@ class ImageTile_Outputs(OutputSlots):
 class ImageTile_(Node[ImageTile_Inputs, ImageTile_Outputs]):
     """
     Original name: ImageTile+
-    No description available.
+    Category: essentials/image manipulation
+    
+
+    Inputs:
+        - image (Image)
+        - rows (int) (default: 2)
+        - cols (int) (default: 2)
+        - overlap (float) (default: 0)
+        - overlap_x (int) (default: 0)
+        - overlap_y (int) (default: 0)
+
+    Outputs:
+        - image (Image)
+        - tile_width (int)
+        - tile_height (int)
+        - overlap_x (int)
+        - overlap_y (int)
     """
     _original_name: str = 'ImageTile+'
 

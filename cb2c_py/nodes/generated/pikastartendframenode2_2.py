@@ -31,7 +31,22 @@ class PikaStartEndFrameNode2_2Outputs(OutputSlots):
 class PikaStartEndFrameNode2_2(Node[PikaStartEndFrameNode2_2Inputs, PikaStartEndFrameNode2_2Outputs]):
     """
     Original name: PikaStartEndFrameNode2_2
-    No description available.
+    Category: api node/video/Pika
+    Generate a video by combining your first and last frame. Upload two images to define the start and end points, and let the AI create a smooth transition between them.
+
+    Inputs:
+        - image_start (Image)
+          The first image to combine.
+        - image_end (Image)
+          The last image to combine.
+        - prompt_text (str)
+        - negative_prompt (str) (default: None)
+        - seed (int) (default: None)
+        - resolution (Any) (default: '1080p')
+        - duration (Any) (default: 'None')
+
+    Outputs:
+        - video (Any)
     """
     _original_name: str = 'PikaStartEndFrameNode2_2'
 

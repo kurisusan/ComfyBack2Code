@@ -19,7 +19,14 @@ class SimpleMathFloat_Outputs(OutputSlots):
 class SimpleMathFloat_(Node[SimpleMathFloat_Inputs, SimpleMathFloat_Outputs]):
     """
     Original name: SimpleMathFloat+
-    No description available.
+    Category: essentials/utilities
+    
+
+    Inputs:
+        - value (float) (default: 0.0)
+
+    Outputs:
+        - float (float)
     """
     _original_name: str = 'SimpleMathFloat+'
 

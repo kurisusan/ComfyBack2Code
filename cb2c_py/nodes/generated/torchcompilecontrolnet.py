@@ -25,7 +25,18 @@ class TorchCompileControlNetOutputs(OutputSlots):
 class TorchCompileControlNet(Node[TorchCompileControlNetInputs, TorchCompileControlNetOutputs]):
     """
     Original name: TorchCompileControlNet
-    No description available.
+    Category: KJNodes/torchcompile
+    
+
+    Inputs:
+        - controlnet (Any)
+        - backend (str)
+        - fullgraph (bool) (default: False)
+          Enable full graph mode
+        - mode (str) (default: 'default')
+
+    Outputs:
+        - control_net (Any)
     """
     _original_name: str = 'TorchCompileControlNet'
 

@@ -27,7 +27,18 @@ class SimpleMathSlider_Outputs(OutputSlots):
 class SimpleMathSlider_(Node[SimpleMathSlider_Inputs, SimpleMathSlider_Outputs]):
     """
     Original name: SimpleMathSlider+
-    No description available.
+    Category: essentials/utilities
+    
+
+    Inputs:
+        - value (float) (default: 0.5)
+        - min (float) (default: 0.0)
+        - max (float) (default: 1.0)
+        - rounding (int) (default: 0)
+
+    Outputs:
+        - float (float)
+        - int (int)
     """
     _original_name: str = 'SimpleMathSlider+'
 

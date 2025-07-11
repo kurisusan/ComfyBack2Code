@@ -31,7 +31,25 @@ class WanVideoEncodeOutputs(OutputSlots):
 class WanVideoEncode(Node[WanVideoEncodeInputs, WanVideoEncodeOutputs]):
     """
     Original name: WanVideoEncode
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - vae (Any)
+        - image (Image)
+        - enable_vae_tiling (bool) (default: False)
+          Drastically reduces memory use but may introduce seams
+        - tile_x (int) (default: 272)
+          Tile size in pixels, smaller values use less VRAM, may introduce more seams
+        - tile_y (int) (default: 272)
+          Tile size in pixels, smaller values use less VRAM, may introduce more seams
+        - tile_stride_x (int) (default: 144)
+          Tile stride in pixels, smaller values use less VRAM, may introduce more seams
+        - tile_stride_y (int) (default: 128)
+          Tile stride in pixels, smaller values use less VRAM, may introduce more seams
+
+    Outputs:
+        - samples (Latent)
     """
     _original_name: str = 'WanVideoEncode'
 

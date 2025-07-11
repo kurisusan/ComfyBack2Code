@@ -31,7 +31,24 @@ class SoundReactiveOutputs(OutputSlots):
 class SoundReactive(Node[SoundReactiveInputs, SoundReactiveOutputs]):
     """
     Original name: SoundReactive
-    No description available.
+    Category: KJNodes/audio
+    
+Reacts to the sound level of the input.  
+Uses your browsers sound input options and requires.  
+Meant to be used with realtime diffusion with autoqueue.
+
+
+    Inputs:
+        - sound_level (float) (default: 1.0)
+        - start_range_hz (int) (default: 150)
+        - end_range_hz (int) (default: 2000)
+        - multiplier (float) (default: 1.0)
+        - smoothing_factor (float) (default: 0.5)
+        - normalize (bool) (default: False)
+
+    Outputs:
+        - sound_level (float)
+        - sound_level_int (int)
     """
     _original_name: str = 'SoundReactive'
 

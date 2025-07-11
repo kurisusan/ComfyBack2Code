@@ -21,7 +21,15 @@ class CaseConverterOutputs(OutputSlots):
 class CaseConverter(Node[CaseConverterInputs, CaseConverterOutputs]):
     """
     Original name: CaseConverter
-    No description available.
+    Category: utils/string
+    
+
+    Inputs:
+        - string (str)
+        - mode (Any)
+
+    Outputs:
+        - string (str)
     """
     _original_name: str = 'CaseConverter'
 

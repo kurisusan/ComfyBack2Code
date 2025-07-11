@@ -21,7 +21,15 @@ class ImageColorToMaskOutputs(OutputSlots):
 class ImageColorToMask(Node[ImageColorToMaskInputs, ImageColorToMaskOutputs]):
     """
     Original name: ImageColorToMask
-    No description available.
+    Category: mask
+    
+
+    Inputs:
+        - image (Image)
+        - color (int) (default: 0)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'ImageColorToMask'
 

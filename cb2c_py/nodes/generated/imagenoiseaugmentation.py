@@ -23,7 +23,18 @@ class ImageNoiseAugmentationOutputs(OutputSlots):
 class ImageNoiseAugmentation(Node[ImageNoiseAugmentationInputs, ImageNoiseAugmentationOutputs]):
     """
     Original name: ImageNoiseAugmentation
-    No description available.
+    Category: KJNodes/image
+    
+    Add noise to an image.  
+    
+
+    Inputs:
+        - image (Image)
+        - noise_aug_strength (float) (default: None)
+        - seed (int) (default: 123)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageNoiseAugmentation'
 

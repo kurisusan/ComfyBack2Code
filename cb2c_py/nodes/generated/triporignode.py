@@ -21,7 +21,15 @@ class TripoRigNodeOutputs(OutputSlots):
 class TripoRigNode(Node[TripoRigNodeInputs, TripoRigNodeOutputs]):
     """
     Original name: TripoRigNode
-    No description available.
+    Category: api node/3d/Tripo
+    
+
+    Inputs:
+        - original_model_task_id (Any)
+
+    Outputs:
+        - model_file (str)
+        - rig_task_id (Any)
     """
     _original_name: str = 'TripoRigNode'
 

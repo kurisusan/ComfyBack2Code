@@ -37,7 +37,32 @@ class FluxProExpandNodeOutputs(OutputSlots):
 class FluxProExpandNode(Node[FluxProExpandNodeInputs, FluxProExpandNodeOutputs]):
     """
     Original name: FluxProExpandNode
-    No description available.
+    Category: api node/image/BFL
+    Outpaints image based on prompt.
+
+    Inputs:
+        - image (Image)
+        - prompt (str) (default: '')
+          Prompt for the image generation
+        - prompt_upsampling (bool) (default: False)
+          Whether to perform upsampling on the prompt. If active, automatically modifies the prompt for more creative generation, but results are nondeterministic (same seed will not produce exactly the same result).
+        - top (int) (default: 0)
+          Number of pixels to expand at the top of the image
+        - bottom (int) (default: 0)
+          Number of pixels to expand at the bottom of the image
+        - left (int) (default: 0)
+          Number of pixels to expand at the left side of the image
+        - right (int) (default: 0)
+          Number of pixels to expand at the right side of the image
+        - guidance (float) (default: 60)
+          Guidance strength for the image generation process
+        - steps (int) (default: 50)
+          Number of steps for the image generation process
+        - seed (int) (default: 0)
+          The random seed used for creating the noise.
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'FluxProExpandNode'
 

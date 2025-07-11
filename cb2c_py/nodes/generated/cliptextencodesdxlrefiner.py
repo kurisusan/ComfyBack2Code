@@ -27,7 +27,18 @@ class CLIPTextEncodeSDXLRefinerOutputs(OutputSlots):
 class CLIPTextEncodeSDXLRefiner(Node[CLIPTextEncodeSDXLRefinerInputs, CLIPTextEncodeSDXLRefinerOutputs]):
     """
     Original name: CLIPTextEncodeSDXLRefiner
-    No description available.
+    Category: advanced/conditioning
+    
+
+    Inputs:
+        - ascore (float) (default: 6.0)
+        - width (int) (default: 1024.0)
+        - height (int) (default: 1024.0)
+        - text (str)
+        - clip (Clip)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'CLIPTextEncodeSDXLRefiner'
 

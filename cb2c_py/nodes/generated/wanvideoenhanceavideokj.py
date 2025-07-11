@@ -23,7 +23,18 @@ class WanVideoEnhanceAVideoKJOutputs(OutputSlots):
 class WanVideoEnhanceAVideoKJ(Node[WanVideoEnhanceAVideoKJInputs, WanVideoEnhanceAVideoKJOutputs]):
     """
     Original name: WanVideoEnhanceAVideoKJ
-    No description available.
+    Category: KJNodes/experimental
+    https://github.com/NUS-HPC-AI-Lab/Enhance-A-Video
+
+    Inputs:
+        - model (Model)
+        - latent (Latent)
+          Only used to get the latent count
+        - weight (float) (default: 2.0)
+          Strength of the enhance effect
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'WanVideoEnhanceAVideoKJ'
 

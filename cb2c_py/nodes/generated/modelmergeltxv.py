@@ -87,7 +87,48 @@ class ModelMergeLTXVOutputs(OutputSlots):
 class ModelMergeLTXV(Node[ModelMergeLTXVInputs, ModelMergeLTXVOutputs]):
     """
     Original name: ModelMergeLTXV
-    No description available.
+    Category: advanced/model_merging/model_specific
+    
+
+    Inputs:
+        - model1 (Model)
+        - model2 (Model)
+        - patchify_proj_ (float) (default: 1.0)
+        - adaln_single_ (float) (default: 1.0)
+        - caption_projection_ (float) (default: 1.0)
+        - transformer_blocks_0_ (float) (default: 1.0)
+        - transformer_blocks_1_ (float) (default: 1.0)
+        - transformer_blocks_2_ (float) (default: 1.0)
+        - transformer_blocks_3_ (float) (default: 1.0)
+        - transformer_blocks_4_ (float) (default: 1.0)
+        - transformer_blocks_5_ (float) (default: 1.0)
+        - transformer_blocks_6_ (float) (default: 1.0)
+        - transformer_blocks_7_ (float) (default: 1.0)
+        - transformer_blocks_8_ (float) (default: 1.0)
+        - transformer_blocks_9_ (float) (default: 1.0)
+        - transformer_blocks_10_ (float) (default: 1.0)
+        - transformer_blocks_11_ (float) (default: 1.0)
+        - transformer_blocks_12_ (float) (default: 1.0)
+        - transformer_blocks_13_ (float) (default: 1.0)
+        - transformer_blocks_14_ (float) (default: 1.0)
+        - transformer_blocks_15_ (float) (default: 1.0)
+        - transformer_blocks_16_ (float) (default: 1.0)
+        - transformer_blocks_17_ (float) (default: 1.0)
+        - transformer_blocks_18_ (float) (default: 1.0)
+        - transformer_blocks_19_ (float) (default: 1.0)
+        - transformer_blocks_20_ (float) (default: 1.0)
+        - transformer_blocks_21_ (float) (default: 1.0)
+        - transformer_blocks_22_ (float) (default: 1.0)
+        - transformer_blocks_23_ (float) (default: 1.0)
+        - transformer_blocks_24_ (float) (default: 1.0)
+        - transformer_blocks_25_ (float) (default: 1.0)
+        - transformer_blocks_26_ (float) (default: 1.0)
+        - transformer_blocks_27_ (float) (default: 1.0)
+        - scale_shift_table (float) (default: 1.0)
+        - proj_out_ (float) (default: 1.0)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'ModelMergeLTXV'
 

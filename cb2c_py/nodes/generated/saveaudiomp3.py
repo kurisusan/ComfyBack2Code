@@ -23,7 +23,16 @@ class SaveAudioMP3Outputs(OutputSlots):
 class SaveAudioMP3(Node[SaveAudioMP3Inputs, SaveAudioMP3Outputs]):
     """
     Original name: SaveAudioMP3
-    No description available.
+    Category: audio
+    
+
+    Inputs:
+        - audio (Any)
+        - filename_prefix (str) (default: 'audio/ComfyUI')
+        - quality (str) (default: 'V0')
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'SaveAudioMP3'
 

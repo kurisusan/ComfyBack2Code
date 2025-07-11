@@ -21,7 +21,15 @@ class AnimalPosePreprocessorOutputs(OutputSlots):
 class AnimalPosePreprocessor(Node[AnimalPosePreprocessorInputs, AnimalPosePreprocessorOutputs]):
     """
     Original name: AnimalPosePreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Faces and Poses Estimators
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
+        - pose_keypoint (Any)
     """
     _original_name: str = 'AnimalPosePreprocessor'
 

@@ -21,7 +21,15 @@ class LoadImageOutputs(OutputSlots):
 class LoadImage(Node[LoadImageInputs, LoadImageOutputs]):
     """
     Original name: LoadImage
-    No description available.
+    Category: image
+    
+
+    Inputs:
+        - image (str)
+
+    Outputs:
+        - image (Image)
+        - mask (Image)
     """
     _original_name: str = 'LoadImage'
 

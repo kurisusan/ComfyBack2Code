@@ -29,7 +29,19 @@ class SamplerCustomAdvancedOutputs(OutputSlots):
 class SamplerCustomAdvanced(Node[SamplerCustomAdvancedInputs, SamplerCustomAdvancedOutputs]):
     """
     Original name: SamplerCustomAdvanced
-    No description available.
+    Category: sampling/custom_sampling
+    
+
+    Inputs:
+        - noise (Any)
+        - guider (Any)
+        - sampler (Any)
+        - sigmas (Any)
+        - latent_image (Latent)
+
+    Outputs:
+        - output (Latent)
+        - denoised_output (Latent)
     """
     _original_name: str = 'SamplerCustomAdvanced'
 

@@ -19,7 +19,15 @@ class RecraftCreativeUpscaleNodeOutputs(OutputSlots):
 class RecraftCreativeUpscaleNode(Node[RecraftCreativeUpscaleNodeInputs, RecraftCreativeUpscaleNodeOutputs]):
     """
     Original name: RecraftCreativeUpscaleNode
-    No description available.
+    Category: api node/image/Recraft
+    Upscale image synchronously.
+Enhances a given raster image using ‘creative upscale’ tool, boosting resolution with a focus on refining small details and faces.
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'RecraftCreativeUpscaleNode'
 

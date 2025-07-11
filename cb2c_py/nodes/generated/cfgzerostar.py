@@ -19,7 +19,14 @@ class CFGZeroStarOutputs(OutputSlots):
 class CFGZeroStar(Node[CFGZeroStarInputs, CFGZeroStarOutputs]):
     """
     Original name: CFGZeroStar
-    No description available.
+    Category: advanced/guidance
+    
+
+    Inputs:
+        - model (Model)
+
+    Outputs:
+        - patched_model (Model)
     """
     _original_name: str = 'CFGZeroStar'
 

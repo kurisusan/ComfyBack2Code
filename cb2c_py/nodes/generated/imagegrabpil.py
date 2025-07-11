@@ -29,7 +29,22 @@ class ImageGrabPILOutputs(OutputSlots):
 class ImageGrabPIL(Node[ImageGrabPILInputs, ImageGrabPILOutputs]):
     """
     Original name: ImageGrabPIL
-    No description available.
+    Category: KJNodes/image
+    
+Captures an area specified by screen coordinates.  
+Can be used for realtime diffusion with autoqueue.
+
+
+    Inputs:
+        - x (int) (default: 0)
+        - y (int) (default: 0)
+        - width (int) (default: 512)
+        - height (int) (default: 512)
+        - num_frames (int) (default: 1)
+        - delay (float) (default: 0.1)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageGrabPIL'
 

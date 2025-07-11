@@ -25,7 +25,17 @@ class AddNoiseOutputs(OutputSlots):
 class AddNoise(Node[AddNoiseInputs, AddNoiseOutputs]):
     """
     Original name: AddNoise
-    No description available.
+    Category: _for_testing/custom_sampling/noise
+    
+
+    Inputs:
+        - model (Model)
+        - noise (Any)
+        - sigmas (Any)
+        - latent_image (Latent)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'AddNoise'
 

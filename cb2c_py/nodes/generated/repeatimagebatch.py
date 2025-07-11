@@ -21,7 +21,15 @@ class RepeatImageBatchOutputs(OutputSlots):
 class RepeatImageBatch(Node[RepeatImageBatchInputs, RepeatImageBatchOutputs]):
     """
     Original name: RepeatImageBatch
-    No description available.
+    Category: image/batch
+    
+
+    Inputs:
+        - image (Image)
+        - amount (int) (default: 1)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'RepeatImageBatch'
 

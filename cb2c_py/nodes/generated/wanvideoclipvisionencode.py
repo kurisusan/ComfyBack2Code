@@ -31,7 +31,25 @@ class WanVideoClipVisionEncodeOutputs(OutputSlots):
 class WanVideoClipVisionEncode(Node[WanVideoClipVisionEncodeInputs, WanVideoClipVisionEncodeOutputs]):
     """
     Original name: WanVideoClipVisionEncode
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - clip_vision (Any)
+        - image_1 (Image)
+          Image to encode
+        - strength_1 (float) (default: 1.0)
+          Additional clip embed multiplier
+        - strength_2 (float) (default: 1.0)
+          Additional clip embed multiplier
+        - crop (str) (default: 'center')
+          Crop image to 224x224 before encoding
+        - combine_embeds (str) (default: 'average')
+          Method to combine multiple clip embeds
+        - force_offload (bool) (default: True)
+
+    Outputs:
+        - image_embeds (Any)
     """
     _original_name: str = 'WanVideoClipVisionEncode'
 

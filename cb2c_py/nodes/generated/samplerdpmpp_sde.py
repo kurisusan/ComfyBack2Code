@@ -25,7 +25,17 @@ class SamplerDPMPP_SDEOutputs(OutputSlots):
 class SamplerDPMPP_SDE(Node[SamplerDPMPP_SDEInputs, SamplerDPMPP_SDEOutputs]):
     """
     Original name: SamplerDPMPP_SDE
-    No description available.
+    Category: sampling/custom_sampling/samplers
+    
+
+    Inputs:
+        - eta (float) (default: 1.0)
+        - s_noise (float) (default: 1.0)
+        - r (float) (default: 0.5)
+        - noise_device (str)
+
+    Outputs:
+        - sampler (Any)
     """
     _original_name: str = 'SamplerDPMPP_SDE'
 

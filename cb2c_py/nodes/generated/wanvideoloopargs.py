@@ -23,7 +23,19 @@ class WanVideoLoopArgsOutputs(OutputSlots):
 class WanVideoLoopArgs(Node[WanVideoLoopArgsInputs, WanVideoLoopArgsOutputs]):
     """
     Original name: WanVideoLoopArgs
-    No description available.
+    Category: WanVideoWrapper
+    Looping through latent shift as shown in https://github.com/YisuiTT/Mobius/
+
+    Inputs:
+        - shift_skip (int) (default: 6)
+          Skip step of latent shift
+        - start_percent (float) (default: 0.0)
+          Start percent of the looping effect
+        - end_percent (float) (default: 1.0)
+          End percent of the looping effect
+
+    Outputs:
+        - loop_args (Any)
     """
     _original_name: str = 'WanVideoLoopArgs'
 

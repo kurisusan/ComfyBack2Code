@@ -19,7 +19,14 @@ class PrimitiveFloatOutputs(OutputSlots):
 class PrimitiveFloat(Node[PrimitiveFloatInputs, PrimitiveFloatOutputs]):
     """
     Original name: PrimitiveFloat
-    No description available.
+    Category: utils/primitive
+    
+
+    Inputs:
+        - value (float)
+
+    Outputs:
+        - float (float)
     """
     _original_name: str = 'PrimitiveFloat'
 

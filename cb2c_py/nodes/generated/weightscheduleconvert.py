@@ -29,7 +29,21 @@ class WeightScheduleConvertOutputs(OutputSlots):
 class WeightScheduleConvert(Node[WeightScheduleConvertInputs, WeightScheduleConvertOutputs]):
     """
     Original name: WeightScheduleConvert
-    No description available.
+    Category: KJNodes/weights
+    
+Converts different value lists/series to another type.  
+
+
+    Inputs:
+        - input_values (float) (default: 0.0)
+        - output_type (str) (default: 'list')
+        - invert (bool) (default: False)
+        - repeat (int) (default: 1)
+
+    Outputs:
+        - float (float)
+        - string (str)
+        - int (int)
     """
     _original_name: str = 'WeightScheduleConvert'
 

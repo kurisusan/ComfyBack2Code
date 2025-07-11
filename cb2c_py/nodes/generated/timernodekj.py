@@ -27,7 +27,18 @@ class TimerNodeKJOutputs(OutputSlots):
 class TimerNodeKJ(Node[TimerNodeKJInputs, TimerNodeKJOutputs]):
     """
     Original name: TimerNodeKJ
-    No description available.
+    Category: KJNodes/misc
+    
+
+    Inputs:
+        - any_input (Any)
+        - mode (str)
+        - name (str) (default: 'Timer')
+
+    Outputs:
+        - any_output (Any)
+        - timer (Any)
+        - time (int)
     """
     _original_name: str = 'TimerNodeKJ'
 

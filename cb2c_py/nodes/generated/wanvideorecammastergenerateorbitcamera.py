@@ -21,7 +21,17 @@ class WanVideoReCamMasterGenerateOrbitCameraOutputs(OutputSlots):
 class WanVideoReCamMasterGenerateOrbitCamera(Node[WanVideoReCamMasterGenerateOrbitCameraInputs, WanVideoReCamMasterGenerateOrbitCameraOutputs]):
     """
     Original name: WanVideoReCamMasterGenerateOrbitCamera
-    No description available.
+    Category: WanVideoWrapper
+    https://github.com/KwaiVGI/ReCamMaster
+
+    Inputs:
+        - num_frames (int) (default: 81)
+          Number of frames to generate
+        - degrees (int) (default: 90)
+          Degrees to orbit
+
+    Outputs:
+        - camera_poses (Any)
     """
     _original_name: str = 'WanVideoReCamMasterGenerateOrbitCamera'
 

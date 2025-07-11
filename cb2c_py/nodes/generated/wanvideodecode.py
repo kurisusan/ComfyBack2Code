@@ -31,7 +31,25 @@ class WanVideoDecodeOutputs(OutputSlots):
 class WanVideoDecode(Node[WanVideoDecodeInputs, WanVideoDecodeOutputs]):
     """
     Original name: WanVideoDecode
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - vae (Any)
+        - samples (Latent)
+        - enable_vae_tiling (bool) (default: False)
+          Drastically reduces memory use but will introduce seams at tile stride boundaries. The location and number of seams is dictated by the tile stride size. The visibility of seams can be controlled by increasing the tile size. Seams become less obvious at 1.5x stride and are barely noticeable at 2x stride size. Which is to say if you use a stride width of 160, the seams are barely noticeable with a tile width of 320.
+        - tile_x (int) (default: 272)
+          Tile width in pixels. Smaller values use less VRAM but will make seams more obvious.
+        - tile_y (int) (default: 272)
+          Tile height in pixels. Smaller values use less VRAM but will make seams more obvious.
+        - tile_stride_x (int) (default: 144)
+          Tile stride width in pixels. Smaller values use less VRAM but will introduce more seams.
+        - tile_stride_y (int) (default: 128)
+          Tile stride height in pixels. Smaller values use less VRAM but will introduce more seams.
+
+    Outputs:
+        - images (Image)
     """
     _original_name: str = 'WanVideoDecode'
 

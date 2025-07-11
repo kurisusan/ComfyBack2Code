@@ -29,7 +29,19 @@ class SDXL_Power_Prompt___Positive__rgthree_Outputs(OutputSlots):
 class SDXL_Power_Prompt___Positive__rgthree_(Node[SDXL_Power_Prompt___Positive__rgthree_Inputs, SDXL_Power_Prompt___Positive__rgthree_Outputs]):
     """
     Original name: SDXL Power Prompt - Positive (rgthree)
-    No description available.
+    Category: rgthree
+    
+
+    Inputs:
+        - prompt_g (str)
+        - prompt_l (str)
+
+    Outputs:
+        - conditioning (Conditioning)
+        - model (Model)
+        - clip (Clip)
+        - text_g (str)
+        - text_l (str)
     """
     _original_name: str = 'SDXL Power Prompt - Positive (rgthree)'
 

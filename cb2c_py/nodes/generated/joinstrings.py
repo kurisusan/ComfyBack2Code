@@ -23,7 +23,16 @@ class JoinStringsOutputs(OutputSlots):
 class JoinStrings(Node[JoinStringsInputs, JoinStringsOutputs]):
     """
     Original name: JoinStrings
-    No description available.
+    Category: KJNodes/text
+    
+
+    Inputs:
+        - string1 (str) (default: '')
+        - string2 (str) (default: '')
+        - delimiter (str) (default: ' ')
+
+    Outputs:
+        - string (str)
     """
     _original_name: str = 'JoinStrings'
 

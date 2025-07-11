@@ -45,7 +45,27 @@ class DrawText_Outputs(OutputSlots):
 class DrawText_(Node[DrawText_Inputs, DrawText_Outputs]):
     """
     Original name: DrawText+
-    No description available.
+    Category: essentials/text
+    
+
+    Inputs:
+        - text (str) (default: 'Hello, World!')
+        - font (str)
+        - size (int) (default: 56)
+        - color (str) (default: '#FFFFFF')
+        - background_color (str) (default: '#00000000')
+        - shadow_distance (int) (default: 0)
+        - shadow_blur (int) (default: 0)
+        - shadow_color (str) (default: '#000000')
+        - horizontal_align (str)
+        - vertical_align (str)
+        - offset_x (int) (default: 0)
+        - offset_y (int) (default: 0)
+        - direction (str)
+
+    Outputs:
+        - image (Image)
+        - mask (Image)
     """
     _original_name: str = 'DrawText+'
 

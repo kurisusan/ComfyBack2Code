@@ -19,7 +19,14 @@ class RecraftStyleV3LogoRasterOutputs(OutputSlots):
 class RecraftStyleV3LogoRaster(Node[RecraftStyleV3LogoRasterInputs, RecraftStyleV3LogoRasterOutputs]):
     """
     Original name: RecraftStyleV3LogoRaster
-    No description available.
+    Category: api node/image/Recraft
+    Select realistic_image style and optional substyle.
+
+    Inputs:
+        - substyle (str)
+
+    Outputs:
+        - recraft_style (Any)
     """
     _original_name: str = 'RecraftStyleV3LogoRaster'
 

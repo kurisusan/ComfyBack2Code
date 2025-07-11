@@ -21,7 +21,15 @@ class ImageToMaskOutputs(OutputSlots):
 class ImageToMask(Node[ImageToMaskInputs, ImageToMaskOutputs]):
     """
     Original name: ImageToMask
-    No description available.
+    Category: mask
+    
+
+    Inputs:
+        - image (Image)
+        - channel (str)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'ImageToMask'
 

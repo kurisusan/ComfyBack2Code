@@ -10,7 +10,7 @@ class CLIPLoaderGGUFMultiGPUInputs(InputSlots):
     clip_name: Slot[str]
     type: Slot[str]
     def __init__(self, node: "Node"):
-        self.clip_name = Slot[str](node, "clip_name", [])
+        self.clip_name = Slot[str](node, "clip_name", ['umt5_xxl_fp8_e4m3fn_scaled.safetensors'])
         self.type = Slot[str](node, "type", ['stable_diffusion', 'stable_cascade', 'sd3', 'stable_audio', 'mochi', 'ltxv', 'pixart', 'wan'])
 
 class CLIPLoaderGGUFMultiGPUOutputs(OutputSlots):
@@ -21,7 +21,15 @@ class CLIPLoaderGGUFMultiGPUOutputs(OutputSlots):
 class CLIPLoaderGGUFMultiGPU(Node[CLIPLoaderGGUFMultiGPUInputs, CLIPLoaderGGUFMultiGPUOutputs]):
     """
     Original name: CLIPLoaderGGUFMultiGPU
-    No description available.
+    Category: multigpu
+    
+
+    Inputs:
+        - clip_name (str)
+        - type (str)
+
+    Outputs:
+        - clip (Clip)
     """
     _original_name: str = 'CLIPLoaderGGUFMultiGPU'
 

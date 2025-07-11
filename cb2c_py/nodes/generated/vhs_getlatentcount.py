@@ -19,7 +19,14 @@ class VHS_GetLatentCountOutputs(OutputSlots):
 class VHS_GetLatentCount(Node[VHS_GetLatentCountInputs, VHS_GetLatentCountOutputs]):
     """
     Original name: VHS_GetLatentCount
-    No description available.
+    Category: Video Helper Suite 🎥🅥🅗🅢/latent
+    Get Latent Count 🎥🅥🅗🅢<div style="font-size: 0.8em"><div id=VHS_shortdesc>Return the number of latents in an input as an INT</div></div><div style="font-size: 0.8em"><div vhs_title="Inputs" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Inputs: <div vhs_title="latents" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">latents: The input latent</div></div></div></div><div vhs_title="Outputs" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Outputs: <div vhs_title="count" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">count: The number of latents in the input</div></div></div></div></div>
+
+    Inputs:
+        - latents (Latent)
+
+    Outputs:
+        - count (int)
     """
     _original_name: str = 'VHS_GetLatentCount'
 

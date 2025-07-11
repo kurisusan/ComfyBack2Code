@@ -25,7 +25,17 @@ class EmptyMochiLatentVideoOutputs(OutputSlots):
 class EmptyMochiLatentVideo(Node[EmptyMochiLatentVideoInputs, EmptyMochiLatentVideoOutputs]):
     """
     Original name: EmptyMochiLatentVideo
-    No description available.
+    Category: latent/video
+    
+
+    Inputs:
+        - width (int) (default: 848)
+        - height (int) (default: 480)
+        - length (int) (default: 25)
+        - batch_size (int) (default: 1)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'EmptyMochiLatentVideo'
 

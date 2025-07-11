@@ -19,7 +19,15 @@ class WanVideoTinyVAELoaderOutputs(OutputSlots):
 class WanVideoTinyVAELoader(Node[WanVideoTinyVAELoaderInputs, WanVideoTinyVAELoaderOutputs]):
     """
     Original name: WanVideoTinyVAELoader
-    No description available.
+    Category: WanVideoWrapper
+    Loads Wan VAE model from 'ComfyUI/models/vae'
+
+    Inputs:
+        - model_name (str)
+          These models are loaded from 'ComfyUI/models/vae_approx'
+
+    Outputs:
+        - vae (Any)
     """
     _original_name: str = 'WanVideoTinyVAELoader'
 

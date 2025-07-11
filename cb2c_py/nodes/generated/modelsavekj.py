@@ -23,7 +23,16 @@ class ModelSaveKJOutputs(OutputSlots):
 class ModelSaveKJ(Node[ModelSaveKJInputs, ModelSaveKJOutputs]):
     """
     Original name: ModelSaveKJ
-    No description available.
+    Category: advanced/model_merging
+    
+
+    Inputs:
+        - model (Model)
+        - filename_prefix (str) (default: 'diffusion_models/ComfyUI')
+        - model_key_prefix (str) (default: 'model.diffusion_model.')
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'ModelSaveKJ'
 

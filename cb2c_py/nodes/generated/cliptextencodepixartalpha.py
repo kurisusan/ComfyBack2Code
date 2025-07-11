@@ -25,7 +25,17 @@ class CLIPTextEncodePixArtAlphaOutputs(OutputSlots):
 class CLIPTextEncodePixArtAlpha(Node[CLIPTextEncodePixArtAlphaInputs, CLIPTextEncodePixArtAlphaOutputs]):
     """
     Original name: CLIPTextEncodePixArtAlpha
-    No description available.
+    Category: advanced/conditioning
+    Encodes text and sets the resolution conditioning for PixArt Alpha. Does not apply to PixArt Sigma.
+
+    Inputs:
+        - width (int) (default: 1024.0)
+        - height (int) (default: 1024.0)
+        - text (str)
+        - clip (Clip)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'CLIPTextEncodePixArtAlpha'
 

@@ -23,7 +23,16 @@ class ImageQuantizeOutputs(OutputSlots):
 class ImageQuantize(Node[ImageQuantizeInputs, ImageQuantizeOutputs]):
     """
     Original name: ImageQuantize
-    No description available.
+    Category: image/postprocessing
+    
+
+    Inputs:
+        - image (Image)
+        - colors (int) (default: 256)
+        - dither (str)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageQuantize'
 

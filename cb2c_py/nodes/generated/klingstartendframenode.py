@@ -35,7 +35,27 @@ class KlingStartEndFrameNodeOutputs(OutputSlots):
 class KlingStartEndFrameNode(Node[KlingStartEndFrameNodeInputs, KlingStartEndFrameNodeOutputs]):
     """
     Original name: KlingStartEndFrameNode
-    No description available.
+    Category: api node/video/Kling
+    Generate a video sequence that transitions between your provided start and end images. The node creates all frames in between, producing a smooth transformation from the first frame to the last.
+
+    Inputs:
+        - start_frame (Image) (default: None)
+          Reference Image - URL or Base64 encoded string, cannot exceed 10MB, resolution not less than 300*300px, aspect ratio between 1:2.5 ~ 2.5:1. Base64 should not include data:image prefix.
+        - end_frame (Image) (default: None)
+          Reference Image - End frame control. URL or Base64 encoded string, cannot exceed 10MB, resolution not less than 300*300px. Base64 should not include data:image prefix.
+        - prompt (str) (default: None)
+          Positive text prompt
+        - negative_prompt (str) (default: None)
+          Negative text prompt
+        - cfg_scale (float) (default: 0.5)
+        - aspect_ratio (Any) (default: '16:9')
+        - mode (str) (default: 'pro mode / 5s duration / kling-v1-5')
+          The configuration to use for the video generation following the format: mode / duration / model_name.
+
+    Outputs:
+        - video (Any)
+        - video_id (str)
+        - duration (str)
     """
     _original_name: str = 'KlingStartEndFrameNode'
 

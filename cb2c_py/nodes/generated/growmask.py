@@ -23,7 +23,16 @@ class GrowMaskOutputs(OutputSlots):
 class GrowMask(Node[GrowMaskInputs, GrowMaskOutputs]):
     """
     Original name: GrowMask
-    No description available.
+    Category: mask
+    
+
+    Inputs:
+        - mask (Image)
+        - expand (int) (default: 0)
+        - tapered_corners (bool) (default: True)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'GrowMask'
 

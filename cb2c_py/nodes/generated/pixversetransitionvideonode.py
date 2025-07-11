@@ -31,7 +31,22 @@ class PixverseTransitionVideoNodeOutputs(OutputSlots):
 class PixverseTransitionVideoNode(Node[PixverseTransitionVideoNodeInputs, PixverseTransitionVideoNodeOutputs]):
     """
     Original name: PixverseTransitionVideoNode
-    No description available.
+    Category: api node/video/PixVerse
+    Generates videos based on prompt and output_size.
+
+    Inputs:
+        - first_frame (Image)
+        - last_frame (Image)
+        - prompt (str) (default: '')
+          Prompt for the video generation
+        - quality (str) (default: '540p')
+        - duration_seconds (str)
+        - motion_mode (str)
+        - seed (int) (default: 0)
+          Seed for video generation.
+
+    Outputs:
+        - video (Any)
     """
     _original_name: str = 'PixverseTransitionVideoNode'
 

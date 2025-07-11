@@ -21,7 +21,16 @@ class SaveSVGNodeOutputs(OutputSlots):
 class SaveSVGNode(Node[SaveSVGNodeInputs, SaveSVGNodeOutputs]):
     """
     Original name: SaveSVGNode
-    No description available.
+    Category: image/save
+    Save SVG files on disk.
+
+    Inputs:
+        - svg (Any)
+        - filename_prefix (str) (default: 'svg/ComfyUI')
+          The prefix for the file to save. This may include formatting information such as %date:yyyy-MM-dd% or %Empty Latent Image.width% to include values from nodes.
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'SaveSVGNode'
 

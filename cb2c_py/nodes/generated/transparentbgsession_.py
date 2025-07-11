@@ -21,7 +21,15 @@ class TransparentBGSession_Outputs(OutputSlots):
 class TransparentBGSession_(Node[TransparentBGSession_Inputs, TransparentBGSession_Outputs]):
     """
     Original name: TransparentBGSession+
-    No description available.
+    Category: essentials/image manipulation
+    
+
+    Inputs:
+        - mode (str)
+        - use_jit (bool) (default: True)
+
+    Outputs:
+        - rembg_session (Any)
     """
     _original_name: str = 'TransparentBGSession+'
 

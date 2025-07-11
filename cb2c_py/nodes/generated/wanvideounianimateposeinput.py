@@ -25,7 +25,21 @@ class WanVideoUniAnimatePoseInputOutputs(OutputSlots):
 class WanVideoUniAnimatePoseInput(Node[WanVideoUniAnimatePoseInputInputs, WanVideoUniAnimatePoseInputOutputs]):
     """
     Original name: WanVideoUniAnimatePoseInput
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - pose_images (Image)
+          Pose images
+        - strength (float) (default: 1.0)
+          Strength of the pose control
+        - start_percent (float) (default: 0.0)
+          Start percentage for the pose control
+        - end_percent (float) (default: 1.0)
+          End percentage for the pose control
+
+    Outputs:
+        - unianimate_poses (Any)
     """
     _original_name: str = 'WanVideoUniAnimatePoseInput'
 

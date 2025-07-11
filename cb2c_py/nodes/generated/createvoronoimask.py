@@ -31,7 +31,20 @@ class CreateVoronoiMaskOutputs(OutputSlots):
 class CreateVoronoiMask(Node[CreateVoronoiMaskInputs, CreateVoronoiMaskOutputs]):
     """
     Original name: CreateVoronoiMask
-    No description available.
+    Category: KJNodes/masking/generate
+    
+
+    Inputs:
+        - frames (int) (default: 16)
+        - num_points (int) (default: 15)
+        - line_width (int) (default: 4)
+        - speed (float) (default: 0.5)
+        - frame_width (int) (default: 512)
+        - frame_height (int) (default: 512)
+
+    Outputs:
+        - mask (Image)
+        - mask_inverted (Image)
     """
     _original_name: str = 'CreateVoronoiMask'
 

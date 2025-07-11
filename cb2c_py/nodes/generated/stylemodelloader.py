@@ -19,7 +19,14 @@ class StyleModelLoaderOutputs(OutputSlots):
 class StyleModelLoader(Node[StyleModelLoaderInputs, StyleModelLoaderOutputs]):
     """
     Original name: StyleModelLoader
-    No description available.
+    Category: loaders
+    
+
+    Inputs:
+        - style_model_name (str)
+
+    Outputs:
+        - style_model (Any)
     """
     _original_name: str = 'StyleModelLoader'
 

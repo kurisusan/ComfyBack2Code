@@ -27,7 +27,18 @@ class RegexMatchOutputs(OutputSlots):
 class RegexMatch(Node[RegexMatchInputs, RegexMatchOutputs]):
     """
     Original name: RegexMatch
-    No description available.
+    Category: utils/string
+    
+
+    Inputs:
+        - string (str)
+        - regex_pattern (str)
+        - case_insensitive (bool) (default: True)
+        - multiline (bool) (default: False)
+        - dotall (bool) (default: False)
+
+    Outputs:
+        - matches (bool)
     """
     _original_name: str = 'RegexMatch'
 

@@ -23,7 +23,20 @@ class FloatToMaskOutputs(OutputSlots):
 class FloatToMask(Node[FloatToMaskInputs, FloatToMaskOutputs]):
     """
     Original name: FloatToMask
-    No description available.
+    Category: KJNodes/masking/generate
+    
+Generates a batch of masks based on the input float values.
+The batch size is determined by the length of the input float values.
+Each mask is generated with the specified width and height.
+
+
+    Inputs:
+        - input_values (float) (default: 0)
+        - width (int) (default: 100)
+        - height (int) (default: 100)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'FloatToMask'
 

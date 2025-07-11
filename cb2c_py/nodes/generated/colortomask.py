@@ -31,7 +31,24 @@ class ColorToMaskOutputs(OutputSlots):
 class ColorToMask(Node[ColorToMaskInputs, ColorToMaskOutputs]):
     """
     Original name: ColorToMask
-    No description available.
+    Category: KJNodes/masking
+    
+Converts chosen RGB value to a mask.  
+With batch inputs, the **per_batch**  
+controls the number of images processed at once.
+
+
+    Inputs:
+        - images (Image)
+        - invert (bool) (default: False)
+        - red (int) (default: 0)
+        - green (int) (default: 0)
+        - blue (int) (default: 0)
+        - threshold (int) (default: 10)
+        - per_batch (int) (default: 16)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'ColorToMask'
 

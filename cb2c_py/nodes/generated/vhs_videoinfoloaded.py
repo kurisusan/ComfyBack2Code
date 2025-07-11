@@ -27,7 +27,18 @@ class VHS_VideoInfoLoadedOutputs(OutputSlots):
 class VHS_VideoInfoLoaded(Node[VHS_VideoInfoLoadedInputs, VHS_VideoInfoLoadedOutputs]):
     """
     Original name: VHS_VideoInfoLoaded
-    No description available.
+    Category: Video Helper Suite 🎥🅥🅗🅢
+    Video Info Loaded 🎥🅥🅗🅢<div style="font-size: 0.8em"><div id=VHS_shortdesc>Splits information on a video into a numerous outputs describing the file itself after accounting for load options</div></div><div style="font-size: 0.8em"><div vhs_title="Inputs" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Inputs: <div vhs_title="video_info" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">video_info: A connection to a Load Video node</div></div></div></div><div vhs_title="Outputs" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Outputs: <div vhs_title="loaded_fps🟦" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">loaded_fps🟦: The frame rate after accounting for force_rate and select_every_nth. This output is of particular use as it can be connected to the converted frame_rate input of a Video Combine node to ensure audio remains synchronized.</div></div><div vhs_title="loaded_frame_count🟦" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">loaded_frame_count🟦: The number of frames returned by the current execution. Identical to the frame_count returned by the node itself</div></div><div vhs_title="loaded_duration🟦" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">loaded_duration🟦: The duration in seconds of returned images after accounting for frame_load_cap</div></div><div vhs_title="loaded_width🟦" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">loaded_width🟦: The width of the video after scaling. This is the dimension of the corresponding image even if loading as a latent directly</div></div><div vhs_title="loaded_height🟦" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">loaded_height🟦: The height of the video after scaling. This is the dimension of the corresponding image even if loading as a latent directly</div></div></div></div></div>
+
+    Inputs:
+        - video_info (Any)
+
+    Outputs:
+        - fps_ (float)
+        - frame_count_ (int)
+        - duration_ (float)
+        - width_ (int)
+        - height_ (int)
     """
     _original_name: str = 'VHS_VideoInfoLoaded'
 

@@ -19,7 +19,14 @@ class PrimitiveStringMultilineOutputs(OutputSlots):
 class PrimitiveStringMultiline(Node[PrimitiveStringMultilineInputs, PrimitiveStringMultilineOutputs]):
     """
     Original name: PrimitiveStringMultiline
-    No description available.
+    Category: utils/primitive
+    
+
+    Inputs:
+        - value (str)
+
+    Outputs:
+        - string (str)
     """
     _original_name: str = 'PrimitiveStringMultiline'
 

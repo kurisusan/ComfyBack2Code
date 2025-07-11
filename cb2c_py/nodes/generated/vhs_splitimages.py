@@ -27,7 +27,18 @@ class VHS_SplitImagesOutputs(OutputSlots):
 class VHS_SplitImages(Node[VHS_SplitImagesInputs, VHS_SplitImagesOutputs]):
     """
     Original name: VHS_SplitImages
-    No description available.
+    Category: Video Helper Suite 🎥🅥🅗🅢/image
+    Split Images 🎥🅥🅗🅢<div style="font-size: 0.8em"><div id=VHS_shortdesc>Split a set of images into two groups</div></div><div style="font-size: 0.8em"><div vhs_title="Inputs" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Inputs: <div vhs_title="images" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">images: The images to be split.</div></div></div></div><div vhs_title="Outputs" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Outputs: <div vhs_title="IMAGE_A" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">IMAGE_A: The first group of images</div></div><div vhs_title="A_count" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">A_count: The number of images in group A. This will be equal to split_index unless the images input has length less than split_index</div></div><div vhs_title="IMAGE_B" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">IMAGE_B: The second group of images</div></div><div vhs_title="B_count" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">B_count: The number of images in group B</div></div></div></div><div vhs_title="Widgets" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Widgets: <div vhs_title="split_index" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">split_index: The index of the first latent that will be in the second output groups.</div></div></div></div></div>
+
+    Inputs:
+        - images (Image)
+        - split_index (int) (default: 0)
+
+    Outputs:
+        - image_a (Image)
+        - a_count (int)
+        - image_b (Image)
+        - b_count (int)
     """
     _original_name: str = 'VHS_SplitImages'
 

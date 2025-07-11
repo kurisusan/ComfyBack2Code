@@ -23,7 +23,18 @@ class GetImageRangeFromBatchOutputs(OutputSlots):
 class GetImageRangeFromBatch(Node[GetImageRangeFromBatchInputs, GetImageRangeFromBatchOutputs]):
     """
     Original name: GetImageRangeFromBatch
-    No description available.
+    Category: KJNodes/image
+    
+Returns a range of images from a batch.
+
+
+    Inputs:
+        - start_index (int) (default: 0)
+        - num_frames (int) (default: 1)
+
+    Outputs:
+        - image (Image)
+        - mask (Image)
     """
     _original_name: str = 'GetImageRangeFromBatch'
 

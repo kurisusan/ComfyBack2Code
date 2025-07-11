@@ -23,7 +23,16 @@ class MaskExpandBatch_Outputs(OutputSlots):
 class MaskExpandBatch_(Node[MaskExpandBatch_Inputs, MaskExpandBatch_Outputs]):
     """
     Original name: MaskExpandBatch+
-    No description available.
+    Category: essentials/mask batch
+    
+
+    Inputs:
+        - mask (Image)
+        - size (int) (default: 16)
+        - method (str)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'MaskExpandBatch+'
 

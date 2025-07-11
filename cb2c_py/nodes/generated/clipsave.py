@@ -21,7 +21,15 @@ class CLIPSaveOutputs(OutputSlots):
 class CLIPSave(Node[CLIPSaveInputs, CLIPSaveOutputs]):
     """
     Original name: CLIPSave
-    No description available.
+    Category: advanced/model_merging
+    
+
+    Inputs:
+        - clip (Clip)
+        - filename_prefix (str) (default: 'clip/ComfyUI')
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'CLIPSave'
 

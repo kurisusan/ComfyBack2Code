@@ -43,7 +43,28 @@ class LoadAndResizeImageOutputs(OutputSlots):
 class LoadAndResizeImage(Node[LoadAndResizeImageInputs, LoadAndResizeImageOutputs]):
     """
     Original name: LoadAndResizeImage
-    No description available.
+    Category: KJNodes/image
+    
+
+    Inputs:
+        - image (str)
+        - resize (bool) (default: False)
+        - width (int) (default: 512)
+        - height (int) (default: 512)
+        - repeat (int) (default: 1)
+        - keep_proportion (bool) (default: False)
+        - divisible_by (int) (default: 2)
+        - mask_channel (str)
+          Channel to use for the mask output
+        - background_color (str) (default: '')
+          Fills the alpha channel with the specified color.
+
+    Outputs:
+        - image (Image)
+        - mask (Image)
+        - width (int)
+        - height (int)
+        - image_path (str)
     """
     _original_name: str = 'LoadAndResizeImage'
 

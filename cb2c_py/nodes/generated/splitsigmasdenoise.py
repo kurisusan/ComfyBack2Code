@@ -23,7 +23,16 @@ class SplitSigmasDenoiseOutputs(OutputSlots):
 class SplitSigmasDenoise(Node[SplitSigmasDenoiseInputs, SplitSigmasDenoiseOutputs]):
     """
     Original name: SplitSigmasDenoise
-    No description available.
+    Category: sampling/custom_sampling/sigmas
+    
+
+    Inputs:
+        - sigmas (Any)
+        - denoise (float) (default: 1.0)
+
+    Outputs:
+        - high_sigmas (Any)
+        - low_sigmas (Any)
     """
     _original_name: str = 'SplitSigmasDenoise'
 

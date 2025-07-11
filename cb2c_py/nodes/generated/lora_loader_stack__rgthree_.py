@@ -39,7 +39,24 @@ class Lora_Loader_Stack__rgthree_Outputs(OutputSlots):
 class Lora_Loader_Stack__rgthree_(Node[Lora_Loader_Stack__rgthree_Inputs, Lora_Loader_Stack__rgthree_Outputs]):
     """
     Original name: Lora Loader Stack (rgthree)
-    No description available.
+    Category: rgthree
+    
+
+    Inputs:
+        - model (Model)
+        - clip (Clip)
+        - lora_01 (str)
+        - strength_01 (float) (default: 1.0)
+        - lora_02 (str)
+        - strength_02 (float) (default: 1.0)
+        - lora_03 (str)
+        - strength_03 (float) (default: 1.0)
+        - lora_04 (str)
+        - strength_04 (float) (default: 1.0)
+
+    Outputs:
+        - model (Model)
+        - clip (Clip)
     """
     _original_name: str = 'Lora Loader Stack (rgthree)'
 

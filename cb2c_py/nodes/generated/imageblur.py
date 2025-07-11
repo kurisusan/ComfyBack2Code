@@ -23,7 +23,16 @@ class ImageBlurOutputs(OutputSlots):
 class ImageBlur(Node[ImageBlurInputs, ImageBlurOutputs]):
     """
     Original name: ImageBlur
-    No description available.
+    Category: image/postprocessing
+    
+
+    Inputs:
+        - image (Image)
+        - blur_radius (int) (default: 1)
+        - sigma (float) (default: 1.0)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageBlur'
 

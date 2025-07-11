@@ -21,7 +21,15 @@ class LossGraphNodeOutputs(OutputSlots):
 class LossGraphNode(Node[LossGraphNodeInputs, LossGraphNodeOutputs]):
     """
     Original name: LossGraphNode
-    No description available.
+    Category: training
+    Plots the loss graph and saves it to the output directory.
+
+    Inputs:
+        - loss (Any) (default: {})
+        - filename_prefix (str) (default: 'loss_graph')
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'LossGraphNode'
 

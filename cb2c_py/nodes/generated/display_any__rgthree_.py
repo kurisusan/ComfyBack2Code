@@ -19,7 +19,14 @@ class Display_Any__rgthree_Outputs(OutputSlots):
 class Display_Any__rgthree_(Node[Display_Any__rgthree_Inputs, Display_Any__rgthree_Outputs]):
     """
     Original name: Display Any (rgthree)
-    No description available.
+    Category: rgthree
+    
+
+    Inputs:
+        - source (Any)
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'Display Any (rgthree)'
 

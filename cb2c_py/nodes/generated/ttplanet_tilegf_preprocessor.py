@@ -19,7 +19,14 @@ class TTPlanet_TileGF_PreprocessorOutputs(OutputSlots):
 class TTPlanet_TileGF_Preprocessor(Node[TTPlanet_TileGF_PreprocessorInputs, TTPlanet_TileGF_PreprocessorOutputs]):
     """
     Original name: TTPlanet_TileGF_Preprocessor
-    No description available.
+    Category: ControlNet Preprocessors/tile
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'TTPlanet_TileGF_Preprocessor'
 

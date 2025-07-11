@@ -23,7 +23,18 @@ class SaveImageWithAlphaOutputs(OutputSlots):
 class SaveImageWithAlpha(Node[SaveImageWithAlphaInputs, SaveImageWithAlphaOutputs]):
     """
     Original name: SaveImageWithAlpha
-    No description available.
+    Category: KJNodes/image
+    
+Saves an image and mask as .PNG with the mask as the alpha channel. 
+
+
+    Inputs:
+        - images (Image)
+        - mask (Image)
+        - filename_prefix (str) (default: 'ComfyUI')
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'SaveImageWithAlpha'
 

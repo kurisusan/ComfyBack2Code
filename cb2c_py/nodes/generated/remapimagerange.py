@@ -25,7 +25,19 @@ class RemapImageRangeOutputs(OutputSlots):
 class RemapImageRange(Node[RemapImageRangeInputs, RemapImageRangeOutputs]):
     """
     Original name: RemapImageRange
-    No description available.
+    Category: KJNodes/image
+    
+Remaps the image values to the specified range. 
+
+
+    Inputs:
+        - image (Image)
+        - min (float) (default: 0.0)
+        - max (float) (default: 1.0)
+        - clamp (bool) (default: True)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'RemapImageRange'
 

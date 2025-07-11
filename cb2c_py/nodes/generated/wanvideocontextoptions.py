@@ -29,7 +29,24 @@ class WanVideoContextOptionsOutputs(OutputSlots):
 class WanVideoContextOptions(Node[WanVideoContextOptionsInputs, WanVideoContextOptionsOutputs]):
     """
     Original name: WanVideoContextOptions
-    No description available.
+    Category: WanVideoWrapper
+    Context options for WanVideo, allows splitting the video into context windows and attemps blending them for longer generations than the model and memory otherwise would allow.
+
+    Inputs:
+        - context_schedule (str)
+        - context_frames (int) (default: 81)
+          Number of pixel frames in the context, NOTE: the latent space has 4 frames in 1
+        - context_stride (int) (default: 4)
+          Context stride as pixel frames, NOTE: the latent space has 4 frames in 1
+        - context_overlap (int) (default: 16)
+          Context overlap as pixel frames, NOTE: the latent space has 4 frames in 1
+        - freenoise (bool) (default: True)
+          Shuffle the noise
+        - verbose (bool) (default: False)
+          Print debug output
+
+    Outputs:
+        - context_options (Any)
     """
     _original_name: str = 'WanVideoContextOptions'
 

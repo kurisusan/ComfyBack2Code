@@ -21,7 +21,15 @@ class TorchCompileModelOutputs(OutputSlots):
 class TorchCompileModel(Node[TorchCompileModelInputs, TorchCompileModelOutputs]):
     """
     Original name: TorchCompileModel
-    No description available.
+    Category: _for_testing
+    
+
+    Inputs:
+        - model (Model)
+        - backend (str)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'TorchCompileModel'
 

@@ -31,7 +31,20 @@ class WanCameraEmbeddingOutputs(OutputSlots):
 class WanCameraEmbedding(Node[WanCameraEmbeddingInputs, WanCameraEmbeddingOutputs]):
     """
     Original name: WanCameraEmbedding
-    No description available.
+    Category: camera
+    
+
+    Inputs:
+        - camera_pose (str) (default: 'Static')
+        - width (int) (default: 832)
+        - height (int) (default: 480)
+        - length (int) (default: 81)
+
+    Outputs:
+        - camera_embedding (Any)
+        - width (int)
+        - height (int)
+        - length (int)
     """
     _original_name: str = 'WanCameraEmbedding'
 

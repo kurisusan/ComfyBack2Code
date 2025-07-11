@@ -19,7 +19,14 @@ class RenderAnimalKpsOutputs(OutputSlots):
 class RenderAnimalKps(Node[RenderAnimalKpsInputs, RenderAnimalKpsOutputs]):
     """
     Original name: RenderAnimalKps
-    No description available.
+    Category: ControlNet Preprocessors/Pose Keypoint Postprocess
+    
+
+    Inputs:
+        - kps (Any)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'RenderAnimalKps'
 

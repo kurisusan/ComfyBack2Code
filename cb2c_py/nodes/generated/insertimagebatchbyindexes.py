@@ -23,7 +23,22 @@ class InsertImageBatchByIndexesOutputs(OutputSlots):
 class InsertImageBatchByIndexes(Node[InsertImageBatchByIndexesInputs, InsertImageBatchByIndexesOutputs]):
     """
     Original name: InsertImageBatchByIndexes
-    No description available.
+    Category: KJNodes/image
+    
+This node is designed to be use with node FilterZeroMasksAndCorrespondingImages
+It inserts the images_to_insert into images according to insert_indexes
+
+Returns:
+    images_after_insert: updated original images with origonal sequence order
+
+
+    Inputs:
+        - images (Image)
+        - images_to_insert (Image)
+        - insert_indexes (Any)
+
+    Outputs:
+        - images_after_insert (Image)
     """
     _original_name: str = 'InsertImageBatchByIndexes'
 

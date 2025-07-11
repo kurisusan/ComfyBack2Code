@@ -25,7 +25,17 @@ class ConditioningSetPropertiesAndCombineOutputs(OutputSlots):
 class ConditioningSetPropertiesAndCombine(Node[ConditioningSetPropertiesAndCombineInputs, ConditioningSetPropertiesAndCombineOutputs]):
     """
     Original name: ConditioningSetPropertiesAndCombine
-    No description available.
+    Category: advanced/hooks/cond single
+    
+
+    Inputs:
+        - cond (Conditioning)
+        - cond_NEW (Conditioning)
+        - strength (float) (default: 1.0)
+        - set_cond_area (str)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'ConditioningSetPropertiesAndCombine'
 

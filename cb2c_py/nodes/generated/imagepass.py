@@ -19,7 +19,16 @@ class ImagePassOutputs(OutputSlots):
 class ImagePass(Node[ImagePassInputs, ImagePassOutputs]):
     """
     Original name: ImagePass
-    No description available.
+    Category: KJNodes/image
+    
+Passes the image through without modifying it.
+
+
+    Inputs:
+        No inputs.
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImagePass'
 

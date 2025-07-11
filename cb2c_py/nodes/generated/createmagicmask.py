@@ -33,7 +33,21 @@ class CreateMagicMaskOutputs(OutputSlots):
 class CreateMagicMask(Node[CreateMagicMaskInputs, CreateMagicMaskOutputs]):
     """
     Original name: CreateMagicMask
-    No description available.
+    Category: KJNodes/masking/generate
+    
+
+    Inputs:
+        - frames (int) (default: 16)
+        - depth (int) (default: 12)
+        - distortion (float) (default: 1.5)
+        - seed (int) (default: 123)
+        - transitions (int) (default: 1)
+        - frame_width (int) (default: 512)
+        - frame_height (int) (default: 512)
+
+    Outputs:
+        - mask (Image)
+        - mask_inverted (Image)
     """
     _original_name: str = 'CreateMagicMask'
 

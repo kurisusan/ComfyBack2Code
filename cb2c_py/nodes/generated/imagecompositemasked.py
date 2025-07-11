@@ -27,7 +27,18 @@ class ImageCompositeMaskedOutputs(OutputSlots):
 class ImageCompositeMasked(Node[ImageCompositeMaskedInputs, ImageCompositeMaskedOutputs]):
     """
     Original name: ImageCompositeMasked
-    No description available.
+    Category: image
+    
+
+    Inputs:
+        - destination (Image)
+        - source (Image)
+        - x (int) (default: 0)
+        - y (int) (default: 0)
+        - resize_source (bool) (default: False)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageCompositeMasked'
 

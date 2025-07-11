@@ -21,7 +21,17 @@ class MinimaxTextToVideoNodeOutputs(OutputSlots):
 class MinimaxTextToVideoNode(Node[MinimaxTextToVideoNodeInputs, MinimaxTextToVideoNodeOutputs]):
     """
     Original name: MinimaxTextToVideoNode
-    No description available.
+    Category: api node/video/MiniMax
+    Generates videos from prompts using MiniMax's API
+
+    Inputs:
+        - prompt_text (str) (default: '')
+          Text prompt to guide the video generation
+        - model (str) (default: 'T2V-01')
+          Model to use for video generation
+
+    Outputs:
+        - video (Any)
     """
     _original_name: str = 'MinimaxTextToVideoNode'
 

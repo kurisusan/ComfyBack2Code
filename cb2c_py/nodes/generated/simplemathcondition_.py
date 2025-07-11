@@ -25,7 +25,17 @@ class SimpleMathCondition_Outputs(OutputSlots):
 class SimpleMathCondition_(Node[SimpleMathCondition_Inputs, SimpleMathCondition_Outputs]):
     """
     Original name: SimpleMathCondition+
-    No description available.
+    Category: essentials/utilities
+    
+
+    Inputs:
+        - evaluate (Any) (default: 0)
+        - on_true (str) (default: '')
+        - on_false (str) (default: '')
+
+    Outputs:
+        - int (int)
+        - float (float)
     """
     _original_name: str = 'SimpleMathCondition+'
 

@@ -19,7 +19,14 @@ class M_LSDPreprocessorOutputs(OutputSlots):
 class M_LSDPreprocessor(Node[M_LSDPreprocessorInputs, M_LSDPreprocessorOutputs]):
     """
     Original name: M-LSDPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Line Extractors
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'M-LSDPreprocessor'
 

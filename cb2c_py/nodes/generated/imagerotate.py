@@ -21,7 +21,15 @@ class ImageRotateOutputs(OutputSlots):
 class ImageRotate(Node[ImageRotateInputs, ImageRotateOutputs]):
     """
     Original name: ImageRotate
-    No description available.
+    Category: image/transform
+    
+
+    Inputs:
+        - image (Image)
+        - rotation (str)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageRotate'
 

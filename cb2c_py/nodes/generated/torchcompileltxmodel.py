@@ -27,7 +27,20 @@ class TorchCompileLTXModelOutputs(OutputSlots):
 class TorchCompileLTXModel(Node[TorchCompileLTXModelInputs, TorchCompileLTXModelOutputs]):
     """
     Original name: TorchCompileLTXModel
-    No description available.
+    Category: KJNodes/torchcompile
+    
+
+    Inputs:
+        - model (Model)
+        - backend (str)
+        - fullgraph (bool) (default: False)
+          Enable full graph mode
+        - mode (str) (default: 'default')
+        - dynamic (bool) (default: False)
+          Enable dynamic mode
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'TorchCompileLTXModel'
 

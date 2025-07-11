@@ -31,7 +31,22 @@ class LumaVideoNodeOutputs(OutputSlots):
 class LumaVideoNode(Node[LumaVideoNodeInputs, LumaVideoNodeOutputs]):
     """
     Original name: LumaVideoNode
-    No description available.
+    Category: api node/video/Luma
+    Generates videos synchronously based on prompt and output_size.
+
+    Inputs:
+        - prompt (str) (default: '')
+          Prompt for the video generation
+        - model (str)
+        - aspect_ratio (str) (default: '16:9')
+        - resolution (str) (default: '540p')
+        - duration (str)
+        - loop (bool) (default: False)
+        - seed (int) (default: 0)
+          Seed to determine if node should re-run; actual results are nondeterministic regardless of seed.
+
+    Outputs:
+        - video (Any)
     """
     _original_name: str = 'LumaVideoNode'
 

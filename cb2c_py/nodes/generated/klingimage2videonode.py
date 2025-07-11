@@ -37,7 +37,26 @@ class KlingImage2VideoNodeOutputs(OutputSlots):
 class KlingImage2VideoNode(Node[KlingImage2VideoNodeInputs, KlingImage2VideoNodeOutputs]):
     """
     Original name: KlingImage2VideoNode
-    No description available.
+    Category: api node/video/Kling
+    Kling Image to Video Node
+
+    Inputs:
+        - start_frame (Image) (default: None)
+          The reference image used to generate the video.
+        - prompt (str) (default: None)
+          Positive text prompt
+        - negative_prompt (str) (default: None)
+          Negative text prompt
+        - model_name (Any) (default: 'kling-v2-master')
+        - cfg_scale (float) (default: 0.8)
+        - mode (Any) (default: 'std')
+        - aspect_ratio (Any) (default: '16:9')
+        - duration (Any) (default: '5')
+
+    Outputs:
+        - video (Any)
+        - video_id (str)
+        - duration (str)
     """
     _original_name: str = 'KlingImage2VideoNode'
 

@@ -19,7 +19,14 @@ class PixverseTemplateNodeOutputs(OutputSlots):
 class PixverseTemplateNode(Node[PixverseTemplateNodeInputs, PixverseTemplateNodeOutputs]):
     """
     Original name: PixverseTemplateNode
-    No description available.
+    Category: api node/video/PixVerse
+    
+
+    Inputs:
+        - template (str)
+
+    Outputs:
+        - pixverse_template (Any)
     """
     _original_name: str = 'PixverseTemplateNode'
 

@@ -39,7 +39,24 @@ class StableZero123_BatchScheduleOutputs(OutputSlots):
 class StableZero123_BatchSchedule(Node[StableZero123_BatchScheduleInputs, StableZero123_BatchScheduleOutputs]):
     """
     Original name: StableZero123_BatchSchedule
-    No description available.
+    Category: KJNodes/experimental
+    
+
+    Inputs:
+        - clip_vision (Any)
+        - init_image (Image)
+        - vae (Vae)
+        - width (int) (default: 256)
+        - height (int) (default: 256)
+        - batch_size (int) (default: 1)
+        - interpolation (str)
+        - azimuth_points_string (str) (default: '0:(0.0),\n7:(1.0),\n15:(0.0)\n')
+        - elevation_points_string (str) (default: '0:(0.0),\n7:(0.0),\n15:(0.0)\n')
+
+    Outputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - latent (Latent)
     """
     _original_name: str = 'StableZero123_BatchSchedule'
 

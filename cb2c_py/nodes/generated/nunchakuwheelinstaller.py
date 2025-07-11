@@ -21,7 +21,17 @@ class NunchakuWheelInstallerOutputs(OutputSlots):
 class NunchakuWheelInstaller(Node[NunchakuWheelInstallerInputs, NunchakuWheelInstallerOutputs]):
     """
     Original name: NunchakuWheelInstaller
-    No description available.
+    Category: Nunchaku
+    
+
+    Inputs:
+        - source (str)
+          Source for downloading nunchaku wheels.
+        - version (str)
+          Specific version to install.
+
+    Outputs:
+        - status (str)
     """
     _original_name: str = 'NunchakuWheelInstaller'
 

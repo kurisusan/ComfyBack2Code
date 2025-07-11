@@ -9,7 +9,7 @@ from typing import Dict, Any, List, Union
 class UnetLoaderGGUFDisTorchMultiGPUInputs(InputSlots):
     unet_name: Slot[str]
     def __init__(self, node: "Node"):
-        self.unet_name = Slot[str](node, "unet_name", [])
+        self.unet_name = Slot[str](node, "unet_name", ['wan2.1-t2v-14b-Q4_K_M.gguf'])
 
 class UnetLoaderGGUFDisTorchMultiGPUOutputs(OutputSlots):
     model: Slot[Model]
@@ -19,7 +19,14 @@ class UnetLoaderGGUFDisTorchMultiGPUOutputs(OutputSlots):
 class UnetLoaderGGUFDisTorchMultiGPU(Node[UnetLoaderGGUFDisTorchMultiGPUInputs, UnetLoaderGGUFDisTorchMultiGPUOutputs]):
     """
     Original name: UnetLoaderGGUFDisTorchMultiGPU
-    No description available.
+    Category: multigpu
+    
+
+    Inputs:
+        - unet_name (str)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'UnetLoaderGGUFDisTorchMultiGPU'
 

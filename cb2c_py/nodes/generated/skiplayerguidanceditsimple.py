@@ -27,7 +27,18 @@ class SkipLayerGuidanceDiTSimpleOutputs(OutputSlots):
 class SkipLayerGuidanceDiTSimple(Node[SkipLayerGuidanceDiTSimpleInputs, SkipLayerGuidanceDiTSimpleOutputs]):
     """
     Original name: SkipLayerGuidanceDiTSimple
-    No description available.
+    Category: advanced/guidance
+    Simple version of the SkipLayerGuidanceDiT node that only modifies the uncond pass.
+
+    Inputs:
+        - model (Model)
+        - double_layers (str) (default: '7, 8, 9')
+        - single_layers (str) (default: '7, 8, 9')
+        - start_percent (float) (default: 0.0)
+        - end_percent (float) (default: 1.0)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'SkipLayerGuidanceDiTSimple'
 

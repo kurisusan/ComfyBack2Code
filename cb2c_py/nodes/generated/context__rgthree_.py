@@ -35,7 +35,22 @@ class Context__rgthree_Outputs(OutputSlots):
 class Context__rgthree_(Node[Context__rgthree_Inputs, Context__rgthree_Outputs]):
     """
     Original name: Context (rgthree)
-    No description available.
+    Category: rgthree
+    
+
+    Inputs:
+        No inputs.
+
+    Outputs:
+        - context (Any)
+        - model (Model)
+        - clip (Clip)
+        - vae (Vae)
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - latent (Latent)
+        - image (Image)
+        - seed (int)
     """
     _original_name: str = 'Context (rgthree)'
 

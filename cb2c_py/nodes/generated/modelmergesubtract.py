@@ -23,7 +23,16 @@ class ModelMergeSubtractOutputs(OutputSlots):
 class ModelMergeSubtract(Node[ModelMergeSubtractInputs, ModelMergeSubtractOutputs]):
     """
     Original name: ModelMergeSubtract
-    No description available.
+    Category: advanced/model_merging
+    
+
+    Inputs:
+        - model1 (Model)
+        - model2 (Model)
+        - multiplier (float) (default: 1.0)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'ModelMergeSubtract'
 

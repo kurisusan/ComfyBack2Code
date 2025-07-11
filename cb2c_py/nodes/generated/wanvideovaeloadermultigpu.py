@@ -9,7 +9,7 @@ from typing import Dict, Any, List, Union
 class WanVideoVAELoaderMultiGPUInputs(InputSlots):
     model_name: Slot[str]
     def __init__(self, node: "Node"):
-        self.model_name = Slot[str](node, "model_name", [])
+        self.model_name = Slot[str](node, "model_name", ['wan_2.1_vae.safetensors'])
 
 class WanVideoVAELoaderMultiGPUOutputs(OutputSlots):
     vae: Slot[Any]
@@ -19,7 +19,15 @@ class WanVideoVAELoaderMultiGPUOutputs(OutputSlots):
 class WanVideoVAELoaderMultiGPU(Node[WanVideoVAELoaderMultiGPUInputs, WanVideoVAELoaderMultiGPUOutputs]):
     """
     Original name: WanVideoVAELoaderMultiGPU
-    No description available.
+    Category: multigpu
+    Loads Wan VAE model from 'ComfyUI/models/vae'
+
+    Inputs:
+        - model_name (str)
+          These models are loaded from 'ComfyUI/models/vae'
+
+    Outputs:
+        - vae (Any)
     """
     _original_name: str = 'WanVideoVAELoaderMultiGPU'
 

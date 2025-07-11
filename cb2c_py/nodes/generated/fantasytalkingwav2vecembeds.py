@@ -31,7 +31,22 @@ class FantasyTalkingWav2VecEmbedsOutputs(OutputSlots):
 class FantasyTalkingWav2VecEmbeds(Node[FantasyTalkingWav2VecEmbedsInputs, FantasyTalkingWav2VecEmbedsOutputs]):
     """
     Original name: FantasyTalkingWav2VecEmbeds
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - wav2vec_model (Any)
+        - fantasytalking_model (Any)
+        - audio (Any)
+        - num_frames (int) (default: 81)
+        - fps (float) (default: 23.0)
+        - audio_scale (float) (default: 1.0)
+          Strength of the audio conditioning
+        - audio_cfg_scale (float) (default: 1.0)
+          When not 1.0, an extra model pass without audio conditioning is done: slower inference but more motion is allowed
+
+    Outputs:
+        - fantasytalking_embeds (Any)
     """
     _original_name: str = 'FantasyTalkingWav2VecEmbeds'
 

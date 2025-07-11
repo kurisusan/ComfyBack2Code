@@ -31,7 +31,23 @@ class KlingTextToVideoNodeOutputs(OutputSlots):
 class KlingTextToVideoNode(Node[KlingTextToVideoNodeInputs, KlingTextToVideoNodeOutputs]):
     """
     Original name: KlingTextToVideoNode
-    No description available.
+    Category: api node/video/Kling
+    Kling Text to Video Node
+
+    Inputs:
+        - prompt (str) (default: None)
+          Positive text prompt
+        - negative_prompt (str) (default: None)
+          Negative text prompt
+        - cfg_scale (float) (default: 1.0)
+        - aspect_ratio (Any) (default: '16:9')
+        - mode (str) (default: 'standard mode / 5s duration / kling-v1-6')
+          The configuration to use for the video generation following the format: mode / duration / model_name.
+
+    Outputs:
+        - video (Any)
+        - video_id (str)
+        - duration (str)
     """
     _original_name: str = 'KlingTextToVideoNode'
 

@@ -27,7 +27,18 @@ class UNetTemporalAttentionMultiplyOutputs(OutputSlots):
 class UNetTemporalAttentionMultiply(Node[UNetTemporalAttentionMultiplyInputs, UNetTemporalAttentionMultiplyOutputs]):
     """
     Original name: UNetTemporalAttentionMultiply
-    No description available.
+    Category: _for_testing/attention_experiments
+    
+
+    Inputs:
+        - model (Model)
+        - self_structural (float) (default: 1.0)
+        - self_temporal (float) (default: 1.0)
+        - cross_structural (float) (default: 1.0)
+        - cross_temporal (float) (default: 1.0)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'UNetTemporalAttentionMultiply'
 

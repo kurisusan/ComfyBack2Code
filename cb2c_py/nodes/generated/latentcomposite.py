@@ -27,7 +27,18 @@ class LatentCompositeOutputs(OutputSlots):
 class LatentComposite(Node[LatentCompositeInputs, LatentCompositeOutputs]):
     """
     Original name: LatentComposite
-    No description available.
+    Category: latent
+    
+
+    Inputs:
+        - samples_to (Latent)
+        - samples_from (Latent)
+        - x (int) (default: 0)
+        - y (int) (default: 0)
+        - feather (int) (default: 0)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'LatentComposite'
 

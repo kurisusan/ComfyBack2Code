@@ -21,7 +21,18 @@ class VAEDecodeOutputs(OutputSlots):
 class VAEDecode(Node[VAEDecodeInputs, VAEDecodeOutputs]):
     """
     Original name: VAEDecode
-    No description available.
+    Category: latent
+    Decodes latent images back into pixel space images.
+
+    Inputs:
+        - samples (Latent)
+          The latent to be decoded.
+        - vae (Vae)
+          The VAE model used for decoding the latent.
+
+    Outputs:
+        - image (Image)
+          The decoded image.
     """
     _original_name: str = 'VAEDecode'
 

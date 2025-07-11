@@ -19,7 +19,14 @@ class CombineHooks8Outputs(OutputSlots):
 class CombineHooks8(Node[CombineHooks8Inputs, CombineHooks8Outputs]):
     """
     Original name: CombineHooks8
-    No description available.
+    Category: advanced/hooks/combine
+    
+
+    Inputs:
+        No inputs.
+
+    Outputs:
+        - hooks (Any)
     """
     _original_name: str = 'CombineHooks8'
 

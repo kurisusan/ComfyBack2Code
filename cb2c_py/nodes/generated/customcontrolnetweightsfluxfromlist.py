@@ -21,7 +21,15 @@ class CustomControlNetWeightsFluxFromListOutputs(OutputSlots):
 class CustomControlNetWeightsFluxFromList(Node[CustomControlNetWeightsFluxFromListInputs, CustomControlNetWeightsFluxFromListOutputs]):
     """
     Original name: CustomControlNetWeightsFluxFromList
-    No description available.
+    Category: KJNodes/controlnet
+    Creates controlnet weights from a list of floats for Advanced-ControlNet
+
+    Inputs:
+        - list_of_floats (float)
+
+    Outputs:
+        - cn_weights (Any)
+        - tk_shortcut (Any)
     """
     _original_name: str = 'CustomControlNetWeightsFluxFromList'
 

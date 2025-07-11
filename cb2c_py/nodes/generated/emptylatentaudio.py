@@ -21,7 +21,16 @@ class EmptyLatentAudioOutputs(OutputSlots):
 class EmptyLatentAudio(Node[EmptyLatentAudioInputs, EmptyLatentAudioOutputs]):
     """
     Original name: EmptyLatentAudio
-    No description available.
+    Category: latent/audio
+    
+
+    Inputs:
+        - seconds (float) (default: 47.6)
+        - batch_size (int) (default: 1)
+          The number of latent images in the batch.
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'EmptyLatentAudio'
 

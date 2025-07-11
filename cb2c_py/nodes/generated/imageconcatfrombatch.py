@@ -25,7 +25,19 @@ class ImageConcatFromBatchOutputs(OutputSlots):
 class ImageConcatFromBatch(Node[ImageConcatFromBatchInputs, ImageConcatFromBatchOutputs]):
     """
     Original name: ImageConcatFromBatch
-    No description available.
+    Category: KJNodes/image
+    
+    Concatenates images from a batch into a grid with a specified number of columns.
+    
+
+    Inputs:
+        - images (Image)
+        - num_columns (int) (default: 3)
+        - match_image_size (bool) (default: False)
+        - max_resolution (int) (default: 4096)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageConcatFromBatch'
 

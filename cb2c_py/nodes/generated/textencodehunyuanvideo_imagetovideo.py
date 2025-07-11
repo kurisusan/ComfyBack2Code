@@ -25,7 +25,18 @@ class TextEncodeHunyuanVideo_ImageToVideoOutputs(OutputSlots):
 class TextEncodeHunyuanVideo_ImageToVideo(Node[TextEncodeHunyuanVideo_ImageToVideoInputs, TextEncodeHunyuanVideo_ImageToVideoOutputs]):
     """
     Original name: TextEncodeHunyuanVideo_ImageToVideo
-    No description available.
+    Category: advanced/conditioning
+    
+
+    Inputs:
+        - clip (Clip)
+        - clip_vision_output (Any)
+        - prompt (str)
+        - image_interleave (int) (default: 2)
+          How much the image influences things vs the text prompt. Higher number means more influence from the text prompt.
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'TextEncodeHunyuanVideo_ImageToVideo'
 

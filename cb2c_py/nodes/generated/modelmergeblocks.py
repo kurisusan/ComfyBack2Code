@@ -27,7 +27,18 @@ class ModelMergeBlocksOutputs(OutputSlots):
 class ModelMergeBlocks(Node[ModelMergeBlocksInputs, ModelMergeBlocksOutputs]):
     """
     Original name: ModelMergeBlocks
-    No description available.
+    Category: advanced/model_merging
+    
+
+    Inputs:
+        - model1 (Model)
+        - model2 (Model)
+        - input (float) (default: 1.0)
+        - middle (float) (default: 1.0)
+        - out (float) (default: 1.0)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'ModelMergeBlocks'
 

@@ -23,7 +23,16 @@ class ModelMergeSimpleOutputs(OutputSlots):
 class ModelMergeSimple(Node[ModelMergeSimpleInputs, ModelMergeSimpleOutputs]):
     """
     Original name: ModelMergeSimple
-    No description available.
+    Category: advanced/model_merging
+    
+
+    Inputs:
+        - model1 (Model)
+        - model2 (Model)
+        - ratio (float) (default: 1.0)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'ModelMergeSimple'
 

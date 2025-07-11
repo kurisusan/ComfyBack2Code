@@ -33,7 +33,22 @@ class InpaintModelConditioningOutputs(OutputSlots):
 class InpaintModelConditioning(Node[InpaintModelConditioningInputs, InpaintModelConditioningOutputs]):
     """
     Original name: InpaintModelConditioning
-    No description available.
+    Category: conditioning/inpaint
+    
+
+    Inputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - vae (Vae)
+        - pixels (Image)
+        - mask (Image)
+        - noise_mask (bool) (default: True)
+          Add a noise mask to the latent so sampling will only happen within the mask. Might improve results or completely break things depending on the model.
+
+    Outputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - latent (Latent)
     """
     _original_name: str = 'InpaintModelConditioning'
 

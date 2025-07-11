@@ -23,7 +23,16 @@ class CreateHookLoraOutputs(OutputSlots):
 class CreateHookLora(Node[CreateHookLoraInputs, CreateHookLoraOutputs]):
     """
     Original name: CreateHookLora
-    No description available.
+    Category: advanced/hooks/create
+    
+
+    Inputs:
+        - lora_name (str)
+        - strength_model (float) (default: 1.0)
+        - strength_clip (float) (default: 1.0)
+
+    Outputs:
+        - hooks (Any)
     """
     _original_name: str = 'CreateHookLora'
 

@@ -25,7 +25,17 @@ class unCLIPCheckpointLoaderOutputs(OutputSlots):
 class unCLIPCheckpointLoader(Node[unCLIPCheckpointLoaderInputs, unCLIPCheckpointLoaderOutputs]):
     """
     Original name: unCLIPCheckpointLoader
-    No description available.
+    Category: loaders
+    
+
+    Inputs:
+        - ckpt_name (str)
+
+    Outputs:
+        - model (Model)
+        - clip (Clip)
+        - vae (Vae)
+        - clip_vision (Any)
     """
     _original_name: str = 'unCLIPCheckpointLoader'
 

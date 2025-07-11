@@ -27,7 +27,21 @@ class WanVideoNAGOutputs(OutputSlots):
 class WanVideoNAG(Node[WanVideoNAGInputs, WanVideoNAGOutputs]):
     """
     Original name: WanVideoNAG
-    No description available.
+    Category: KJNodes/experimental
+    https://github.com/ChenDarYen/Normalized-Attention-Guidance
+
+    Inputs:
+        - model (Model)
+        - conditioning (Conditioning)
+        - nag_scale (float) (default: 11.0)
+          Strength of negative guidance effect
+        - nag_alpha (float) (default: 0.25)
+          Mixing coefficient in that controls the balance between the normalized guided representation and the original positive representation.
+        - nag_tau (float) (default: 2.5)
+          Clipping threshold that controls how much the guided attention can deviate from the positive attention.
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'WanVideoNAG'
 

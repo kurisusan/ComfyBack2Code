@@ -33,7 +33,21 @@ class PatchModelAddDownscaleOutputs(OutputSlots):
 class PatchModelAddDownscale(Node[PatchModelAddDownscaleInputs, PatchModelAddDownscaleOutputs]):
     """
     Original name: PatchModelAddDownscale
-    No description available.
+    Category: model_patches/unet
+    
+
+    Inputs:
+        - model (Model)
+        - block_number (int) (default: 3)
+        - downscale_factor (float) (default: 2.0)
+        - start_percent (float) (default: 0.0)
+        - end_percent (float) (default: 0.35)
+        - downscale_after_skip (bool) (default: True)
+        - downscale_method (str)
+        - upscale_method (str)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'PatchModelAddDownscale'
 

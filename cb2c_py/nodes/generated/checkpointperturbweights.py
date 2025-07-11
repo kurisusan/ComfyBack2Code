@@ -27,7 +27,18 @@ class CheckpointPerturbWeightsOutputs(OutputSlots):
 class CheckpointPerturbWeights(Node[CheckpointPerturbWeightsInputs, CheckpointPerturbWeightsOutputs]):
     """
     Original name: CheckpointPerturbWeights
-    No description available.
+    Category: KJNodes/experimental
+    
+
+    Inputs:
+        - model (Model)
+        - joint_blocks (float) (default: 0.02)
+        - final_layer (float) (default: 0.02)
+        - rest_of_the_blocks (float) (default: 0.02)
+        - seed (int) (default: 123)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'CheckpointPerturbWeights'
 

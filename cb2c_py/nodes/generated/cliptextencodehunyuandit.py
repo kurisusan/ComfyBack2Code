@@ -23,7 +23,16 @@ class CLIPTextEncodeHunyuanDiTOutputs(OutputSlots):
 class CLIPTextEncodeHunyuanDiT(Node[CLIPTextEncodeHunyuanDiTInputs, CLIPTextEncodeHunyuanDiTOutputs]):
     """
     Original name: CLIPTextEncodeHunyuanDiT
-    No description available.
+    Category: advanced/conditioning
+    
+
+    Inputs:
+        - clip (Clip)
+        - bert (str)
+        - mt5xl (str)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'CLIPTextEncodeHunyuanDiT'
 

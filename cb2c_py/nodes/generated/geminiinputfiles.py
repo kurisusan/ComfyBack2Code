@@ -19,7 +19,15 @@ class GeminiInputFilesOutputs(OutputSlots):
 class GeminiInputFiles(Node[GeminiInputFilesInputs, GeminiInputFilesOutputs]):
     """
     Original name: GeminiInputFiles
-    No description available.
+    Category: api node/text/Gemini
+    Loads and prepares input files to include as inputs for Gemini LLM nodes. The files will be read by the Gemini model when generating a response. The contents of the text file count toward the token limit. 🛈 TIP: Can be chained together with other Gemini Input File nodes.
+
+    Inputs:
+        - file (Any) (default: 'None')
+          Input files to include as context for the model. Only accepts text (.txt) and PDF (.pdf) files for now.
+
+    Outputs:
+        - gemini_input_files (Any)
     """
     _original_name: str = 'GeminiInputFiles'
 

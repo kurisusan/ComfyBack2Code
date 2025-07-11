@@ -19,7 +19,14 @@ class StabilityUpscaleFastNodeOutputs(OutputSlots):
 class StabilityUpscaleFastNode(Node[StabilityUpscaleFastNodeInputs, StabilityUpscaleFastNodeOutputs]):
     """
     Original name: StabilityUpscaleFastNode
-    No description available.
+    Category: api node/image/Stability AI
+    Quickly upscales an image via Stability API call to 4x its original size; intended for upscaling low-quality/compressed images.
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'StabilityUpscaleFastNode'
 

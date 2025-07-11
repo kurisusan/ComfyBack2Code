@@ -31,7 +31,22 @@ class BboxToIntOutputs(OutputSlots):
 class BboxToInt(Node[BboxToIntInputs, BboxToIntOutputs]):
     """
     Original name: BboxToInt
-    No description available.
+    Category: KJNodes/masking
+    
+Returns selected index from bounding box list as integers.
+
+
+    Inputs:
+        - bboxes (Any)
+        - index (int) (default: 0)
+
+    Outputs:
+        - x_min (int)
+        - y_min (int)
+        - width (int)
+        - height (int)
+        - center_x (int)
+        - center_y (int)
     """
     _original_name: str = 'BboxToInt'
 

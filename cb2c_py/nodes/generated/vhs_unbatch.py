@@ -19,7 +19,14 @@ class VHS_UnbatchOutputs(OutputSlots):
 class VHS_Unbatch(Node[VHS_UnbatchInputs, VHS_UnbatchOutputs]):
     """
     Original name: VHS_Unbatch
-    No description available.
+    Category: Video Helper Suite 🎥🅥🅗🅢
+    Unbatch 🎥🅥🅗🅢<div style="font-size: 0.8em"><div id=VHS_shortdesc>Unbatch a list of items into a single concatenated item</div></div><div style="font-size: 0.8em">Useful for when you want a single video output from a complex workflow</div><div style="font-size: 0.8em">Has no relation to the Meta Batch system of VHS</div><div style="font-size: 0.8em"><div vhs_title="Inputs" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Inputs: <div vhs_title="batched" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">batched: Any input which may or may not be batched</div></div></div></div><div vhs_title="Outputs" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Outputs: <div vhs_title="unbatched" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">unbatched: A single output element. Torch tensors are concatenated across dim 0, all other types are added which functions as concatenation for strings and arrays, but may give undesired results for other types</div></div></div></div></div>
+
+    Inputs:
+        - batched (Any)
+
+    Outputs:
+        - unbatched (Any)
     """
     _original_name: str = 'VHS_Unbatch'
 

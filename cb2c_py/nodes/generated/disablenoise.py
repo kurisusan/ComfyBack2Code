@@ -19,7 +19,14 @@ class DisableNoiseOutputs(OutputSlots):
 class DisableNoise(Node[DisableNoiseInputs, DisableNoiseOutputs]):
     """
     Original name: DisableNoise
-    No description available.
+    Category: sampling/custom_sampling/noise
+    
+
+    Inputs:
+        No inputs.
+
+    Outputs:
+        - noise (Any)
     """
     _original_name: str = 'DisableNoise'
 

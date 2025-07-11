@@ -29,7 +29,19 @@ class ConditioningSetAreaPercentageOutputs(OutputSlots):
 class ConditioningSetAreaPercentage(Node[ConditioningSetAreaPercentageInputs, ConditioningSetAreaPercentageOutputs]):
     """
     Original name: ConditioningSetAreaPercentage
-    No description available.
+    Category: conditioning
+    
+
+    Inputs:
+        - conditioning (Conditioning)
+        - width (float) (default: 1.0)
+        - height (float) (default: 1.0)
+        - x (float) (default: 0)
+        - y (float) (default: 0)
+        - strength (float) (default: 1.0)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'ConditioningSetAreaPercentage'
 

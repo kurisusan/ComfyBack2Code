@@ -31,7 +31,25 @@ class WanVideoVACEEncodeOutputs(OutputSlots):
 class WanVideoVACEEncode(Node[WanVideoVACEEncodeInputs, WanVideoVACEEncodeOutputs]):
     """
     Original name: WanVideoVACEEncode
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - vae (Any)
+        - width (int) (default: 832)
+          Width of the image to encode
+        - height (int) (default: 480)
+          Height of the image to encode
+        - num_frames (int) (default: 81)
+          Number of frames to encode
+        - strength (float) (default: 1.0)
+        - vace_start_percent (float) (default: 0.0)
+          Start percent of the steps to apply VACE
+        - vace_end_percent (float) (default: 1.0)
+          End percent of the steps to apply VACE
+
+    Outputs:
+        - vace_embeds (Any)
     """
     _original_name: str = 'WanVideoVACEEncode'
 

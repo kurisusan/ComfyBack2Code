@@ -31,7 +31,22 @@ class BatchCLIPSegOutputs(OutputSlots):
 class BatchCLIPSeg(Node[BatchCLIPSegInputs, BatchCLIPSegOutputs]):
     """
     Original name: BatchCLIPSeg
-    No description available.
+    Category: KJNodes/masking
+    
+Segments an image or batch of images using CLIPSeg.
+
+
+    Inputs:
+        - images (Image)
+        - text (str)
+        - threshold (float) (default: 0.5)
+        - binary_mask (bool) (default: True)
+        - combine_mask (bool) (default: False)
+        - use_cuda (bool) (default: True)
+
+    Outputs:
+        - mask (Image)
+        - image (Image)
     """
     _original_name: str = 'BatchCLIPSeg'
 

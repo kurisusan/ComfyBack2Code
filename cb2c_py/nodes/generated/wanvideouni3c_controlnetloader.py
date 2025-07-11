@@ -27,7 +27,21 @@ class WanVideoUni3C_ControlnetLoaderOutputs(OutputSlots):
 class WanVideoUni3C_ControlnetLoader(Node[WanVideoUni3C_ControlnetLoaderInputs, WanVideoUni3C_ControlnetLoaderOutputs]):
     """
     Original name: WanVideoUni3C_ControlnetLoader
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - model (str)
+          These models are loaded from the 'ComfyUI/models/controlnet' -folder
+        - base_precision (str) (default: 'fp16')
+        - quantization (str) (default: 'disabled')
+          optional quantization method
+        - load_device (str) (default: 'main_device')
+          Initial device to load the model to, NOT recommended with the larger models unless you have 48GB+ VRAM
+        - attention_mode (str) (default: 'sdpa')
+
+    Outputs:
+        - controlnet (Any)
     """
     _original_name: str = 'WanVideoUni3C_ControlnetLoader'
 

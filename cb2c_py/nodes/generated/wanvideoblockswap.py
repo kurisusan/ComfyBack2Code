@@ -23,7 +23,19 @@ class WanVideoBlockSwapOutputs(OutputSlots):
 class WanVideoBlockSwap(Node[WanVideoBlockSwapInputs, WanVideoBlockSwapOutputs]):
     """
     Original name: WanVideoBlockSwap
-    No description available.
+    Category: WanVideoWrapper
+    Settings for block swapping, reduces VRAM use by swapping blocks to CPU memory
+
+    Inputs:
+        - blocks_to_swap (int) (default: 20)
+          Number of transformer blocks to swap, the 14B model has 40, while the 1.3B model has 30 blocks
+        - offload_img_emb (bool) (default: False)
+          Offload img_emb to offload_device
+        - offload_txt_emb (bool) (default: False)
+          Offload time_emb to offload_device
+
+    Outputs:
+        - block_swap_args (Any)
     """
     _original_name: str = 'WanVideoBlockSwap'
 

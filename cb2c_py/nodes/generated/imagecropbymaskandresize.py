@@ -33,7 +33,21 @@ class ImageCropByMaskAndResizeOutputs(OutputSlots):
 class ImageCropByMaskAndResize(Node[ImageCropByMaskAndResizeInputs, ImageCropByMaskAndResizeOutputs]):
     """
     Original name: ImageCropByMaskAndResize
-    No description available.
+    Category: KJNodes/image
+    
+
+    Inputs:
+        - image (Image)
+        - mask (Image)
+        - base_resolution (int) (default: 512)
+        - padding (int) (default: 0)
+        - min_crop_resolution (int) (default: 128)
+        - max_crop_resolution (int) (default: 512)
+
+    Outputs:
+        - images (Image)
+        - masks (Image)
+        - bbox (Any)
     """
     _original_name: str = 'ImageCropByMaskAndResize'
 

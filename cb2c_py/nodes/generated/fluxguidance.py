@@ -21,7 +21,15 @@ class FluxGuidanceOutputs(OutputSlots):
 class FluxGuidance(Node[FluxGuidanceInputs, FluxGuidanceOutputs]):
     """
     Original name: FluxGuidance
-    No description available.
+    Category: advanced/conditioning/flux
+    
+
+    Inputs:
+        - conditioning (Conditioning)
+        - guidance (float) (default: 3.5)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'FluxGuidance'
 

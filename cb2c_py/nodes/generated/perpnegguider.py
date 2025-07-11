@@ -29,7 +29,19 @@ class PerpNegGuiderOutputs(OutputSlots):
 class PerpNegGuider(Node[PerpNegGuiderInputs, PerpNegGuiderOutputs]):
     """
     Original name: PerpNegGuider
-    No description available.
+    Category: _for_testing
+    
+
+    Inputs:
+        - model (Model)
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - empty_conditioning (Conditioning)
+        - cfg (float) (default: 8.0)
+        - neg_scale (float) (default: 1.0)
+
+    Outputs:
+        - guider (Any)
     """
     _original_name: str = 'PerpNegGuider'
 

@@ -23,7 +23,16 @@ class SimpleComparison_Outputs(OutputSlots):
 class SimpleComparison_(Node[SimpleComparison_Inputs, SimpleComparison_Outputs]):
     """
     Original name: SimpleComparison+
-    No description available.
+    Category: essentials/utilities
+    
+
+    Inputs:
+        - a (Any) (default: 0)
+        - b (Any) (default: 0)
+        - comparison (str)
+
+    Outputs:
+        - boolean (bool)
     """
     _original_name: str = 'SimpleComparison+'
 

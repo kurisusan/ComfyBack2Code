@@ -23,7 +23,16 @@ class GetImageSizeOutputs(OutputSlots):
 class GetImageSize(Node[GetImageSizeInputs, GetImageSizeOutputs]):
     """
     Original name: GetImageSize
-    No description available.
+    Category: image
+    Returns width and height of the image, and passes it through unchanged.
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - width (int)
+        - height (int)
+        - batch_size (int)
     """
     _original_name: str = 'GetImageSize'
 

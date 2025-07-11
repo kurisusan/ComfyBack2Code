@@ -25,7 +25,17 @@ class VHS_SelectEveryNthMaskOutputs(OutputSlots):
 class VHS_SelectEveryNthMask(Node[VHS_SelectEveryNthMaskInputs, VHS_SelectEveryNthMaskOutputs]):
     """
     Original name: VHS_SelectEveryNthMask
-    No description available.
+    Category: Video Helper Suite 🎥🅥🅗🅢/mask
+    Select Every Nth Mask 🎥🅥🅗🅢<div style="font-size: 0.8em"><div id=VHS_shortdesc>Keep only 1 mask for every interval</div></div><div style="font-size: 0.8em"><div vhs_title="Inputs" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Inputs: <div vhs_title="mask" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">mask: The input mask</div></div></div></div><div vhs_title="Outputs" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Outputs: <div vhs_title="MASK" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">MASK: The output mask</div></div><div vhs_title="count" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">count: The number of mask in the input</div></div></div></div><div vhs_title="Widgets" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Widgets: <div vhs_title="select_every_nth" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">select_every_nth: The interval from which one frame is kept. 1 means no frames are skipped.</div></div><div vhs_title="skip_first_mask" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">skip_first_mask: A number of frames which that is skipped from the start. This applies before select_every_nth. As a result, multiple copies of the node can each have a different skip_first_frames to divide the mask into groups</div></div></div></div></div>
+
+    Inputs:
+        - mask (Image)
+        - select_every_nth (int) (default: 1)
+        - skip_first_masks (int) (default: 0)
+
+    Outputs:
+        - mask (Image)
+        - count (int)
     """
     _original_name: str = 'VHS_SelectEveryNthMask'
 

@@ -19,7 +19,14 @@ class TTPlanet_TileSimple_PreprocessorOutputs(OutputSlots):
 class TTPlanet_TileSimple_Preprocessor(Node[TTPlanet_TileSimple_PreprocessorInputs, TTPlanet_TileSimple_PreprocessorOutputs]):
     """
     Original name: TTPlanet_TileSimple_Preprocessor
-    No description available.
+    Category: ControlNet Preprocessors/tile
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'TTPlanet_TileSimple_Preprocessor'
 

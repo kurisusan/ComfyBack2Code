@@ -19,7 +19,14 @@ class LineartStandardPreprocessorOutputs(OutputSlots):
 class LineartStandardPreprocessor(Node[LineartStandardPreprocessorInputs, LineartStandardPreprocessorOutputs]):
     """
     Original name: LineartStandardPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Line Extractors
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'LineartStandardPreprocessor'
 

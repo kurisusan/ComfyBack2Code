@@ -23,7 +23,16 @@ class SDTurboSchedulerOutputs(OutputSlots):
 class SDTurboScheduler(Node[SDTurboSchedulerInputs, SDTurboSchedulerOutputs]):
     """
     Original name: SDTurboScheduler
-    No description available.
+    Category: sampling/custom_sampling/schedulers
+    
+
+    Inputs:
+        - model (Model)
+        - steps (int) (default: 1)
+        - denoise (float) (default: 1.0)
+
+    Outputs:
+        - sigmas (Any)
     """
     _original_name: str = 'SDTurboScheduler'
 

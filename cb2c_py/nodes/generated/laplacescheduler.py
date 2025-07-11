@@ -27,7 +27,18 @@ class LaplaceSchedulerOutputs(OutputSlots):
 class LaplaceScheduler(Node[LaplaceSchedulerInputs, LaplaceSchedulerOutputs]):
     """
     Original name: LaplaceScheduler
-    No description available.
+    Category: sampling/custom_sampling/schedulers
+    
+
+    Inputs:
+        - steps (int) (default: 20)
+        - sigma_max (float) (default: 14.614642)
+        - sigma_min (float) (default: 0.0291675)
+        - mu (float) (default: 0.0)
+        - beta (float) (default: 0.5)
+
+    Outputs:
+        - sigmas (Any)
     """
     _original_name: str = 'LaplaceScheduler'
 

@@ -21,7 +21,18 @@ class MaskOrImageToWeightOutputs(OutputSlots):
 class MaskOrImageToWeight(Node[MaskOrImageToWeightInputs, MaskOrImageToWeightOutputs]):
     """
     Original name: MaskOrImageToWeight
-    No description available.
+    Category: KJNodes/weights
+    
+Gets the mean values from mask or image batch  
+and returns that as the selected output type.   
+
+
+    Inputs:
+        - output_type (str) (default: 'list')
+
+    Outputs:
+        - float (float)
+        - string (str)
     """
     _original_name: str = 'MaskOrImageToWeight'
 

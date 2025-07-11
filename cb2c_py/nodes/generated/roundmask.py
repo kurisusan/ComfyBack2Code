@@ -19,7 +19,18 @@ class RoundMaskOutputs(OutputSlots):
 class RoundMask(Node[RoundMaskInputs, RoundMaskOutputs]):
     """
     Original name: RoundMask
-    No description available.
+    Category: KJNodes/masking
+    
+Rounds the mask or batch of masks to a binary mask.  
+<img src="https://github.com/kijai/ComfyUI-KJNodes/assets/40791699/52c85202-f74e-4b96-9dac-c8bda5ddcc40" width="300" height="250" alt="RoundMask example">
+
+
+
+    Inputs:
+        - mask (Image)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'RoundMask'
 

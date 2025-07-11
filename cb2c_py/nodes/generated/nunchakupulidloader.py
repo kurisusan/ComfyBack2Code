@@ -21,7 +21,16 @@ class NunchakuPulidLoaderOutputs(OutputSlots):
 class NunchakuPulidLoader(Node[NunchakuPulidLoaderInputs, NunchakuPulidLoaderOutputs]):
     """
     Original name: NunchakuPulidLoader
-    No description available.
+    Category: Nunchaku
+    
+
+    Inputs:
+        - model (Model)
+          The nunchaku model.
+
+    Outputs:
+        - model (Model)
+        - pulid (Any)
     """
     _original_name: str = 'NunchakuPulidLoader'
 

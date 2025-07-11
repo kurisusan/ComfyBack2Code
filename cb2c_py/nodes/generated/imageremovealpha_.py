@@ -19,7 +19,14 @@ class ImageRemoveAlpha_Outputs(OutputSlots):
 class ImageRemoveAlpha_(Node[ImageRemoveAlpha_Inputs, ImageRemoveAlpha_Outputs]):
     """
     Original name: ImageRemoveAlpha+
-    No description available.
+    Category: essentials/image utils
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageRemoveAlpha+'
 

@@ -23,7 +23,17 @@ class GetVideoComponentsOutputs(OutputSlots):
 class GetVideoComponents(Node[GetVideoComponentsInputs, GetVideoComponentsOutputs]):
     """
     Original name: GetVideoComponents
-    No description available.
+    Category: image/video
+    Extracts all components from a video: frames, audio, and framerate.
+
+    Inputs:
+        - video (Any)
+          The video to extract components from.
+
+    Outputs:
+        - images (Image)
+        - audio (Any)
+        - fps (float)
     """
     _original_name: str = 'GetVideoComponents'
 

@@ -25,7 +25,17 @@ class ImageSharpenOutputs(OutputSlots):
 class ImageSharpen(Node[ImageSharpenInputs, ImageSharpenOutputs]):
     """
     Original name: ImageSharpen
-    No description available.
+    Category: image/postprocessing
+    
+
+    Inputs:
+        - image (Image)
+        - sharpen_radius (int) (default: 1)
+        - sigma (float) (default: 1.0)
+        - alpha (float) (default: 1.0)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageSharpen'
 

@@ -27,7 +27,20 @@ class ConditioningMultiCombineOutputs(OutputSlots):
 class ConditioningMultiCombine(Node[ConditioningMultiCombineInputs, ConditioningMultiCombineOutputs]):
     """
     Original name: ConditioningMultiCombine
-    No description available.
+    Category: KJNodes/masking/conditioning
+    
+Combines multiple conditioning nodes into one
+
+
+    Inputs:
+        - inputcount (int) (default: 2)
+        - operation (str) (default: 'combine')
+        - conditioning_1 (Conditioning)
+        - conditioning_2 (Conditioning)
+
+    Outputs:
+        - combined (Conditioning)
+        - inputcount (int)
     """
     _original_name: str = 'ConditioningMultiCombine'
 

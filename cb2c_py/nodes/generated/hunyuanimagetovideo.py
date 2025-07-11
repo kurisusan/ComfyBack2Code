@@ -33,7 +33,21 @@ class HunyuanImageToVideoOutputs(OutputSlots):
 class HunyuanImageToVideo(Node[HunyuanImageToVideoInputs, HunyuanImageToVideoOutputs]):
     """
     Original name: HunyuanImageToVideo
-    No description available.
+    Category: conditioning/video_models
+    
+
+    Inputs:
+        - positive (Conditioning)
+        - vae (Vae)
+        - width (int) (default: 848)
+        - height (int) (default: 480)
+        - length (int) (default: 53)
+        - batch_size (int) (default: 1)
+        - guidance_type (str)
+
+    Outputs:
+        - positive (Conditioning)
+        - latent (Latent)
     """
     _original_name: str = 'HunyuanImageToVideo'
 

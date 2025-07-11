@@ -23,7 +23,16 @@ class T5TokenizerOptionsOutputs(OutputSlots):
 class T5TokenizerOptions(Node[T5TokenizerOptionsInputs, T5TokenizerOptionsOutputs]):
     """
     Original name: T5TokenizerOptions
-    No description available.
+    Category: _for_testing/conditioning
+    
+
+    Inputs:
+        - clip (Clip)
+        - min_padding (int) (default: 0)
+        - min_length (int) (default: 0)
+
+    Outputs:
+        - clip (Clip)
     """
     _original_name: str = 'T5TokenizerOptions'
 

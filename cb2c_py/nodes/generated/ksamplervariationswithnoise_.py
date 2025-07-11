@@ -41,7 +41,25 @@ class KSamplerVariationsWithNoise_Outputs(OutputSlots):
 class KSamplerVariationsWithNoise_(Node[KSamplerVariationsWithNoise_Inputs, KSamplerVariationsWithNoise_Outputs]):
     """
     Original name: KSamplerVariationsWithNoise+
-    No description available.
+    Category: essentials/sampling
+    
+
+    Inputs:
+        - model (Model)
+        - latent_image (Latent)
+        - main_seed (Any) (default: 0)
+        - steps (int) (default: 20)
+        - cfg (float) (default: 8.0)
+        - sampler_name (str)
+        - scheduler (str)
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - variation_strength (float) (default: 0.17)
+        - variation_seed (Any) (default: 12345)
+        - denoise (float) (default: 1.0)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'KSamplerVariationsWithNoise+'
 

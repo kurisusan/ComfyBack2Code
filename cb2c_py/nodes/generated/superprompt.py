@@ -23,7 +23,23 @@ class SuperpromptOutputs(OutputSlots):
 class Superprompt(Node[SuperpromptInputs, SuperpromptOutputs]):
     """
     Original name: Superprompt
-    No description available.
+    Category: KJNodes/text
+    
+# SuperPrompt
+A T5 model fine-tuned on the SuperPrompt dataset for  
+upsampling text prompts to more detailed descriptions.  
+Meant to be used as a pre-generation step for text-to-image  
+models that benefit from more detailed prompts.  
+https://huggingface.co/roborovski/superprompt-v1
+
+
+    Inputs:
+        - instruction_prompt (str) (default: 'Expand the following prompt to add more detail')
+        - prompt (str) (default: '')
+        - max_new_tokens (int) (default: 128)
+
+    Outputs:
+        - string (str)
     """
     _original_name: str = 'Superprompt'
 

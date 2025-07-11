@@ -23,7 +23,20 @@ class AppendInstanceDiffusionTrackingOutputs(OutputSlots):
 class AppendInstanceDiffusionTracking(Node[AppendInstanceDiffusionTrackingInputs, AppendInstanceDiffusionTrackingOutputs]):
     """
     Original name: AppendInstanceDiffusionTracking
-    No description available.
+    Category: KJNodes/InstanceDiffusion
+    
+Appends tracking data to be used with InstanceDiffusion:  
+https://github.com/logtd/ComfyUI-InstanceDiffusion  
+
+
+
+    Inputs:
+        - tracking_1 (Any)
+        - tracking_2 (Any)
+
+    Outputs:
+        - tracking (Any)
+        - prompt (str)
     """
     _original_name: str = 'AppendInstanceDiffusionTracking'
 

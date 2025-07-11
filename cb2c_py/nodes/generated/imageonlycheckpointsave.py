@@ -25,7 +25,17 @@ class ImageOnlyCheckpointSaveOutputs(OutputSlots):
 class ImageOnlyCheckpointSave(Node[ImageOnlyCheckpointSaveInputs, ImageOnlyCheckpointSaveOutputs]):
     """
     Original name: ImageOnlyCheckpointSave
-    No description available.
+    Category: advanced/model_merging
+    
+
+    Inputs:
+        - model (Model)
+        - clip_vision (Any)
+        - vae (Vae)
+        - filename_prefix (str) (default: 'checkpoints/ComfyUI')
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'ImageOnlyCheckpointSave'
 

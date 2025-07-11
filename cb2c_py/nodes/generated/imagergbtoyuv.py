@@ -23,7 +23,16 @@ class ImageRGBToYUVOutputs(OutputSlots):
 class ImageRGBToYUV(Node[ImageRGBToYUVInputs, ImageRGBToYUVOutputs]):
     """
     Original name: ImageRGBToYUV
-    No description available.
+    Category: image/batch
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - y (Image)
+        - u (Image)
+        - v (Image)
     """
     _original_name: str = 'ImageRGBToYUV'
 

@@ -35,7 +35,22 @@ class CLIPTextEncodeSDXLOutputs(OutputSlots):
 class CLIPTextEncodeSDXL(Node[CLIPTextEncodeSDXLInputs, CLIPTextEncodeSDXLOutputs]):
     """
     Original name: CLIPTextEncodeSDXL
-    No description available.
+    Category: advanced/conditioning
+    
+
+    Inputs:
+        - clip (Clip)
+        - width (int) (default: 1024.0)
+        - height (int) (default: 1024.0)
+        - crop_w (int) (default: 0)
+        - crop_h (int) (default: 0)
+        - target_width (int) (default: 1024.0)
+        - target_height (int) (default: 1024.0)
+        - text_g (str)
+        - text_l (str)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'CLIPTextEncodeSDXL'
 

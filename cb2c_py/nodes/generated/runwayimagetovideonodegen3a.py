@@ -27,7 +27,21 @@ class RunwayImageToVideoNodeGen3aOutputs(OutputSlots):
 class RunwayImageToVideoNodeGen3a(Node[RunwayImageToVideoNodeGen3aInputs, RunwayImageToVideoNodeGen3aOutputs]):
     """
     Original name: RunwayImageToVideoNodeGen3a
-    No description available.
+    Category: api node/video/Runway
+    Generate a video from a single starting frame using Gen3a Turbo model. Before diving in, review these best practices to ensure that your input selections will set your generation up for success: https://help.runwayml.com/hc/en-us/articles/33927968552339-Creating-with-Act-One-on-Gen-3-Alpha-and-Turbo.
+
+    Inputs:
+        - prompt (str) (default: None)
+          Text prompt for the generation
+        - start_frame (Image)
+          Start frame to be used for the video
+        - duration (Any)
+        - ratio (Any)
+        - seed (int)
+          Random seed for generation
+
+    Outputs:
+        - video (Any)
     """
     _original_name: str = 'RunwayImageToVideoNodeGen3a'
 

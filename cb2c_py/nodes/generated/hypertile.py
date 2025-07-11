@@ -27,7 +27,18 @@ class HyperTileOutputs(OutputSlots):
 class HyperTile(Node[HyperTileInputs, HyperTileOutputs]):
     """
     Original name: HyperTile
-    No description available.
+    Category: model_patches/unet
+    
+
+    Inputs:
+        - model (Model)
+        - tile_size (int) (default: 256)
+        - swap_size (int) (default: 2)
+        - max_depth (int) (default: 0)
+        - scale_depth (bool) (default: False)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'HyperTile'
 

@@ -33,7 +33,21 @@ class ImageCrop_Outputs(OutputSlots):
 class ImageCrop_(Node[ImageCrop_Inputs, ImageCrop_Outputs]):
     """
     Original name: ImageCrop+
-    No description available.
+    Category: essentials/image manipulation
+    
+
+    Inputs:
+        - image (Image)
+        - width (int) (default: 256)
+        - height (int) (default: 256)
+        - position (str)
+        - x_offset (int) (default: 0)
+        - y_offset (int) (default: 0)
+
+    Outputs:
+        - image (Image)
+        - x (int)
+        - y (int)
     """
     _original_name: str = 'ImageCrop+'
 

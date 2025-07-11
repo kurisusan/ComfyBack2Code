@@ -27,7 +27,18 @@ class ImageUntile_Outputs(OutputSlots):
 class ImageUntile_(Node[ImageUntile_Inputs, ImageUntile_Outputs]):
     """
     Original name: ImageUntile+
-    No description available.
+    Category: essentials/image manipulation
+    
+
+    Inputs:
+        - tiles (Image)
+        - overlap_x (int) (default: 0)
+        - overlap_y (int) (default: 0)
+        - rows (int) (default: 2)
+        - cols (int) (default: 2)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageUntile+'
 

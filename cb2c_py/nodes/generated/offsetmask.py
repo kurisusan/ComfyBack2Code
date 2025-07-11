@@ -33,7 +33,30 @@ class OffsetMaskOutputs(OutputSlots):
 class OffsetMask(Node[OffsetMaskInputs, OffsetMaskOutputs]):
     """
     Original name: OffsetMask
-    No description available.
+    Category: KJNodes/masking
+    
+Offsets the mask by the specified amount.  
+ - mask: Input mask or mask batch
+ - x: Horizontal offset
+ - y: Vertical offset
+ - angle: Angle in degrees
+ - roll: roll edge wrapping
+ - duplication_factor: Number of times to duplicate the mask to form a batch
+ - border padding_mode: Padding mode for the mask
+
+
+    Inputs:
+        - mask (Image)
+        - x (int) (default: 0)
+        - y (int) (default: 0)
+        - angle (int) (default: 0)
+        - duplication_factor (int) (default: 1)
+        - roll (bool) (default: False)
+        - incremental (bool) (default: False)
+        - padding_mode (str) (default: 'empty')
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'OffsetMask'
 

@@ -21,7 +21,15 @@ class WanVideoSetBlockSwapOutputs(OutputSlots):
 class WanVideoSetBlockSwap(Node[WanVideoSetBlockSwapInputs, WanVideoSetBlockSwapOutputs]):
     """
     Original name: WanVideoSetBlockSwap
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - model (Any)
+        - block_swap_args (Any)
+
+    Outputs:
+        - model (Any)
     """
     _original_name: str = 'WanVideoSetBlockSwap'
 

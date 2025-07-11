@@ -63,7 +63,36 @@ class Context_Merge_Big__rgthree_Outputs(OutputSlots):
 class Context_Merge_Big__rgthree_(Node[Context_Merge_Big__rgthree_Inputs, Context_Merge_Big__rgthree_Outputs]):
     """
     Original name: Context Merge Big (rgthree)
-    No description available.
+    Category: rgthree
+    
+
+    Inputs:
+        No inputs.
+
+    Outputs:
+        - context (Any)
+        - model (Model)
+        - clip (Clip)
+        - vae (Vae)
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - latent (Latent)
+        - image (Image)
+        - seed (int)
+        - steps (int)
+        - step_refiner (int)
+        - cfg (float)
+        - ckpt_name (str)
+        - sampler (str)
+        - scheduler (str)
+        - clip_width (int)
+        - clip_height (int)
+        - text_pos_g (str)
+        - text_pos_l (str)
+        - text_neg_g (str)
+        - text_neg_l (str)
+        - mask (Image)
+        - control_net (Any)
     """
     _original_name: str = 'Context Merge Big (rgthree)'
 

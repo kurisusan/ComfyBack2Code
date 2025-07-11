@@ -10,7 +10,7 @@ class LoadWanVideoClipTextEncoderInputs(InputSlots):
     model_name: Slot[str]
     precision: Slot[str]
     def __init__(self, node: "Node"):
-        self.model_name = Slot[str](node, "model_name", [])
+        self.model_name = Slot[str](node, "model_name", ['umt5_xxl_fp8_e4m3fn_scaled.safetensors'])
         self.precision = Slot[str](node, "precision", ['fp16', 'fp32', 'bf16'])
 
 class LoadWanVideoClipTextEncoderOutputs(OutputSlots):
@@ -21,7 +21,16 @@ class LoadWanVideoClipTextEncoderOutputs(OutputSlots):
 class LoadWanVideoClipTextEncoder(Node[LoadWanVideoClipTextEncoderInputs, LoadWanVideoClipTextEncoderOutputs]):
     """
     Original name: LoadWanVideoClipTextEncoder
-    No description available.
+    Category: WanVideoWrapper
+    Loads Wan clip_vision model from 'ComfyUI/models/clip_vision'
+
+    Inputs:
+        - model_name (str)
+          These models are loaded from 'ComfyUI/models/clip_vision'
+        - precision (str) (default: 'fp16')
+
+    Outputs:
+        - wan_clip_vision (Any)
     """
     _original_name: str = 'LoadWanVideoClipTextEncoder'
 

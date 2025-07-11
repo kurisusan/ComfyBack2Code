@@ -19,7 +19,16 @@ class TCFGOutputs(OutputSlots):
 class TCFG(Node[TCFGInputs, TCFGOutputs]):
     """
     Original name: TCFG
-    No description available.
+    Category: advanced/guidance
+    TCFG – Tangential Damping CFG (2503.18137)
+
+Refine the uncond (negative) to align with the cond (positive) for improving quality.
+
+    Inputs:
+        - model (Model)
+
+    Outputs:
+        - patched_model (Model)
     """
     _original_name: str = 'TCFG'
 

@@ -39,7 +39,24 @@ class LTXVImgToVideoOutputs(OutputSlots):
 class LTXVImgToVideo(Node[LTXVImgToVideoInputs, LTXVImgToVideoOutputs]):
     """
     Original name: LTXVImgToVideo
-    No description available.
+    Category: conditioning/video_models
+    
+
+    Inputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - vae (Vae)
+        - image (Image)
+        - width (int) (default: 768)
+        - height (int) (default: 512)
+        - length (int) (default: 97)
+        - batch_size (int) (default: 1)
+        - strength (float) (default: 1.0)
+
+    Outputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - latent (Latent)
     """
     _original_name: str = 'LTXVImgToVideo'
 

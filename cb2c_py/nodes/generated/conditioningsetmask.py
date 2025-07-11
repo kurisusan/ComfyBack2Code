@@ -25,7 +25,17 @@ class ConditioningSetMaskOutputs(OutputSlots):
 class ConditioningSetMask(Node[ConditioningSetMaskInputs, ConditioningSetMaskOutputs]):
     """
     Original name: ConditioningSetMask
-    No description available.
+    Category: conditioning
+    
+
+    Inputs:
+        - conditioning (Conditioning)
+        - mask (Image)
+        - strength (float) (default: 1.0)
+        - set_cond_area (str)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'ConditioningSetMask'
 

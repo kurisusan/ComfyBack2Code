@@ -21,7 +21,15 @@ class LatentRotateOutputs(OutputSlots):
 class LatentRotate(Node[LatentRotateInputs, LatentRotateOutputs]):
     """
     Original name: LatentRotate
-    No description available.
+    Category: latent/transform
+    
+
+    Inputs:
+        - samples (Latent)
+        - rotation (str)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'LatentRotate'
 

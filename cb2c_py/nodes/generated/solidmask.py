@@ -23,7 +23,16 @@ class SolidMaskOutputs(OutputSlots):
 class SolidMask(Node[SolidMaskInputs, SolidMaskOutputs]):
     """
     Original name: SolidMask
-    No description available.
+    Category: mask
+    
+
+    Inputs:
+        - value (float) (default: 1.0)
+        - width (int) (default: 512)
+        - height (int) (default: 512)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'SolidMask'
 

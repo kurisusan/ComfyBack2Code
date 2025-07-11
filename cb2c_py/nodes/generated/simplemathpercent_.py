@@ -19,7 +19,14 @@ class SimpleMathPercent_Outputs(OutputSlots):
 class SimpleMathPercent_(Node[SimpleMathPercent_Inputs, SimpleMathPercent_Outputs]):
     """
     Original name: SimpleMathPercent+
-    No description available.
+    Category: essentials/utilities
+    
+
+    Inputs:
+        - value (float) (default: 0.0)
+
+    Outputs:
+        - float (float)
     """
     _original_name: str = 'SimpleMathPercent+'
 

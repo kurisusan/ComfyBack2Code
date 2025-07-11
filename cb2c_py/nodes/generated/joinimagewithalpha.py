@@ -21,7 +21,15 @@ class JoinImageWithAlphaOutputs(OutputSlots):
 class JoinImageWithAlpha(Node[JoinImageWithAlphaInputs, JoinImageWithAlphaOutputs]):
     """
     Original name: JoinImageWithAlpha
-    No description available.
+    Category: mask/compositing
+    
+
+    Inputs:
+        - image (Image)
+        - alpha (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'JoinImageWithAlpha'
 

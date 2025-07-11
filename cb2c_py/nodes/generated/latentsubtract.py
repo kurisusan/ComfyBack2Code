@@ -21,7 +21,15 @@ class LatentSubtractOutputs(OutputSlots):
 class LatentSubtract(Node[LatentSubtractInputs, LatentSubtractOutputs]):
     """
     Original name: LatentSubtract
-    No description available.
+    Category: latent/advanced
+    
+
+    Inputs:
+        - samples1 (Latent)
+        - samples2 (Latent)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'LatentSubtract'
 

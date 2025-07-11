@@ -27,7 +27,18 @@ class CLIPTextEncodeHiDreamOutputs(OutputSlots):
 class CLIPTextEncodeHiDream(Node[CLIPTextEncodeHiDreamInputs, CLIPTextEncodeHiDreamOutputs]):
     """
     Original name: CLIPTextEncodeHiDream
-    No description available.
+    Category: advanced/conditioning
+    
+
+    Inputs:
+        - clip (Clip)
+        - clip_l (str)
+        - clip_g (str)
+        - t5xxl (str)
+        - llama (str)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'CLIPTextEncodeHiDream'
 

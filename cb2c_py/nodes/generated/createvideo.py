@@ -21,7 +21,16 @@ class CreateVideoOutputs(OutputSlots):
 class CreateVideo(Node[CreateVideoInputs, CreateVideoOutputs]):
     """
     Original name: CreateVideo
-    No description available.
+    Category: image/video
+    Create a video from images.
+
+    Inputs:
+        - images (Image)
+          The images to create a video from.
+        - fps (float) (default: 30.0)
+
+    Outputs:
+        - video (Any)
     """
     _original_name: str = 'CreateVideo'
 

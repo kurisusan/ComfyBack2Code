@@ -23,7 +23,16 @@ class ConditioningAverageOutputs(OutputSlots):
 class ConditioningAverage(Node[ConditioningAverageInputs, ConditioningAverageOutputs]):
     """
     Original name: ConditioningAverage
-    No description available.
+    Category: conditioning
+    
+
+    Inputs:
+        - conditioning_to (Conditioning)
+        - conditioning_from (Conditioning)
+        - conditioning_to_strength (float) (default: 1.0)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'ConditioningAverage'
 

@@ -21,7 +21,15 @@ class AppendStringsToListOutputs(OutputSlots):
 class AppendStringsToList(Node[AppendStringsToListInputs, AppendStringsToListOutputs]):
     """
     Original name: AppendStringsToList
-    No description available.
+    Category: KJNodes/text
+    
+
+    Inputs:
+        - string1 (str) (default: '')
+        - string2 (str) (default: '')
+
+    Outputs:
+        - string (str)
     """
     _original_name: str = 'AppendStringsToList'
 

@@ -29,7 +29,19 @@ class InstructPixToPixConditioningOutputs(OutputSlots):
 class InstructPixToPixConditioning(Node[InstructPixToPixConditioningInputs, InstructPixToPixConditioningOutputs]):
     """
     Original name: InstructPixToPixConditioning
-    No description available.
+    Category: conditioning/instructpix2pix
+    
+
+    Inputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - vae (Vae)
+        - pixels (Image)
+
+    Outputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - latent (Latent)
     """
     _original_name: str = 'InstructPixToPixConditioning'
 

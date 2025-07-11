@@ -39,7 +39,32 @@ class TorchCompileModelHyVideoOutputs(OutputSlots):
 class TorchCompileModelHyVideo(Node[TorchCompileModelHyVideoInputs, TorchCompileModelHyVideoOutputs]):
     """
     Original name: TorchCompileModelHyVideo
-    No description available.
+    Category: KJNodes/torchcompile
+    
+
+    Inputs:
+        - model (Model)
+        - backend (str) (default: 'inductor')
+        - fullgraph (bool) (default: False)
+          Enable full graph mode
+        - mode (str) (default: 'default')
+        - dynamic (bool) (default: False)
+          Enable dynamic mode
+        - dynamo_cache_size_limit (int) (default: 64)
+          torch._dynamo.config.cache_size_limit
+        - compile_single_blocks (bool) (default: True)
+          Compile single blocks
+        - compile_double_blocks (bool) (default: True)
+          Compile double blocks
+        - compile_txt_in (bool) (default: False)
+          Compile txt_in layers
+        - compile_vector_in (bool) (default: False)
+          Compile vector_in layers
+        - compile_final_layer (bool) (default: False)
+          Compile final layer
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'TorchCompileModelHyVideo'
 

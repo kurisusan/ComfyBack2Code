@@ -19,7 +19,14 @@ class StringConstantOutputs(OutputSlots):
 class StringConstant(Node[StringConstantInputs, StringConstantOutputs]):
     """
     Original name: StringConstant
-    No description available.
+    Category: KJNodes/constants
+    
+
+    Inputs:
+        - string (str) (default: '')
+
+    Outputs:
+        - string (str)
     """
     _original_name: str = 'StringConstant'
 

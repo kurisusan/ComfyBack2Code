@@ -35,7 +35,25 @@ class MultiTalkWav2VecEmbedsOutputs(OutputSlots):
 class MultiTalkWav2VecEmbeds(Node[MultiTalkWav2VecEmbedsInputs, MultiTalkWav2VecEmbedsOutputs]):
     """
     Original name: MultiTalkWav2VecEmbeds
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - wav2vec_model (Any)
+        - audio_1 (Any)
+        - normalize_loudness (bool) (default: True)
+        - num_frames (int) (default: 81)
+        - fps (float) (default: 25.0)
+        - audio_scale (float) (default: 1.0)
+          Strength of the audio conditioning
+        - audio_cfg_scale (float) (default: 1.0)
+          When not 1.0, an extra model pass without audio conditioning is done: slower inference but more motion is allowed
+        - multi_audio_type (str) (default: 'para')
+          'para' overlay speakers in parallel, 'add' concatenate sequentially
+
+    Outputs:
+        - multitalk_embeds (Any)
+        - audio (Any)
     """
     _original_name: str = 'MultiTalkWav2VecEmbeds'
 

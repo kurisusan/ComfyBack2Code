@@ -29,7 +29,22 @@ class WanVideoImageResizeToClosestOutputs(OutputSlots):
 class WanVideoImageResizeToClosest(Node[WanVideoImageResizeToClosestInputs, WanVideoImageResizeToClosestOutputs]):
     """
     Original name: WanVideoImageResizeToClosest
-    No description available.
+    Category: WanVideoWrapper
+    Resizes image to the closest supported resolution based on aspect ratio and max pixels, according to the original code
+
+    Inputs:
+        - image (Image)
+          Image to resize
+        - generation_width (int) (default: 832)
+          Width of the image to encode
+        - generation_height (int) (default: 480)
+          Height of the image to encode
+        - aspect_ratio_preservation (str)
+
+    Outputs:
+        - image (Image)
+        - width (int)
+        - height (int)
     """
     _original_name: str = 'WanVideoImageResizeToClosest'
 

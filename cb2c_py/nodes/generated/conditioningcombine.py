@@ -21,7 +21,15 @@ class ConditioningCombineOutputs(OutputSlots):
 class ConditioningCombine(Node[ConditioningCombineInputs, ConditioningCombineOutputs]):
     """
     Original name: ConditioningCombine
-    No description available.
+    Category: conditioning
+    
+
+    Inputs:
+        - conditioning_1 (Conditioning)
+        - conditioning_2 (Conditioning)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'ConditioningCombine'
 

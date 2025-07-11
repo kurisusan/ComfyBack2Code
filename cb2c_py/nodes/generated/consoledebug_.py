@@ -19,7 +19,14 @@ class ConsoleDebug_Outputs(OutputSlots):
 class ConsoleDebug_(Node[ConsoleDebug_Inputs, ConsoleDebug_Outputs]):
     """
     Original name: ConsoleDebug+
-    No description available.
+    Category: essentials/utilities
+    
+
+    Inputs:
+        - value (Any)
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'ConsoleDebug+'
 

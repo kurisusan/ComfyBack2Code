@@ -25,7 +25,17 @@ class unCLIPConditioningOutputs(OutputSlots):
 class unCLIPConditioning(Node[unCLIPConditioningInputs, unCLIPConditioningOutputs]):
     """
     Original name: unCLIPConditioning
-    No description available.
+    Category: conditioning
+    
+
+    Inputs:
+        - conditioning (Conditioning)
+        - clip_vision_output (Any)
+        - strength (float) (default: 1.0)
+        - noise_augmentation (float) (default: 0.0)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'unCLIPConditioning'
 

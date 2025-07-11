@@ -33,7 +33,21 @@ class ControlNetApplyAdvancedOutputs(OutputSlots):
 class ControlNetApplyAdvanced(Node[ControlNetApplyAdvancedInputs, ControlNetApplyAdvancedOutputs]):
     """
     Original name: ControlNetApplyAdvanced
-    No description available.
+    Category: conditioning/controlnet
+    
+
+    Inputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - control_net (Any)
+        - image (Image)
+        - strength (float) (default: 1.0)
+        - start_percent (float) (default: 0.0)
+        - end_percent (float) (default: 1.0)
+
+    Outputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
     """
     _original_name: str = 'ControlNetApplyAdvanced'
 

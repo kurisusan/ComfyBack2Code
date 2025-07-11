@@ -21,7 +21,17 @@ class SaveLoRANodeOutputs(OutputSlots):
 class SaveLoRANode(Node[SaveLoRANodeInputs, SaveLoRANodeOutputs]):
     """
     Original name: SaveLoRANode
-    No description available.
+    Category: loaders
+    
+
+    Inputs:
+        - lora (Any)
+          The LoRA model to save. Do not use the model with LoRA layers.
+        - prefix (str) (default: 'loras/ComfyUI_trained_lora')
+          The prefix to use for the saved LoRA file.
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'SaveLoRANode'
 

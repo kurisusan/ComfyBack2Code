@@ -43,7 +43,46 @@ class PointsEditorOutputs(OutputSlots):
 class PointsEditor(Node[PointsEditorInputs, PointsEditorOutputs]):
     """
     Original name: PointsEditor
-    No description available.
+    Category: KJNodes/experimental
+    
+# WORK IN PROGRESS  
+Do not count on this as part of your workflow yet,  
+probably contains lots of bugs and stability is not  
+guaranteed!!  
+  
+## Graphical editor to create coordinates
+
+**Shift + click** to add a positive (green) point.
+**Shift + right click** to add a negative (red) point.
+**Ctrl + click** to draw a box.  
+**Right click on a point** to delete it.    
+Note that you can't delete from start/end of the points array.  
+  
+To add an image select the node and copy/paste or drag in the image.  
+Or from the bg_image input on queue (first frame of the batch).  
+
+**THE IMAGE IS SAVED TO THE NODE AND WORKFLOW METADATA**  
+you can clear the image from the context menu by right clicking on the canvas  
+
+
+
+    Inputs:
+        - points_store (str)
+        - coordinates (str)
+        - neg_coordinates (str)
+        - bbox_store (str)
+        - bboxes (str)
+        - bbox_format (str)
+        - width (int) (default: 512)
+        - height (int) (default: 512)
+        - normalize (bool) (default: False)
+
+    Outputs:
+        - positive_coords (str)
+        - negative_coords (str)
+        - bbox (Any)
+        - bbox_mask (Image)
+        - cropped_image (Image)
     """
     _original_name: str = 'PointsEditor'
 

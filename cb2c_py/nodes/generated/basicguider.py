@@ -21,7 +21,15 @@ class BasicGuiderOutputs(OutputSlots):
 class BasicGuider(Node[BasicGuiderInputs, BasicGuiderOutputs]):
     """
     Original name: BasicGuider
-    No description available.
+    Category: sampling/custom_sampling/guiders
+    
+
+    Inputs:
+        - model (Model)
+        - conditioning (Conditioning)
+
+    Outputs:
+        - guider (Any)
     """
     _original_name: str = 'BasicGuider'
 

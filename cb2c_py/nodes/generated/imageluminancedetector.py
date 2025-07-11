@@ -19,7 +19,14 @@ class ImageLuminanceDetectorOutputs(OutputSlots):
 class ImageLuminanceDetector(Node[ImageLuminanceDetectorInputs, ImageLuminanceDetectorOutputs]):
     """
     Original name: ImageLuminanceDetector
-    No description available.
+    Category: ControlNet Preprocessors/Recolor
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageLuminanceDetector'
 

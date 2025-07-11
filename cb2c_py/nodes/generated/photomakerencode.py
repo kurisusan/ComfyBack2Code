@@ -25,7 +25,17 @@ class PhotoMakerEncodeOutputs(OutputSlots):
 class PhotoMakerEncode(Node[PhotoMakerEncodeInputs, PhotoMakerEncodeOutputs]):
     """
     Original name: PhotoMakerEncode
-    No description available.
+    Category: _for_testing/photomaker
+    
+
+    Inputs:
+        - photomaker (Any)
+        - image (Image)
+        - clip (Clip)
+        - text (str) (default: 'photograph of photomaker')
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'PhotoMakerEncode'
 

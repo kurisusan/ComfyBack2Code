@@ -29,7 +29,22 @@ class PikaswapsOutputs(OutputSlots):
 class Pikaswaps(Node[PikaswapsInputs, PikaswapsOutputs]):
     """
     Original name: Pikaswaps
-    No description available.
+    Category: api node/video/Pika
+    Swap out any object or region of your video with a new image or object. Define areas to replace either with a mask or coordinates.
+
+    Inputs:
+        - video (Any)
+          The video to swap an object in.
+        - image (Image)
+          The image used to replace the masked object in the video.
+        - mask (Image)
+          Use the mask to define areas in the video to replace
+        - prompt_text (str) (default: None)
+        - negative_prompt (str) (default: None)
+        - seed (int) (default: None)
+
+    Outputs:
+        - video (Any)
     """
     _original_name: str = 'Pikaswaps'
 

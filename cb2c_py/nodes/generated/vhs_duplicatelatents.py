@@ -23,7 +23,16 @@ class VHS_DuplicateLatentsOutputs(OutputSlots):
 class VHS_DuplicateLatents(Node[VHS_DuplicateLatentsInputs, VHS_DuplicateLatentsOutputs]):
     """
     Original name: VHS_DuplicateLatents
-    No description available.
+    Category: Video Helper Suite 🎥🅥🅗🅢/latent
+    Repeat Latents 🎥🅥🅗🅢<div style="font-size: 0.8em"><div id=VHS_shortdesc>Append copies of a latent to itself so it repeats</div></div><div style="font-size: 0.8em"><div vhs_title="Inputs" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Inputs: <div vhs_title="latents" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">latents: The latents to be repeated</div></div></div></div><div vhs_title="Outputs" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Outputs: <div vhs_title="LATENT" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">LATENT: The latent with repeats</div></div><div vhs_title="count" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">count: The number of latents in the output. Equal to the length of the input latent * multiply_by</div></div></div></div><div vhs_title="Widgets" style="display: flex; font-size: 0.8em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">Widgets: <div vhs_title="multiply_by" style="display: flex; font-size: 1em" class="VHS_collapse"><div style="color: #AAA; height: 1.5em;">[<span style="font-family: monospace">-</span>]</div><div style="width: 100%">multiply_by: Controls the number of times the latent should repeat. 1, the default, means no change.</div></div></div></div></div>
+
+    Inputs:
+        - latents (Latent)
+        - multiply_by (int) (default: 1)
+
+    Outputs:
+        - latent (Latent)
+        - count (int)
     """
     _original_name: str = 'VHS_DuplicateLatents'
 

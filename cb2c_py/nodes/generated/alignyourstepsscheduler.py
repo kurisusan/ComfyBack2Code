@@ -23,7 +23,16 @@ class AlignYourStepsSchedulerOutputs(OutputSlots):
 class AlignYourStepsScheduler(Node[AlignYourStepsSchedulerInputs, AlignYourStepsSchedulerOutputs]):
     """
     Original name: AlignYourStepsScheduler
-    No description available.
+    Category: sampling/custom_sampling/schedulers
+    
+
+    Inputs:
+        - model_type (str)
+        - steps (int) (default: 10)
+        - denoise (float) (default: 1.0)
+
+    Outputs:
+        - sigmas (Any)
     """
     _original_name: str = 'AlignYourStepsScheduler'
 

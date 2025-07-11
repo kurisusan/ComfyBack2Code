@@ -21,7 +21,17 @@ class GetImagesFromBatchIndexedOutputs(OutputSlots):
 class GetImagesFromBatchIndexed(Node[GetImagesFromBatchIndexedInputs, GetImagesFromBatchIndexedOutputs]):
     """
     Original name: GetImagesFromBatchIndexed
-    No description available.
+    Category: KJNodes/image
+    
+Selects and returns the images at the specified indices as an image batch.
+
+
+    Inputs:
+        - images (Image)
+        - indexes (str) (default: '0, 1, 2')
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'GetImagesFromBatchIndexed'
 

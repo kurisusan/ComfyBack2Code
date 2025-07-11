@@ -35,7 +35,22 @@ class SV3D_ConditioningOutputs(OutputSlots):
 class SV3D_Conditioning(Node[SV3D_ConditioningInputs, SV3D_ConditioningOutputs]):
     """
     Original name: SV3D_Conditioning
-    No description available.
+    Category: conditioning/3d_models
+    
+
+    Inputs:
+        - clip_vision (Any)
+        - init_image (Image)
+        - vae (Vae)
+        - width (int) (default: 576)
+        - height (int) (default: 576)
+        - video_frames (int) (default: 21)
+        - elevation (float) (default: 0.0)
+
+    Outputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - latent (Latent)
     """
     _original_name: str = 'SV3D_Conditioning'
 

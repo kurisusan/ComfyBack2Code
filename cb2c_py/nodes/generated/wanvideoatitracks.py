@@ -33,7 +33,25 @@ class WanVideoATITracksOutputs(OutputSlots):
 class WanVideoATITracks(Node[WanVideoATITracksInputs, WanVideoATITracksOutputs]):
     """
     Original name: WanVideoATITracks
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - model (Any)
+        - tracks (str)
+        - width (int) (default: 832)
+          Width of the image to encode
+        - height (int) (default: 480)
+          Height of the image to encode
+        - temperature (float) (default: 220.0)
+        - topk (int) (default: 2)
+        - start_percent (float) (default: 0.0)
+          Start percent of the steps to apply ATI
+        - end_percent (float) (default: 1.0)
+          End percent of the steps to apply ATI
+
+    Outputs:
+        - model (Any)
     """
     _original_name: str = 'WanVideoATITracks'
 

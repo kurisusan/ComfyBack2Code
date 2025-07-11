@@ -23,7 +23,18 @@ class SleepOutputs(OutputSlots):
 class Sleep(Node[SleepInputs, SleepOutputs]):
     """
     Original name: Sleep
-    No description available.
+    Category: KJNodes/misc
+    
+Delays the execution for the input amount of time.
+
+
+    Inputs:
+        - input (Any)
+        - minutes (int) (default: 0)
+        - seconds (float) (default: 0.0)
+
+    Outputs:
+        - _ (Any)
     """
     _original_name: str = 'Sleep'
 

@@ -21,7 +21,15 @@ class PerturbedAttentionGuidanceOutputs(OutputSlots):
 class PerturbedAttentionGuidance(Node[PerturbedAttentionGuidanceInputs, PerturbedAttentionGuidanceOutputs]):
     """
     Original name: PerturbedAttentionGuidance
-    No description available.
+    Category: model_patches/unet
+    
+
+    Inputs:
+        - model (Model)
+        - scale (float) (default: 3.0)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'PerturbedAttentionGuidance'
 

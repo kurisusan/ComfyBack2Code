@@ -33,7 +33,26 @@ class Intrinsic_lora_samplingOutputs(OutputSlots):
 class Intrinsic_lora_sampling(Node[Intrinsic_lora_samplingInputs, Intrinsic_lora_samplingOutputs]):
     """
     Original name: Intrinsic_lora_sampling
-    No description available.
+    Category: KJNodes
+    
+Sampler to use the intrinsic loras:  
+https://github.com/duxiaodan/intrinsic-lora  
+These LoRAs are tiny and thus included  
+with this node pack.
+
+
+    Inputs:
+        - model (Model)
+        - lora_name (str)
+        - task (str) (default: 'depth map')
+        - text (str) (default: '')
+        - clip (Clip)
+        - vae (Vae)
+        - per_batch (int) (default: 16)
+
+    Outputs:
+        - image (Image)
+        - latent (Latent)
     """
     _original_name: str = 'Intrinsic_lora_sampling'
 

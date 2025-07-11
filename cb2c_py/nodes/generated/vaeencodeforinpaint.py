@@ -25,7 +25,17 @@ class VAEEncodeForInpaintOutputs(OutputSlots):
 class VAEEncodeForInpaint(Node[VAEEncodeForInpaintInputs, VAEEncodeForInpaintOutputs]):
     """
     Original name: VAEEncodeForInpaint
-    No description available.
+    Category: latent/inpaint
+    
+
+    Inputs:
+        - pixels (Image)
+        - vae (Vae)
+        - mask (Image)
+        - grow_mask_by (int) (default: 6)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'VAEEncodeForInpaint'
 

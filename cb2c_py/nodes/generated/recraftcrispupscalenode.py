@@ -19,7 +19,15 @@ class RecraftCrispUpscaleNodeOutputs(OutputSlots):
 class RecraftCrispUpscaleNode(Node[RecraftCrispUpscaleNodeInputs, RecraftCrispUpscaleNodeOutputs]):
     """
     Original name: RecraftCrispUpscaleNode
-    No description available.
+    Category: api node/image/Recraft
+    Upscale image synchronously.
+Enhances a given raster image using ‘crisp upscale’ tool, increasing image resolution, making the image sharper and cleaner.
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'RecraftCrispUpscaleNode'
 

@@ -35,7 +35,22 @@ class KSampler_Config__rgthree_Outputs(OutputSlots):
 class KSampler_Config__rgthree_(Node[KSampler_Config__rgthree_Inputs, KSampler_Config__rgthree_Outputs]):
     """
     Original name: KSampler Config (rgthree)
-    No description available.
+    Category: rgthree
+    
+
+    Inputs:
+        - steps_total (int) (default: 30)
+        - refiner_step (int) (default: 24)
+        - cfg (float) (default: 8.0)
+        - sampler_name (str)
+        - scheduler (str)
+
+    Outputs:
+        - steps (int)
+        - refiner_step (int)
+        - cfg (float)
+        - sampler (str)
+        - scheduler (str)
     """
     _original_name: str = 'KSampler Config (rgthree)'
 

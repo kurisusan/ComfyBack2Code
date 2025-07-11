@@ -31,7 +31,20 @@ class RegexExtractOutputs(OutputSlots):
 class RegexExtract(Node[RegexExtractInputs, RegexExtractOutputs]):
     """
     Original name: RegexExtract
-    No description available.
+    Category: utils/string
+    
+
+    Inputs:
+        - string (str)
+        - regex_pattern (str)
+        - mode (Any)
+        - case_insensitive (bool) (default: True)
+        - multiline (bool) (default: False)
+        - dotall (bool) (default: False)
+        - group_index (int) (default: 1)
+
+    Outputs:
+        - string (str)
     """
     _original_name: str = 'RegexExtract'
 

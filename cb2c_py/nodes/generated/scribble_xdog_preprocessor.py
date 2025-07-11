@@ -19,7 +19,14 @@ class Scribble_XDoG_PreprocessorOutputs(OutputSlots):
 class Scribble_XDoG_Preprocessor(Node[Scribble_XDoG_PreprocessorInputs, Scribble_XDoG_PreprocessorOutputs]):
     """
     Original name: Scribble_XDoG_Preprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Line Extractors
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'Scribble_XDoG_Preprocessor'
 

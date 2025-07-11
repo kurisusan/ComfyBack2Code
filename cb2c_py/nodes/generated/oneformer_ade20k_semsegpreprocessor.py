@@ -19,7 +19,14 @@ class OneFormer_ADE20K_SemSegPreprocessorOutputs(OutputSlots):
 class OneFormer_ADE20K_SemSegPreprocessor(Node[OneFormer_ADE20K_SemSegPreprocessorInputs, OneFormer_ADE20K_SemSegPreprocessorOutputs]):
     """
     Original name: OneFormer-ADE20K-SemSegPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Semantic Segmentation
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'OneFormer-ADE20K-SemSegPreprocessor'
 

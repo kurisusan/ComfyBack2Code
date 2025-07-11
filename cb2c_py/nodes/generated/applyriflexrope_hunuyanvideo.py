@@ -23,7 +23,18 @@ class ApplyRifleXRoPE_HunuyanVideoOutputs(OutputSlots):
 class ApplyRifleXRoPE_HunuyanVideo(Node[ApplyRifleXRoPE_HunuyanVideoInputs, ApplyRifleXRoPE_HunuyanVideoOutputs]):
     """
     Original name: ApplyRifleXRoPE_HunuyanVideo
-    No description available.
+    Category: KJNodes/experimental
+    Extends the potential frame count of HunyuanVideo using this method: https://github.com/thu-ml/RIFLEx
+
+    Inputs:
+        - model (Model)
+        - latent (Latent)
+          Only used to get the latent count
+        - k (int) (default: 4)
+          Index of intrinsic frequency
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'ApplyRifleXRoPE_HunuyanVideo'
 

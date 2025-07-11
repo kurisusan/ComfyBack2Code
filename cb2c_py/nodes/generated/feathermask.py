@@ -27,7 +27,18 @@ class FeatherMaskOutputs(OutputSlots):
 class FeatherMask(Node[FeatherMaskInputs, FeatherMaskOutputs]):
     """
     Original name: FeatherMask
-    No description available.
+    Category: mask
+    
+
+    Inputs:
+        - mask (Image)
+        - left (int) (default: 0)
+        - top (int) (default: 0)
+        - right (int) (default: 0)
+        - bottom (int) (default: 0)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'FeatherMask'
 

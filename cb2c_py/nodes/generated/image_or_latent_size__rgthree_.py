@@ -21,7 +21,15 @@ class Image_or_Latent_Size__rgthree_Outputs(OutputSlots):
 class Image_or_Latent_Size__rgthree_(Node[Image_or_Latent_Size__rgthree_Inputs, Image_or_Latent_Size__rgthree_Outputs]):
     """
     Original name: Image or Latent Size (rgthree)
-    No description available.
+    Category: rgthree
+    
+
+    Inputs:
+        No inputs.
+
+    Outputs:
+        - width (int)
+        - height (int)
     """
     _original_name: str = 'Image or Latent Size (rgthree)'
 

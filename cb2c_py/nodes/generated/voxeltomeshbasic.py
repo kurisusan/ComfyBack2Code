@@ -21,7 +21,15 @@ class VoxelToMeshBasicOutputs(OutputSlots):
 class VoxelToMeshBasic(Node[VoxelToMeshBasicInputs, VoxelToMeshBasicOutputs]):
     """
     Original name: VoxelToMeshBasic
-    No description available.
+    Category: 3d
+    
+
+    Inputs:
+        - voxel (Any)
+        - threshold (float) (default: 0.6)
+
+    Outputs:
+        - mesh (Any)
     """
     _original_name: str = 'VoxelToMeshBasic'
 

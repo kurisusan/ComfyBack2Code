@@ -27,7 +27,18 @@ class SeparateMasksOutputs(OutputSlots):
 class SeparateMasks(Node[SeparateMasksInputs, SeparateMasksOutputs]):
     """
     Original name: SeparateMasks
-    No description available.
+    Category: KJNodes/masking
+    Separates a mask into multiple masks based on the size of the connected components.
+
+    Inputs:
+        - mask (Image)
+        - size_threshold_width (int) (default: 256)
+        - size_threshold_height (int) (default: 256)
+        - mode (str)
+        - max_poly_points (int) (default: 8)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'SeparateMasks'
 

@@ -10,7 +10,7 @@ class LoadWanVideoT5TextEncoderMultiGPUInputs(InputSlots):
     model_name: Slot[str]
     precision: Slot[str]
     def __init__(self, node: "Node"):
-        self.model_name = Slot[str](node, "model_name", [])
+        self.model_name = Slot[str](node, "model_name", ['umt5_xxl_fp8_e4m3fn_scaled.safetensors'])
         self.precision = Slot[str](node, "precision", ['fp16', 'fp32', 'bf16'])
 
 class LoadWanVideoT5TextEncoderMultiGPUOutputs(OutputSlots):
@@ -21,7 +21,16 @@ class LoadWanVideoT5TextEncoderMultiGPUOutputs(OutputSlots):
 class LoadWanVideoT5TextEncoderMultiGPU(Node[LoadWanVideoT5TextEncoderMultiGPUInputs, LoadWanVideoT5TextEncoderMultiGPUOutputs]):
     """
     Original name: LoadWanVideoT5TextEncoderMultiGPU
-    No description available.
+    Category: multigpu
+    Loads Wan text_encoder model from 'ComfyUI/models/LLM'
+
+    Inputs:
+        - model_name (str)
+          These models are loaded from 'ComfyUI/models/text_encoders'
+        - precision (str) (default: 'bf16')
+
+    Outputs:
+        - wan_t5_model (Any)
     """
     _original_name: str = 'LoadWanVideoT5TextEncoderMultiGPU'
 

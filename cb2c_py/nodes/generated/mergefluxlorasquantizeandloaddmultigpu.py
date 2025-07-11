@@ -49,7 +49,29 @@ class MergeFluxLoRAsQuantizeAndLoaddMultiGPUOutputs(OutputSlots):
 class MergeFluxLoRAsQuantizeAndLoaddMultiGPU(Node[MergeFluxLoRAsQuantizeAndLoaddMultiGPUInputs, MergeFluxLoRAsQuantizeAndLoaddMultiGPUOutputs]):
     """
     Original name: MergeFluxLoRAsQuantizeAndLoaddMultiGPU
-    No description available.
+    Category: multigpu
+    
+
+    Inputs:
+        - unet_name (str)
+        - switch_1 (str)
+        - lora_name_1 (str)
+        - lora_weight_1 (float) (default: 1.0)
+        - switch_2 (str)
+        - lora_name_2 (str)
+        - lora_weight_2 (float) (default: 1.0)
+        - switch_3 (str)
+        - lora_name_3 (str)
+        - lora_weight_3 (float) (default: 1.0)
+        - switch_4 (str)
+        - lora_name_4 (str)
+        - lora_weight_4 (float) (default: 1.0)
+        - quantization (str) (default: 'Q4_K_S')
+        - delete_final_gguf (bool) (default: False)
+        - new_model_name (str) (default: 'merged_model')
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'MergeFluxLoRAsQuantizeAndLoaddMultiGPU'
 

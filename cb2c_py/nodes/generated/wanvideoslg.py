@@ -23,7 +23,19 @@ class WanVideoSLGOutputs(OutputSlots):
 class WanVideoSLG(Node[WanVideoSLGInputs, WanVideoSLGOutputs]):
     """
     Original name: WanVideoSLG
-    No description available.
+    Category: WanVideoWrapper
+    Skips uncond on the selected blocks
+
+    Inputs:
+        - blocks (str) (default: '10')
+          Blocks to skip uncond on, separated by comma, index starts from 0
+        - start_percent (float) (default: 0.1)
+          Start percent of the control signal
+        - end_percent (float) (default: 1.0)
+          End percent of the control signal
+
+    Outputs:
+        - slg_args (Any)
     """
     _original_name: str = 'WanVideoSLG'
 

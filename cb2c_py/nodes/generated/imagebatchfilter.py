@@ -25,7 +25,17 @@ class ImageBatchFilterOutputs(OutputSlots):
 class ImageBatchFilter(Node[ImageBatchFilterInputs, ImageBatchFilterOutputs]):
     """
     Original name: ImageBatchFilter
-    No description available.
+    Category: KJNodes/image
+    Removes empty images from a batch
+
+    Inputs:
+        - images (Image)
+        - empty_color (str) (default: '0, 0, 0')
+        - empty_threshold (float) (default: 0.01)
+
+    Outputs:
+        - images (Image)
+        - removed_indices (str)
     """
     _original_name: str = 'ImageBatchFilter'
 

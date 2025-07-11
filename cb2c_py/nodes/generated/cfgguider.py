@@ -25,7 +25,17 @@ class CFGGuiderOutputs(OutputSlots):
 class CFGGuider(Node[CFGGuiderInputs, CFGGuiderOutputs]):
     """
     Original name: CFGGuider
-    No description available.
+    Category: sampling/custom_sampling/guiders
+    
+
+    Inputs:
+        - model (Model)
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - cfg (float) (default: 8.0)
+
+    Outputs:
+        - guider (Any)
     """
     _original_name: str = 'CFGGuider'
 

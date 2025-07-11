@@ -23,7 +23,16 @@ class CLIPMergeSubtractOutputs(OutputSlots):
 class CLIPMergeSubtract(Node[CLIPMergeSubtractInputs, CLIPMergeSubtractOutputs]):
     """
     Original name: CLIPMergeSubtract
-    No description available.
+    Category: advanced/model_merging
+    
+
+    Inputs:
+        - clip1 (Clip)
+        - clip2 (Clip)
+        - multiplier (float) (default: 1.0)
+
+    Outputs:
+        - clip (Clip)
     """
     _original_name: str = 'CLIPMergeSubtract'
 

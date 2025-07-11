@@ -23,7 +23,16 @@ class LatentUpscaleByOutputs(OutputSlots):
 class LatentUpscaleBy(Node[LatentUpscaleByInputs, LatentUpscaleByOutputs]):
     """
     Original name: LatentUpscaleBy
-    No description available.
+    Category: latent
+    
+
+    Inputs:
+        - samples (Latent)
+        - upscale_method (str)
+        - scale_by (float) (default: 1.5)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'LatentUpscaleBy'
 

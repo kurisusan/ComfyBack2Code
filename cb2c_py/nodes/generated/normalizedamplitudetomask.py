@@ -35,7 +35,26 @@ class NormalizedAmplitudeToMaskOutputs(OutputSlots):
 class NormalizedAmplitudeToMask(Node[NormalizedAmplitudeToMaskInputs, NormalizedAmplitudeToMaskOutputs]):
     """
     Original name: NormalizedAmplitudeToMask
-    No description available.
+    Category: KJNodes/audio
+    
+Works as a bridge to the AudioScheduler -nodes:  
+https://github.com/a1lazydog/ComfyUI-AudioScheduler  
+Creates masks based on the normalized amplitude.
+
+
+    Inputs:
+        - normalized_amp (Any)
+        - width (int) (default: 512)
+        - height (int) (default: 512)
+        - frame_offset (int) (default: 0)
+        - location_x (int) (default: 256)
+        - location_y (int) (default: 256)
+        - size (int) (default: 128)
+        - shape (str) (default: 'none')
+        - color (str) (default: 'amplitude')
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'NormalizedAmplitudeToMask'
 

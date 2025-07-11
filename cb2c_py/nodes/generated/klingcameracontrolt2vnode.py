@@ -31,7 +31,23 @@ class KlingCameraControlT2VNodeOutputs(OutputSlots):
 class KlingCameraControlT2VNode(Node[KlingCameraControlT2VNodeInputs, KlingCameraControlT2VNodeOutputs]):
     """
     Original name: KlingCameraControlT2VNode
-    No description available.
+    Category: api node/video/Kling
+    Transform text into cinematic videos with professional camera movements that simulate real-world cinematography. Control virtual camera actions including zoom, rotation, pan, tilt, and first-person view, while maintaining focus on your original text.
+
+    Inputs:
+        - prompt (str) (default: None)
+          Positive text prompt
+        - negative_prompt (str) (default: None)
+          Negative text prompt
+        - cfg_scale (float) (default: 0.75)
+        - aspect_ratio (Any) (default: '16:9')
+        - camera_control (Any)
+          Can be created using the Kling Camera Controls node. Controls the camera movement and motion during the video generation.
+
+    Outputs:
+        - video (Any)
+        - video_id (str)
+        - duration (str)
     """
     _original_name: str = 'KlingCameraControlT2VNode'
 

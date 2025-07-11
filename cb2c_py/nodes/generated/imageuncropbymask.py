@@ -25,7 +25,17 @@ class ImageUncropByMaskOutputs(OutputSlots):
 class ImageUncropByMask(Node[ImageUncropByMaskInputs, ImageUncropByMaskOutputs]):
     """
     Original name: ImageUncropByMask
-    No description available.
+    Category: KJNodes/image
+    
+
+    Inputs:
+        - destination (Image)
+        - source (Image)
+        - mask (Image)
+        - bbox (Any)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageUncropByMask'
 

@@ -39,7 +39,28 @@ class SV3D_BatchScheduleOutputs(OutputSlots):
 class SV3D_BatchSchedule(Node[SV3D_BatchScheduleInputs, SV3D_BatchScheduleOutputs]):
     """
     Original name: SV3D_BatchSchedule
-    No description available.
+    Category: KJNodes/experimental
+    
+Allow scheduling of the azimuth and elevation conditions for SV3D.  
+Note that SV3D is still a video model and the schedule needs to always go forward  
+https://huggingface.co/stabilityai/sv3d
+
+
+    Inputs:
+        - clip_vision (Any)
+        - init_image (Image)
+        - vae (Vae)
+        - width (int) (default: 576)
+        - height (int) (default: 576)
+        - batch_size (int) (default: 21)
+        - interpolation (str)
+        - azimuth_points_string (str) (default: '0:(0.0),\n9:(180.0),\n20:(360.0)\n')
+        - elevation_points_string (str) (default: '0:(0.0),\n9:(0.0),\n20:(0.0)\n')
+
+    Outputs:
+        - positive (Conditioning)
+        - negative (Conditioning)
+        - latent (Latent)
     """
     _original_name: str = 'SV3D_BatchSchedule'
 

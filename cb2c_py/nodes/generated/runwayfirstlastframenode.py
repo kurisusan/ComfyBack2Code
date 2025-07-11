@@ -29,7 +29,23 @@ class RunwayFirstLastFrameNodeOutputs(OutputSlots):
 class RunwayFirstLastFrameNode(Node[RunwayFirstLastFrameNodeInputs, RunwayFirstLastFrameNodeOutputs]):
     """
     Original name: RunwayFirstLastFrameNode
-    No description available.
+    Category: api node/video/Runway
+    Upload first and last keyframes, draft a prompt, and generate a video. More complex transitions, such as cases where the Last frame is completely different from the First frame, may benefit from the longer 10s duration. This would give the generation more time to smoothly transition between the two inputs. Before diving in, review these best practices to ensure that your input selections will set your generation up for success: https://help.runwayml.com/hc/en-us/articles/34170748696595-Creating-with-Keyframes-on-Gen-3.
+
+    Inputs:
+        - prompt (str) (default: None)
+          Text prompt for the generation
+        - start_frame (Image)
+          Start frame to be used for the video
+        - end_frame (Image)
+          End frame to be used for the video. Supported for gen3a_turbo only.
+        - duration (Any)
+        - ratio (Any)
+        - seed (int)
+          Random seed for generation
+
+    Outputs:
+        - video (Any)
     """
     _original_name: str = 'RunwayFirstLastFrameNode'
 

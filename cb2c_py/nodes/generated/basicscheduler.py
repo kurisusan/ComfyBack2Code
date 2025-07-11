@@ -25,7 +25,17 @@ class BasicSchedulerOutputs(OutputSlots):
 class BasicScheduler(Node[BasicSchedulerInputs, BasicSchedulerOutputs]):
     """
     Original name: BasicScheduler
-    No description available.
+    Category: sampling/custom_sampling/schedulers
+    
+
+    Inputs:
+        - model (Model)
+        - scheduler (str)
+        - steps (int) (default: 20)
+        - denoise (float) (default: 1.0)
+
+    Outputs:
+        - sigmas (Any)
     """
     _original_name: str = 'BasicScheduler'
 

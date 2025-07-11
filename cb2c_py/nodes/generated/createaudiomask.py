@@ -29,7 +29,19 @@ class CreateAudioMaskOutputs(OutputSlots):
 class CreateAudioMask(Node[CreateAudioMaskInputs, CreateAudioMaskOutputs]):
     """
     Original name: CreateAudioMask
-    No description available.
+    Category: KJNodes/deprecated
+    
+
+    Inputs:
+        - invert (bool) (default: False)
+        - frames (int) (default: 16)
+        - scale (float) (default: 0.5)
+        - audio_path (str) (default: 'audio.wav')
+        - width (int) (default: 256)
+        - height (int) (default: 256)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'CreateAudioMask'
 

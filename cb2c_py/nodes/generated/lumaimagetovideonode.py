@@ -29,7 +29,21 @@ class LumaImageToVideoNodeOutputs(OutputSlots):
 class LumaImageToVideoNode(Node[LumaImageToVideoNodeInputs, LumaImageToVideoNodeOutputs]):
     """
     Original name: LumaImageToVideoNode
-    No description available.
+    Category: api node/video/Luma
+    Generates videos synchronously based on prompt, input images, and output_size.
+
+    Inputs:
+        - prompt (str) (default: '')
+          Prompt for the video generation
+        - model (str)
+        - resolution (str) (default: '540p')
+        - duration (str)
+        - loop (bool) (default: False)
+        - seed (int) (default: 0)
+          Seed to determine if node should re-run; actual results are nondeterministic regardless of seed.
+
+    Outputs:
+        - video (Any)
     """
     _original_name: str = 'LumaImageToVideoNode'
 

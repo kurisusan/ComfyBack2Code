@@ -19,7 +19,14 @@ class INTConstantOutputs(OutputSlots):
 class INTConstant(Node[INTConstantInputs, INTConstantOutputs]):
     """
     Original name: INTConstant
-    No description available.
+    Category: KJNodes/constants
+    
+
+    Inputs:
+        - value (int) (default: 0)
+
+    Outputs:
+        - value (int)
     """
     _original_name: str = 'INTConstant'
 

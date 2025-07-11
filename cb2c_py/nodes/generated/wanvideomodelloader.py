@@ -12,7 +12,7 @@ class WanVideoModelLoaderInputs(InputSlots):
     quantization: Slot[str]
     load_device: Slot[str]
     def __init__(self, node: "Node"):
-        self.model = Slot[str](node, "model", [])
+        self.model = Slot[str](node, "model", ['wan2.1-t2v-14b-Q4_K_M.gguf'])
         self.base_precision = Slot[str](node, "base_precision", ['fp32', 'bf16', 'fp16', 'fp16_fast'])
         self.quantization = Slot[str](node, "quantization", ['disabled', 'fp8_e4m3fn', 'fp8_e4m3fn_fast', 'fp8_e5m2', 'fp8_e4m3fn_fast_no_ffn'])
         self.load_device = Slot[str](node, "load_device", ['main_device', 'offload_device'])
@@ -25,7 +25,20 @@ class WanVideoModelLoaderOutputs(OutputSlots):
 class WanVideoModelLoader(Node[WanVideoModelLoaderInputs, WanVideoModelLoaderOutputs]):
     """
     Original name: WanVideoModelLoader
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - model (str)
+          These models are loaded from the 'ComfyUI/models/diffusion_models' -folder
+        - base_precision (str) (default: 'bf16')
+        - quantization (str) (default: 'disabled')
+          optional quantization method
+        - load_device (str) (default: 'main_device')
+          Initial device to load the model to, NOT recommended with the larger models unless you have 48GB+ VRAM
+
+    Outputs:
+        - model (Any)
     """
     _original_name: str = 'WanVideoModelLoader'
 

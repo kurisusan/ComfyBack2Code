@@ -27,7 +27,18 @@ class DifferentialDiffusionAdvancedOutputs(OutputSlots):
 class DifferentialDiffusionAdvanced(Node[DifferentialDiffusionAdvancedInputs, DifferentialDiffusionAdvancedOutputs]):
     """
     Original name: DifferentialDiffusionAdvanced
-    No description available.
+    Category: _for_testing
+    
+
+    Inputs:
+        - model (Model)
+        - samples (Latent)
+        - mask (Image)
+        - multiplier (float) (default: 1.0)
+
+    Outputs:
+        - model (Model)
+        - latent (Latent)
     """
     _original_name: str = 'DifferentialDiffusionAdvanced'
 

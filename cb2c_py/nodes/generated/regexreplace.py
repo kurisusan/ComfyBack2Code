@@ -23,7 +23,16 @@ class RegexReplaceOutputs(OutputSlots):
 class RegexReplace(Node[RegexReplaceInputs, RegexReplaceOutputs]):
     """
     Original name: RegexReplace
-    No description available.
+    Category: utils/string
+    Find and replace text using regex patterns.
+
+    Inputs:
+        - string (str)
+        - regex_pattern (str)
+        - replace (str)
+
+    Outputs:
+        - string (str)
     """
     _original_name: str = 'RegexReplace'
 

@@ -33,7 +33,21 @@ class ImageColorMatchAdobe_Outputs(OutputSlots):
 class ImageColorMatchAdobe_(Node[ImageColorMatchAdobe_Inputs, ImageColorMatchAdobe_Outputs]):
     """
     Original name: ImageColorMatchAdobe+
-    No description available.
+    Category: essentials/image processing
+    
+
+    Inputs:
+        - image (Image)
+        - reference (Image)
+        - color_space (str)
+        - luminance_factor (float) (default: 1.0)
+        - color_intensity_factor (float) (default: 1.0)
+        - fade_factor (float) (default: 1.0)
+        - neutralization_factor (float) (default: 0.0)
+        - device (str)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageColorMatchAdobe+'
 

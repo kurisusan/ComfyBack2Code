@@ -19,7 +19,14 @@ class KSamplerSelectOutputs(OutputSlots):
 class KSamplerSelect(Node[KSamplerSelectInputs, KSamplerSelectOutputs]):
     """
     Original name: KSamplerSelect
-    No description available.
+    Category: sampling/custom_sampling/samplers
+    
+
+    Inputs:
+        - sampler_name (str)
+
+    Outputs:
+        - sampler (Any)
     """
     _original_name: str = 'KSamplerSelect'
 

@@ -21,7 +21,15 @@ class SaveGLBOutputs(OutputSlots):
 class SaveGLB(Node[SaveGLBInputs, SaveGLBOutputs]):
     """
     Original name: SaveGLB
-    No description available.
+    Category: 3d
+    
+
+    Inputs:
+        - mesh (Any)
+        - filename_prefix (str) (default: 'mesh/ComfyUI')
+
+    Outputs:
+        No outputs.
     """
     _original_name: str = 'SaveGLB'
 

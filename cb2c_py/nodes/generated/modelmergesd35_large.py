@@ -109,7 +109,59 @@ class ModelMergeSD35_LargeOutputs(OutputSlots):
 class ModelMergeSD35_Large(Node[ModelMergeSD35_LargeInputs, ModelMergeSD35_LargeOutputs]):
     """
     Original name: ModelMergeSD35_Large
-    No description available.
+    Category: advanced/model_merging/model_specific
+    
+
+    Inputs:
+        - model1 (Model)
+        - model2 (Model)
+        - pos_embed_ (float) (default: 1.0)
+        - x_embedder_ (float) (default: 1.0)
+        - context_embedder_ (float) (default: 1.0)
+        - y_embedder_ (float) (default: 1.0)
+        - t_embedder_ (float) (default: 1.0)
+        - joint_blocks_0_ (float) (default: 1.0)
+        - joint_blocks_1_ (float) (default: 1.0)
+        - joint_blocks_2_ (float) (default: 1.0)
+        - joint_blocks_3_ (float) (default: 1.0)
+        - joint_blocks_4_ (float) (default: 1.0)
+        - joint_blocks_5_ (float) (default: 1.0)
+        - joint_blocks_6_ (float) (default: 1.0)
+        - joint_blocks_7_ (float) (default: 1.0)
+        - joint_blocks_8_ (float) (default: 1.0)
+        - joint_blocks_9_ (float) (default: 1.0)
+        - joint_blocks_10_ (float) (default: 1.0)
+        - joint_blocks_11_ (float) (default: 1.0)
+        - joint_blocks_12_ (float) (default: 1.0)
+        - joint_blocks_13_ (float) (default: 1.0)
+        - joint_blocks_14_ (float) (default: 1.0)
+        - joint_blocks_15_ (float) (default: 1.0)
+        - joint_blocks_16_ (float) (default: 1.0)
+        - joint_blocks_17_ (float) (default: 1.0)
+        - joint_blocks_18_ (float) (default: 1.0)
+        - joint_blocks_19_ (float) (default: 1.0)
+        - joint_blocks_20_ (float) (default: 1.0)
+        - joint_blocks_21_ (float) (default: 1.0)
+        - joint_blocks_22_ (float) (default: 1.0)
+        - joint_blocks_23_ (float) (default: 1.0)
+        - joint_blocks_24_ (float) (default: 1.0)
+        - joint_blocks_25_ (float) (default: 1.0)
+        - joint_blocks_26_ (float) (default: 1.0)
+        - joint_blocks_27_ (float) (default: 1.0)
+        - joint_blocks_28_ (float) (default: 1.0)
+        - joint_blocks_29_ (float) (default: 1.0)
+        - joint_blocks_30_ (float) (default: 1.0)
+        - joint_blocks_31_ (float) (default: 1.0)
+        - joint_blocks_32_ (float) (default: 1.0)
+        - joint_blocks_33_ (float) (default: 1.0)
+        - joint_blocks_34_ (float) (default: 1.0)
+        - joint_blocks_35_ (float) (default: 1.0)
+        - joint_blocks_36_ (float) (default: 1.0)
+        - joint_blocks_37_ (float) (default: 1.0)
+        - final_layer_ (float) (default: 1.0)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'ModelMergeSD35_Large'
 

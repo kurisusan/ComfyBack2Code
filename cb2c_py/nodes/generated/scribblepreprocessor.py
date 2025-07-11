@@ -19,7 +19,14 @@ class ScribblePreprocessorOutputs(OutputSlots):
 class ScribblePreprocessor(Node[ScribblePreprocessorInputs, ScribblePreprocessorOutputs]):
     """
     Original name: ScribblePreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Line Extractors
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ScribblePreprocessor'
 

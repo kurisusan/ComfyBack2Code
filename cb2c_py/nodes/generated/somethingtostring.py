@@ -19,7 +19,16 @@ class SomethingToStringOutputs(OutputSlots):
 class SomethingToString(Node[SomethingToStringInputs, SomethingToStringOutputs]):
     """
     Original name: SomethingToString
-    No description available.
+    Category: KJNodes/text
+    
+Converts any type to a string.
+
+
+    Inputs:
+        - input (Any)
+
+    Outputs:
+        - string (str)
     """
     _original_name: str = 'SomethingToString'
 

@@ -19,7 +19,14 @@ class SemSegPreprocessorOutputs(OutputSlots):
 class SemSegPreprocessor(Node[SemSegPreprocessorInputs, SemSegPreprocessorOutputs]):
     """
     Original name: SemSegPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Semantic Segmentation
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'SemSegPreprocessor'
 

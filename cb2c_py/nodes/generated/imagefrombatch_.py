@@ -23,7 +23,16 @@ class ImageFromBatch_Outputs(OutputSlots):
 class ImageFromBatch_(Node[ImageFromBatch_Inputs, ImageFromBatch_Outputs]):
     """
     Original name: ImageFromBatch+
-    No description available.
+    Category: essentials/image batch
+    
+
+    Inputs:
+        - image (Image)
+        - start (int) (default: 0)
+        - length (int) (default: -1)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageFromBatch+'
 

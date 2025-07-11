@@ -37,7 +37,34 @@ class KSamplerOutputs(OutputSlots):
 class KSampler(Node[KSamplerInputs, KSamplerOutputs]):
     """
     Original name: KSampler
-    No description available.
+    Category: sampling
+    Uses the provided model, positive and negative conditioning to denoise the latent image.
+
+    Inputs:
+        - model (Model)
+          The model used for denoising the input latent.
+        - seed (int) (default: 0)
+          The random seed used for creating the noise.
+        - steps (int) (default: 20)
+          The number of steps used in the denoising process.
+        - cfg (float) (default: 8.0)
+          The Classifier-Free Guidance scale balances creativity and adherence to the prompt. Higher values result in images more closely matching the prompt however too high values will negatively impact quality.
+        - sampler_name (str)
+          The algorithm used when sampling, this can affect the quality, speed, and style of the generated output.
+        - scheduler (str)
+          The scheduler controls how noise is gradually removed to form the image.
+        - positive (Conditioning)
+          The conditioning describing the attributes you want to include in the image.
+        - negative (Conditioning)
+          The conditioning describing the attributes you want to exclude from the image.
+        - latent_image (Latent)
+          The latent image to denoise.
+        - denoise (float) (default: 1.0)
+          The amount of denoising applied, lower values will maintain the structure of the initial image allowing for image to image sampling.
+
+    Outputs:
+        - latent (Latent)
+          The denoised latent.
     """
     _original_name: str = 'KSampler'
 

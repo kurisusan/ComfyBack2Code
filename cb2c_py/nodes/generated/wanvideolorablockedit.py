@@ -97,7 +97,54 @@ class WanVideoLoraBlockEditOutputs(OutputSlots):
 class WanVideoLoraBlockEdit(Node[WanVideoLoraBlockEditInputs, WanVideoLoraBlockEditOutputs]):
     """
     Original name: WanVideoLoraBlockEdit
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - blocks_0_ (bool) (default: True)
+        - blocks_1_ (bool) (default: True)
+        - blocks_2_ (bool) (default: True)
+        - blocks_3_ (bool) (default: True)
+        - blocks_4_ (bool) (default: True)
+        - blocks_5_ (bool) (default: True)
+        - blocks_6_ (bool) (default: True)
+        - blocks_7_ (bool) (default: True)
+        - blocks_8_ (bool) (default: True)
+        - blocks_9_ (bool) (default: True)
+        - blocks_10_ (bool) (default: True)
+        - blocks_11_ (bool) (default: True)
+        - blocks_12_ (bool) (default: True)
+        - blocks_13_ (bool) (default: True)
+        - blocks_14_ (bool) (default: True)
+        - blocks_15_ (bool) (default: True)
+        - blocks_16_ (bool) (default: True)
+        - blocks_17_ (bool) (default: True)
+        - blocks_18_ (bool) (default: True)
+        - blocks_19_ (bool) (default: True)
+        - blocks_20_ (bool) (default: True)
+        - blocks_21_ (bool) (default: True)
+        - blocks_22_ (bool) (default: True)
+        - blocks_23_ (bool) (default: True)
+        - blocks_24_ (bool) (default: True)
+        - blocks_25_ (bool) (default: True)
+        - blocks_26_ (bool) (default: True)
+        - blocks_27_ (bool) (default: True)
+        - blocks_28_ (bool) (default: True)
+        - blocks_29_ (bool) (default: True)
+        - blocks_30_ (bool) (default: True)
+        - blocks_31_ (bool) (default: True)
+        - blocks_32_ (bool) (default: True)
+        - blocks_33_ (bool) (default: True)
+        - blocks_34_ (bool) (default: True)
+        - blocks_35_ (bool) (default: True)
+        - blocks_36_ (bool) (default: True)
+        - blocks_37_ (bool) (default: True)
+        - blocks_38_ (bool) (default: True)
+        - blocks_39_ (bool) (default: True)
+
+    Outputs:
+        - blocks (Any)
+          The modified lora model
     """
     _original_name: str = 'WanVideoLoraBlockEdit'
 

@@ -23,7 +23,16 @@ class ExponentialSchedulerOutputs(OutputSlots):
 class ExponentialScheduler(Node[ExponentialSchedulerInputs, ExponentialSchedulerOutputs]):
     """
     Original name: ExponentialScheduler
-    No description available.
+    Category: sampling/custom_sampling/schedulers
+    
+
+    Inputs:
+        - steps (int) (default: 20)
+        - sigma_max (float) (default: 14.614642)
+        - sigma_min (float) (default: 0.0291675)
+
+    Outputs:
+        - sigmas (Any)
     """
     _original_name: str = 'ExponentialScheduler'
 

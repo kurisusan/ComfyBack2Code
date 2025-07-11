@@ -25,7 +25,20 @@ class RecraftReplaceBackgroundNodeOutputs(OutputSlots):
 class RecraftReplaceBackgroundNode(Node[RecraftReplaceBackgroundNodeInputs, RecraftReplaceBackgroundNodeOutputs]):
     """
     Original name: RecraftReplaceBackgroundNode
-    No description available.
+    Category: api node/image/Recraft
+    Replace background on image, based on provided prompt.
+
+    Inputs:
+        - image (Image)
+        - prompt (str) (default: '')
+          Prompt for the image generation.
+        - n (int) (default: 1)
+          The number of images to generate.
+        - seed (int) (default: 0)
+          Seed to determine if node should re-run; actual results are nondeterministic regardless of seed.
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'RecraftReplaceBackgroundNode'
 

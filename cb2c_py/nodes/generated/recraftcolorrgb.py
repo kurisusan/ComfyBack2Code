@@ -23,7 +23,19 @@ class RecraftColorRGBOutputs(OutputSlots):
 class RecraftColorRGB(Node[RecraftColorRGBInputs, RecraftColorRGBOutputs]):
     """
     Original name: RecraftColorRGB
-    No description available.
+    Category: api node/image/Recraft
+    Create Recraft Color by choosing specific RGB values.
+
+    Inputs:
+        - r (int) (default: 0)
+          Red value of color.
+        - g (int) (default: 0)
+          Green value of color.
+        - b (int) (default: 0)
+          Blue value of color.
+
+    Outputs:
+        - recraft_color (Any)
     """
     _original_name: str = 'RecraftColorRGB'
 

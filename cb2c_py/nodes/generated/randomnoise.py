@@ -19,7 +19,14 @@ class RandomNoiseOutputs(OutputSlots):
 class RandomNoise(Node[RandomNoiseInputs, RandomNoiseOutputs]):
     """
     Original name: RandomNoise
-    No description available.
+    Category: sampling/custom_sampling/noise
+    
+
+    Inputs:
+        - noise_seed (int) (default: 0)
+
+    Outputs:
+        - noise (Any)
     """
     _original_name: str = 'RandomNoise'
 

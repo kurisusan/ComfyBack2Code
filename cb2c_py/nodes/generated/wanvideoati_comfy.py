@@ -29,7 +29,21 @@ class WanVideoATI_comfyOutputs(OutputSlots):
 class WanVideoATI_comfy(Node[WanVideoATI_comfyInputs, WanVideoATI_comfyOutputs]):
     """
     Original name: WanVideoATI_comfy
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - model (Model)
+        - width (int) (default: 832)
+          Width of the image to encode
+        - height (int) (default: 480)
+          Height of the image to encode
+        - tracks (str)
+        - temperature (float) (default: 220.0)
+        - topk (int) (default: 2)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'WanVideoATI_comfy'
 

@@ -29,7 +29,23 @@ class OffsetMaskByNormalizedAmplitudeOutputs(OutputSlots):
 class OffsetMaskByNormalizedAmplitude(Node[OffsetMaskByNormalizedAmplitudeInputs, OffsetMaskByNormalizedAmplitudeOutputs]):
     """
     Original name: OffsetMaskByNormalizedAmplitude
-    No description available.
+    Category: KJNodes/audio
+    
+Works as a bridge to the AudioScheduler -nodes:  
+https://github.com/a1lazydog/ComfyUI-AudioScheduler  
+Offsets masks based on the normalized amplitude.
+
+
+    Inputs:
+        - normalized_amp (Any)
+        - mask (Image)
+        - x (int) (default: 0)
+        - y (int) (default: 0)
+        - rotate (bool) (default: False)
+        - angle_multiplier (float) (default: 0.0)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'OffsetMaskByNormalizedAmplitude'
 

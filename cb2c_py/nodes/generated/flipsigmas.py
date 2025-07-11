@@ -19,7 +19,14 @@ class FlipSigmasOutputs(OutputSlots):
 class FlipSigmas(Node[FlipSigmasInputs, FlipSigmasOutputs]):
     """
     Original name: FlipSigmas
-    No description available.
+    Category: sampling/custom_sampling/sigmas
+    
+
+    Inputs:
+        - sigmas (Any)
+
+    Outputs:
+        - sigmas (Any)
     """
     _original_name: str = 'FlipSigmas'
 

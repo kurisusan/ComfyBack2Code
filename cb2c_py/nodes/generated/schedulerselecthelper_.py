@@ -35,7 +35,22 @@ class SchedulerSelectHelper_Outputs(OutputSlots):
 class SchedulerSelectHelper_(Node[SchedulerSelectHelper_Inputs, SchedulerSelectHelper_Outputs]):
     """
     Original name: SchedulerSelectHelper+
-    No description available.
+    Category: essentials/sampling
+    
+
+    Inputs:
+        - simple (bool) (default: False)
+        - sgm_uniform (bool) (default: False)
+        - karras (bool) (default: False)
+        - exponential (bool) (default: False)
+        - ddim_uniform (bool) (default: False)
+        - beta (bool) (default: False)
+        - normal (bool) (default: False)
+        - linear_quadratic (bool) (default: False)
+        - kl_optimal (bool) (default: False)
+
+    Outputs:
+        - string (str)
     """
     _original_name: str = 'SchedulerSelectHelper+'
 

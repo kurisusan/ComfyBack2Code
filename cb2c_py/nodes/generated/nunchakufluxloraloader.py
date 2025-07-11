@@ -23,7 +23,20 @@ class NunchakuFluxLoraLoaderOutputs(OutputSlots):
 class NunchakuFluxLoraLoader(Node[NunchakuFluxLoraLoaderInputs, NunchakuFluxLoraLoaderOutputs]):
     """
     Original name: NunchakuFluxLoraLoader
-    No description available.
+    Category: Nunchaku
+    LoRAs are used to modify the diffusion model, altering the way in which latents are denoised such as applying styles. You can link multiple LoRA nodes.
+
+    Inputs:
+        - model (Model)
+          The diffusion model the LoRA will be applied to.
+        - lora_name (str)
+          The name of the LoRA.
+        - lora_strength (float) (default: 1.0)
+          How strongly to modify the diffusion model. This value can be negative.
+
+    Outputs:
+        - model (Model)
+          The modified diffusion model.
     """
     _original_name: str = 'NunchakuFluxLoraLoader'
 

@@ -41,7 +41,36 @@ class WanVideoUniAnimateDWPoseDetectorOutputs(OutputSlots):
 class WanVideoUniAnimateDWPoseDetector(Node[WanVideoUniAnimateDWPoseDetectorInputs, WanVideoUniAnimateDWPoseDetectorOutputs]):
     """
     Original name: WanVideoUniAnimateDWPoseDetector
-    No description available.
+    Category: WanVideoWrapper
+    
+
+    Inputs:
+        - pose_images (Image)
+          Pose images
+        - score_threshold (float) (default: 0.3)
+          Score threshold for pose detection
+        - stick_width (int) (default: 4)
+          Stick width for drawing keypoints
+        - draw_body (bool) (default: True)
+          Draw body keypoints
+        - body_keypoint_size (int) (default: 4)
+          Body keypoint size
+        - draw_feet (bool) (default: True)
+          Draw feet keypoints
+        - draw_hands (bool) (default: True)
+          Draw hand keypoints
+        - hand_keypoint_size (int) (default: 4)
+          Hand keypoint size
+        - colorspace (str)
+          Color space for the output image
+        - handle_not_detected (str) (default: 'empty')
+          How to handle undetected poses, empty inserts black and repeat inserts previous detection
+        - draw_head (bool) (default: True)
+          Draw head keypoints
+
+    Outputs:
+        - poses (Image)
+        - reference_pose (Image)
     """
     _original_name: str = 'WanVideoUniAnimateDWPoseDetector'
 

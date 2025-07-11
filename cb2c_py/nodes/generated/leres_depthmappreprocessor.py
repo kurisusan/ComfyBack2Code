@@ -19,7 +19,14 @@ class LeReS_DepthMapPreprocessorOutputs(OutputSlots):
 class LeReS_DepthMapPreprocessor(Node[LeReS_DepthMapPreprocessorInputs, LeReS_DepthMapPreprocessorOutputs]):
     """
     Original name: LeReS-DepthMapPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Normal and Depth Estimators
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'LeReS-DepthMapPreprocessor'
 

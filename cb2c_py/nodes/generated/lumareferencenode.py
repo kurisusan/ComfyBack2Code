@@ -21,7 +21,17 @@ class LumaReferenceNodeOutputs(OutputSlots):
 class LumaReferenceNode(Node[LumaReferenceNodeInputs, LumaReferenceNodeOutputs]):
     """
     Original name: LumaReferenceNode
-    No description available.
+    Category: api node/image/Luma
+    Holds an image and weight for use with Luma Generate Image node.
+
+    Inputs:
+        - image (Image)
+          Image to use as reference.
+        - weight (float) (default: 1.0)
+          Weight of image reference.
+
+    Outputs:
+        - luma_ref (Any)
     """
     _original_name: str = 'LumaReferenceNode'
 

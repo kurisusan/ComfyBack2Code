@@ -21,7 +21,15 @@ class Power_Prompt___Simple__rgthree_Outputs(OutputSlots):
 class Power_Prompt___Simple__rgthree_(Node[Power_Prompt___Simple__rgthree_Inputs, Power_Prompt___Simple__rgthree_Outputs]):
     """
     Original name: Power Prompt - Simple (rgthree)
-    No description available.
+    Category: rgthree
+    
+
+    Inputs:
+        - prompt (str)
+
+    Outputs:
+        - conditioning (Conditioning)
+        - text (str)
     """
     _original_name: str = 'Power Prompt - Simple (rgthree)'
 

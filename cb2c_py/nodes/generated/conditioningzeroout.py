@@ -19,7 +19,14 @@ class ConditioningZeroOutOutputs(OutputSlots):
 class ConditioningZeroOut(Node[ConditioningZeroOutInputs, ConditioningZeroOutOutputs]):
     """
     Original name: ConditioningZeroOut
-    No description available.
+    Category: advanced/conditioning
+    
+
+    Inputs:
+        - conditioning (Conditioning)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'ConditioningZeroOut'
 

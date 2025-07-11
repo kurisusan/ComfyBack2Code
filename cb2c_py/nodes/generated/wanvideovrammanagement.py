@@ -19,7 +19,15 @@ class WanVideoVRAMManagementOutputs(OutputSlots):
 class WanVideoVRAMManagement(Node[WanVideoVRAMManagementInputs, WanVideoVRAMManagementOutputs]):
     """
     Original name: WanVideoVRAMManagement
-    No description available.
+    Category: WanVideoWrapper
+    Alternative offloading method from DiffSynth-Studio, more aggressive in reducing memory use than block swapping, but can be slower
+
+    Inputs:
+        - offload_percent (float) (default: 1.0)
+          Percentage of parameters to offload
+
+    Outputs:
+        - vram_management_args (Any)
     """
     _original_name: str = 'WanVideoVRAMManagement'
 

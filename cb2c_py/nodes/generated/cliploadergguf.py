@@ -10,7 +10,7 @@ class CLIPLoaderGGUFInputs(InputSlots):
     clip_name: Slot[str]
     type: Slot[str]
     def __init__(self, node: "Node"):
-        self.clip_name = Slot[str](node, "clip_name", [])
+        self.clip_name = Slot[str](node, "clip_name", ['umt5_xxl_fp8_e4m3fn_scaled.safetensors'])
         self.type = Slot[str](node, "type", ['stable_diffusion', 'stable_cascade', 'sd3', 'stable_audio', 'mochi', 'ltxv', 'pixart', 'cosmos', 'lumina2', 'wan', 'hidream', 'chroma', 'ace', 'omnigen2'])
 
 class CLIPLoaderGGUFOutputs(OutputSlots):
@@ -21,7 +21,15 @@ class CLIPLoaderGGUFOutputs(OutputSlots):
 class CLIPLoaderGGUF(Node[CLIPLoaderGGUFInputs, CLIPLoaderGGUFOutputs]):
     """
     Original name: CLIPLoaderGGUF
-    No description available.
+    Category: bootleg
+    
+
+    Inputs:
+        - clip_name (str)
+        - type (str)
+
+    Outputs:
+        - clip (Clip)
     """
     _original_name: str = 'CLIPLoaderGGUF'
 

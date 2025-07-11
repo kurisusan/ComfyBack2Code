@@ -11,8 +11,8 @@ class DualCLIPLoaderGGUFMultiGPUInputs(InputSlots):
     clip_name2: Slot[str]
     type: Slot[str]
     def __init__(self, node: "Node"):
-        self.clip_name1 = Slot[str](node, "clip_name1", [])
-        self.clip_name2 = Slot[str](node, "clip_name2", [])
+        self.clip_name1 = Slot[str](node, "clip_name1", ['umt5_xxl_fp8_e4m3fn_scaled.safetensors'])
+        self.clip_name2 = Slot[str](node, "clip_name2", ['umt5_xxl_fp8_e4m3fn_scaled.safetensors'])
         self.type = Slot[str](node, "type", ['sdxl', 'sd3', 'flux', 'hunyuan_video'])
 
 class DualCLIPLoaderGGUFMultiGPUOutputs(OutputSlots):
@@ -23,7 +23,16 @@ class DualCLIPLoaderGGUFMultiGPUOutputs(OutputSlots):
 class DualCLIPLoaderGGUFMultiGPU(Node[DualCLIPLoaderGGUFMultiGPUInputs, DualCLIPLoaderGGUFMultiGPUOutputs]):
     """
     Original name: DualCLIPLoaderGGUFMultiGPU
-    No description available.
+    Category: multigpu
+    
+
+    Inputs:
+        - clip_name1 (str)
+        - clip_name2 (str)
+        - type (str)
+
+    Outputs:
+        - clip (Clip)
     """
     _original_name: str = 'DualCLIPLoaderGGUFMultiGPU'
 

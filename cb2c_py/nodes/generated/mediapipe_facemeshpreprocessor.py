@@ -19,7 +19,14 @@ class MediaPipe_FaceMeshPreprocessorOutputs(OutputSlots):
 class MediaPipe_FaceMeshPreprocessor(Node[MediaPipe_FaceMeshPreprocessorInputs, MediaPipe_FaceMeshPreprocessorOutputs]):
     """
     Original name: MediaPipe-FaceMeshPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Faces and Poses Estimators
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'MediaPipe-FaceMeshPreprocessor'
 

@@ -25,7 +25,17 @@ class ConditioningTimestepsRangeOutputs(OutputSlots):
 class ConditioningTimestepsRange(Node[ConditioningTimestepsRangeInputs, ConditioningTimestepsRangeOutputs]):
     """
     Original name: ConditioningTimestepsRange
-    No description available.
+    Category: advanced/hooks
+    
+
+    Inputs:
+        - start_percent (float) (default: 0.0)
+        - end_percent (float) (default: 1.0)
+
+    Outputs:
+        - timesteps_range (Any)
+        - before_range (Any)
+        - after_range (Any)
     """
     _original_name: str = 'ConditioningTimestepsRange'
 

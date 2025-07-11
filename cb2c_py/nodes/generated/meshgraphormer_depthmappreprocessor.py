@@ -21,7 +21,15 @@ class MeshGraphormer_DepthMapPreprocessorOutputs(OutputSlots):
 class MeshGraphormer_DepthMapPreprocessor(Node[MeshGraphormer_DepthMapPreprocessorInputs, MeshGraphormer_DepthMapPreprocessorOutputs]):
     """
     Original name: MeshGraphormer-DepthMapPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/Normal and Depth Estimators
+    
+
+    Inputs:
+        - image (Image)
+
+    Outputs:
+        - image (Image)
+        - inpainting_mask (Image)
     """
     _original_name: str = 'MeshGraphormer-DepthMapPreprocessor'
 

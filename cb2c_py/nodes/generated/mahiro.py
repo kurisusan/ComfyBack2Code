@@ -19,7 +19,14 @@ class MahiroOutputs(OutputSlots):
 class Mahiro(Node[MahiroInputs, MahiroOutputs]):
     """
     Original name: Mahiro
-    No description available.
+    Category: _for_testing
+    Modify the guidance to scale more on the 'direction' of the positive prompt rather than the difference between the negative prompt.
+
+    Inputs:
+        - model (Model)
+
+    Outputs:
+        - patched_model (Model)
     """
     _original_name: str = 'Mahiro'
 

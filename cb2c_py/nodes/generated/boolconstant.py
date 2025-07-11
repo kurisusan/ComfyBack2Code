@@ -19,7 +19,14 @@ class BOOLConstantOutputs(OutputSlots):
 class BOOLConstant(Node[BOOLConstantInputs, BOOLConstantOutputs]):
     """
     Original name: BOOLConstant
-    No description available.
+    Category: KJNodes/constants
+    
+
+    Inputs:
+        - value (bool) (default: True)
+
+    Outputs:
+        - value (bool)
     """
     _original_name: str = 'BOOLConstant'
 

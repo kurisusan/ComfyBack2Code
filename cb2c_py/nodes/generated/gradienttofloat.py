@@ -23,7 +23,18 @@ class GradientToFloatOutputs(OutputSlots):
 class GradientToFloat(Node[GradientToFloatInputs, GradientToFloatOutputs]):
     """
     Original name: GradientToFloat
-    No description available.
+    Category: KJNodes/image
+    
+Calculates list of floats from image.    
+
+
+    Inputs:
+        - image (Image)
+        - steps (int) (default: 10)
+
+    Outputs:
+        - float_x (float)
+        - float_y (float)
     """
     _original_name: str = 'GradientToFloat'
 

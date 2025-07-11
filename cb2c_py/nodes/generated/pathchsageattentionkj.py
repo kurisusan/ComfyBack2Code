@@ -21,7 +21,16 @@ class PathchSageAttentionKJOutputs(OutputSlots):
 class PathchSageAttentionKJ(Node[PathchSageAttentionKJInputs, PathchSageAttentionKJOutputs]):
     """
     Original name: PathchSageAttentionKJ
-    No description available.
+    Category: KJNodes/experimental
+    Experimental node for patching attention mode. This doesn't use the model patching system and thus can't be disabled without running the node again with 'disabled' option.
+
+    Inputs:
+        - model (Model)
+        - sage_attention (str) (default: 'False')
+          Global patch comfy attention to use sageattn, once patched to revert back to normal you would need to run this node again with disabled option.
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'PathchSageAttentionKJ'
 

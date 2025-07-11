@@ -21,7 +21,15 @@ class UNETLoaderMultiGPUOutputs(OutputSlots):
 class UNETLoaderMultiGPU(Node[UNETLoaderMultiGPUInputs, UNETLoaderMultiGPUOutputs]):
     """
     Original name: UNETLoaderMultiGPU
-    No description available.
+    Category: multigpu
+    
+
+    Inputs:
+        - unet_name (str)
+        - weight_dtype (str)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'UNETLoaderMultiGPU'
 

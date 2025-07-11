@@ -23,7 +23,17 @@ class CFGZeroStarAndInitOutputs(OutputSlots):
 class CFGZeroStarAndInit(Node[CFGZeroStarAndInitInputs, CFGZeroStarAndInitOutputs]):
     """
     Original name: CFGZeroStarAndInit
-    No description available.
+    Category: KJNodes/experimental
+    https://github.com/WeichenFan/CFG-Zero-star
+
+    Inputs:
+        - model (Model)
+        - use_zero_init (bool) (default: True)
+        - zero_init_steps (int) (default: 0)
+          for zero init, starts from 0 so first step is always zeroed out if use_zero_init enabled
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'CFGZeroStarAndInit'
 

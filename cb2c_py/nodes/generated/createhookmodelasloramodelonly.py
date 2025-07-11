@@ -21,7 +21,15 @@ class CreateHookModelAsLoraModelOnlyOutputs(OutputSlots):
 class CreateHookModelAsLoraModelOnly(Node[CreateHookModelAsLoraModelOnlyInputs, CreateHookModelAsLoraModelOnlyOutputs]):
     """
     Original name: CreateHookModelAsLoraModelOnly
-    No description available.
+    Category: advanced/hooks/create
+    
+
+    Inputs:
+        - ckpt_name (str)
+        - strength_model (float) (default: 1.0)
+
+    Outputs:
+        - hooks (Any)
     """
     _original_name: str = 'CreateHookModelAsLoraModelOnly'
 

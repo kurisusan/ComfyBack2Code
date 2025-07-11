@@ -31,7 +31,20 @@ class SkipLayerGuidanceDiTOutputs(OutputSlots):
 class SkipLayerGuidanceDiT(Node[SkipLayerGuidanceDiTInputs, SkipLayerGuidanceDiTOutputs]):
     """
     Original name: SkipLayerGuidanceDiT
-    No description available.
+    Category: advanced/guidance
+    Generic version of SkipLayerGuidance node that can be used on every DiT model.
+
+    Inputs:
+        - model (Model)
+        - double_layers (str) (default: '7, 8, 9')
+        - single_layers (str) (default: '7, 8, 9')
+        - scale (float) (default: 3.0)
+        - start_percent (float) (default: 0.01)
+        - end_percent (float) (default: 0.15)
+        - rescaling_scale (float) (default: 0.0)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'SkipLayerGuidanceDiT'
 

@@ -25,7 +25,17 @@ class WebcamCaptureOutputs(OutputSlots):
 class WebcamCapture(Node[WebcamCaptureInputs, WebcamCaptureOutputs]):
     """
     Original name: WebcamCapture
-    No description available.
+    Category: image
+    
+
+    Inputs:
+        - image (Any)
+        - width (int) (default: 0)
+        - height (int) (default: 0)
+        - capture_on_queue (bool) (default: True)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'WebcamCapture'
 

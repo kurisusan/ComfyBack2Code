@@ -29,7 +29,23 @@ class WanVideoTorchCompileSettingsOutputs(OutputSlots):
 class WanVideoTorchCompileSettings(Node[WanVideoTorchCompileSettingsInputs, WanVideoTorchCompileSettingsOutputs]):
     """
     Original name: WanVideoTorchCompileSettings
-    No description available.
+    Category: WanVideoWrapper
+    torch.compile settings, when connected to the model loader, torch.compile of the selected layers is attempted. Requires Triton and torch 2.5.0 is recommended
+
+    Inputs:
+        - backend (str) (default: 'inductor')
+        - fullgraph (bool) (default: False)
+          Enable full graph mode
+        - mode (str) (default: 'default')
+        - dynamic (bool) (default: False)
+          Enable dynamic mode
+        - dynamo_cache_size_limit (int) (default: 64)
+          torch._dynamo.config.cache_size_limit
+        - compile_transformer_blocks_only (bool) (default: True)
+          Compile only the transformer blocks, usually enough and can make compilation faster and less error prone
+
+    Outputs:
+        - torch_compile_args (Any)
     """
     _original_name: str = 'WanVideoTorchCompileSettings'
 

@@ -21,7 +21,15 @@ class RebatchLatentsOutputs(OutputSlots):
 class RebatchLatents(Node[RebatchLatentsInputs, RebatchLatentsOutputs]):
     """
     Original name: RebatchLatents
-    No description available.
+    Category: latent/batch
+    
+
+    Inputs:
+        - latents (Latent)
+        - batch_size (int) (default: 1)
+
+    Outputs:
+        - latent (Latent)
     """
     _original_name: str = 'RebatchLatents'
 

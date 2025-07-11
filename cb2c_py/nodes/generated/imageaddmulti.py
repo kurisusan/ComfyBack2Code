@@ -27,7 +27,22 @@ class ImageAddMultiOutputs(OutputSlots):
 class ImageAddMulti(Node[ImageAddMultiInputs, ImageAddMultiOutputs]):
     """
     Original name: ImageAddMulti
-    No description available.
+    Category: KJNodes/image
+    
+Add blends multiple images together.    
+You can set how many inputs the node has,  
+with the **inputcount** and clicking update.
+
+
+    Inputs:
+        - inputcount (int) (default: 2)
+        - image_1 (Image)
+        - image_2 (Image)
+        - blending (str) (default: 'add')
+        - blend_amount (float) (default: 0.5)
+
+    Outputs:
+        - images (Image)
     """
     _original_name: str = 'ImageAddMulti'
 

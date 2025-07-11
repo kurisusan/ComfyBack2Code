@@ -21,7 +21,15 @@ class ImageGenResolutionFromLatentOutputs(OutputSlots):
 class ImageGenResolutionFromLatent(Node[ImageGenResolutionFromLatentInputs, ImageGenResolutionFromLatentOutputs]):
     """
     Original name: ImageGenResolutionFromLatent
-    No description available.
+    Category: ControlNet Preprocessors
+    
+
+    Inputs:
+        - latent (Latent)
+
+    Outputs:
+        - image_gen_width__int_ (int)
+        - image_gen_height__int_ (int)
     """
     _original_name: str = 'ImageGenResolutionFromLatent'
 

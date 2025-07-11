@@ -21,7 +21,15 @@ class MaskFlip_Outputs(OutputSlots):
 class MaskFlip_(Node[MaskFlip_Inputs, MaskFlip_Outputs]):
     """
     Original name: MaskFlip+
-    No description available.
+    Category: essentials/mask
+    
+
+    Inputs:
+        - mask (Image)
+        - axis (str)
+
+    Outputs:
+        - mask (Image)
     """
     _original_name: str = 'MaskFlip+'
 

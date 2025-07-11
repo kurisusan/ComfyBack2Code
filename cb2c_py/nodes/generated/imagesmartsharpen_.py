@@ -27,7 +27,18 @@ class ImageSmartSharpen_Outputs(OutputSlots):
 class ImageSmartSharpen_(Node[ImageSmartSharpen_Inputs, ImageSmartSharpen_Outputs]):
     """
     Original name: ImageSmartSharpen+
-    No description available.
+    Category: essentials/image processing
+    
+
+    Inputs:
+        - image (Image)
+        - noise_radius (int) (default: 7)
+        - preserve_edges (float) (default: 0.75)
+        - sharpen (float) (default: 5.0)
+        - ratio (float) (default: 0.5)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'ImageSmartSharpen+'
 

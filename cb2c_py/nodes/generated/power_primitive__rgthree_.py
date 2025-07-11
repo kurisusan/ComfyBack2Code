@@ -19,7 +19,14 @@ class Power_Primitive__rgthree_Outputs(OutputSlots):
 class Power_Primitive__rgthree_(Node[Power_Primitive__rgthree_Inputs, Power_Primitive__rgthree_Outputs]):
     """
     Original name: Power Primitive (rgthree)
-    No description available.
+    Category: rgthree
+    
+
+    Inputs:
+        No inputs.
+
+    Outputs:
+        - _ (Any)
     """
     _original_name: str = 'Power Primitive (rgthree)'
 

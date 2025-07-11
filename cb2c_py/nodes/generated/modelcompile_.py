@@ -25,7 +25,17 @@ class ModelCompile_Outputs(OutputSlots):
 class ModelCompile_(Node[ModelCompile_Inputs, ModelCompile_Outputs]):
     """
     Original name: ModelCompile+
-    No description available.
+    Category: essentials/utilities
+    
+
+    Inputs:
+        - model (Model)
+        - fullgraph (bool) (default: False)
+        - dynamic (bool) (default: False)
+        - mode (str)
+
+    Outputs:
+        - model (Model)
     """
     _original_name: str = 'ModelCompile+'
 

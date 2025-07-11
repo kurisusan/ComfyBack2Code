@@ -33,7 +33,22 @@ class ImageCropByMaskBatchOutputs(OutputSlots):
 class ImageCropByMaskBatch(Node[ImageCropByMaskBatchInputs, ImageCropByMaskBatchOutputs]):
     """
     Original name: ImageCropByMaskBatch
-    No description available.
+    Category: KJNodes/image
+    Crops the input images based on the provided masks.
+
+    Inputs:
+        - image (Image)
+        - masks (Image)
+        - width (int) (default: 512)
+        - height (int) (default: 512)
+        - padding (int) (default: 0)
+        - preserve_size (bool) (default: False)
+        - bg_color (str) (default: '0, 0, 0')
+          Color as RGB values in range 0-255, separated by commas.
+
+    Outputs:
+        - images (Image)
+        - masks (Image)
     """
     _original_name: str = 'ImageCropByMaskBatch'
 

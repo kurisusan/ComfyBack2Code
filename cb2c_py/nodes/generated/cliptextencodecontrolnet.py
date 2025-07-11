@@ -23,7 +23,16 @@ class CLIPTextEncodeControlnetOutputs(OutputSlots):
 class CLIPTextEncodeControlnet(Node[CLIPTextEncodeControlnetInputs, CLIPTextEncodeControlnetOutputs]):
     """
     Original name: CLIPTextEncodeControlnet
-    No description available.
+    Category: _for_testing/conditioning
+    
+
+    Inputs:
+        - clip (Clip)
+        - conditioning (Conditioning)
+        - text (str)
+
+    Outputs:
+        - conditioning (Conditioning)
     """
     _original_name: str = 'CLIPTextEncodeControlnet'
 

@@ -21,7 +21,17 @@ class DepthAnything_V2Outputs(OutputSlots):
 class DepthAnything_V2(Node[DepthAnything_V2Inputs, DepthAnything_V2Outputs]):
     """
     Original name: DepthAnything_V2
-    No description available.
+    Category: DepthAnythingV2
+    
+https://depth-anything-v2.github.io
+
+
+    Inputs:
+        - da_model (Any)
+        - images (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'DepthAnything_V2'
 

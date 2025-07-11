@@ -31,7 +31,25 @@ class FluxProFillNodeOutputs(OutputSlots):
 class FluxProFillNode(Node[FluxProFillNodeInputs, FluxProFillNodeOutputs]):
     """
     Original name: FluxProFillNode
-    No description available.
+    Category: api node/image/BFL
+    Inpaints image based on mask and prompt.
+
+    Inputs:
+        - image (Image)
+        - mask (Image)
+        - prompt (str) (default: '')
+          Prompt for the image generation
+        - prompt_upsampling (bool) (default: False)
+          Whether to perform upsampling on the prompt. If active, automatically modifies the prompt for more creative generation, but results are nondeterministic (same seed will not produce exactly the same result).
+        - guidance (float) (default: 60)
+          Guidance strength for the image generation process
+        - steps (int) (default: 50)
+          Number of steps for the image generation process
+        - seed (int) (default: 0)
+          The random seed used for creating the noise.
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'FluxProFillNode'
 

@@ -27,7 +27,23 @@ class JoinStringMultiOutputs(OutputSlots):
 class JoinStringMulti(Node[JoinStringMultiInputs, JoinStringMultiOutputs]):
     """
     Original name: JoinStringMulti
-    No description available.
+    Category: KJNodes/text
+    
+Creates single string, or a list of strings, from  
+multiple input strings.  
+You can set how many inputs the node has,  
+with the **inputcount** and clicking update.
+
+
+    Inputs:
+        - inputcount (int) (default: 2)
+        - string_1 (str) (default: '')
+        - string_2 (str) (default: '')
+        - delimiter (str) (default: ' ')
+        - return_list (bool) (default: False)
+
+    Outputs:
+        - string (str)
     """
     _original_name: str = 'JoinStringMulti'
 

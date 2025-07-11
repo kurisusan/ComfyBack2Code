@@ -21,7 +21,15 @@ class InpaintPreprocessorOutputs(OutputSlots):
 class InpaintPreprocessor(Node[InpaintPreprocessorInputs, InpaintPreprocessorOutputs]):
     """
     Original name: InpaintPreprocessor
-    No description available.
+    Category: ControlNet Preprocessors/others
+    
+
+    Inputs:
+        - image (Image)
+        - mask (Image)
+
+    Outputs:
+        - image (Image)
     """
     _original_name: str = 'InpaintPreprocessor'
 
